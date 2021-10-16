@@ -87,6 +87,21 @@
             left: 50%;
             transform: translate(-50%, -50%);
         }
+        .head-text {
+            font-size: 12px;
+        }
+        .container{
+            padding-top: 35px;
+            padding-left: 0px;
+            max-width: 1280px;
+        }
+
+        .sorter-options{
+            width: 110px;
+            background-color: #E5E5E5;
+            height: 35px;
+            padding: 0 20px 0 15px;
+        }
     </style>
 </head>
 
@@ -116,9 +131,16 @@
         <!-- <img src="https://www.logaworld.com/pub/media/bg_pagetitle/default/bg_catalog.png">
         <div class="centered">สินค้า</div> -->
     </div>
+        <!-- main--->
+    <div class="container">
+        <a class='head-text'>หน้าแรก &nbsp;&nbsp;>&nbsp;&nbsp; สินค้า</a>
+
+    </div>
+
     <div class="container">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-3">
+                <h4><strong style="border-bottom: 2px solid #9a258e;">กรองข้อมูล</strong></h4>
                 <div class="card">
                     <header class="card-header ">
                         <a data-toggle="collapse" data-target="#collapse1" aria-expanded="true">
@@ -226,6 +248,25 @@
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <div class = "col-md-9">
+                <div class = "row">
+                    <div class = "col-md-4">
+                        
+                    </div>
+                    <div class = "col-md-4 style="text-align: center;>
+                        <a name = "text-list">สินค้า 1-12 ของ 27</a>
+                    </div>
+                    <div class = "col-md-4" style="text-align: right;">
+                        <label class="sorter-label" for="sorter">เรียงจาก</label>
+                        <select id="sorter" data-role="sorter" class="sorter-options">
+                            <option value="position" selected="selected">ตำแหน่ง</option>
+                            <option value="name">ชื่อสินค้า</option>
+                            <option value="price">ราคา</option></select>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
