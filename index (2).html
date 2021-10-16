@@ -105,6 +105,12 @@
             padding: 0 20px 0 10px;
             border: none;
         }
+        
+        .more::before{
+            content: ">";
+            padding-left: 20px;
+            padding-right: 20px;
+        }
     </style>
 </head>
 
@@ -136,8 +142,10 @@
     </div>
     <!-- main--->
     <div class="container">
-        <a class='head-text'>หน้าแรก &nbsp;&nbsp;>&nbsp;&nbsp; สินค้า</a>
-
+        <div class="row">
+            <a href="#home" style="font-size:12px; color: black;">หน้าแรก</a>
+            <p class="more" style="font-size:12px; color: black;">สินค้า</p>
+        </div>
     </div>
 
     <div class="container">
