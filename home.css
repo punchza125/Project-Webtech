@@ -1,0 +1,119 @@
+
+h3,h5{
+    font-family: "Prompt", arial, tahoma;
+}
+h5{
+    font-size: 1vw;
+    color: #333;
+}
+#newprod,h3{
+    font-size: 1.4vw;
+    color: #333;
+}
+#newprod{
+    font-weight: 600;
+}
+#kirin{
+    width: 100%;
+    
+    
+}
+#pic1{
+    width: 100%;
+    transition: 0.5s;
+}
+#pic2{
+    width: 100%;
+    transition: 0.5s;
+}
+
+#pic3{
+    width: 100%;
+    
+    transition: 0.5s;
+}
+#pic4{
+    width: 100%;
+   
+}
+.img-hover-zoom {
+    
+    overflow: hidden; 
+  }
+  
+
+  .img-hover-zoom img {
+    transition: transform .5s ease;
+  }
+  
+
+  .img-hover-zoom:hover img {
+    transform: scale(1.1);
+  }
+#title{
+    position: absolute;
+    z-index: 1;
+}
+#shopnow{
+    
+    color:#AE0496;
+    border: solid;
+    border-width: 1px;
+    border-color: #AE0496;
+    transition: 0.5s;
+}
+#shopnow:hover{
+    
+    color:#AE0496;
+    border: solid;
+    border-width: 1px;
+    border-color: #AE0496;
+    background-color: white;
+}
+#shopnow2{
+    
+    color:white;
+    border: solid;
+    border-width: 1px;
+    border-color: white;
+    transition: 0.5s;
+}
+#shopnow2:hover{
+    
+    color:#AE0496;
+    border: solid;
+    border-width: 1px;
+    border-color: white;
+    background-color: white;
+}
+A {text-decoration: none;}
+input[type=button], input[type=submit], input[type=reset] {
+    background-color: #AE0496;
+    border: none;
+    font-size: 0.6vw;
+    color: white;
+    padding:7px 20px;
+    text-decoration: none;
+   
+    cursor: pointer;
+    font-family: "Prompt", arial, tahoma;
+  }
+
+  ::placeholder {
+    font-family: "Prompt", arial, tahoma;
+  }
+  #subs{
+      width: 27vw;
+      padding: 2%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: black;
+  }
+  #subsbg{
+      background-image: url("bg_newslater.png");
+  }
+  #fname{
+ 
+      width: 60%;
+      transform: translateY(2px);
+  }
+  
