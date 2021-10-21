@@ -168,6 +168,18 @@
             cursor:pointer
 
         }
+
+        .txt:after {
+            content: '\2212';
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+            font-size: 20px;
+        }
+
+        .active:after {
+            content: "\002B";
+        }
     </style>
 </head>
 
@@ -212,7 +224,7 @@
                 <div class="card" style="border-top: none; border-left: none; border-right: none;">
                     <header class="card-header " style="border: none; background-color: white;">
                         <a data-toggle="collapse" data-target="#collapse1" aria-expanded="true">
-                            <h6 style="font-weight: bold; font-size: 14px; color: #222222;">ประเภท</h6>
+                            <h6 class="txt" style="font-weight: bold; font-size: 14px; color: #222222;">ประเภท</h6>
                         </a>
                     </header>
                     <div class="filter-content collapse show" id="collapse1">
@@ -247,7 +259,7 @@
                 <div class="card" style="border-top: none; border-left: none; border-right: none;">
                     <header class="card-header " style="border: none; background-color: white;">
                         <a data-toggle="collapse" data-target="#collapse2" aria-expanded="true">
-                            <h6 style="font-weight: bold; font-size: 14px; color: #222222;">รูปทรง</h6>
+                            <h6 class="txt" style="font-weight: bold; font-size: 14px; color: #222222;">รูปทรง</h6>
                         </a>
                     </header>
                     <div class="filter-content collapse show" id="collapse2">
@@ -262,7 +274,7 @@
                 <div class="card" style="border-top: none; border-left: none; border-right: none;">
                     <header class="card-header " style="border: none; background-color: white;">
                         <a data-toggle="collapse" data-target="#collapse3" aria-expanded="true">
-                            <h6 style="font-weight: bold; font-size: 14px; color: #222222;">เชื่อมต่อ</h6>
+                            <h6 class="txt" style="font-weight: bold; font-size: 14px; color: #222222;">เชื่อมต่อ</h6>
                         </a>
                     </header>
                     <div class="filter-content collapse show" id="collapse3">
@@ -277,7 +289,7 @@
                 <div class="card" style="border-top: none; border-left: none; border-right: none;">
                     <header class="card-header " style="border: none; background-color: white;">
                         <a data-toggle="collapse" data-target="#collapse4" aria-expanded="true">
-                            <h6 style="font-weight: bold; font-size: 14px; color: #222222;">ชนิด</h6>
+                            <h6 class="txt" style="font-weight: bold; font-size: 14px; color: #222222;">ชนิด</h6>
                         </a>
                     </header>
                     <div class="filter-content collapse show" id="collapse4">
@@ -300,7 +312,7 @@
                 <div class="card" style="border-top: none; border-left: none; border-right: none;">
                     <header class="card-header " style="border: none; background-color: white;">
                         <a data-toggle="collapse" data-target="#collapse5" aria-expanded="true">
-                            <h6 style="font-weight: bold; font-size: 14px; color: #222222;">คอลเลคชั่น</h6>
+                            <h6 class="txt" style="font-weight: bold; font-size: 14px; color: #222222;">คอลเลคชั่น</h6>
                         </a>
                     </header>
                     <div class="filter-content collapse show" id="collapse5">
@@ -327,7 +339,7 @@
                 <div class="card" style="border-top: none; border-left: none; border-right: none;">
                     <header class="card-header " style="border: none; background-color: white;">
                         <a data-toggle="collapse" data-target="#collapse6" aria-expanded="true">
-                            <h6 style="font-weight: bold; font-size: 14px; color: #222222;">ขนาด</h6>
+                            <h6 class="txt" style="font-weight: bold; font-size: 14px; color: #222222;">ขนาด</h6>
                         </a>
                     </header>
                     <div class="filter-content collapse show" id="collapse6">
@@ -352,7 +364,7 @@
                 <div class="card" style="border-top: none; border-left: none; border-right: none;">
                     <header class="card-header " style="border: none; background-color: white;">
                         <a data-toggle="collapse" data-target="#collapse7" aria-expanded="true">
-                            <h6 style="font-weight: bold; font-size: 14px; color: #222222;">สี</h6>
+                            <h6 class="txt" style="font-weight: bold; font-size: 14px; color: #222222;">สี</h6>
                         </a>
                     </header>
                     <div class="filter-content collapse show" id="collapse7">
@@ -371,7 +383,7 @@
 
                 <header class="card-header " style="border: none; background-color: white;">
                     <a data-toggle="collapse" data-target="#collapse8" aria-expanded="true">
-                        <h6 style="font-weight: bold; font-size: 14px; color: #222222;">ราคา</h6>
+                        <h6 class="txt" style="font-weight: bold; font-size: 14px; color: #222222;">ราคา</h6>
                     </a>
                 </header>
                 <div class="filter-content collapse show" id="collapse8">
@@ -390,6 +402,17 @@
                     </div>
                 </div>
             </div>
+
+            <script>
+                var coll = document.getElementsByClassName("txt");
+                var i;
+
+                for (i = 0; i < coll.length; i++) {
+                    coll[i].addEventListener("click", function () {
+                        this.classList.toggle("active"); 
+                    });
+                }
+            </script>
 
 
             <div class="col-md-9">
