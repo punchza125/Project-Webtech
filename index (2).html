@@ -11,6 +11,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/de3473a09c.js" crossorigin="anonymous"></script> 
 
 
     <!--Font-->
@@ -180,9 +181,7 @@
         .active:after {
             content: "\002B";
         }
-        .table{
-            cursor: pointer;
-        }
+
 
 
     </style>
@@ -228,7 +227,7 @@
                 <h4><strong
                         style="border-bottom: 2px solid #9a258e; font-size: 20px;margin-left: 19px;">กรองข้อมูล</strong>
                 </h4>
-                <div class="table" style="border-top: none; border-left: none; border-right: none;">
+                <div class="card" style="border-top: none; border-left: none; border-right: none; cursor: pointer;">
                     <header class="card-header " style="border: none; background-color: white;">
                         <a data-toggle="collapse" data-target="#collapse1" aria-expanded="true">
                             <h6 class="txt" style="font-weight: bold; font-size: 14px; color: #222222;">ประเภท</h6>
@@ -263,7 +262,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="table" style="border-top: none; border-left: none; border-right: none;">
+                <div class="card" style="border-top: none; border-left: none; border-right: none; cursor: pointer;">
                     <header class="card-header " style="border: none; background-color: white;">
                         <a data-toggle="collapse" data-target="#collapse2" aria-expanded="true">
                             <h6 class="txt" style="font-weight: bold; font-size: 14px; color: #222222;">รูปทรง</h6>
@@ -278,7 +277,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="table" style="border-top: none; border-left: none; border-right: none;">
+                <div class="card" style="border-top: none; border-left: none; border-right: none; cursor: pointer;">
                     <header class="card-header " style="border: none; background-color: white;">
                         <a data-toggle="collapse" data-target="#collapse3" aria-expanded="true">
                             <h6 class="txt" style="font-weight: bold; font-size: 14px; color: #222222;">เชื่อมต่อ</h6>
@@ -293,7 +292,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="table" style="border-top: none; border-left: none; border-right: none;">
+                <div class="card" style="border-top: none; border-left: none; border-right: none; cursor: pointer;">
                     <header class="card-header " style="border: none; background-color: white;">
                         <a data-toggle="collapse" data-target="#collapse4" aria-expanded="true">
                             <h6 class="txt" style="font-weight: bold; font-size: 14px; color: #222222;">ชนิด</h6>
@@ -316,7 +315,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="table" style="border-top: none; border-left: none; border-right: none;">
+                <div class="card" style="border-top: none; border-left: none; border-right: none; cursor: pointer;">
                     <header class="card-header " style="border: none; background-color: white;">
                         <a data-toggle="collapse" data-target="#collapse5" aria-expanded="true">
                             <h6 class="txt" style="font-weight: bold; font-size: 14px; color: #222222;">คอลเลคชั่น</h6>
@@ -343,7 +342,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="table" style="border-top: none; border-left: none; border-right: none;">
+                <div class="card" style="border-top: none; border-left: none; border-right: none; cursor: pointer;">
                     <header class="card-header " style="border: none; background-color: white;">
                         <a data-toggle="collapse" data-target="#collapse6" aria-expanded="true">
                             <h6 class="txt" style="font-weight: bold; font-size: 14px; color: #222222;">ขนาด</h6>
@@ -368,7 +367,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="table" style="border-top: none; border-left: none; border-right: none;">
+                <div class="card" style="border-top: none; border-left: none; border-right: none; cursor: pointer;">
                     <header class="card-header " style="border: none; background-color: white;">
                         <a data-toggle="collapse" data-target="#collapse7" aria-expanded="true">
                             <h6 class="txt" style="font-weight: bold; font-size: 14px; color: #222222;">สี</h6>
@@ -424,12 +423,16 @@
 
             <div class="col-md-9">
                 <div class="row">
+                    
                     <div class="col-md-4">
-
+                        <i class="fas fa-th"></i>
+                        <i class="fas fa-list"></i>
                     </div>
                     <div class="col-md-4">
                         <a name="text-list">สินค้า 1-12 ของ 27</a>
+                        
                     </div>
+                    
                     <div class="col-md-4" style="text-align: right;">
                         <label class="sorter-label" for="sorter">เรียงจาก</label>
                         <select id="sorter" data-role="sorter" class="sorter-options">
