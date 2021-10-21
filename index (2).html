@@ -157,7 +157,8 @@
             color: white;
             text-decoration: none;
         }
-        .select-color{
+
+        .select-color {
             width: 20px;
             height: 20px;
             background-color: red;
@@ -165,8 +166,7 @@
             margin-left: 5px;
             float: left;
             border: 1px solid #ddd;
-            cursor:pointer
-
+            cursor: pointer
         }
 
         .txt:after {
@@ -180,6 +180,11 @@
         .active:after {
             content: "\002B";
         }
+        .table{
+            cursor: pointer;
+        }
+
+
     </style>
 </head>
 
@@ -220,43 +225,45 @@
     <div class="container">
         <div class="row">
             <div class="col-md-3">
-                <h4><strong style="border-bottom: 2px solid #9a258e; font-size: 20px;margin-left: 19px;">กรองข้อมูล</strong></h4>
-                <div class="card" style="border-top: none; border-left: none; border-right: none;">
+                <h4><strong
+                        style="border-bottom: 2px solid #9a258e; font-size: 20px;margin-left: 19px;">กรองข้อมูล</strong>
+                </h4>
+                <div class="table" style="border-top: none; border-left: none; border-right: none;">
                     <header class="card-header " style="border: none; background-color: white;">
                         <a data-toggle="collapse" data-target="#collapse1" aria-expanded="true">
                             <h6 class="txt" style="font-weight: bold; font-size: 14px; color: #222222;">ประเภท</h6>
                         </a>
                     </header>
-                    <div class="filter-content collapse show" id="collapse1">
+                    <div class="filter-content collapse show " id="collapse1">
                         <div class="card-body" style="margin-top: -25px; font-size: 14px; color: #333333;">
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox">
-                                <label class="form-check-label" style="margin-bottom: 6px;">คอลเลคชั่นใหม่</label>
+                                <input  class="form-check-input "  style="cursor:pointer" type="checkbox">
+                                <label class="table" style="margin-bottom: 6px;">คอลเลคชั่นใหม่</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox">
-                                <label class="form-check-label" style="margin-bottom: 6px;">Keyboard</label>
+                                <input  class="form-check-input" style="cursor:pointer" type="checkbox">
+                                <label class="table" style="margin-bottom: 6px;">Keyboard</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox">
-                                <label class="form-check-label" style="margin-bottom: 6px;">Mice</label>
+                                <input  class="form-check-input" style="cursor:pointer" type="checkbox">
+                                <label class="table" style="margin-bottom: 6px;">Mice</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox">
-                                <label class="form-check-label" style="margin-bottom: 6px;">Mousepad</label>
+                                <input  class="form-check-input" style="cursor:pointer" type="checkbox">
+                                <label class="table" style="margin-bottom: 6px;">Mousepad</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox">
-                                <label class="form-check-label" style="margin-bottom: 6px;">Others</label>
+                                <input  class="form-check-input" style="cursor:pointer" type="checkbox">
+                                <label class="table" style="margin-bottom: 6px;">Others</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox">
-                                <label class="form-check-label">Limited</label>
+                                <input  class="form-check-input" style="cursor:pointer" type="checkbox">
+                                <label class="table">Limited</label>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="card" style="border-top: none; border-left: none; border-right: none;">
+                <div class="table" style="border-top: none; border-left: none; border-right: none;">
                     <header class="card-header " style="border: none; background-color: white;">
                         <a data-toggle="collapse" data-target="#collapse2" aria-expanded="true">
                             <h6 class="txt" style="font-weight: bold; font-size: 14px; color: #222222;">รูปทรง</h6>
@@ -265,13 +272,13 @@
                     <div class="filter-content collapse show" id="collapse2">
                         <div class="card-body" style="margin-top: -25px; font-size: 14px; color: #333333;">
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox">
-                                <label class="form-check-label">Ambidexterous</label>
+                                <input  class="form-check-input" style="cursor:pointer" type="checkbox">
+                                <label class="table">Ambidexterous</label>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="card" style="border-top: none; border-left: none; border-right: none;">
+                <div class="table" style="border-top: none; border-left: none; border-right: none;">
                     <header class="card-header " style="border: none; background-color: white;">
                         <a data-toggle="collapse" data-target="#collapse3" aria-expanded="true">
                             <h6 class="txt" style="font-weight: bold; font-size: 14px; color: #222222;">เชื่อมต่อ</h6>
@@ -280,13 +287,13 @@
                     <div class="filter-content collapse show" id="collapse3">
                         <div class="card-body" style="margin-top: -25px; font-size: 14px; color: #333333;">
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox">
-                                <label class="form-check-label">Wireless</label>
+                                <input  class="form-check-input" style="cursor:pointer" type="checkbox">
+                                <label class="table">Wireless</label>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="card" style="border-top: none; border-left: none; border-right: none;">
+                <div class="table" style="border-top: none; border-left: none; border-right: none;">
                     <header class="card-header " style="border: none; background-color: white;">
                         <a data-toggle="collapse" data-target="#collapse4" aria-expanded="true">
                             <h6 class="txt" style="font-weight: bold; font-size: 14px; color: #222222;">ชนิด</h6>
@@ -295,21 +302,21 @@
                     <div class="filter-content collapse show" id="collapse4">
                         <div class="card-body" style="margin-top: -25px; font-size: 14px; color: #333333;">
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox">
-                                <label class="form-check-label" style="margin-bottom: 6px;">None-Waterproof</label>
+                                <input  class="form-check-input" style="cursor:pointer" type="checkbox">
+                                <label class="table" style="margin-bottom: 6px;">None-Waterproof</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox">
-                                <label class="form-check-label" style="margin-bottom: 6px;">Waterproof</label>
+                                <input  class="form-check-input" style="cursor:pointer" type="checkbox">
+                                <label class="table" style="margin-bottom: 6px;">Waterproof</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox">
-                                <label class="form-check-label" style="margin-bottom: 6px;">Cloth</label>
+                                <input  class="form-check-input" style="cursor:pointer" type="checkbox">
+                                <label class="table" style="margin-bottom: 6px;">Cloth</label>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="card" style="border-top: none; border-left: none; border-right: none;">
+                <div class="table" style="border-top: none; border-left: none; border-right: none;">
                     <header class="card-header " style="border: none; background-color: white;">
                         <a data-toggle="collapse" data-target="#collapse5" aria-expanded="true">
                             <h6 class="txt" style="font-weight: bold; font-size: 14px; color: #222222;">คอลเลคชั่น</h6>
@@ -318,25 +325,25 @@
                     <div class="filter-content collapse show" id="collapse5">
                         <div class="card-body" style="margin-top: -25px; font-size: 14px; color: #333333;">
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox">
-                                <label class="form-check-label" style="margin-bottom: 6px;">Mice</label>
+                                <input  class="form-check-input" style="cursor:pointer" type="checkbox">
+                                <label class="table" style="margin-bottom: 6px;">Mice</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox">
-                                <label class="form-check-label" style="margin-bottom: 6px;">Keyboard</label>
+                                <input  class="form-check-input" style="cursor:pointer" type="checkbox">
+                                <label class="table" style="margin-bottom: 6px;">Keyboard</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox">
-                                <label class="form-check-label" style="margin-bottom: 6px;">Mousepad</label>
+                                <input  class="form-check-input" style="cursor:pointer" type="checkbox">
+                                <label class="table" style="margin-bottom: 6px;">Mousepad</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox">
-                                <label class="form-check-label" style="margin-bottom: 6px;">Accessories</label>
+                                <input  class="form-check-input" style="cursor:pointer" type="checkbox">
+                                <label class="table" style="margin-bottom: 6px;">Accessories</label>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="card" style="border-top: none; border-left: none; border-right: none;">
+                <div class="table" style="border-top: none; border-left: none; border-right: none;">
                     <header class="card-header " style="border: none; background-color: white;">
                         <a data-toggle="collapse" data-target="#collapse6" aria-expanded="true">
                             <h6 class="txt" style="font-weight: bold; font-size: 14px; color: #222222;">ขนาด</h6>
@@ -361,7 +368,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card" style="border-top: none; border-left: none; border-right: none;">
+                <div class="table" style="border-top: none; border-left: none; border-right: none;">
                     <header class="card-header " style="border: none; background-color: white;">
                         <a data-toggle="collapse" data-target="#collapse7" aria-expanded="true">
                             <h6 class="txt" style="font-weight: bold; font-size: 14px; color: #222222;">สี</h6>
@@ -383,7 +390,7 @@
 
                 <header class="card-header " style="border: none; background-color: white;">
                     <a data-toggle="collapse" data-target="#collapse8" aria-expanded="true">
-                        <h6 class="txt" style="font-weight: bold; font-size: 14px; color: #222222;">ราคา</h6>
+                        <h6 class="table" style="font-weight: bold; font-size: 14px; color: #222222;">ราคา</h6>
                     </a>
                 </header>
                 <div class="filter-content collapse show" id="collapse8">
@@ -409,7 +416,7 @@
 
                 for (i = 0; i < coll.length; i++) {
                     coll[i].addEventListener("click", function () {
-                        this.classList.toggle("active"); 
+                        this.classList.toggle("active");
                     });
                 }
             </script>
@@ -705,8 +712,7 @@
                         <div class="row">
                             <div class="col">
                                 <div class="card" style="width: 18rem; border: none; height: 476px;">
-                                    <img class="card-img-top"
-                                        id = "kirin-product"
+                                    <img class="card-img-top" id="kirin-product"
                                         src="https://www.logaworld.com/pub/media/catalog/product/cache/dca41e4f63acec2e70b84390dc0971fe/k/i/kirin_marketing-02.jpg"
                                         alt="Card image cap">
                                     <div class="card-body" style="padding-left: 0; padding-right: 0;">
@@ -714,8 +720,14 @@
                                             <p><b>Kirin PRO wireless</b></p>
                                         </a>
                                         <p class="card-text"><b>฿2,490.00</b></p>
-                                        <div class = "select-color" style="background: url(https://www.logaworld.com/pub/media/catalog/product/cache/a164c73bbe7b9525372a978396cc197f/b/l/black.jpg) no-repeat center;" onclick="kirinproductblack();" data-toggle="tooltip" data-placement="top" title="Black"></div>
-                                        <div class = "select-color" style="background: url(https://www.logaworld.com/pub/media/catalog/product/cache/a164c73bbe7b9525372a978396cc197f/w/h/white.jpg) no-repeat center;" onclick="kirinproductwhite();" data-toggle="tooltip" data-placement="top" title="White"></div>
+                                        <div class="select-color"
+                                            style="background: url(https://www.logaworld.com/pub/media/catalog/product/cache/a164c73bbe7b9525372a978396cc197f/b/l/black.jpg) no-repeat center;"
+                                            onclick="kirinproductblack();" data-toggle="tooltip" data-placement="top"
+                                            title="Black"></div>
+                                        <div class="select-color"
+                                            style="background: url(https://www.logaworld.com/pub/media/catalog/product/cache/a164c73bbe7b9525372a978396cc197f/w/h/white.jpg) no-repeat center;"
+                                            onclick="kirinproductwhite();" data-toggle="tooltip" data-placement="top"
+                                            title="White"></div>
                                     </div>
                                 </div>
                             </div>
@@ -752,10 +764,10 @@
         $('[data-toggle="tooltip"]').tooltip()
     })
 
-    function kirinproductblack(){
+    function kirinproductblack() {
         document.getElementById("kirin-product").src = "https://www.logaworld.com/pub/media/catalog/product/cache/d6f018367e77d13c90a5944d1e9d6db5/k/i/kirin_black.jpg";
     }
-    function kirinproductwhite(){
+    function kirinproductwhite() {
         document.getElementById("kirin-product").src = "https://www.logaworld.com/pub/media/catalog/product/cache/d6f018367e77d13c90a5944d1e9d6db5/k/i/kirin_white.jpg";
     }
 
