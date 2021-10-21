@@ -1,4 +1,4 @@
-<html lang="en">
+html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -157,6 +157,7 @@
             color: white;
             text-decoration: none;
         }
+
     </style>
 </head>
 
@@ -313,12 +314,12 @@
                 <div class="filter-content collapse show" id="collapse6">
                     <div class="card-body">
                         <div class="form-check">
-                            <span class="btn btn-light rounded-circle mw-100">S </span>
-                            <span class="btn btn-light rounded-circle mw-100">L </span>
-                            <span class="btn btn-light rounded-circle mw-100 p-1">96% </span>
-                            <span class="btn btn-light rounded-circle mw-100 p-2">2L </span>
-                            <span class="btn btn-light rounded-circle mw-100 p-2">XL </span>
-                            <span class="btn btn-light rounded-circle mw-100 p-2">XXL </span>
+                            <span class="btn btn-light rounded-circle mw-100 p-2" data-toggle="tooltip" data-placement="top" title="S" >S </span>
+                            <span class="btn btn-light rounded-circle mw-100 p-2" data-toggle="tooltip" data-placement="top" title="L" >L </span>
+                            <span class="btn btn-light rounded-circle mw-100 p-1" data-toggle="tooltip" data-placement="top" title="96%" >96% </span>
+                            <span class="btn btn-light rounded-circle mw-100 p-1" data-toggle="tooltip" data-placement="top" title="2L" >2L </span>
+                            <span class="btn btn-light rounded-circle mw-100 p-1" data-toggle="tooltip" data-placement="top" title="XL" >XL </span>
+                            <span class="btn btn-light rounded-circle mw-100 p-1" data-toggle="tooltip" data-placement="top" title="XXL" >XXL </span>
                         </div>
                     </div>
                 </div>
@@ -330,9 +331,9 @@
                 <div class="filter-content collapse show" id="collapse7">
                     <div class="card-body">
                         <div class="form-check">
-                            <span class="btn btn-dark rounded-circle p-3 "></span>
-                            <span class="btn btn-light rounded-circle p-3 "></span>
-                            <span class="btn btn-dark rounded-circle p-3 "></span>
+                            <span class="btn btn-dark rounded-circle p-3 " data-toggle="tooltip" data-placement="top" title="Black"></span>
+                            <span class="btn btn-light rounded-circle p-3 " data-toggle="tooltip" data-placement="top" title="White"></span>
+                            <span class="btn btn-dark rounded-circle p-3 " data-toggle="tooltip" data-placement="top" title="Black (blue switch)"></span>
                         </div>
                     </div>
                 </div>
@@ -687,5 +688,9 @@
         </div>
 
 </body>
-
+<script>
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+</script>
 </html>
