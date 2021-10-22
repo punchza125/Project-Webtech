@@ -1,1 +1,199 @@
 
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loga</title>
+    <!--bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+    <!--Font-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Prompt', sans-serif;
+        }
+
+        .container {
+            padding-top: 35px;
+            padding-left: 0px;
+            max-width: 1280px;
+        }
+
+        .more::before {
+            content: ">";
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .column {
+            float: left;
+            width: 16.66%;
+        }
+
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 40%;
+            width: auto;
+            padding: 16px;
+            margin-top: -50px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .pic {
+            display: none;
+        }
+
+        img {
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- main--->
+    <div class="container">
+        <div class="row" style="margin-left: 18px">
+            <a href="#home" style="font-size:12px; color: black;">หน้าแรก</a>
+            <p class="more" style="font-size:12px; color: black;">LOGA RAVANA : 2.4GHz wireless Mechanical keyboard</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="pic">
+                    <img src="https://www.logaworld.com/pub/media/catalog/product/cache/c6de907dadf40ef7ba5b58639aac49e6/r/a/ravana_marketing-02.jpg"
+                        style="width: 100%;">
+                </div>
+                <div class="pic">
+                    <img src="https://www.logaworld.com/pub/media/catalog/product/cache/c6de907dadf40ef7ba5b58639aac49e6/r/a/ravana_marketing-03.jpg"
+                        style="width: 100%;">
+                </div>
+                <div class="pic">
+                    <img src="https://www.logaworld.com/pub/media/catalog/product/cache/c6de907dadf40ef7ba5b58639aac49e6/r/a/ravana_marketing-04.jpg"
+                        style="width: 100%;">
+                </div>
+                <div class="pic">
+                    <img src="https://www.logaworld.com/pub/media/catalog/product/cache/c6de907dadf40ef7ba5b58639aac49e6/r/a/ravana_marketing-05.jpg"
+                        style="width: 100%;">
+                </div>
+                <div class="pic">
+                    <img src="https://www.logaworld.com/pub/media/catalog/product/cache/c6de907dadf40ef7ba5b58639aac49e6/r/a/ravana_marketing-06.jpg"
+                        style="width: 100%;">
+                </div>
+                <div class="pic">
+                    <img src="https://www.logaworld.com/pub/media/catalog/product/cache/c6de907dadf40ef7ba5b58639aac49e6/r/a/ravana_marketing-07.jpg"
+                        style="width: 100%;">
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+            </div>
+            <div class="col-md-6">
+                <span>
+                    <h1 style="font-size: 24px; color: #333333;"><b>LOGA RAVANA : 2.4GHz wireless Mechanical
+                            keyboard</b></h1>
+                </span>
+                <span style="font-size: 18px; color: #C60000;"><b>฿3,490.00</b></span>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="column">
+                    <img src="https://www.logaworld.com/pub/media/catalog/product/cache/c6de907dadf40ef7ba5b58639aac49e6/r/a/ravana_marketing-02.jpg"
+                        style="width:100%" onclick="currentSlide(1)">
+                </div>
+                <div class="column">
+                    <img src="https://www.logaworld.com/pub/media/catalog/product/cache/c6de907dadf40ef7ba5b58639aac49e6/r/a/ravana_marketing-03.jpg"
+                        style="width:100%" onclick="currentSlide(2)">
+                </div>
+                <div class="column">
+                    <img src="https://www.logaworld.com/pub/media/catalog/product/cache/c6de907dadf40ef7ba5b58639aac49e6/r/a/ravana_marketing-04.jpg"
+                        style="width:100%" onclick="currentSlide(3)">
+                </div>
+                <div class="column">
+                    <img src="https://www.logaworld.com/pub/media/catalog/product/cache/c6de907dadf40ef7ba5b58639aac49e6/r/a/ravana_marketing-05.jpg"
+                        style="width:100%" onclick="currentSlide(4)">
+                </div>
+                <div class="column">
+                    <img src="https://www.logaworld.com/pub/media/catalog/product/cache/c6de907dadf40ef7ba5b58639aac49e6/r/a/ravana_marketing-06.jpg"
+                        style="width:100%" onclick="currentSlide(5)">
+                </div>
+                <div class="column">
+                    <img src="https://www.logaworld.com/pub/media/catalog/product/cache/c6de907dadf40ef7ba5b58639aac49e6/r/a/ravana_marketing-07.jpg"
+                        style="width:100%" onclick="currentSlide(6)">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("pic");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            
+            slides[slideIndex - 1].style.display = "block";
+        }
+
+    </script>
+
+</body>
+
+</html>
