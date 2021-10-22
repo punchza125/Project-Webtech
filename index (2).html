@@ -11,7 +11,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="https://kit.fontawesome.com/de3473a09c.js" crossorigin="anonymous"></script> 
+    <script src="https://kit.fontawesome.com/de3473a09c.js" crossorigin="anonymous"></script>
 
 
     <!--Font-->
@@ -182,7 +182,20 @@
             content: "\002B";
         }
 
+        .table{
+            cursor: pointer;
+        }
 
+        .table:hover{
+            color: purple;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            display: none;   
+        }
 
     </style>
 </head>
@@ -236,27 +249,27 @@
                     <div class="filter-content collapse show " id="collapse1">
                         <div class="card-body" style="margin-top: -25px; font-size: 14px; color: #333333;">
                             <div class="form-check">
-                                <input  class="form-check-input "  style="cursor:pointer" type="checkbox">
-                                <label class="table"  style="margin-bottom: 6px;">คอลเลคชั่นใหม่</label>
+                                <input class="form-check-input " style="cursor:pointer" type="checkbox">
+                                <label class="table" style="margin-bottom: 6px;">คอลเลคชั่นใหม่</label>
                             </div>
                             <div class="form-check">
-                                <input  class="form-check-input" style="cursor:pointer" type="checkbox">
+                                <input class="form-check-input" style="cursor:pointer" type="checkbox">
                                 <label class="table" style="margin-bottom: 6px;">Keyboard</label>
                             </div>
                             <div class="form-check">
-                                <input  class="form-check-input" style="cursor:pointer" type="checkbox">
+                                <input class="form-check-input" style="cursor:pointer" type="checkbox">
                                 <label class="table" style="margin-bottom: 6px;">Mice</label>
                             </div>
                             <div class="form-check">
-                                <input  class="form-check-input" style="cursor:pointer" type="checkbox">
+                                <input class="form-check-input" style="cursor:pointer" type="checkbox">
                                 <label class="table" style="margin-bottom: 6px;">Mousepad</label>
                             </div>
                             <div class="form-check">
-                                <input  class="form-check-input" style="cursor:pointer" type="checkbox">
+                                <input class="form-check-input" style="cursor:pointer" type="checkbox">
                                 <label class="table" style="margin-bottom: 6px;">Others</label>
                             </div>
                             <div class="form-check">
-                                <input  class="form-check-input" style="cursor:pointer" type="checkbox">
+                                <input class="form-check-input" style="cursor:pointer" type="checkbox">
                                 <label class="table">Limited</label>
                             </div>
                         </div>
@@ -271,7 +284,7 @@
                     <div class="filter-content collapse show" id="collapse2">
                         <div class="card-body" style="margin-top: -25px; font-size: 14px; color: #333333;">
                             <div class="form-check">
-                                <input  class="form-check-input" style="cursor:pointer" type="checkbox">
+                                <input class="form-check-input" style="cursor:pointer" type="checkbox">
                                 <label class="table">Ambidexterous</label>
                             </div>
                         </div>
@@ -286,7 +299,7 @@
                     <div class="filter-content collapse show" id="collapse3">
                         <div class="card-body" style="margin-top: -25px; font-size: 14px; color: #333333;">
                             <div class="form-check">
-                                <input  class="form-check-input" style="cursor:pointer" type="checkbox">
+                                <input class="form-check-input" style="cursor:pointer" type="checkbox">
                                 <label class="table">Wireless</label>
                             </div>
                         </div>
@@ -301,15 +314,15 @@
                     <div class="filter-content collapse show" id="collapse4">
                         <div class="card-body" style="margin-top: -25px; font-size: 14px; color: #333333;">
                             <div class="form-check">
-                                <input  class="form-check-input" style="cursor:pointer" type="checkbox">
+                                <input class="form-check-input" style="cursor:pointer" type="checkbox">
                                 <label class="table" style="margin-bottom: 6px;">None-Waterproof</label>
                             </div>
                             <div class="form-check">
-                                <input  class="form-check-input" style="cursor:pointer" type="checkbox">
+                                <input class="form-check-input" style="cursor:pointer" type="checkbox">
                                 <label class="table" style="margin-bottom: 6px;">Waterproof</label>
                             </div>
                             <div class="form-check">
-                                <input  class="form-check-input" style="cursor:pointer" type="checkbox">
+                                <input class="form-check-input" style="cursor:pointer" type="checkbox">
                                 <label class="table" style="margin-bottom: 6px;">Cloth</label>
                             </div>
                         </div>
@@ -324,19 +337,19 @@
                     <div class="filter-content collapse show" id="collapse5">
                         <div class="card-body" style="margin-top: -25px; font-size: 14px; color: #333333;">
                             <div class="form-check">
-                                <input  class="form-check-input" style="cursor:pointer" type="checkbox">
+                                <input class="form-check-input" style="cursor:pointer" type="checkbox">
                                 <label class="table" style="margin-bottom: 6px;">Mice</label>
                             </div>
                             <div class="form-check">
-                                <input  class="form-check-input" style="cursor:pointer" type="checkbox">
+                                <input class="form-check-input" style="cursor:pointer" type="checkbox">
                                 <label class="table" style="margin-bottom: 6px;">Keyboard</label>
                             </div>
                             <div class="form-check">
-                                <input  class="form-check-input" style="cursor:pointer" type="checkbox">
+                                <input class="form-check-input" style="cursor:pointer" type="checkbox">
                                 <label class="table" style="margin-bottom: 6px;">Mousepad</label>
                             </div>
                             <div class="form-check">
-                                <input  class="form-check-input" style="cursor:pointer" type="checkbox">
+                                <input class="form-check-input" style="cursor:pointer" type="checkbox">
                                 <label class="table" style="margin-bottom: 6px;">Accessories</label>
                             </div>
                         </div>
@@ -423,16 +436,16 @@
 
             <div class="col-md-9">
                 <div class="row">
-                    
+
                     <div class="col-md-4">
                         <i class="fas fa-th"></i>
                         <i class="fas fa-list"></i>
                     </div>
                     <div class="col-md-4">
                         <a name="text-list">สินค้า 1-12 ของ 27</a>
-                        
+
                     </div>
-                    
+
                     <div class="col-md-4" style="text-align: right;">
                         <label class="sorter-label" for="sorter">เรียงจาก</label>
                         <select id="sorter" data-role="sorter" class="sorter-options">
@@ -753,15 +766,10 @@
                         <a href="#" class="next">&#8250;</a>
                     </div>
                 </div>
-
                 <div class="container"></div>
-
-
-
             </div>
-
         </div>
-
+        <a id="back-to-top" href="#" class="btn btn-light btn btn-outline-dark  border border-dark back-to-top" role="button"><i class="fas fa-chevron-up"></i></a>
 </body>
 <script>
     $(function () {
@@ -775,7 +783,19 @@
         document.getElementById("kirin-product").src = "https://www.logaworld.com/pub/media/catalog/product/cache/d6f018367e77d13c90a5944d1e9d6db5/k/i/kirin_white.jpg";
     }
 
-
+    $(document).ready(function(){
+	$(window).scroll(function () {
+			if ($(this).scrollTop() > 50) {
+				$('#back-to-top').fadeIn();
+			} else {
+				$('#back-to-top').fadeOut();
+			}
+		});
+		$('#back-to-top').click(function () {
+			$('body,html').animate({
+				scrollTop: 0
+			}, 400);
+			return false;
+		});
+    });
 </script>
-
-</html>
