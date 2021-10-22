@@ -6,12 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>loga</title>
     <!--bootstrap-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="https://kit.fontawesome.com/de3473a09c.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
 
 
     <!--Font-->
@@ -111,6 +116,7 @@
             content: ">";
             padding-left: 20px;
             padding-right: 20px;
+            
         }
 
         .card-title:hover {
@@ -122,6 +128,7 @@
             font-size: 16px;
             color: black;
             font-weight: 500;
+            text-decoration: none;
         }
 
         .card-text {
@@ -151,12 +158,13 @@
             color: #AAAAAA;
             font-size: 14px;
             margin-left: 5px;
+            text-decoration: none;
         }
 
         .next:hover {
             background-color: #9A258F;
             color: white;
-            text-decoration: none;
+
         }
 
         .select-color {
@@ -182,11 +190,11 @@
             content: "\002B";
         }
 
-        .table{
+        .table {
             cursor: pointer;
         }
 
-        .table:hover{
+        .table:hover {
             color: purple;
         }
 
@@ -194,9 +202,8 @@
             position: fixed;
             bottom: 25px;
             right: 25px;
-            display: none;   
+            display: none;
         }
-
     </style>
 </head>
 
@@ -246,7 +253,7 @@
                             <h6 class="txt" style="font-weight: bold; font-size: 14px; color: #222222;">ประเภท</h6>
                         </a>
                     </header>
-                    <div class="filter-content collapse show " id="collapse1">
+                    
                         <div class="card-body" style="margin-top: -25px; font-size: 14px; color: #333333;">
                             <div class="form-check">
                                 <input class="form-check-input " style="cursor:pointer" type="checkbox">
@@ -273,7 +280,7 @@
                                 <label class="table">Limited</label>
                             </div>
                         </div>
-                    </div>
+                    
                 </div>
                 <div class="card" style="border-top: none; border-left: none; border-right: none; cursor: pointer;">
                     <header class="card-header " style="border: none; background-color: white;">
@@ -769,7 +776,8 @@
                 <div class="container"></div>
             </div>
         </div>
-        <a id="back-to-top" href="#" class="btn btn-light btn btn-outline-dark  border border-dark back-to-top" role="button"><i class="fas fa-chevron-up"></i></a>
+        <a id="back-to-top" href="#" class="btn btn-light btn btn-outline-dark  border border-dark back-to-top"
+            role="button"><i class="fas fa-chevron-up"></i></a>
 </body>
 <script>
     $(function () {
@@ -783,19 +791,19 @@
         document.getElementById("kirin-product").src = "https://www.logaworld.com/pub/media/catalog/product/cache/d6f018367e77d13c90a5944d1e9d6db5/k/i/kirin_white.jpg";
     }
 
-    $(document).ready(function(){
-	$(window).scroll(function () {
-			if ($(this).scrollTop() > 50) {
-				$('#back-to-top').fadeIn();
-			} else {
-				$('#back-to-top').fadeOut();
-			}
-		});
-		$('#back-to-top').click(function () {
-			$('body,html').animate({
-				scrollTop: 0
-			}, 400);
-			return false;
-		});
+    $(document).ready(function () {
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 50) {
+                $('#back-to-top').fadeIn();
+            } else {
+                $('#back-to-top').fadeOut();
+            }
+        });
+        $('#back-to-top').click(function () {
+            $('body,html').animate({
+                scrollTop: 0
+            }, 400);
+            return false;
+        });
     });
 </script>
