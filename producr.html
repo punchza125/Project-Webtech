@@ -50,21 +50,72 @@
             clear: both;
         }
 
-        .column {
-            float: left;
-            width: 16.66%;
-            margin-right: 15px;
+        .slideshow {
+            position: relative;
+            margin: auto;
         }
 
-        .prev {
+        #content {
+            display: grid;
+            grid-gap: 16px;
+            grid-auto-flow: column;
+            margin: auto;
+            box-sizing: border-box;
+        }
+
+        #wrapper {
+            position: relative;
+        }
+
+        #carousel {
+            overflow: auto;
+            scroll-behavior: smooth;
+            scrollbar-width: none;
+        }
+
+        #carousel::-webkit-scrollbar {
+            height: 0;
+        }
+
+        #prev {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            background: #4440404d;
+            border: none;
+            padding: 5px;
+            outline: 0;
             cursor: pointer;
             position: absolute;
             top: 50%;
+            left: 0;
+            transform: translate(50%, -50%);
+            display: none;
+
+        }
+
+        #next {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            background: #4440404d;
+            border: none;
+            padding: 5px;
+            outline: 0;
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translate(-50%, -50%);
+
+        }
+
+        .prev1 {
+            cursor: pointer;
+            position: absolute;
+            top: 40%;
             width: 80px;
             padding: 40px;
-            padding-top: 298px;
-            padding-bottom: 298px;
-            margin-top: -290px;
             color: #333333;
             font-weight: bold;
             font-size: 18px;
@@ -74,15 +125,12 @@
             text-decoration: none;
         }
 
-        .next {
+        .next1 {
             cursor: pointer;
             position: absolute;
-            top: 50%;
+            top: 40%;
             width: 80px;
             padding: 40px;
-            padding-top: 298px;
-            padding-bottom: 298px;
-            margin-top: -290px;
             color: #333333;
             font-weight: bold;
             font-size: 18px;
@@ -90,11 +138,9 @@
             border-radius: 0 3px 3px 0;
             user-select: none;
             text-decoration: none;
-            margin-right: 775px;
         }
 
-
-        .next {
+        .next1 {
             right: 0;
             border-radius: 3px 0 0 3px;
         }
@@ -148,7 +194,7 @@
     <div class="container">
         <div class="row rpic">
             <div class="col-md-6">
-                <div class="apic">
+                <div class="apic" onmouseover="mouseOver()" onmouseout="mouseOut()">
                     <div class="pic">
                         <img src="https://www.logaworld.com/pub/media/catalog/product/cache/c6de907dadf40ef7ba5b58639aac49e6/r/a/ravana_marketing-02.jpg"
                             style="width: 100%;">
@@ -186,7 +232,7 @@
                             style="width: 100%;">
                     </div>
                 </div>
-                <div class="butt" id="but" onmouseover="mouseOver()" onmouseout="mouseOut()">
+                <div class="butt" id="but">
                     <a class="prev" id="pre" onmouseover="mouseOver()" onmouseout="mouseOut()"
                         onclick="plusSlides(-1)">&#10094;</a>
                     <a class="next" id="nex" onmouseover="mouseOver()" onmouseout="mouseOut()"
@@ -234,41 +280,60 @@
         </div>
         <div class="row" style="margin-top: 20px;">
             <div class="col-md-6">
-                <div class="column">
-                    <img src="https://www.logaworld.com/pub/media/catalog/product/cache/c6de907dadf40ef7ba5b58639aac49e6/r/a/ravana_marketing-02.jpg"
-                        style="width:100%" onclick="currentSlide(1)">
-                </div>
-                <div class="column">
-                    <img src="https://www.logaworld.com/pub/media/catalog/product/cache/c6de907dadf40ef7ba5b58639aac49e6/r/a/ravana_marketing-03.jpg"
-                        style="width:100%" onclick="currentSlide(2)">
-                </div>
-                <div class="column">
-                    <img src="https://www.logaworld.com/pub/media/catalog/product/cache/c6de907dadf40ef7ba5b58639aac49e6/r/a/ravana_marketing-04.jpg"
-                        style="width:100%" onclick="currentSlide(3)">
-                </div>
-                <div class="column">
-                    <img src="https://www.logaworld.com/pub/media/catalog/product/cache/c6de907dadf40ef7ba5b58639aac49e6/r/a/ravana_marketing-05.jpg"
-                        style="width:100%" onclick="currentSlide(4)">
-                </div>
-                <div class="column">
-                    <img src="https://www.logaworld.com/pub/media/catalog/product/cache/c6de907dadf40ef7ba5b58639aac49e6/r/a/ravana_marketing-06.jpg"
-                        style="width:100%" onclick="currentSlide(5)">
-                </div>
-                <div class="column">
-                    <img src="https://www.logaworld.com/pub/media/catalog/product/cache/c6de907dadf40ef7ba5b58639aac49e6/r/a/ravana_marketing-07.jpg"
-                        style="width:100%" onclick="currentSlide(6)">
-                </div>
-                <div class="column">
-                    <img src="https://www.logaworld.com/pub/media/catalog/product/cache/c6de907dadf40ef7ba5b58639aac49e6/r/a/ravana_marketing-08.jpg"
-                        style="width:100%" onclick="currentSlide(7)">
-                </div>
-                <div class="column">
-                    <img src="https://www.logaworld.com/pub/media/catalog/product/cache/c6de907dadf40ef7ba5b58639aac49e6/r/a/ravana_marketing-09.jpg"
-                        style="width:100%" onclick="currentSlide(8)">
-                </div>
-                <div class="column">
-                    <img src="https://www.logaworld.com/pub/media/catalog/product/cache/c6de907dadf40ef7ba5b58639aac49e6/r/a/ravana_marketing-10.jpg"
-                        style="width:100%" onclick="currentSlide(9)">
+                <div id="wrapper">
+                    <div id="carousel">
+                        <div id="content">
+                            <div>
+                                <img src="https://www.logaworld.com/pub/media/catalog/product/cache/c6de907dadf40ef7ba5b58639aac49e6/r/a/ravana_marketing-02.jpg"
+                                    style="width:100%" onclick="currentSlide(1)">
+                            </div>
+                            <div>
+                                <img src="https://www.logaworld.com/pub/media/catalog/product/cache/c6de907dadf40ef7ba5b58639aac49e6/r/a/ravana_marketing-03.jpg"
+                                    style="width:100%" onclick="currentSlide(2)">
+                            </div>
+                            <div>
+                                <img src="https://www.logaworld.com/pub/media/catalog/product/cache/c6de907dadf40ef7ba5b58639aac49e6/r/a/ravana_marketing-04.jpg"
+                                    style="width:100%" onclick="currentSlide(3)">
+                            </div>
+                            <div>
+                                <img src="https://www.logaworld.com/pub/media/catalog/product/cache/c6de907dadf40ef7ba5b58639aac49e6/r/a/ravana_marketing-05.jpg"
+                                    style="width:100%" onclick="currentSlide(4)">
+                            </div>
+                            <div>
+                                <img src="https://www.logaworld.com/pub/media/catalog/product/cache/c6de907dadf40ef7ba5b58639aac49e6/r/a/ravana_marketing-06.jpg"
+                                    style="width:100%" onclick="currentSlide(5)">
+                            </div>
+                            <div>
+                                <img src="https://www.logaworld.com/pub/media/catalog/product/cache/c6de907dadf40ef7ba5b58639aac49e6/r/a/ravana_marketing-07.jpg"
+                                    style="width:100%" onclick="currentSlide(6)">
+                            </div>
+                            <div>
+                                <img src="https://www.logaworld.com/pub/media/catalog/product/cache/c6de907dadf40ef7ba5b58639aac49e6/r/a/ravana_marketing-08.jpg"
+                                    style="width:100%" onclick="currentSlide(7)">
+                            </div>
+                            <div>
+                                <img src="https://www.logaworld.com/pub/media/catalog/product/cache/c6de907dadf40ef7ba5b58639aac49e6/r/a/ravana_marketing-09.jpg"
+                                    style="width:100%" onclick="currentSlide(8)">
+                            </div>
+                            <div>
+                                <img src="https://www.logaworld.com/pub/media/catalog/product/cache/c6de907dadf40ef7ba5b58639aac49e6/r/a/ravana_marketing-10.jpg"
+                                    style="width:100%" onclick="currentSlide(9)">
+                            </div>
+
+                            <button id="prev">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path fill="none" d="M0 0h24v24H0V0z" />
+                                    <path d="M15.61 7.41L14.2 6l-6 6 6 6 1.41-1.41L11.03 12l4.58-4.59z" />
+                                </svg>
+                            </button>
+                            <button id="next">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path fill="none" d="M0 0h24v24H0V0z" />
+                                    <path d="M10.02 6L8.61 7.41 13.19 12l-4.58 4.59L10.02 18l6-6-6-6z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -395,7 +460,35 @@
                 this.className += " active";
             });
         }
+        const gap = 16;
 
+        const carousel = document.getElementById("carousel"),
+            content = document.getElementById("content"),
+            next = document.getElementById("next"),
+            prev = document.getElementById("prev");
+
+        next.addEventListener("click", e => {
+            carousel.scrollBy(width + gap, 0);
+            if (carousel.scrollWidth !== 0) {
+                prev.style.display = "flex";
+            }
+            if (content.scrollWidth - width - gap <= carousel.scrollLeft + width) {
+                next.style.display = "none";
+            }
+        });
+        prev.addEventListener("click", e => {
+            carousel.scrollBy(-(width + gap), 0);
+            if (carousel.scrollLeft - width - gap <= 0) {
+                prev.style.display = "none";
+            }
+            if (!content.scrollWidth - width - gap <= carousel.scrollLeft + width) {
+                next.style.display = "flex";
+            }
+        });
+
+        let width = carousel.offsetWidth;
+        window.addEventListener("resize", e => (width = carousel.offsetWidth));
+    
     </script>
 
 </body>
