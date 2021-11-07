@@ -3,7 +3,7 @@ h3,h5{
     font-family: "Prompt", arial, tahoma;
 }
 h5{
-    font-size: 1vw;
+    font-size: 0.9vw;
     color: #333;
 }
 #newprod,h3{
@@ -127,6 +127,30 @@ input[type=button], input[type=submit], input[type=reset] {
 #footer-info:hover{
     color: #AE0496;
 }
+
+#newprod{
+  font-size: 100%;
+  margin-bottom: 0.5%;
+
+  
+  transition: 0.5s;
+  font-family: "Prompt", arial, tahoma;
+  
+  
+}
+#newprod:hover{
+  color: #AE0496;
+}
+#newprod2{
+  font-size: 150%;
+  margin-bottom: 0.5%;
+  font-weight: 500;
+  
+  transition: 0.5s;
+  font-family: "Prompt", arial, tahoma;
+  
+  
+}
 #footer-info2{
     font-size: 70%;
     margin-bottom: 0.5%;
@@ -231,4 +255,18 @@ transform: translateX(-40%);
 }
 .carousel-control-next{
 transform: translateX(40%);
+}
+#addtocart{
+  width: 100%;
+  padding: 5%;
+  background-color: #AE0496;
+  color:#ffffff;
+    border: solid;
+    border-width: 1px;
+    border-color: #AE0496;
+    transition: 0.5s;
+}
+#addtocart:hover{
+  background-color: #383838;
+  border-color: #383838;
 }
