@@ -270,3 +270,43 @@ transform: translateX(40%);
   background-color: #383838;
   border-color: #383838;
 }
+.centered {
+  position: absolute;
+  top:16%;
+  left: 0%;
+
+}
+
+.more::before {
+  content: ">";
+  padding-left: 20px;
+  padding-right: 20px;
+
+}
+.table {
+  cursor: pointer;
+}
+
+.table:hover {
+  color: purple;
+}
+#home{
+  color: #000;
+  transition: 0.5s;
+}
+#home:hover{
+  color: #AE0496;
+}
+.quotation-mark{
+
+margin-top: -10px;
+font-weight: bold;
+font-size:100px;
+color:rgb(0, 0, 0);
+
+
+
+}
+blockquote{
+background-color: rgb(240, 240, 240);
+}
