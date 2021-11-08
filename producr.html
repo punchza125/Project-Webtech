@@ -4,12 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>loga</title>
+    <title>LOGA RAVANA : 2.4GHz wireless Mechanical keyboard</title>
     <script src="https://kit.fontawesome.com/de3473a09c.js" crossorigin="anonymous"></script>
     <!--bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -20,6 +15,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
+    <!--icon-->
+    <link rel="icon" href="logo_loga.png" type="image/x-icon">
 
     <!--Font-->
 
@@ -44,6 +41,9 @@
             padding-right: 20px;
         }
 
+        .more2::after{
+            content: ":";
+        }
         .rpic:after {
             content: "";
             display: table;
@@ -169,13 +169,61 @@
         }
 
         .nbar:hover {
-            border-bottom: solid 2px purple;
+            border-bottom: solid 2px #9A258F;
             font-weight: 800;
         }
 
         a.active {
-            border-bottom: solid 2px purple;
+            border-bottom: solid 2px #9A258F;
             font-weight: 800;
+        }
+
+        .rc-anchor-center-container {
+            display: table;
+            height: 100%;
+        }
+
+        .rc-anchor-normal .rc-anchor-content {
+            height: 65px;
+            width: 206px;
+            float: left;
+        }
+
+        div.stars {
+            width: 260px;
+        }
+
+
+        input.star {
+            display: none
+        }
+
+        label.star {
+            cursor: pointer;
+            float: right;
+            padding: 10px;
+            font-size: 20px;
+            transition: all .2s
+        }
+
+        input.star:checked~label.star:before {
+            content: '\f005';
+            color: #FD4;
+            transition: all .25s
+        }
+
+
+        input.star-1:checked~label.star:before {
+            color: #F62
+        }
+
+        label.star:hover {
+            transform: rotate(-15deg) scale(1.3)
+        }
+
+        label.star:before {
+            content: '\f006';
+            font-family: FontAwesome
         }
     </style>
 
@@ -257,7 +305,8 @@
                 </div>
                 <br>
                 <br>
-                <span style="color: #696969;">ดาวน์โหลด LOGA RAVANA ซอฟต์แวร์ได้<a href=""
+                <span style="color: #696969;">ดาวน์โหลด LOGA RAVANA ซอฟต์แวร์ได้<a
+                        href="https://drive.google.com/file/d/15o-oYUeW2abrP-nwuLyQdocLO87Ojc8S/view"
                         style="color: #9A258F;">ที่นี่</a><br></span><br>
                 <br>
                 <br>
@@ -343,15 +392,15 @@
 
         <div id="clicks">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <ul class="nav nav-tabs" id="myTab" role="tablist">
-                    <li class="nav-item nbar" role="presentation"> <a class="nav-link active" id="home-tab"
-                            data-bs-toggle="tab" href="#home" role="tab" aria-controls="home"
+                <ul class="nav" id="myTab" role="tablist" style="border-bottom: 1px solid #ccc; width: 1700px;">
+                    <li class="nav-item nbar" role="presentation"> <a class="nav-link active" style="color: black;"
+                            id="home-tab" data-bs-toggle="tab" href="#home" role="tab" aria-controls="home"
                             aria-selected="true">Details</a> </li>
-                    <li class="nav-item nbar" role="presentation"> <a class="nav-link" id="profile-tab"
-                            data-bs-toggle="tab" href="#profile" role="tab" aria-controls="profile"
+                    <li class="nav-item nbar" role="presentation"> <a class="nav-link" style="color: black;"
+                            id="profile-tab" data-bs-toggle="tab" href="#profile" role="tab" aria-controls="profile"
                             aria-selected="false">More Information</a> </li>
-                    <li class="nav-item nbar" role="presentation"> <a class="nav-link" id="contact-tab"
-                            data-bs-toggle="tab" href="#contact" role="tab" aria-controls="contact"
+                    <li class="nav-item nbar" role="presentation"> <a class="nav-link" style="color: black;"
+                            id="contact-tab" data-bs-toggle="tab" href="#contact" role="tab" aria-controls="contact"
                             aria-selected="false">Reviews</a> </li>
                 </ul>
             </nav>
@@ -400,13 +449,110 @@
                     ระหว่างการชาร์จ Battery จะมีไฟแสดงเตือนตรงกลาง และจะดับอัตโนมัติเมื่อเต็ม<br>
                     เมื่อแบตเตอรี่ใกล้หมดจะสัญญาณไฟกระพริบเตือนที่ปุ่ม FN<br><br>
                     *คำเตือน เครื่อง console ใช้ได้แค่โหมดสายเท่านั้น<br><br>
-                    <button type="button" class="btn btn-light btn-lg" style="background-color: purple; color: white; font-size: 14px"><i class="fa fa-download" aria-hidden="true"></i>
-                        ดาวน์โหลดซอฟท์แวร์</button>
-                        <br>
-                        <br>
+                    <button type="button" class="btn btn-light btn-lg"
+                        style="background-color: #9A258F; color: white; font-size: 14px"><i class="fa fa-download"
+                            aria-hidden="true"></i>
+                        <a href="https://drive.google.com/file/d/15o-oYUeW2abrP-nwuLyQdocLO87Ojc8S/view"
+                            style="color: white; text-decoration: none;">ดาวน์โหลดซอฟท์แวร์</a>
+                    </button>
+                    <br>
+                    <br>
                 </div>
-                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">4.</div>
-                <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">.5.</div>
+
+                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <td>ขนาด</td>
+                                <td>96%</td>
+                            </tr>
+                            <tr>
+                                <td>สี</td>
+                                <td>White</td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+                <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                    <div class="col-12">
+                        <p style="border-bottom: 1px solid #ccc; display: block; width: 900px;">เขียนรีวิวของคุณเอง</p>
+                        <div class="rc-anchor rc-anchor-normal rc-anchor-light">
+                            <div class="rc-anchor-content">
+                                <div class="rc-inline-block">
+                                    <div class="rc-anchor-center-container">
+                                        <div class="col-12">
+                                            <label class="rc-anchor-center-item rc-anchor-checkbox-label"
+                                                id="recaptcha-anchor-label"
+                                                style="color: white; background-color: #007bff; padding: 0 0 0 70px;">ปกป้องโดย
+                                                reCAPTCHA
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="rc-anchor-normal-footer">
+                                <img src="google.jpg" style="width: 80px; height: auto;">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="col-12">
+                            <p style="border-bottom: 1px solid #ccc; display: block; width: 900px;">
+                                <b>คุณกำลังรีวิว:LOGA RAVANA : 2.4GHz wireless Mechanical keyboard</b>
+                            </p>
+                        </div>
+                        <div class="col-12">
+                            <div class="stars">
+                                <form action=""> <input class="star star-5" id="star-5" type="radio" name="star" />
+                                    <label class="star star-5" for="star-5"></label> <input class="star star-4"
+                                        id="star-4" type="radio" name="star" /> <label class="star star-4"
+                                        for="star-4"></label> <input class="star star-3" id="star-3" type="radio"
+                                        name="star" /> <label class="star star-3" for="star-3"></label> <input
+                                        class="star star-2" id="star-2" type="radio" name="star" /> <label
+                                        class="star star-2" for="star-2"></label> <input class="star star-1" id="star-1"
+                                        type="radio" name="star" /> <label class="star star-1" for="star-1">
+                                    </label>
+                                    <p class="more2" style="font-size:16px; cursor: pointer;">คุณภาพ</p>
+                                </form>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="col-12">
+                            <div class="stars">
+                                <form action=""> <input class="star star-5" id="star-50" type="radio" name="star" />
+                                    <label class="star star-5" for="star-50"></label> <input class="star star-4"
+                                        id="star-40" type="radio" name="star" /> <label class="star star-4"
+                                        for="star-40"></label> <input class="star star-3" id="star-30" type="radio"
+                                        name="star" /> <label class="star star-3" for="star-30"></label> <input
+                                        class="star star-2" id="star-20" type="radio" name="star" /> <label
+                                        class="star star-2" for="star-20"></label> <input class="star star-1" id="star-10"
+                                        type="radio" name="star" /> <label class="star star-1" for="star-10">
+                                    </label>
+                                    <p class="more2" style="font-size:16px; cursor: pointer;">ราคา</p>
+                                </form>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="col-12">
+                            <div class="stars">
+                                <form action=""> <input class="star star-5" id="star-500" type="radio" name="star" />
+                                    <label class="star star-5" for="star-500"></label> <input class="star star-4"
+                                        id="star-400" type="radio" name="star" /> <label class="star star-4"
+                                        for="star-400"></label> <input class="star star-3" id="star-300" type="radio"
+                                        name="star" /> <label class="star star-3" for="star-300"></label> <input
+                                        class="star star-2" id="star-200" type="radio" name="star" /> <label
+                                        class="star star-2" for="star-200"></label> <input class="star star-1" id="star-100"
+                                        type="radio" name="star" /> <label class="star star-1" for="star-100">
+                                    </label>
+                                    <p class="more2" style="font-size:16px; cursor: pointer;">คุ้มค่า</p>
+                                </form>
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -488,7 +634,7 @@
 
         let width = carousel.offsetWidth;
         window.addEventListener("resize", e => (width = carousel.offsetWidth));
-    
+
     </script>
 
 </body>
