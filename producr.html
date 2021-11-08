@@ -41,9 +41,15 @@
             padding-right: 20px;
         }
 
-        .more2::after{
+        .more2::after {
             content: ":";
         }
+
+        .more3::after {
+            content: "*";
+            color: red;
+        }
+
         .rpic:after {
             content: "";
             display: table;
@@ -189,10 +195,24 @@
             float: left;
         }
 
+        .cart:hover {
+            background-color: #343a40;
+            color: white;
+        }
+
+        .cart {
+            background-color: #9A258F;
+            color: white;
+            font-size: 14px;
+            font-weight: 400;
+            border-radius: 3px;
+            width: 15%;
+            height: 35px;
+        }
+
         div.stars {
             width: 260px;
         }
-
 
         input.star {
             display: none
@@ -201,7 +221,7 @@
         label.star {
             cursor: pointer;
             float: right;
-            padding: 10px;
+            padding: 3px;
             font-size: 20px;
             transition: all .2s
         }
@@ -518,7 +538,6 @@
                                 </form>
                             </div>
                         </div>
-                        <br>
                         <div class="col-12">
                             <div class="stars">
                                 <form action=""> <input class="star star-5" id="star-50" type="radio" name="star" />
@@ -527,14 +546,15 @@
                                         for="star-40"></label> <input class="star star-3" id="star-30" type="radio"
                                         name="star" /> <label class="star star-3" for="star-30"></label> <input
                                         class="star star-2" id="star-20" type="radio" name="star" /> <label
-                                        class="star star-2" for="star-20"></label> <input class="star star-1" id="star-10"
-                                        type="radio" name="star" /> <label class="star star-1" for="star-10">
+                                        class="star star-2" for="star-20"></label> <input class="star star-1"
+                                        id="star-10" type="radio" name="star" /> <label class="star star-1"
+                                        for="star-10">
                                     </label>
                                     <p class="more2" style="font-size:16px; cursor: pointer;">ราคา</p>
                                 </form>
                             </div>
                         </div>
-                        <br>
+
                         <div class="col-12">
                             <div class="stars">
                                 <form action=""> <input class="star star-5" id="star-500" type="radio" name="star" />
@@ -543,14 +563,45 @@
                                         for="star-400"></label> <input class="star star-3" id="star-300" type="radio"
                                         name="star" /> <label class="star star-3" for="star-300"></label> <input
                                         class="star star-2" id="star-200" type="radio" name="star" /> <label
-                                        class="star star-2" for="star-200"></label> <input class="star star-1" id="star-100"
-                                        type="radio" name="star" /> <label class="star star-1" for="star-100">
+                                        class="star star-2" for="star-200"></label> <input class="star star-1"
+                                        id="star-100" type="radio" name="star" /> <label class="star star-1"
+                                        for="star-100">
                                     </label>
                                     <p class="more2" style="font-size:16px; cursor: pointer;">คุ้มค่า</p>
                                 </form>
                             </div>
                         </div>
                         <br>
+                        <form class="row needs-validation" novalidate>
+                            <div class="col-md-6">
+                                <label for="validationCustom01" class="form-label more3"><b>ชื่อเล่น</b></label>
+                                <input type="text" class="form-control-plaintext" id="validationCustom01" value=""
+                                    placeholder="ชื่อเล่น" required><br>
+                                <div class="invalid-feedback">
+                                    ฟิลด์นี้จำเป็น
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="validationCustom02" class="form-label more3"><b>สรุป</b></label>
+                                <input type="text" class="form-control-plaintext" id="validationCustom02" value=""
+                                    placeholder="สรุป" required><br>
+                                <div class="invalid-feedback">
+                                    ฟิลด์นี้จำเป็น
+                                </div>
+                            </div>
+                            <div class="col-12 ">
+                                <label for="validationCustom02" class="form-label more3"><b>รีวิว</b></label>
+                                <input type="text" placeholder="รีวิว" style="height: 100px;"
+                                    class="form-control-plaintext" id="validationCustom02" value="" required><br>
+                                <div class="invalid-feedback">
+                                    ฟิลด์นี้จำเป็น
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <button class="btn cart" type="submit">ยืนยันรีวิว</button>
+                            </div>
+
+                        </form>
                     </div>
                 </div>
             </div>
@@ -635,6 +686,21 @@
         let width = carousel.offsetWidth;
         window.addEventListener("resize", e => (width = carousel.offsetWidth));
 
+        (() => {
+            'use strict';
+
+            const forms = document.querySelectorAll('.needs-validation');
+
+            Array.prototype.slice.call(forms).forEach((form) => {
+                form.addEventListener('submit', (event) => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        })();
     </script>
 
 </body>
