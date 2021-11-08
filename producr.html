@@ -63,7 +63,7 @@
 
         #content {
             display: grid;
-            grid-gap: 16px;
+            grid-gap: 20px;
             grid-auto-flow: column;
             margin: auto;
             box-sizing: border-box;
@@ -71,6 +71,7 @@
 
         #wrapper {
             position: relative;
+            width: 100%;
         }
 
         #carousel {
@@ -83,18 +84,25 @@
             height: 0;
         }
 
+        .item {
+            width: 90px;
+            height: 90px;
+        }
+
         #prev {
             display: flex;
             justify-content: center;
             align-content: center;
-            background: #4440404d;
+            background: #FFFFFF4D;
             border: none;
             padding: 5px;
+            padding-top: 39px;
+            padding-bottom: 39px;
             outline: 0;
             cursor: pointer;
             position: absolute;
             top: 50%;
-            left: 0;
+            left: -17;
             transform: translate(50%, -50%);
             display: none;
 
@@ -104,14 +112,16 @@
             display: flex;
             justify-content: center;
             align-content: center;
-            background: #4440404d;
+            background: #FFFFFF4D;
             border: none;
             padding: 5px;
+            padding-top: 39px;
+            padding-bottom: 39px;
             outline: 0;
             cursor: pointer;
             position: absolute;
             top: 50%;
-            right: 0;
+            right: -17;
             transform: translate(-50%, -50%);
 
         }
@@ -119,9 +129,11 @@
         .prev1 {
             cursor: pointer;
             position: absolute;
-            top: 40%;
+            top: 0%;
             width: 80px;
             padding: 40px;
+            padding-top: 320px;
+            padding-bottom: 275px;
             color: #333333;
             font-weight: bold;
             font-size: 18px;
@@ -134,9 +146,11 @@
         .next1 {
             cursor: pointer;
             position: absolute;
-            top: 40%;
+            top: 0%;
             width: 80px;
             padding: 40px;
+            padding-top: 320px;
+            padding-bottom: 275px;
             color: #333333;
             font-weight: bold;
             font-size: 18px;
@@ -147,7 +161,7 @@
         }
 
         .next1 {
-            right: 0;
+            right: 12;
             border-radius: 3px 0 0 3px;
         }
 
@@ -354,39 +368,39 @@
                         <div id="content">
                             <div>
                                 <img src="https://www.logaworld.com/pub/media/catalog/product/cache/c6de907dadf40ef7ba5b58639aac49e6/r/a/ravana_marketing-02.jpg"
-                                    style="width:100%" onclick="currentSlide(1)">
+                                    class="item" onclick="currentSlide(1)">
                             </div>
                             <div>
                                 <img src="https://www.logaworld.com/pub/media/catalog/product/cache/c6de907dadf40ef7ba5b58639aac49e6/r/a/ravana_marketing-03.jpg"
-                                    style="width:100%" onclick="currentSlide(2)">
+                                    class="item" onclick="currentSlide(2)">
                             </div>
                             <div>
                                 <img src="https://www.logaworld.com/pub/media/catalog/product/cache/c6de907dadf40ef7ba5b58639aac49e6/r/a/ravana_marketing-04.jpg"
-                                    style="width:100%" onclick="currentSlide(3)">
+                                    class="item" onclick="currentSlide(3)">
                             </div>
                             <div>
                                 <img src="https://www.logaworld.com/pub/media/catalog/product/cache/c6de907dadf40ef7ba5b58639aac49e6/r/a/ravana_marketing-05.jpg"
-                                    style="width:100%" onclick="currentSlide(4)">
+                                    class="item" onclick="currentSlide(4)">
                             </div>
                             <div>
                                 <img src="https://www.logaworld.com/pub/media/catalog/product/cache/c6de907dadf40ef7ba5b58639aac49e6/r/a/ravana_marketing-06.jpg"
-                                    style="width:100%" onclick="currentSlide(5)">
+                                    class="item" onclick="currentSlide(5)">
                             </div>
                             <div>
                                 <img src="https://www.logaworld.com/pub/media/catalog/product/cache/c6de907dadf40ef7ba5b58639aac49e6/r/a/ravana_marketing-07.jpg"
-                                    style="width:100%" onclick="currentSlide(6)">
+                                    class="item" onclick="currentSlide(6)">
                             </div>
                             <div>
                                 <img src="https://www.logaworld.com/pub/media/catalog/product/cache/c6de907dadf40ef7ba5b58639aac49e6/r/a/ravana_marketing-08.jpg"
-                                    style="width:100%" onclick="currentSlide(7)">
+                                    class="item" onclick="currentSlide(7)">
                             </div>
                             <div>
                                 <img src="https://www.logaworld.com/pub/media/catalog/product/cache/c6de907dadf40ef7ba5b58639aac49e6/r/a/ravana_marketing-09.jpg"
-                                    style="width:100%" onclick="currentSlide(8)">
+                                    class="item" onclick="currentSlide(8)">
                             </div>
                             <div>
                                 <img src="https://www.logaworld.com/pub/media/catalog/product/cache/c6de907dadf40ef7ba5b58639aac49e6/r/a/ravana_marketing-10.jpg"
-                                    style="width:100%" onclick="currentSlide(9)">
+                                    class="item" onclick="currentSlide(9)">
                             </div>
 
                             <button id="prev">
