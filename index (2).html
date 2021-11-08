@@ -4,16 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>loga</title>
-    <script src="https://kit.fontawesome.com/de3473a09c.js" crossorigin="anonymous"></script> 
+    <title>สินค้า</title>
+    <script src="https://kit.fontawesome.com/de3473a09c.js" crossorigin="anonymous"></script>
     <!--bootstrap-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
+    <!--icon-->
+    <link rel="icon" href="logo_loga.png" type="image/x-icon">
 
-    
+    <!--jquery-->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <!--Font-->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,12 +33,14 @@
         body {
             font-family: 'Prompt', sans-serif;
         }
-        h4{
-            border-bottom: 2px solid #9a258e; 
+
+        h4 {
+            border-bottom: 2px solid #9a258e;
             font-size: 20px;
             margin-left: 19px;
             width: 95px;
         }
+
         .topnav {
             overflow: hidden;
             background-color: white;
@@ -197,7 +208,72 @@
         .table:hover {
             color: purple;
         }
-        
+
+        .value {
+            position: absolute;
+            top: 30px;
+            left: 50%;
+            margin: 0 0 0 -20px;
+            width: 40px;
+            text-align: center;
+            font-weight: normal;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .price-range-both.value {
+            width: 100px;
+            margin: 0 0 0 -50px;
+            top: 20px;
+        }
+
+        .price-range-both {
+            display: none;
+
+        }
+
+        .value i {
+            font-style: normal;
+        }
+
+        #myBtn {
+            display: none;
+            position: fixed;
+            bottom: 10px;
+            right: 20px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: rgb(255, 255, 255);
+            color: #AE0496;
+            cursor: pointer;
+            border: solid 1px black;
+            padding-left: 9px;
+            padding-right: 9px;
+            transition: 0.5s;
+            animation: slidein 0.2s forwards;
+        }
+
+        #myBtn:hover {
+            background-color: #000000;
+            color: #ffffff;
+        }
+
+        @keyframes slidein {
+            from {
+                bottom: 0px;
+            }
+
+            to {
+                bottom: 20px;
+            }
+        }
+
+
+        #myBtn:hover {
+            background-color: #555;
+        }
     </style>
 </head>
 
@@ -228,11 +304,12 @@
         <div class="centered">สินค้า</div> -->
     </div>
     <!-- main--->
-    <div class="container" >
-            <p style="font-size:12px; display: inline;"><a href="" style="text-decoration: none; color: black;">หน้าแรก</a></p>
-            <p class="more" style="font-size:12px; color: black; display: inline;">สินค้า</p>
+    <div class="container">
+        <p style="font-size:12px; display: inline;"><a href="" style="text-decoration: none; color: black;">หน้าแรก</a>
+        </p>
+        <p class="more" style="font-size:12px; color: black; display: inline;">สินค้า</p>
 
-        </div>
+    </div>
     </div>
 
     <div class="container">
@@ -240,16 +317,18 @@
             <div class="col-md-3">
                 <h4>กรองข้อมูล</h4>
                 <div class="card" style="border-top: none; border-left: none; border-right: none; cursor: pointer;">
-                    
+
                     <header class="card-header " style="border: none; background-color: white; padding-left: 0px;">
-                        <a data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-current="false">
+                        <a data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false"
+                            aria-current="false">
                             <h6 class="txt" style="font-weight: bold; font-size: 14px; color: #222222;">ประเภท</h6>
                         </a>
                     </header>
                     <div class="collapse show" id="collapse1">
-                        <div class="card-body " style="margin-top: -25px; font-size: 14px; color: #333333; padding-left: 0px;">
+                        <div class="card-body "
+                            style="margin-top: -25px; font-size: 14px; color: #333333; padding-left: 0px;">
                             <div class="form-check ">
-                                <input class="form-check-input  " style="cursor:pointer" type="checkbox">
+                                <input class="form-check-input" style="cursor:pointer" type="checkbox">
                                 <label class="table" style="margin-bottom: 6px;">คอลเลคชั่นใหม่</label>
                             </div>
                             <div class="form-check">
@@ -277,12 +356,14 @@
                 </div>
                 <div class="card" style="border-top: none; border-left: none; border-right: none; cursor: pointer;">
                     <header class="card-header " style="border: none; background-color: white; padding-left: 0px;">
-                        <a data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-current="false">
+                        <a data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false"
+                            aria-current="false">
                             <h6 class="txt" style="font-weight: bold; font-size: 14px; color: #222222;">รูปทรง</h6>
                         </a>
                     </header>
                     <div class="collapse show" id="collapse2">
-                        <div class="card-body" style="margin-top: -25px; font-size: 14px; color: #333333; padding-left: 0px;">
+                        <div class="card-body"
+                            style="margin-top: -25px; font-size: 14px; color: #333333; padding-left: 0px;">
                             <div class="form-check">
                                 <input class="form-check-input" style="cursor:pointer" type="checkbox">
                                 <label class="table">Ambidexterous</label>
@@ -292,12 +373,14 @@
                 </div>
                 <div class="card" style="border-top: none; border-left: none; border-right: none; cursor: pointer;">
                     <header class="card-header " style="border: none; background-color: white; padding-left: 0px;">
-                        <a data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-current="false">
+                        <a data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false"
+                            aria-current="false">
                             <h6 class="txt" style="font-weight: bold; font-size: 14px; color: #222222;">เชื่อมต่อ</h6>
                         </a>
                     </header>
                     <div class="collapse show" id="collapse3">
-                        <div class="card-body" style="margin-top: -25px; font-size: 14px; color: #333333; padding-left: 0px;">
+                        <div class="card-body"
+                            style="margin-top: -25px; font-size: 14px; color: #333333; padding-left: 0px;">
                             <div class="form-check">
                                 <input class="form-check-input" style="cursor:pointer" type="checkbox">
                                 <label class="table">Wireless</label>
@@ -307,12 +390,14 @@
                 </div>
                 <div class="card" style="border-top: none; border-left: none; border-right: none; cursor: pointer;">
                     <header class="card-header " style="border: none; background-color: white; padding-left: 0px;">
-                        <a data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-current="false">
+                        <a data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false"
+                            aria-current="false">
                             <h6 class="txt" style="font-weight: bold; font-size: 14px; color: #222222;">ชนิด</h6>
                         </a>
                     </header>
                     <div class="collapse show" id="collapse4">
-                        <div class="card-body" style="margin-top: -25px; font-size: 14px; color: #333333; padding-left: 0px;">
+                        <div class="card-body"
+                            style="margin-top: -25px; font-size: 14px; color: #333333; padding-left: 0px;">
                             <div class="form-check">
                                 <input class="form-check-input" style="cursor:pointer" type="checkbox">
                                 <label class="table" style="margin-bottom: 6px;">None-Waterproof</label>
@@ -330,12 +415,14 @@
                 </div>
                 <div class="card" style="border-top: none; border-left: none; border-right: none; cursor: pointer;">
                     <header class="card-header " style="border: none; background-color: white; padding-left: 0px;">
-                        <a data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-current="false">
+                        <a data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false"
+                            aria-current="false">
                             <h6 class="txt" style="font-weight: bold; font-size: 14px; color: #222222;">คอลเลคชั่น</h6>
                         </a>
                     </header>
                     <div class="collapse show" id="collapse5">
-                        <div class="card-body" style="margin-top: -25px; font-size: 14px; color: #333333; padding-left: 0px;">
+                        <div class="card-body"
+                            style="margin-top: -25px; font-size: 14px; color: #333333; padding-left: 0px;">
                             <div class="form-check">
                                 <input class="form-check-input" style="cursor:pointer" type="checkbox">
                                 <label class="table" style="margin-bottom: 6px;">Mice</label>
@@ -357,7 +444,8 @@
                 </div>
                 <div class="card" style="border-top: none; border-left: none; border-right: none; cursor: pointer;">
                     <header class="card-header " style="border: none; background-color: white; padding-left: 0px;">
-                        <a data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="false" aria-current="false">
+                        <a data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="false"
+                            aria-current="false">
                             <h6 class="txt" style="font-weight: bold; font-size: 14px; color: #222222;">ขนาด</h6>
                         </a>
                     </header>
@@ -382,7 +470,8 @@
                 </div>
                 <div class="card" style="border-top: none; border-left: none; border-right: none; cursor: pointer;">
                     <header class="card-header " style="border: none; background-color: white; padding-left: 0px;">
-                        <a data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="false" aria-current="false">
+                        <a data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="false"
+                            aria-current="false">
                             <h6 class="txt" style="font-weight: bold; font-size: 14px; color: #222222;">สี</h6>
                         </a>
                     </header>
@@ -402,22 +491,14 @@
 
                 <header class="card-header " style="border: none; background-color: white; padding-left: 0px;">
                     <a data-bs-toggle="collapse" data-bs-target="#collapse8" aria-expanded="false" aria-current="false">
-                        <h6 class="txt" style="cursor:pointer; font-weight: bold; font-size: 14px; color: #222222;">ราคา</h6>
+                        <h6 class="txt" style="cursor:pointer; font-weight: bold; font-size: 14px; color: #222222;">ราคา
+                        </h6>
+                        <br>
                     </a>
                 </header>
                 <div class="collapse show" id="collapse8">
                     <div class="card-body" style="margin-top: -25px; font-size: 14px; padding-left: 0px;">
-                        <div class="form-check">
-                            <input type="range" class="form-range" id="customRange1">
-                            <div class="form-row">
-                                <div class="form-group col-md-3">
-                                    <label>฿0</label>
-                                </div>
-                                <div class="form-group text-right col-md-3">
-                                    <label>฿3490</label>
-                                </div>
-                            </div>
-                        </div>
+                        <div id="slider"></div>
                     </div>
                 </div>
             </div>
@@ -752,7 +833,9 @@
                             </div>
                         </div>
                         <div class="row">
-
+                            <div class="col">
+                                <a href="#" class="btn cart">เพิ่มไปยังตะกร้า</a>
+                            </div>
                         </div>
                     </div>
 
@@ -770,11 +853,13 @@
                 <div class="container"></div>
             </div>
         </div>
+        <button onclick="topFunction()" id="myBtn"><i class="fas fa-angle-up"></i></button>
     </div>
 </body>
 <script>
-    $(function () {
-        $('[data-toggle="tooltip"]').tooltip()
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
     })
 
     function kirinproductblack() {
@@ -783,5 +868,71 @@
     function kirinproductwhite() {
         document.getElementById("kirin-product").src = "https://www.logaworld.com/pub/media/catalog/product/cache/d6f018367e77d13c90a5944d1e9d6db5/k/i/kirin_white.jpg";
     }
-    
+
+    function collision($div1, $div2) {
+        var x1 = $div1.offset().left;
+        var w1 = 48;
+        var r1 = x1 + w1;
+        var x2 = $div2.offset().left;
+        var w2 = 48;
+        var r2 = x2 + w2;
+
+        if (r1 < x2 || x1 > r2) return false;
+        return true;
+
+    }
+    $('#slider').slider({
+        range: true,
+        min: 0,
+        max: 3490,
+        values: [0, 3490],
+        slide: function (event, ui) {
+
+            $('.ui-slider-handle:eq(0) .price-range-min').html('฿' + ui.values[0]);
+            $('.ui-slider-handle:eq(1) .price-range-max').html('฿' + ui.values[1]);
+            $('.price-range-both').html('<i>฿' + ui.values[0] + ' - </i>฿' + ui.values[1]);
+
+            if (ui.values[0] == ui.values[1]) {
+                $('.price-range-both i').css('display', 'none');
+            } else {
+                $('.price-range-both i').css('display', 'inline');
+            }
+
+            if (collision($('.price-range-min'), $('.price-range-max')) == true) {
+                $('.price-range-min, .price-range-max').css('opacity', '0');
+                $('.price-range-both').css('display', 'block');
+            } else {
+                $('.price-range-min, .price-range-max').css('opacity', '1');
+                $('.price-range-both').css('display', 'none');
+            }
+
+        }
+    });
+
+    $('.ui-slider-range').append('<span class="price-range-both value"><i>$' + $('#slider').slider('values', 0) + ' - </i>' + $('#slider').slider('values', 1) + '</span>');
+
+    $('.ui-slider-handle:eq(0)').append('<span class="price-range-min value">$' + $('#slider').slider('values', 0) + '</span>');
+
+    $('.ui-slider-handle:eq(1)').append('<span class="price-range-max value">$' + $('#slider').slider('values', 1) + '</span>');
+
+    var mybutton = document.getElementById("myBtn");
+
+
+    window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+
+        } else {
+            mybutton.style.display = "none";
+        }
+
+    }
+
+
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
 </script>
