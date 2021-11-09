@@ -164,6 +164,16 @@ input[type=button], input[type=submit], input[type=reset] {
 #footer-info2:hover{
     color: #AE0496;
 }
+#footer-info3{
+    font-size: 70%;
+    margin-bottom: 0.5%;
+
+    padding-left: 23%;
+    transition: 0.5s;
+    font-family: "Prompt", arial, tahoma;
+    
+    
+}
 #social{
     transition: 0.3s;
     padding: 0%;
@@ -202,10 +212,7 @@ input[type=button], input[type=submit], input[type=reset] {
     from {bottom: 0px;}
     to {bottom: 20px;}
   }
-  @keyframes slideout{
-    from {bottom: 30px;}
-    to {bottom: 0px;}
-  }
+ 
   
   #myBtn:hover {
     background-color: #555;
@@ -267,6 +274,13 @@ transform: translateX(40%);
     transition: 0.5s;
 }
 #addtocart:hover{
+  background-color: #383838;
+  border-color: #383838;
+}
+.subbutton{
+  transition: 0.5s;
+}
+.subbutton:hover{
   background-color: #383838;
   border-color: #383838;
 }
