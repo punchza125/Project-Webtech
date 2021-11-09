@@ -27,6 +27,7 @@
     <style>
         body {
             font-family: 'Prompt', sans-serif;
+            
         }
 
         .container {
@@ -166,6 +167,36 @@
             height: 35px;
         }
 
+        .cart2:hover {
+            background-color: #343a40;
+            color: white;
+        }
+
+        .cart2 {
+            background-color: #9A258F;
+            color: white;
+            font-size: 16px;
+            font-weight: 400;
+            border-radius: 3px;
+            width: 100%;
+            height: 40px;
+        }
+
+        .cart3:hover {
+            background-color: #343a40;
+            color: white;
+        }
+
+        .cart3 {
+            border: solid 1px #9A258F;
+            color: #9A258F;
+            font-size: 16px;
+            font-weight: 400;
+            border-radius: 3px;
+            width: 70%;
+            height: 40px;
+        }
+
         div.stars {
             width: 260px;
         }
@@ -201,6 +232,53 @@
             content: '\f006';
             font-family: FontAwesome
         }
+
+        .input-number {
+            width: 80px;
+            padding: 0 12px;
+            vertical-align: top;
+            text-align: center;
+            outline: none;
+        }
+
+
+        .input-number,
+        .input-number-decrement,
+        .input-number-increment {
+            border: 1px solid #ccc;
+            height: 40px;
+            user-select: none;
+        }
+
+
+        .input-number-decrement,
+        .input-number-increment {
+            display: inline-block;
+            width: 30px;
+            line-height: 38px;
+            background: #f1f1f1;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .input-number-decrement {
+            border-right: none;
+        }
+
+        .input-number-increment {
+            border-left: none;
+        }
+
+        .fa-heart{
+            color: #9A258F;
+            cursor: pointer;
+        }
+
+        .fa-random{
+            color: #9A258F;
+            cursor: pointer;
+        }
+
     </style>
 
 </head>
@@ -220,24 +298,19 @@
             <div class="col-md-6 slideshow">
                 <div class="apic" onmouseover="mouseOver()" onmouseout="mouseOut()">
                     <div class="pic">
-                        <img src="mc1.jpg"
-                            style="width: 100%;">
+                        <img src="mc1.jpg" style="width: 100%;">
                     </div>
                     <div class="pic">
-                        <img src="mc2.jpg"
-                            style="width: 100%;">
+                        <img src="mc2.jpg" style="width: 100%;">
                     </div>
                     <div class="pic">
-                        <img src="mc3.jpg"
-                            style="width: 100%;">
+                        <img src="mc3.jpg" style="width: 100%;">
                     </div>
                     <div class="pic">
-                        <img src="mc4.jpg"
-                            style="width: 100%;">
+                        <img src="mc4.jpg" style="width: 100%;">
                     </div>
                     <div class="pic">
-                        <img src="mc5.jpg"
-                            style="width: 100%;">
+                        <img src="mc5.jpg" style="width: 100%;">
                     </div>
 
                 </div>
@@ -263,7 +336,39 @@
                 </div>
                 <br>
                 <br>
-                <span  style="color: #696969;"class="more3">Kirin cover set</span><br>
+                <span style="color: #696969;" class="more3"><b>Kirin cover set</b></span>
+                <br>
+                <br>
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>เลือกตัวเลือก</option>
+                    <option value="1">สีีฟ้า</option>
+                    <option value="2">สีเหลือง</option>
+                    <option value="3">เขียวมิ้นต์</option>
+                    <option value="3">ชมพู</option>
+                </select>
+                <br>
+                <br>
+                <p>จำนวน &nbsp<span class="input-number-decrement">–</span><input class="input-number" type="text"
+                        value="1" min="0" max=""><span class="input-number-increment">+</span>
+                </p>
+                <div class="row">
+                    <div class="col-3">
+                        <a href="#" class="btn cart2">เพิ่มไปตะกร้า</a>
+                    </div>
+                    <div class="col-3">
+                        <a href="#" class="btn cart3">ซื้อเลย</a>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-4">
+                        <i class="fa fa-heart" aria-hidden="true">&nbsp เพิ่มในรายการโปรด</i>
+                    </div>
+                    <div class="col-4">
+                        <i class="fas fa-random">&nbsp เพิ่มไปเปรียบเทียบ</i>
+                    </div>
+                </div>
+                <br>
                 <br>
                 <br>
                 <b><span>Share this product :</span></b>
@@ -289,24 +394,19 @@
                     <div id="carousel">
                         <div id="content">
                             <div>
-                                <img src="mc1.jpg"
-                                    class="item" onclick="currentSlide(1)">
+                                <img src="mc1.jpg" class="item" onclick="currentSlide(1)">
                             </div>
                             <div>
-                                <img src="mc2.jpg"
-                                    class="item" onclick="currentSlide(2)">
+                                <img src="mc2.jpg" class="item" onclick="currentSlide(2)">
                             </div>
                             <div>
-                                <img src="mc3.jpg"
-                                    class="item" onclick="currentSlide(3)">
+                                <img src="mc3.jpg" class="item" onclick="currentSlide(3)">
                             </div>
                             <div>
-                                <img src="mc4.jpg"
-                                    class="item" onclick="currentSlide(4)">
+                                <img src="mc4.jpg" class="item" onclick="currentSlide(4)">
                             </div>
                             <div>
-                                <img src="mc5.jpg"
-                                    class="item" onclick="currentSlide(5)">
+                                <img src="mc5.jpg" class="item" onclick="currentSlide(5)">
                             </div>
 
                         </div>
@@ -335,66 +435,26 @@
         </div>
         <div class="col-12">
             <div class="tab-content" id="myTabContent">
-                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                    LOGA Ravana<br><br>
-                    Keyboard 96 % ไร้สายแบบ 2.4GHz สำหรับการใช้งานที่หลากหลายรูปแบบ ทั้งเล่นเกมระดับโปร
-                    จนไปถึงการทำงานระดับมืออาชีพ ด้วยขนาดที่เล็กลงแต่ยังคงในส่วน numpad ไว้ ทำให้ผู้ที่ต้องใช้งานตรง
-                    numpad ใช้งานได้สะดวกยิ่งขึ้นโดยไม่เสียพื้นที่บนโต๊ะโดยไม่จำเป็น<br><br>Ravana มาพร้อม switch
-                    mechanical ของ Gateron และมีสัมผัสให้เลือกใช้ถึง 3 แบบ คือ Red Brown และ Blue<br><br>
-                    นอกจากนี้ ตัว socket สำหรับใส่ switch ยังเป็นแบบ hotswap อีกด้วย
-                    ทำให้คุณสามารถปรับแต่งสัมผัสได้ตามใจชอบมากขึ้น<br><br>Ravana มาพร้อมกับ keycap แบบ Double shot
-                    ซึงทำให้ตัวหนังสือไม่มีวันเลือนออกไปจาก keycap<br><br>ระบบ 2.4GHz ไร้ delayของ Ravana
-                    และระบบใช้สายสามารถกดสลับใช้อย่างรวดเร็วผ่านปุ่มลัด FN+Tab และยังสามารถสลับ Layout ระหว่าง Mac
-                    กับ
-                    windows ได้ด้วย (FN+A , FN+S)<br><br>LOGA RAVANA มีไฟ RGB ที่เปิดปิดได้ สามารถใช้งานได้กว่า 100
-                    ชม(ในตอนปิดไฟ RGB ในโหมดไร้สาย) และยังสามารถตั้งไฟ คีย์ลัดและมาโครผ่านทาง software ได้อีกด้วย
-                    (software ใช้ได้กับ windows และโหมดสายเท่านั้น สามารถตั้งค่าแล้วสลับไปใช้ในโหมดไร้สายได้ทันที
-                    หรือสามารถใช้ ปุ่ม FN+ปุ่มต่างๆเพื่อตั้งไฟได้ทันทีโดยไม่ต้องใช้ software)<br><br>
-                    <br>
-                    ราคา 3,490 บาท พร้อมประกัน 2 ปี
-                    <br><br>
-                    Specification
-                    <br><br><br>
-                    96% ANSI layout (100keys)<br>
-                    ขนาด 370x125x35mm<br>
-                    ตัวเลือก switch : Red Brown Blue<br>
-                    ระบบ hotswap สำหรับ switch MX<br>
-                    Wireless 2.4GHz ที่ไม่สัมผัสได้ถึงการดีเลย์<br>
-                    ABS Doubleshot keycap<br>
-                    ไฟ RGB และ Macro (มี software สำหรับ windows เท่านั้น ใช้ได้เฉพาะโหมดสาย)<br>
-                    1000 hz polling rate<br>
-                    กดได้ทุกปุ่ม (Full N key roll-over)<br>
-                    Windows/Mac layout<br>
-                    น้ำหนักประมาน 900g<br>
-                    USB type C<br>
-                    <br>
-                    อุปกรณ์ในกล่อง<br><br>
-                    RAVANA keyboard 1 ชิ้น<br>
-                    สาย USB Type C<br>
-                    Keycap puller<br>
-                    Switch puller<br>
-                    Switch สำรอง 2 ตัว<br><br>
-                    คู่มือการใช้งาน<br><br>
-                    ระหว่างการชาร์จ Battery จะมีไฟแสดงเตือนตรงกลาง และจะดับอัตโนมัติเมื่อเต็ม<br>
-                    เมื่อแบตเตอรี่ใกล้หมดจะสัญญาณไฟกระพริบเตือนที่ปุ่ม FN<br><br>
-                    *คำเตือน เครื่อง console ใช้ได้แค่โหมดสายเท่านั้น<br><br>
-                    <button type="button" class="btn btn-light btn-lg"
-                        style="background-color: #9A258F; color: white; font-size: 14px"><i class="fa fa-download"
-                            aria-hidden="true"></i>
-                        <a href="https://drive.google.com/file/d/15o-oYUeW2abrP-nwuLyQdocLO87Ojc8S/view"
-                            style="color: white; text-decoration: none;">ดาวน์โหลดซอฟท์แวร์</a>
-                    </button>
-                    <br>
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"><br>
+                    Mouse cover ( Kirin PRO Wireless)<br><br>
+                    เล่นเกมอย่างสนุกและมีสีสันด้วย Mouse cover ของ Kirin PRO wirelessฝาบนหมดเม้าส์สำหรับตกแต่ง Kirin PRO wireless เพิ่มความสวยงามให้เม้าส์ของคุณ<br><br>
+                    การถอดและใส่ฝาของ  mouse cover นั้นง่ายดายสามารถถอดและใส่ได้ทันทีโดยไม่ต้องมีเครื่องมือใดๆช่วย<br><br>
+                    ตัวฝามาพร้อมกัน 3 ชิ้น<br><br>
+                    - ฝาปุ่มคลิ๊ก<br>
+                    - ฝาอุ้งมือแบบทึบ<br>
+                    - ฝาอุ้งมือแบบมีรู<br><br>
+                    ทั้งนี้ ยังได้มี ตัวปรับระดับคลิ๊ก ขนาดความสูง 0.6 0.7 0.8 0.9 mm แถมมาด้วย สำหรับปรับ click ให้ fit พอดีปุ่มตามลักษณะของพลาสติก<br><br>
+                    สีปัจจุบันที่เข้ามา<br><br>
+                    เหลือง<br>
+                    ชมพู<br>
+                    เขียวมิ้นต์<br>
+                    ฟ้า<br>
                     <br>
                 </div>
 
                 <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                     <table class="table table-bordered">
                         <tbody>
-                            <tr>
-                                <td>ขนาด</td>
-                                <td>96%</td>
-                            </tr>
                             <tr>
                                 <td>สี</td>
                                 <td>White</td>
@@ -430,7 +490,7 @@
                         <br>
                         <div class="col-12">
                             <p style="border-bottom: 1px solid #ccc; display: block; width: 900px;">
-                                <b>คุณกำลังรีวิว:LOGA RAVANA : 2.4GHz wireless Mechanical keyboard</b>
+                                <b>คุณกำลังรีวิว:Mouse Cover set (Kirin Pro wireless)</b>
                             </p>
                         </div>
                         <div class="col-12">
@@ -444,7 +504,7 @@
                                         class="star star-2" for="star-2"></label> <input class="star star-1" id="star-1"
                                         type="radio" name="star" /> <label class="star star-1" for="star-1">
                                     </label>
-                                    <p class="more2" style="font-size:16px; cursor: pointer;">คุณภาพ</p>
+                                    <p class="more2" style="font-size:16px; cursor: pointer;">ราคา</p>
                                 </form>
                             </div>
                         </div>
@@ -460,7 +520,7 @@
                                         id="star-10" type="radio" name="star" /> <label class="star star-1"
                                         for="star-10">
                                     </label>
-                                    <p class="more2" style="font-size:16px; cursor: pointer;">ราคา</p>
+                                    <p class="more2" style="font-size:16px; cursor: pointer;">ความคุ้มค่า</p>
                                 </form>
                             </div>
                         </div>
@@ -477,7 +537,7 @@
                                         id="star-100" type="radio" name="star" /> <label class="star star-1"
                                         for="star-100">
                                     </label>
-                                    <p class="more2" style="font-size:16px; cursor: pointer;">คุ้มค่า</p>
+                                    <p class="more2" style="font-size:16px; cursor: pointer;">คุณภาพ</p>
                                 </form>
                             </div>
                         </div>
@@ -585,12 +645,50 @@
             });
         })();
 
+        (function () {
+
+            window.inputNumber = function (el) {
+
+                var min = el.attr('min') || false;
+                var max = el.attr('max') || false;
+
+                var els = {};
+
+                els.dec = el.prev();
+                els.inc = el.next();
+
+                el.each(function () {
+                    init($(this));
+                });
+
+                function init(el) {
+
+                    els.dec.on('click', decrement);
+                    els.inc.on('click', increment);
+
+                    function decrement() {
+                        var value = el[0].value;
+                        value--;
+                        if (!min || value >= min) {
+                            el[0].value = value;
+                        }
+                    }
+
+                    function increment() {
+                        var value = el[0].value;
+                        value++;
+                        if (!max || value <= max) {
+                            el[0].value = value++;
+                        }
+                    }
+                }
+            }
+        })();
+
+        inputNumber($('.input-number'));
+
         
     </script>
-
-</body>
-
-</html>
 
 </body>
 
