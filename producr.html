@@ -314,10 +314,10 @@
                             style="width: 100%;">
                     </div>
                 </div>
-                <div class="butt" id="but" onmouseover="mouseOver2()" onmouseout="mouseOut2()">
-                    <a class="prev1" id="pre"
+                <div class="butt" id="but">
+                    <a class="prev1" id="pre" onmouseover="mouseOver2()" onmouseout="mouseOut2()"
                         onclick="plusSlides(-1)">&#10094;</a>
-                    <a class="next1" id="nex"
+                    <a class="next1" id="nex" onmouseover="mouseOver3()" onmouseout="mouseOut3()"
                         onclick="plusSlides(1)">&#10095;</a>
                 </div>
             </div>
@@ -441,7 +441,7 @@
         </div>
         <div class="col-12">
             <div class="tab-content" id="myTabContent">
-                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab" style="margin-top: 30px;">
                     LOGA Ravana<br><br>
                     Keyboard 96 % ไร้สายแบบ 2.4GHz สำหรับการใช้งานที่หลากหลายรูปแบบ ทั้งเล่นเกมระดับโปร
                     จนไปถึงการทำงานระดับมืออาชีพ ด้วยขนาดที่เล็กลงแต่ยังคงในส่วน numpad ไว้ ทำให้ผู้ที่ต้องใช้งานตรง
@@ -494,7 +494,7 @@
                 </div>
 
                 <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                    <table class="table table-bordered">
+                    <table class="table table-bordered" style="margin-top: 30px;">
                         <tbody>
                             <tr>
                                 <td>ขนาด</td>
@@ -510,7 +510,7 @@
                 </div>
                 <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
                     <div class="col-12">
-                        <p style="border-bottom: 1px solid #ccc; display: block; width: 900px;">เขียนรีวิวของคุณเอง</p>
+                        <p style="border-bottom: 1px solid #ccc; display: block; width: 900px; margin-top: 30px;">เขียนรีวิวของคุณเอง</p>
                         <div class="rc-anchor rc-anchor-normal rc-anchor-light">
                             <div class="rc-anchor-content">
                                 <div class="rc-inline-block">
@@ -533,7 +533,7 @@
                         </div>
                         <br>
                         <div class="col-12">
-                            <p style="border-bottom: 1px solid #ccc; display: block; width: 900px;">
+                            <p style="display: block; width: 900px;">
                                 <b>คุณกำลังรีวิว:LOGA RAVANA : 2.4GHz wireless Mechanical keyboard</b>
                             </p>
                         </div>
@@ -603,7 +603,7 @@
                                     ฟิลด์นี้จำเป็น
                                 </div>
                             </div>
-                            <div class="col-12 ">
+                            <div class="col-12 " style="margin-top: 30px;">
                                 <label for="validationCustom02" class="form-label more3"><b>รีวิว</b></label>
                                 <input type="text" placeholder="รีวิว" style="height: 100px;"
                                     class="form-control" id="validationCustom02" value="" required>
@@ -611,7 +611,7 @@
                                     ฟิลด์นี้จำเป็น
                                 </div>
                             </div>
-                            <div class="col-6">
+                            <div class="col-6" style="margin-top: 30px;">
                                 <button class="btn cart" type="submit">ยืนยันรีวิว</button>
                             </div>
 
@@ -657,14 +657,22 @@
 
         function mouseOver2() {
             document.getElementById("pre").style.backgroundColor = "#FFFFFF4D";
-            document.getElementById("nex").style.backgroundColor = "#FFFFFF4D";
             document.getElementById("pre").style.color = "#333333";
-            document.getElementById("nex").style.color = "#333333";
             document.getElementById("but").style.opacity = "1";
         }
 
         function mouseOut2() {
             document.getElementById("pre").style.backgroundColor = "transparent";
+            document.getElementById("but").style.opacity = "0";
+        }
+
+        function mouseOver3() {
+            document.getElementById("nex").style.backgroundColor = "#FFFFFF4D";
+            document.getElementById("nex").style.color = "#333333";
+            document.getElementById("but").style.opacity = "1";
+        }
+
+        function mouseOut3() {
             document.getElementById("nex").style.backgroundColor = "transparent";
             document.getElementById("but").style.opacity = "0";
         }
