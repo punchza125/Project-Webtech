@@ -311,6 +311,27 @@ transform: translateX(40%);
 #home:hover{
   color: #AE0496;
 }
+#photography{
+  color: #000;
+  transition: 0.5s;
+}
+#photography:hover{
+  color: #AE0496;
+}
+#future{
+  color: #000;
+  transition: 0.5s;
+}
+#future:hover{
+  color: #AE0496;
+}
+#steamer{
+  color: #000;
+  transition: 0.5s;
+}
+#steamer:hover{
+  color: #AE0496;
+}
 .quotation-mark{
 
 margin-top: -10px;
