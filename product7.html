@@ -1,0 +1,729 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Zodiac Collection Scorpio Keycap</title>
+    <script src="https://kit.fontawesome.com/de3473a09c.js" crossorigin="anonymous"></script>
+    <!--bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!--icon-->
+    <link rel="icon" href="logo_loga.png" type="image/x-icon">
+
+    <!--Font-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Prompt', sans-serif;
+
+        }
+
+        .container {
+            padding-top: 35px;
+            padding-left: 0px;
+            max-width: 1280px;
+        }
+
+        .more::before {
+            content: ">";
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .more2::after {
+            content: ":";
+        }
+
+        .more3::after {
+            content: "*";
+            color: red;
+        }
+
+        .rpic:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .slideshow {
+            position: relative;
+            margin: auto;
+        }
+
+        .item {
+            width: 90px;
+            height: 90px;
+            float: left;
+            margin-right: 20px;
+        }
+
+        .prev1 {
+            cursor: pointer;
+            position: absolute;
+            top: 0%;
+            width: 80px;
+            padding: 40px;
+            padding-top: 320px;
+            padding-bottom: 275px;
+            color: #333333;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            text-decoration: none;
+        }
+
+        .next1 {
+            cursor: pointer;
+            position: absolute;
+            top: 0%;
+            width: 80px;
+            padding: 40px;
+            padding-top: 320px;
+            padding-bottom: 275px;
+            color: #333333;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            text-decoration: none;
+        }
+
+        .next1 {
+            right: 12;
+            border-radius: 3px 0 0 3px;
+        }
+
+        img {
+            vertical-align: middle;
+        }
+
+        .link {
+            font-size: 12px;
+            color: #696969;
+            text-decoration: none;
+        }
+
+        .link:hover {
+            color: #9A258F;
+            text-decoration: none;
+        }
+
+        .a:hover {
+            background-color: grey;
+        }
+
+        .butt {
+            opacity: 0;
+        }
+
+        .nbar:hover {
+            border-bottom: solid 2px #9A258F;
+            font-weight: 800;
+        }
+
+        a.active {
+            border-bottom: solid 2px #9A258F;
+            font-weight: 800;
+        }
+
+        .rc-anchor-center-container {
+            display: table;
+            height: 100%;
+        }
+
+        .rc-anchor-normal .rc-anchor-content {
+            height: 65px;
+            width: 206px;
+            float: left;
+        }
+
+        .cart:hover {
+            background-color: #343a40;
+            color: white;
+        }
+
+        .cart {
+            background-color: #9A258F;
+            color: white;
+            font-size: 14px;
+            font-weight: 400;
+            border-radius: 3px;
+            width: 15%;
+            height: 35px;
+        }
+
+        .cart2:hover {
+            background-color: #343a40;
+            color: white;
+        }
+
+        .cart2 {
+            background-color: #9A258F;
+            color: white;
+            font-size: 16px;
+            font-weight: 400;
+            border-radius: 3px;
+            width: 100%;
+            height: 40px;
+        }
+
+        .cart3:hover {
+            background-color: #343a40;
+            color: white;
+        }
+
+        .cart3 {
+            border: solid 1px #9A258F;
+            color: #9A258F;
+            font-size: 16px;
+            font-weight: 400;
+            border-radius: 3px;
+            width: 70%;
+            height: 40px;
+        }
+
+        div.stars {
+            width: 260px;
+        }
+
+        input.star {
+            display: none
+        }
+
+        label.star {
+            cursor: pointer;
+            float: right;
+            padding: 3px;
+            font-size: 20px;
+            transition: all .2s
+        }
+
+        input.star:checked~label.star:before {
+            content: '\f005';
+            color: #FD4;
+            transition: all .25s
+        }
+
+
+        input.star-1:checked~label.star:before {
+            color: #F62
+        }
+
+        label.star:hover {
+            transform: rotate(-15deg) scale(1.3)
+        }
+
+        label.star:before {
+            content: '\f006';
+            font-family: FontAwesome
+        }
+
+        .input-number {
+            width: 80px;
+            padding: 0 12px;
+            vertical-align: top;
+            text-align: center;
+            outline: none;
+        }
+
+
+        .input-number,
+        .input-number-decrement,
+        .input-number-increment {
+            border: 1px solid #ccc;
+            height: 40px;
+            user-select: none;
+        }
+
+
+        .input-number-decrement,
+        .input-number-increment {
+            display: inline-block;
+            width: 30px;
+            line-height: 38px;
+            background: #f1f1f1;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .input-number-decrement {
+            border-right: none;
+        }
+
+        .input-number-increment {
+            border-left: none;
+        }
+
+        .fa-heart {
+            color: #9A258F;
+            cursor: pointer;
+        }
+
+        .fa-random {
+            color: #9A258F;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- main--->
+    <div class="container">
+        <p style="font-size:12px; display: inline;"><a href="" style="text-decoration: none; color: black;">หน้าแรก</a>
+        </p>
+        <p class="more" style="font-size:12px; color: black; display: inline;"> Zodiac Collection Scorpio Keycap
+        </p>
+    </div>
+
+    <div class="container">
+        <div class="row rpic">
+            <div class="col-md-6 slideshow">
+                <div class="apic" onmouseover="mouseOver1()" onmouseout="mouseOut1()">
+                    <div class="pic">
+                        <img src="scor1.jpg" style="width: 100%;">
+                    </div>
+                    <div class="pic">
+                        <img src="scor2.jpg" style="width: 100%;">
+                    </div>
+                    <div class="pic">
+                        <img src="scor3.jpg" style="width: 100%;">
+                    </div>
+                    <div class="pic">
+                        <img src="scor4.jpg" style="width: 100%;">
+                    </div>
+                    <div class="pic">
+                        <img src="scor5.jpg" style="width: 100%;">
+                    </div>
+
+                </div>
+                <div class="butt" id="but">
+                    <a class="prev1" id="pre" onmouseover="mouseOver2()" onmouseout="mouseOut2()"
+                        onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next1" id="nex" onmouseover="mouseOver3()" onmouseout="mouseOut3()"
+                        onclick="plusSlides(1)">&#10095;</a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <span>
+                    <h1 style="font-size: 24px; color: #333333;"><b> Zodiac Collection Scorpio Keycap</b></h1>
+                </span>
+                <span style="font-size: 18px; color: #C60000;"><b>฿269.00</b></span><br>
+                <a class="link" href="">เป็นคนแรกที่รีวิวสินค้านี้</a><br>
+                <br>
+                <div class="col-11">
+                    <span style="color: #696969;">คีย์แคป space bar ขนาด 6.25 U และ คีย์แคปปุ่มเล็กแถวบนสุด ขนาด 1U
+                        (R4)</span>
+                    <br><br><span style="color: #696969;">เล่นเกมแล้วรู้สึกว่าดวงไม่ดี? ทำงานแล้วมีเรื่องที่ติดขัด
+                        ลองนี้เลย! คีย์แคปประจำ</span>
+                    <br><span style="color: #696969;">ราศีเสริมดวง!</span>
+                </div>
+                <br>
+                <br>
+                <br>
+                <hr>
+                <br>
+                <p>จำนวน &nbsp<span class="input-number-decrement">–</span><input class="input-number" type="text"
+                        value="1" min="0" max=""><span class="input-number-increment">+</span>
+                </p>
+                <div class="row">
+                    <div class="col-3">
+                        <a href="#" class="btn cart2" data-toggle="modal"
+                            data-target="#exampleModalCenter">เพิ่มไปตะกร้า</a>
+                    </div>
+                    <div class="col-3">
+                        <a href="#" class="btn cart3">ซื้อเลย</a>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-4">
+                        <i class="fa fa-heart" aria-hidden="true">&nbsp เพิ่มในรายการโปรด</i>
+                    </div>
+                    <div class="col-4">
+                        <i class="fas fa-random">&nbsp เพิ่มไปเปรียบเทียบ</i>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br>
+                <b><span>Share this product :</span></b>
+                <br>
+                <div class="col-10">
+                    <a class="btn btn-light  rounded-circle a" style="border: 2px solid whitesmoke; padding: 10px;"
+                        href="https://www.facebook.com/sharer.php?s=100&p[url]=https%3A%2F%2Fwww.logaworld.com%2Floga-ravana-2-4ghz-wireless-mechanical-keyboard.html&p[images][0]=https%3A%2F%2Fwww.logaworld.com%2Fpub%2Fmedia%2Fcatalog%2Fproduct%2Fcache%2Ff2ca15fbffcb2f0e3b76657b525b85cd%2Fr%2Fa%2Fravana_marketing-02.jpg&p[title]=LOGA%20RAVANA%20%3A%202.4GHz%20wireless%20Mechanical%20keyboard&p[summary]=%20LOGA%20RavanaKeyboard%2096%20%25%20%E0%B9%84%E0%B8%A3%E0%B9%89%E0%B8%AA%E0%B8%B2%E0%B8%A2%E0%B9%81%E0%B8%9A%E0%B8%9A%202.4GHz%20%E0%B8%AA%E0%B8%B3%E0%B8%AB%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%AB%E0%B8%A5%E0%B8%B2%E0%B8%81%E0%B8%AB%E0%B8%A5%E0%B8%B2%E0%B8%A2%E0%B8%A3%E0%B8%B9%E0%B8%9B%E0%B9%81%E0%B8%9A%E0%B8%9A%20%E0%B8%97%E0%B8%B1%E0%B9%89%E0%B8%87%E0%B9%80%E0%B8%A5%E0%B9%88%E0%B8%99%E0%B9%80%E0%B8%81%E0%B8%A1%E0%B8%A3%E0%B8%B0%E0%B8%94%E0%B8%B1%E0%B8%9A%E0%B9%82%E0%B8%9B%E0%B8%A3%20%E0%B8%88%E0%B8%99%E0%B9%84%E0%B8%9B%E0%B8%96%E0%B8%B6%E0%B8%87%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%97%E0%B8%B3%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B8%A3%E0%B8%B0%E0%B8%94%E0%B8%B1%E0%B8%9A%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%AD%E0%B8%B2%E0%B8%8A%E0%B8%B5%E0%B8%9E%20%E0%B8%94%E0%B9%89%E0%B8%A7%E0%B8%A2%E0%B8%82%E0%B8%99%E0%B8%B2%E0%B8%94%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B9%80%E0%B8%A5%E0%B9%87%E0%B8%81%E0%B8%A5%E0%B8%87%E0%B9%81%E0%B8%95%E0%B9%88%E0%B8%A2%E0%B8%B1%E0%B8%87%E0%B8%84%E0%B8%87%E0%B9%83%E0%B8%99%E0%B8%AA%E0%B9%88%E0%B8%A7%E0%B8%99%20numpad%20%E0%B9%84%E0%B8%A7%E0%B9%89%20%E0%B8%97%E0%B8%B3%E0%B9%83%E0%B8%AB%E0%B9%89%E0%B8%9C%E0%B8%B9%E0%B9%89%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%95%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B8%95%E0%B8%A3%E0%B8%87%20numpad%20%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B9%84%E0%B8%94%E0%B9%89%E0%B8%AA%E0%B8%B0%E0%B8%94%E0%B8%A7%E0%B8%81%E0%B8%A2%E0%B8%B4%E0%B9%88%E0%B8%87%E0%B8%82%E0%B8%B6%E0%B9%89%E0%B8%99%E0%B9%82%E0%B8%94%E0%B8%A2%E0%B9%84%E0%B8%A1%E0%B9%88%E0%B9%80%E0%B8%AA%E0%B8%B5%E0%B8%A2%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%9A%E0%B8%99%E0%B9%82%E0%B8%95%E0%B9%8A%E0%B8%B0%E0%B9%82%E0%B8%94%E0%B8%A2%E0%B9%84%E0%B8%A1%E0%B9%88%E0%B8%88%E0%B8%B3%E0%B9%80%E0%B8%9B%E0%B9%87%E0%B8%99%E0%B8%94%E0%B8%B2%E0%B8%A7%E0%B8%99%E0%B9%8C%E0%B9%82%E0%B8%AB%E0%B8%A5%E0%B8%94%20LOGA%20RAVANA%20%E0%B8%8B%E0%B8%AD%E0%B8%9F%E0%B8%95%E0%B9%8C%E0%B9%81%E0%B8%A7%E0%B8%A3%E0%B9%8C%E0%B9%84%E0%B8%94%E0%B9%89%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%99%E0%B8%B5%E0%B9%88"
+                        role="button"><i class="fab fa-facebook"></i></a>
+                    <a class="btn btn-light  rounded-circle a" style="border: 2px solid whitesmoke; padding: 10px;"
+                        href="https://twitter.com/home?status=LOGA%20RAVANA%20:%202.4GHz%20wireless%20Mechanical%20keyboard+https://www.logaworld.com/loga-ravana-2-4ghz-wireless-mechanical-keyboard.html"
+                        role="button"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-light  rounded-circle a" style="border: 2px solid whitesmoke; padding: 10px;"
+                        href="https://social-plugins.line.me/lineit/share?url=https://www.logaworld.com/loga-ravana-2-4ghz-wireless-mechanical-keyboard.html"
+                        role="button"><i class="fab fa-line"></i></a>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="row" style="margin-top: 20px;">
+            <div class="col-md-6">
+                <div id="wrapper">
+                    <div id="carousel">
+                        <div id="content">
+                            <div>
+                                <img src="scor1.jpg" class="item" onclick="currentSlide(1)">
+                            </div>
+                            <div>
+                                <img src="scor2.jpg" class="item" onclick="currentSlide(2)">
+                            </div>
+                            <div>
+                                <img src="scor3.jpg" class="item" onclick="currentSlide(3)">
+                            </div>
+                            <div>
+                                <img src="scor4.jpg" class="item" onclick="currentSlide(4)">
+                            </div>
+                            <div>
+                                <img src="scor5.jpg" class="item" onclick="currentSlide(5)">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+
+        <div id="clicks">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <ul class="nav" id="myTab" role="tablist" style="border-bottom: 1px solid #ccc; width: 1700px;">
+                    <li class="nav-item nbar" role="presentation"> <a class="nav-link active" style="color: black;"
+                            id="home-tab" data-bs-toggle="tab" href="#home" role="tab" aria-controls="home"
+                            aria-selected="true">Details</a> </li>
+                    <li class="nav-item nbar" role="presentation"> <a class="nav-link" style="color: black;"
+                            id="profile-tab" data-bs-toggle="tab" href="#profile" role="tab" aria-controls="profile"
+                            aria-selected="false">More Information</a> </li>
+                    <li class="nav-item nbar" role="presentation"> <a class="nav-link" style="color: black;"
+                            id="contact-tab" data-bs-toggle="tab" href="#contact" role="tab" aria-controls="contact"
+                            aria-selected="false">Reviews</a> </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="col-12">
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"><br>
+                    คีย์แคป โลกา ซี่รีย์ จักรราศี : แมงป่อง (พิจิก / พฤศจิก 24 ตุลาคมถึง 22 พฤศจิกายน นับในแบบ
+                    สายนะ)<br><br>
+                    คีย์แคป space bar ขนาด 6.25 U และ คีย์แคปปุ่มเล็กแถวบนสุด ขนาด 1U (R4)<br><br>
+                    เล่นเกมแล้วรู้สึกว่าดวงไม่ดี? ทำงานแล้วมีเรื่องที่ติดขัด ลองนี้เลย!
+                    คีย์แคปประจำราศีเสริมดวง!<br><br>
+                    คีย์แคป โลกา ซี่รีย์ จักรราศี : แมงป่อง (พิจิก / พฤศจิก 24 ตุลาคมถึง 22 พฤศจิกายน นับในแบบ
+                    สายนะ)<br><br>
+                    *คำเตือน คีย์บอร์ดบางรุ่น ที่ไม่ใช่ แถวล่างสุดแบบ standard ไม่สามารถใส่ได้
+                    กรุณาตรวจสอบก่อนซื้อสินค้า<br><br>
+                    สินค้าเสริมดวงและความสวยงามของคีย์บอร์ดคุณ
+                    เหมาะกับการเป็นสินค้าที่ซื้อมาใช้เองหรือเป็นของขวัญให้เพื่อนๆที่รักการใช้คีย์บอร์ด Mechanical
+                    มาพร้อมกัน 2 ปุ่ม เป็นลายแมงป่องบน<br>
+                    space bar และลายประจำราศีบนปุ่ม Esc การดีไซน์คีย์แคปของโลการุ่นนี้อ้างอิงมาจากจักรราศีทั้ง 12
+                    ซึ่งเราได้ทำการดีไซน์โดยมี concept ต่างกันไปตามแต่ละเดือน<br><br>
+                    --Scorpio--<br><br>
+                    ส่วนประกอบของภาพนอกจากตัวแมงป่อง (scorpion) จะมีการซ่อนความหมายต่างๆไวในลวดลายเช่น<br><br>
+                    งู (Snake) อิงจาก totem รูปงู ซึ่งเป็นสัตว์ประจำเดือนเกิดตามความเชื่อของ Native American<br><br>
+                    น้ำ (Water) เป็นธาตุประจำจักรราศี พิจิก<br><br>
+                    สีม่วง (Purple) เป็นสีประจำจักราศี พิจิก<br><br>
+                    Specification<br><br>
+                    - PBT dye-sub<br><br>
+                    - space bar ขนาด 6.25 U<br><br>
+                    - คีย์แคป แถว ESC ขนาด 1U (R4)<br><br>
+                    - กล่องสินค้าจั่วปังคงทนสามารถเก็บสะสมได้<br><br>
+                    List keyboard ที่ใส่ได้แน่นอน<br><br>
+                    LOGA | Ducky | Das | Deck | WASD | Hyper x | Glorious | Keychron | Filco<br><br>
+                    วิธีสังเกตง่ายๆ (แต่ไม่เสมอไป) ตัว Ctrl windows และ ALT ฝั่งซ้ายต้องขนาดเท่ากัน<br><br>
+                    List keyboard ที่ต้องตรวจสอบรุ่น Razer | Corsair | Logitech
+                    <br>
+                    <br>
+                    <br>
+
+
+                </div>
+
+                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                    <table class="table table-bordered" style="margin-top: 30px;">
+                        <tbody>
+                            <tr>
+                                <td>สี</td>
+                                <td>White</td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+                <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                    <div class="col-12">
+                        <p style="border-bottom: 1px solid #ccc; display: block; width: 900px; margin-top: 30px;">
+                            เขียนรีวิวของคุณเอง
+                        </p>
+                        <div class="rc-anchor rc-anchor-normal rc-anchor-light">
+                            <div class="rc-anchor-content">
+                                <div class="rc-inline-block">
+                                    <div class="rc-anchor-center-container">
+                                        <div class="col-12">
+                                            <label class="rc-anchor-center-item rc-anchor-checkbox-label"
+                                                id="recaptcha-anchor-label"
+                                                style="color: white; background-color: #007bff; padding: 0 0 0 70px;">ปกป้องโดย
+                                                reCAPTCHA
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="rc-anchor-normal-footer">
+                                <img src="google.jpg" style="width: 80px; height: auto;">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="col-12">
+                            <p style="display: block; width: 900px;">
+                                <b>คุณกำลังรีวิว: Zodiac Collection Scorpio Keycap</b>
+                            </p>
+                        </div>
+                        <div class="col-12">
+                            <div class="stars">
+                                <form action=""> <input class="star star-5" id="star-5" type="radio" name="star" />
+                                    <label class="star star-5" for="star-5"></label> <input class="star star-4"
+                                        id="star-4" type="radio" name="star" /> <label class="star star-4"
+                                        for="star-4"></label> <input class="star star-3" id="star-3" type="radio"
+                                        name="star" /> <label class="star star-3" for="star-3"></label> <input
+                                        class="star star-2" id="star-2" type="radio" name="star" /> <label
+                                        class="star star-2" for="star-2"></label> <input class="star star-1" id="star-1"
+                                        type="radio" name="star" /> <label class="star star-1" for="star-1">
+                                    </label>
+                                    <p class="more2" style="font-size:16px; cursor: pointer;">ราคา</p>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="stars">
+                                <form action=""> <input class="star star-5" id="star-50" type="radio" name="star" />
+                                    <label class="star star-5" for="star-50"></label> <input class="star star-4"
+                                        id="star-40" type="radio" name="star" /> <label class="star star-4"
+                                        for="star-40"></label> <input class="star star-3" id="star-30" type="radio"
+                                        name="star" /> <label class="star star-3" for="star-30"></label> <input
+                                        class="star star-2" id="star-20" type="radio" name="star" /> <label
+                                        class="star star-2" for="star-20"></label> <input class="star star-1"
+                                        id="star-10" type="radio" name="star" /> <label class="star star-1"
+                                        for="star-10">
+                                    </label>
+                                    <p class="more2" style="font-size:16px; cursor: pointer;">ความคุ้มค่า</p>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="stars">
+                                <form action=""> <input class="star star-5" id="star-500" type="radio" name="star" />
+                                    <label class="star star-5" for="star-500"></label> <input class="star star-4"
+                                        id="star-400" type="radio" name="star" /> <label class="star star-4"
+                                        for="star-400"></label> <input class="star star-3" id="star-300" type="radio"
+                                        name="star" /> <label class="star star-3" for="star-300"></label> <input
+                                        class="star star-2" id="star-200" type="radio" name="star" /> <label
+                                        class="star star-2" for="star-200"></label> <input class="star star-1"
+                                        id="star-100" type="radio" name="star" /> <label class="star star-1"
+                                        for="star-100">
+                                    </label>
+                                    <p class="more2" style="font-size:16px; cursor: pointer;">คุณภาพ</p>
+                                </form>
+                            </div>
+                        </div>
+                        <br>
+                        <form class="row needs-validation" novalidate>
+                            <div class="col-md-6">
+                                <label for="validationCustom01" class="form-label more3"><b>ชื่อเล่น</b></label>
+                                <input type="text" class="form-control" id="validationCustom01" value=""
+                                    placeholder="ชื่อเล่น" required>
+                                <div class="invalid-feedback">
+                                    ฟิลด์นี้จำเป็น
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="validationCustom02" class="form-label more3"><b>สรุป</b></label>
+                                <input type="text" class="form-control" id="validationCustom02" value=""
+                                    placeholder="สรุป" required>
+                                <div class="invalid-feedback">
+                                    ฟิลด์นี้จำเป็น
+                                </div>
+                            </div>
+                            <div class="col-12 " style="margin-top: 30px;">
+                                <label for="validationCustom02" class="form-label more3"><b>รีวิว</b></label>
+                                <input type="text" placeholder="รีวิว" style="height: 100px;" class="form-control"
+                                    id="validationCustom02" value="" required>
+                                <div class="invalid-feedback">
+                                    ฟิลด์นี้จำเป็น
+                                </div>
+                            </div>
+                            <div class="col-6" style="margin-top: 30px;">
+                                <button class="btn cart" type="submit">ยืนยันรีวิว</button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("pic");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            slides[slideIndex - 1].style.display = "block";
+        }
+
+        function mouseOver1() {
+            document.getElementById("but").style.opacity = "1";
+        }
+
+        function mouseOut1() {
+            document.getElementById("but").style.opacity = "0";
+        }
+
+        function mouseOver2() {
+            document.getElementById("pre").style.backgroundColor = "#FFFFFF4D";
+            document.getElementById("pre").style.color = "#333333";
+            document.getElementById("but").style.opacity = "1";
+        }
+
+        function mouseOut2() {
+            document.getElementById("pre").style.backgroundColor = "transparent";
+            document.getElementById("but").style.opacity = "0";
+        }
+
+        function mouseOver3() {
+            document.getElementById("nex").style.backgroundColor = "#FFFFFF4D";
+            document.getElementById("nex").style.color = "#333333";
+            document.getElementById("but").style.opacity = "1";
+        }
+
+        function mouseOut3() {
+            document.getElementById("nex").style.backgroundColor = "transparent";
+            document.getElementById("but").style.opacity = "0";
+        }
+
+
+
+        var header = document.getElementById("clicks");
+        var btns = header.getElementsByClassName("nav-link");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function () {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+
+
+        (() => {
+            'use strict';
+
+            const forms = document.querySelectorAll('.needs-validation');
+
+            Array.prototype.slice.call(forms).forEach((form) => {
+                form.addEventListener('submit', (event) => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        })();
+
+        (function () {
+
+            window.inputNumber = function (el) {
+
+                var min = el.attr('min') || false;
+                var max = el.attr('max') || false;
+
+                var els = {};
+
+                els.dec = el.prev();
+                els.inc = el.next();
+
+                el.each(function () {
+                    init($(this));
+                });
+
+                function init(el) {
+
+                    els.dec.on('click', decrement);
+                    els.inc.on('click', increment);
+
+                    function decrement() {
+                        var value = el[0].value;
+                        value--;
+                        if (!min || value >= min) {
+                            el[0].value = value;
+                        }
+                    }
+
+                    function increment() {
+                        var value = el[0].value;
+                        value++;
+                        if (!max || value <= max) {
+                            el[0].value = value++;
+                        }
+                    }
+                }
+            }
+        })();
+
+        inputNumber($('.input-number'));
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>
