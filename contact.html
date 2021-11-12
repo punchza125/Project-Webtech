@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-    <link href="home.css" rel="stylesheet">
+
 
     <!--Font-->
     <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E     <link rel=" preconnect"
@@ -30,11 +30,13 @@
     <style>
         body {
             font-family: 'Prompt', sans-serif;
-           
+            font-size: 14px;
         }
-        .wrap{
+
+        .wrap {
             overflow: hidden;
         }
+
         h4 {
 
             font-size: 20px;
@@ -42,332 +44,435 @@
             width: 100%;
         }
 
-        .container-fluid {
-            position: relative;
+        a {
+            text-decoration: none;
+        }
 
+        .container-fluid.p-0 {
+            position: relative;
             color: white;
+        }
+
+        .centered.mx-auto.h5.text-center {
+            font-size: 24px;
+            background-image: url(bg_catalog.png);
+            background-color: transparent;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            padding: 4% 0 4%;
+        }
+
+        #myBtn {
+            display: block;
+            visibility: hidden;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 99;
+            font-size: 20px;
+            height: 35px;
+            width: 35px;
+            border: 1px solid #000;
+            outline: none;
+            background-color: rgb(255, 255, 255);
+            color: #000;
+            cursor: pointer;
+            padding-left: 9px;
+            padding-right: 9px;
+            transition: all 300ms;
+        }
+
+        #myBtn:hover {
+            background-color: #000000;
+            color: #ffffff;
+        }
+
+        @keyframes slidein {
+            from {
+                bottom: 0px;
+            }
+
+            to {
+                bottom: 20px;
+            }
+        }
+
+        @keyframes slideout {
+            from {
+                bottom: 20px;
+            }
+
+            to {
+                bottom: -40px;
+            }
+        }
+
+        #home {
+            color: #000;
+            transition: 0.5s;
+        }
+
+        #home:hover {
+            color: #AE0496;
+        }
+
+        .more::before {
+            content: ">";
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .subbutton {
+            padding: 5px 8px;
+            border-radius: 3px;
+            border: 1px solid #9a258f;
+            min-width: 178px;
+            background-color: #9a258f;
+            transition: all .15s;
+        }
+
+        .subbutton:hover {
+            background-color: #333;
+            border: 1px solid #000;
+        }
+
+        #social {
+            transition: 0.3s;
+            padding: 0%;
+            width: 5%;
+            height: 5%;
+            margin-left: 10px;
+        }
+
+        #social:hover {
+            cursor: pointer;
+            opacity: 0.7;
+        }
+
+        #fname {
+            width: 60%;
+            transform: translateY(2px);
+            height: 40px;
+            border: 1px solid #ccc;
+        }
+
+        #footer-info {
+            font-size: 70%;
+            margin: 0.5%;
+            padding-left: 7%;
+            transition: 0.5s;
+            font-family: "Prompt", arial, tahoma;
+        }
+
+        #footer-info:hover {
+            color: #AE0496;
+        }
+
+        #footer-info2 {
+            font-size: 70%;
+            margin-bottom: 0.5%;
+            padding-left: 23%;
+            transition: 0.5s;
+            font-family: "Prompt", arial, tahoma;
+
+        }
+
+        #footer-info2:hover {
+            color: #AE0496;
         }
     </style>
 </head>
 
 <body>
 
-    <!-- background-title --><div class="wrap">
-    <div class="container-fluid p-0">
-        <!--nav add here-->
-        <div class="row" style="height: 260px">
-            <div class="centered mx-auto h5 text-center "style="margin-top:-5%">ติดต่อเรา</div>
-            
-            <img src="bg_catalog.png"
-                style="height: 70%; width: 100%;">
-            
-        </div>
-        
-        <div class="container col-8 "style="margin-top:-50px" >
-            
-            <p style="font-size:12px; display: inline;"><a href="index.html" style="text-decoration: none; "id="home">หน้าแรก</a></p>
-            <p class="more" style="font-size:12px; color: black; display: inline;">ติดต่อเรา</p>
-        
-            
+    <!-- background-title -->
+    <div class="wrap">
+        <div class="container-fluid p-0">
+            <!--nav add here-->
+            <div class="centered mx-auto h5 text-center ">ติดต่อเรา</div>
+            <button onclick="topFunction()" id="myBtn"> <i class="fas fa-angle-up"></i></button>
+            <div class="container col-12 " style="padding-top:20px;padding-left: 20px;">
+                <p style="font-size:12px; display: inline;"><a href="index.html" style="text-decoration: none; "
+                        id="home">หน้าแรก</a></p>
+                <p class="more" style="font-size:12px; color: black; display: inline;">ติดต่อเรา</p>
+            </div>
+            <button onclick="topFunction()" id="myBtn"> <i class="fas fa-angle-up"></i></button>
 
-        </div>
-        <button onclick="topFunction()" id="myBtn" >	<i class="fas fa-angle-up"></i></button>
-        
-        <div class="row mt-3 justify-content-end">
+            <div class="row mt-3 justify-content-end">
 
-            <div class="col-4 text-dark  p-3">
-                <h4>
-                    <span style="  border-bottom: 1px solid #AE0496;margin-left: -5%;">ที่อยู่ติดต่</span>อเรา
+                <div class="col-5 text-dark  p-3">
+                    <h4>
+                        <span style="border-bottom: 2px solid #AE0496;margin-left: -5%;">ที่อยู่ติด</span>ต่อเรา
+                    </h4>
 
-                </h4>
-                <div style="margin-left: -30%;">
                     <div class="row mt-0">
-
-                        <div style="color: rgb(48, 48, 48);margin-left: 20%;">
-                            <p id="footer-info3" style="top: 0%;padding: 0%;margin-right: 0%;"> <i
-                                    class="fas fa-address-book m-2 " style="color: #AE0496;"></i>บริษัทโลกากรุ๊ป จำกัด
+                        <div style="color: rgb(48, 48, 48);">
+                            <p id="footer-info3" style="top: 0%;padding: 0%;margin-right: 0%;font-size: 14px;margin-bottom: 0;"> <i
+                                    class="fas fa-address-book m-2" style="color: #AE0496;"></i>บริษัทโลกากรุ๊ปจำกัด
                                 เลขที่ 656/1, พระรามที่ 5, ถนนนครไชยศรี, ดุสิต, กรุงเทพมหานคร 10300</p>
                         </div>
-                    </div>
-                    <div class="row mt-0" style="flex-wrap:nowrap;flex-shrink: 1;">
-
-                        <a href="" style="color: rgb(48, 48, 48);margin-left: 20%;">
-                            <p id="footer-info2" style="top: 0%;padding: 0%;margin-right: 0%;">
-                                <i class="fas fa-envelope-open m-2  " style="color: #AE0496;"></i></i>Email:
+                        <a href="" style="color: rgb(48, 48, 48);">
+                            <p id="footer-info2" style="top: 0%;padding: 0%;margin-right: 0%;font-size: 14px;">
+                                <i class="fas fa-envelope-open m-2" style="color: #AE0496;"></i></i>Email:
                                 support@logaword.com
                             </p>
                         </a>
-                    </div>
-                    <div class="row mt-0" style="flex-wrap:nowrap;flex-shrink: 1;">
-
-                        <a href="" style="color: rgb(48, 48, 48);margin-left: 20%;">
-                            <p id="footer-info2" style="top: 0%;padding: 0%;margin-right: 0%;">
-                                <i class="fas fa-mobile m-2 " style="color: #AE0496;"></i></i>061 028 8089
+                        <a href="" style="color: rgb(48, 48, 48);">
+                            <p id="footer-info2" style="top: 0%;padding: 0%;margin-right: 0%;font-size: 14px;">
+                                <i class="fas fa-mobile m-2" style="color: #AE0496;"></i></i>061 028
+                                8089
                             </p>
                         </a>
-                    </div>
-                    <div class="row mt-0" style="flex-wrap:nowrap;flex-shrink: 1;">
-
-                        <a href="https://www.facebook.com/Logathailand" style="color: rgb(48, 48, 48);margin-left: 20%;">
-                            <p id="footer-info2" style="top: 0%;padding: 0%;margin-right: 0%;">
+                        <a href="https://www.facebook.com/Logathailand" style="color: rgb(48, 48, 48);">
+                            <p id="footer-info2" style="top: 0%;padding: 0%;margin-right: 0%;font-size: 14px;">
                                 <i class="fab fa-facebook-square m-2 " style="color: #AE0496;"></i></i>Logathailand
                             </p>
                         </a>
-                    </div>
-                    <div class="row mt-0" style="flex-wrap:nowrap;flex-shrink: 1;">
-
-                        <a href="" style="color: rgb(48, 48, 48);margin-left: 20%;">
-                            <p id="footer-info2" style="top: 0%;padding: 0%;margin-right: 0%;">
-                                <i class="fas fa-comments m-2 " style="color: #AE0496;"></i>Line id : @logathailand
+                        <a href="" style="color: rgb(48, 48, 48);">
+                            <p id="footer-info2" style="top: 0%;padding: 0%;margin-right: 0%;font-size: 14px;">
+                                <i class="fas fa-comments m-2 " style="color: #AE0496;"></i>Line id
+                                : @logathailand
                             </p>
                         </a>
                     </div>
 
                 </div>
+                <div class="col-6  text-dark  pt-3">
+                    <h4>
+                        <span style="  border-bottom: 2px solid #AE0496;margin-left: -1%;">สอบถาม</span>ข้อมูลเพิ่มเติม
+
+                    </h4>
+                    <form name="myForm">
+                        <div class="form-group ">
+                            <label for="exampleInputEmail1" class="mt-2 mb-2" style="font-size: 14px;">ชื่อ
+                                นามสกุล</label><span class="text-danger"> *</span>
+                            <input type="text" class="form-control w-50" id="name">
+
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1" class="mt-2 mb-2"
+                                style="font-size: 14px;">อีเมล</label><span class="text-danger"> *</span>
+                            <input type="email" name="emailcheck" class="form-control w-50" id="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1" class="mt-2 mb-2"
+                                style="font-size: 14px;">เรื่อง</label><span class="text-danger"> *</span>
+                            <input type="text" class="form-control w-50" id="subject">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1" class="mt-2 mb-2"
+                                style="font-size: 14px;">ข้อความ</label><span class="text-danger"> *</span>
+                            <textarea class="form-control w-50" rows="4" id="msg"></textarea>
+                        </div>
+                        <button type="button" class="subbutton mt-4 rounded text-white" style="min-width: 90px;"
+                            onclick="conditionForm()" onclick="return checkbae()">ยืนยัน</button>
+
+                    </form>
+                    <div id="valid" style="display: none;color:red ;font-size: 55%;font-weight: 1000">ฟิลด์นี้จำเป็น
+                    </div>
+                    <div id="emailvalid" style="display: none;color:red ;font-size: 55%;font-weight: 1000">
+                        กรุณากรอกที่อยู่อีเมลที่ถูกต้อง (เช่น johndoe@domain.com)</div>
+
+
+                </div>
             </div>
-            <div class="col-6  text-dark  pt-3">
-                <h4>
-                    <span style="  border-bottom: 1px solid #AE0496;margin-left: -1%;">สอบถาม</span>ข้อมูลเพิ่มเติม
 
-                </h4>
-                <form name="myForm" >
-                    <div class="form-group ">
-                        <label for="exampleInputEmail1" class="m-2" style="font-size: 70%;">ชื่อ นามสกุล</label><span
-                            class="text-danger">*</span>
-                        <input type="text" class="form-control w-50" id="name">
+            <div class="container-fluid pt-3" style="background-color: #1f1f1f; margin-top: 5%">
+                <div class="row">
+                    <div class="col-sm-3 mt-5" style="overflow: hidden;">
+                        <img src="Logo_Loga_footer.png" style="width: 30%; margin-left: 2%;">
 
                     </div>
-                    <div class="form-group">
-                        <label for="exampleInputEmail1" class="m-2" style="font-size: 70%;">อีเมล</label><span
-                            class="text-danger">*</span>
-                        <input type="email" name="emailcheck" class="form-control w-50" id="email">
+                    <div class="col-sm-2 mt-3 ">
+                        <div class="row">
+                            <h5 class='fs-6 ' style="color: white; padding-left:9.5%">Customer Services</h5>
+                        </div>
+                        <div class="row mt-1">
+                            <a href="" style="color: rgb(195, 195, 195);">
+                                <p id="footer-info" style="font-size: 14px;">วิธีการแก้ปัญหาเบื้องต้น</p>
+                            </a>
+                        </div>
+                        <div class="row">
+                            <a href="" style="color: rgb(195, 195, 195);">
+                                <p id="footer-info" style="font-size: 14px;">รับประกันสินค้า</p>
+                            </a>
+                        </div>
+                        <div class="row">
+                            <a href="" style="color: rgb(195, 195, 195);">
+                                <p id="footer-info" style="font-size: 14px;">ข้อตกลงและเงื่อนไข</p>
+                            </a>
+                        </div>
+                        <div class="row">
+                            <a href="" style="color: rgb(195, 195, 195);">
+                                <p id="footer-info" style="font-size: 14px;">บทความ</p>
+                            </a>
+                        </div>
+
                     </div>
-                    <div class="form-group">
-                        <label for="exampleInputEmail1" class="m-2" style="font-size: 70%;">เรื่อง</label><span
-                            class="text-danger">*</span>
-                        <input type="text" class="form-control w-50" id="subject">
+                    <div class="col-sm-2 mt-3 ">
+                        <div class="row ">
+                            <h5 class='fs-6 ' style="color: white; padding-left:9.5%">Company Information</h5>
+                        </div>
+                        <div class="row mt-1">
+                            <a href="" style="color: rgb(195, 195, 195);">
+                                <p id="footer-info" style="font-size: 14px;">เกี่ยวกับเรา</p>
+                            </a>
+                        </div>
+                        <div class="row">
+                            <a href="" style="color: rgb(195, 195, 195);">
+                                <p id="footer-info" style="font-size: 14px;">ติดต่อเรา</p>
+                            </a>
+                        </div>
+
                     </div>
-                    <div class="form-group">
-                        <label for="exampleFormControlTextarea1" class="m-2"
-                            style="font-size: 70%">ข้อความ</label><span class="text-danger">*</span>
-                        <textarea class="form-control w-50" rows="4" id="msg" ></textarea>
+                    <div class="col-sm-2 mt-3 ">
+                        <div class="row">
+                            <h5 class='fs-6 ' style="color: white; padding-left:25%">Payment & Shipping
+                            </h5>
+                        </div>
+                        <div class="row mt-1">
+                            <a href="" style="color: rgb(195, 195, 195);">
+                                <p id="footer-info2" style="font-size: 14px;">ตะกร้าของฉัน</p>
+                            </a>
+                        </div>
+                        <div class="row">
+                            <a href="" style="color: rgb(195, 195, 195);">
+                                <p id="footer-info2" style="font-size: 14px;">ติดตามคำสั่งซื้อ</p>
+                            </a>
+                        </div>
                     </div>
-                    <button type="button" class="btn  subbutton mt-4 rounded text-white"style="background-color: #AE0496;" onclick="conditionForm()" onclick="return checkbae()">ยืนยัน</button>
-                    
-                </form>
-                <div id="valid" style="display: none;color:red ;font-size: 55%;font-weight: 1000">ฟิลด์นี้จำเป็น</div>
-                <div id="emailvalid" style="display: none;color:red ;font-size: 55%;font-weight: 1000">กรุณากรอกที่อยู่อีเมลที่ถูกต้อง (เช่น johndoe@domain.com)</div>
-                
+                    <div class="col-sm-3 mt-3  " style="overflow: hidden;">
+                        <div class="row ">
+                            <h5 class='fs-6 ' style="color: white; padding-left:25%">Let’s Talk
+                            </h5>
+                        </div>
+                        <div class="row mt-0" style="flex-wrap:nowrap;flex-shrink: 1;">
+                            <img src="iconmonstr-line-1-32_1.png"
+                                style="width:50px;height: 22px;margin-left: 22%; display: inline-block;">
+                            <a href="" style="color: rgb(255, 255, 255);margin-left: -4%;">
+                                <p id="footer-info2" style="top: 0%;padding: 0%;margin-right: 0%;font-size: 14px;">
+                                    @Logathailand</p>
+                            </a>
+                        </div>
+                        <div class="row mt-0" style="flex-wrap:nowrap;flex-shrink: 1;">
+                            <img src="iconmonstr-email-2-32.png"
+                                style="width:50px;min-width:20px;height: 22px;margin-left: 22%;margin-top: 2.5px;">
+                            <a href="" style="color: rgb(255, 255, 255);margin-left: -4%;">
+                                <p id="footer-info2"
+                                    style="position: relative;top: 0%;padding:0%;margin-right: 0%;font-size: 14px;">
+                                    support@logaworld.com</p>
+                            </a>
+                        </div>
+                        <div class="row mt-2">
+                            <img id="social" src="iconmonstr-facebook-1-32.png"
+                                style="margin-left: 25%;width: 30px;height: 30px;">
+                            <img id="social" src="iconmonstr-youtube-6-32.png" style="width: 30px;height: 30px;">
+                            <img id="social" src="iconmonstr-instagram-11-32.png" style="width: 30px;height: 30px;">
+                            <img id="social" src="iconmonstr-line-1-32.png" style="width: 30px;height: 30px;">
+                        </div>
+                    </div>
+                    <div class="row mt-5">
+                        <div class="container-fluid">
+                            <hr class='m-1' style="color: white;height:1.5px;">
+                            <p class='text-center m-1' style="color: white;font-size: 12px;">© 2021 Logathailand. All
+                                Rights
+                                Reserved.</p>
+                        </div>
+                    </div>
+                </div>
 
             </div>
         </div>
-        
-        <div class="container-fluid pt-3" style="background-color: rgb(39, 38, 38); margin-top: 5%">
-            <div class="row">
-                <div class="col-sm-3 mt-5" style="overflow: hidden;">
-                    <img src="Logo_Loga_footer.png" style="width: 30%; margin-left: 2%;">
-
-                </div>
-                <div class="col-sm-2 mt-3 ">
-                    <div class="row">
-                        <h5 class='fs-6 ' style="color: white; padding-left:9.5%">Customer Services</h5>
-                    </div>
-                    <div class="row mt-1">
-                        <a href="" style="color: rgb(195, 195, 195);">
-                            <p id="footer-info">วิธีการแก้ปัญหาเบื้องต้น</p>
-                        </a>
-                    </div>
-                    <div class="row">
-                        <a href="" style="color: rgb(195, 195, 195);">
-                            <p id="footer-info">รับประกันสินค้า</p>
-                        </a>
-                    </div>
-                    <div class="row">
-                        <a href="" style="color: rgb(195, 195, 195);">
-                            <p id="footer-info">ข้อตกลงและเงื่อนไข</p>
-                        </a>
-                    </div>
-                    <div class="row">
-                        <a href="" style="color: rgb(195, 195, 195);">
-                            <p id="footer-info">บทความ</p>
-                        </a>
-                    </div>
-
-                </div>
-                <div class="col-sm-2 mt-3 ">
-                    <div class="row ">
-                        <h5 class='fs-6 ' style="color: white; padding-left:9.5%">Company Information</h5>
-                    </div>
-                    <div class="row mt-1">
-                        <a href="" style="color: rgb(195, 195, 195);">
-                            <p id="footer-info">เกี่ยวกับเรา</p>
-                        </a>
-                    </div>
-                    <div class="row">
-                        <a href="" style="color: rgb(195, 195, 195);">
-                            <p id="footer-info">ติดต่อเรา</p>
-                        </a>
-                    </div>
-
-                </div>
-                <div class="col-sm-2 mt-3 ">
-                    <div class="row">
-                        <h5 class='fs-6 ' style="color: white; padding-left:25%">Payment & Shipping
-                        </h5>
-                    </div>
-                    <div class="row mt-1">
-                        <a href="" style="color: rgb(195, 195, 195);">
-                            <p id="footer-info2">ตะกร้าของฉัน</p>
-                        </a>
-                    </div>
-                    <div class="row">
-                        <a href="" style="color: rgb(195, 195, 195);">
-                            <p id="footer-info2">ติดตามคำสั่งซื้อ</p>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-sm-3 mt-3  " style="overflow: hidden;">
-                    <div class="row ">
-                        <h5 class='fs-6 ' style="color: white; padding-left:25%">Let’s Talk
-                        </h5>
-                    </div>
-                    <div class="row mt-0" style="flex-wrap:nowrap;flex-shrink: 1;">
-                        <img src="iconmonstr-line-1-32 (1).png "
-                            style="width:2vw;height: 1.5vh;margin-left: 22%; display: inline-block;">
-                        <a href="" style="color: rgb(255, 255, 255);margin-left: -4%;">
-                            <p id="footer-info2" style="top: 0%;padding: 0%;margin-right: 0%;">@Logathailand</p>
-                        </a>
-                    </div>
-                    <div class="row mt-0" style="flex-wrap:nowrap;flex-shrink: 1;">
-                        <img src="iconmonstr-email-2-32.png"
-                            style="width:2vw;min-width:1.5vw;height: 8%;margin-left: 22%;">
-                        <a href="" style="color: rgb(255, 255, 255);margin-left: -4%;">
-                            <p id="footer-info2" style="position: relative;top: 0%;padding:0%;margin-right: 0%;">
-                                support@logaworld.com</p>
-                        </a>
-                    </div>
-                    <div class="row mt-2">
-                        <img id="social" src="iconmonstr-facebook-1-32.png" style="margin-left: 25%;">
-                        <img id="social" src="iconmonstr-youtube-6-32.png">
-                        <img id="social" src="iconmonstr-instagram-11-32.png">
-                        <img id="social" src="iconmonstr-line-1-32.png">
-                    </div>
-                </div>
-                <div class="row mt-5">
-                    <div class="container-fluid">
-                        <hr class='m-1' style="color: white;height:1.5px;">
-                        <p class='text-center m-1' style="color: white;font-size: 70%;">© 2021 Logathailand. All Rights
-                            Reserved.</p>
-                    </div>
-                </div>
-            </div>
-
-        </div></div>
     </div>
 
     </div>
-    </body>
-    <script>
-    
-        var mybutton = document.getElementById("myBtn");
-        
-        
-        window.onscroll = function() {scrollFunction()};
-        
-        function scrollFunction() {
-          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+</body>
+<script>
+
+    var mybutton = document.getElementById("myBtn");
+    window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
             mybutton.style.display = "block";
-            
-          } else {
-            mybutton.style.display = "none";
-          }
-         
+            mybutton.style.visibility = "visible";
+            mybutton.style.animation = "slidein 300ms";
         }
+        else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.animation = "slideout 300ms";
+        }
+    }
+
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+
     var testresults
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+    function conditionForm() {
+        var name = document.forms["myForm"]["name"].value;
+        if (name.length == 0) {
+            document.getElementById("valid").style.display = "block";
+            return false;
 
-    
-        
-        
-        function topFunction() {
-          document.body.scrollTop = 0;
-          document.documentElement.scrollTop = 0;
         }
-      
-    
-       
+
+        var email = document.forms["myForm"]["email"].value;
+        if (email.length == 0) {
+            document.getElementById("valid").style.display = "block";
+            return false;
+
+        }
+
+        checkbae();
+
+        var sub = document.forms["myForm"]["subject"].value;
+        if (sub.length == 0) {
+            document.getElementById("valid").style.display = "block";
+            return false;
+
+        }
+
+        var msg = document.forms["myForm"]["msg"].value;
+        if (msg.length == 0) {
+            document.getElementById("valid").style.display = "block";
+            return false;
+
+        }
 
 
-        function conditionForm() {
-            
-            
-    var name = document.forms["myForm"]["name"].value;
-    if (name.length == 0) {
-        document.getElementById("valid").style.display = "block";
-        return false;
-       
-    }
-   
+        if (document.getElementById("vlid").style.display = "block") {
+            document.getElementById("valid").style.display = "none"
+        }
 
-    var email = document.forms["myForm"]["email"].value;
-    if (email.length == 0) {
-        document.getElementById("valid").style.display = "block";
-        return false;
-        
-    }
-  
-    checkbae();
-    
-
-    var sub = document.forms["myForm"]["subject"].value;
-    if (sub.length == 0) {
-        document.getElementById("valid").style.display = "block";
-        return false;
-        
-    }
-    
-    var msg = document.forms["myForm"]["msg"].value;
-    if (msg.length == 0) {
-        document.getElementById("valid").style.display = "block";
-        return false;
-       
-    }
-    
-
-    if( document.getElementById("vlid").style.display = "block"){
-        document.getElementById("valid").style.display = "none"
     }
 
-    
-    
-    
-    
-    
-}
+    function checkemail() {
+        var str = document.myForm.emailcheck.value
+        var filter = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i
+        if (filter.test(str))
+            testresults = true
 
+        else {
+            document.getElementById("emailvalid").style.display = "block";
+            testresults = false
+        }
 
-
-function checkemail() {
-      var str = document.myForm.emailcheck.value
-      var filter = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i
-      if (filter.test(str))
-        testresults = true
-        
-    
-      else {
-        document.getElementById("emailvalid").style.display = "block";
-        testresults = false
-      }
-      
-      return (testresults)
+        return (testresults)
     }
-    
+
     function checkbae() {
-      if (document.layers || document.getElementById || document.all)
-        return checkemail()
-      else
-     
-        return true
+        if (document.layers || document.getElementById || document.all)
+            return checkemail()
+        else
+
+            return true
     }
 
-        </script>
-        
+</script>
