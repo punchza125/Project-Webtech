@@ -1,0 +1,475 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ลืมรหัสผ่านหรือไม่?</title>
+    <link rel="icon" href="logo_loga.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/de3473a09c.js" crossorigin="anonymous"></script>
+    <!--bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!--Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E     <link rel=" preconnect"
+        href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E     <link rel=" preconnect"
+        href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
+
+
+    <style>
+        body {
+            font-family: 'Prompt', sans-serif;
+            font-size: 14px;
+        }
+
+        .wrap {
+            overflow: hidden;
+        }
+
+        h3,
+        h5 {
+            font-family: "Prompt", arial, tahoma;
+        }
+
+        h5 {
+            font-size: 0.9vw;
+            color: #333;
+        }
+
+        h4 {
+            font-size: 20px;
+            margin-left: 19px;
+            width: 100%;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .container-fluid {
+            width: 100%;
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .container-fluid.p-0 {
+            position: relative;
+            color: white;
+        }
+
+        ::placeholder {
+            color: rgb(182, 182, 182);
+            opacity: 1;
+        }
+
+        input {
+            border: 1;
+            outline: 0;
+            border: 1px solid #e5e5e5;
+        }
+
+        .centered.mx-auto.h5.text-center {
+            font-size: 24px;
+            background-image: url(bg_catalog.png);
+            background-color: transparent;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            padding: 4% 0 4%;
+        }
+
+        #myBtn {
+            display: block;
+            visibility: hidden;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 99;
+            font-size: 20px;
+            height: 35px;
+            width: 35px;
+            border: 1px solid #000;
+            outline: none;
+            background-color: rgb(255, 255, 255);
+            color: #000;
+            cursor: pointer;
+            padding-left: 9px;
+            padding-right: 9px;
+            transition: all 300ms;
+        }
+
+        #myBtn:hover {
+            background-color: #000000;
+            color: #ffffff;
+        }
+
+        @keyframes slidein {
+            from {
+                bottom: 0px;
+            }
+
+            to {
+                bottom: 20px;
+            }
+        }
+
+        @keyframes slideout {
+            from {
+                bottom: 20px;
+            }
+
+            to {
+                bottom: -40px;
+            }
+        }
+
+        #account {
+            height: 48px;
+        }
+
+        #psw {
+            height: 48px;
+        }
+
+        .subbutton {
+            padding: 5px 8px;
+            border-radius: 3px;
+            border: 1px solid #9a258f;
+            min-width: 178px;
+            background-color: #9a258f;
+            transition: all .15s;
+        }
+
+        .subbutton:hover {
+            background-color: #333;
+            border: 1px solid #000;
+        }
+
+        .rc-anchor-center-container {
+            display: table;
+            height: 100%;
+        }
+
+        .rc-anchor-normal .rc-anchor-content {
+            height: 65px;
+            width: 206px;
+            float: left;
+        }
+
+        .sign {
+            display: inline-block;
+            margin: 10px;
+        }
+
+        .signin {
+            position: relative;
+            width: 350px;
+            border-radius: 10px;
+            padding: 0;
+            height: 35px;
+            margin: 10px;
+            cursor: pointer;
+            box-shadow: 1px 4px 16px rgb(0 0 0 / 30%);
+            -webkit-box-shadow: 1px 4px 16px rgb(0 0 0 / 30%);
+            transition: all .3s;
+        }
+
+        .signin:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 3px 14px rgb(0 0 0 / 70%);
+        }
+
+        /* .signin:hover + .hoversign {
+            display: flex;
+            position: absolute;
+            left: 45%;
+        }
+
+        .hoversign {
+            display: block;
+            position: absolute;
+            top: 100%;
+            left: 16%;
+            width: 10%;
+            height: 40px;
+            background-color: #000;
+            transform: rotate(-45deg);
+            transition: all 1s;
+            z-index: -1;
+        } */
+
+        #social {
+            transition: 0.3s;
+            padding: 0%;
+            width: 5%;
+            height: 5%;
+            margin-left: 10px;
+        }
+
+        #social:hover {
+            cursor: pointer;
+            opacity: 0.7;
+        }
+
+        #fname {
+            width: 60%;
+            transform: translateY(2px);
+            height: 40px;
+            border: 1px solid #ccc;
+        }
+
+        #footer-info {
+            font-size: 70%;
+            margin: 0.5%;
+            padding-left: 7%;
+            transition: 0.5s;
+            font-family: "Prompt", arial, tahoma;
+        }
+
+        #footer-info:hover {
+            color: #AE0496;
+        }
+
+        #footer-info2 {
+            font-size: 70%;
+            margin-bottom: 0.5%;
+            padding-left: 23%;
+            transition: 0.5s;
+            font-family: "Prompt", arial, tahoma;
+
+        }
+
+        #footer-info2:hover {
+            color: #AE0496;
+        }
+        #forgot{
+            font-size: 12px;
+            margin-right: 10px;
+            color: #4b4b4b;
+            transition: 0.5s;
+        }
+        #forgot:hover{
+            color: #9a258f;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- background-title -->
+    <div class="wrap">
+        <div class="container-fluid p-0">
+            <!--nav add here-->
+            <div class="centered mx-auto h5 text-center">
+                <span>ลืมรหัสผ่านหรือไม่?</span>
+            </div>
+            <button onclick="topFunction()" id="myBtn"> <i class="fas fa-angle-up"></i></button>
+            <div class="row mt-5 ">
+                <div class="col-3"></div>
+                <div class="col-7  text-dark"
+                    style="padding: 2%;padding-top: 2%;">
+                    <p class="mb-2" style="margin: 0%;font-size: 13px;color: rgb(114, 114, 114);"><i>โปรดป้อนที่อยู่อีเมลของคุณด้านล่างเพื่อรับลิงค์รีเซ็ตรหัสผ่าน</i></p><br>
+                   
+                    <form name="myForm">
+                       
+                        <div class="form-group">
+                            <label for="exampleInputEmail1" class="mb-2"
+                                style="font-size: 14px;">อีเมล</label><span class="text-danger"> *</span>
+                            <input type="email" name="emailcheck" class="form-control w-100" id="email">
+                        </div>
+                        <p style="display: inline; font-weight: 700;">
+                            <a href="login.html" style="text-decoration: none; "
+                                id="forgot">
+                                ย้อนกลับ</a>
+                        </p>
+                        
+                        <button type="button" class="subbutton mt-4 rounded text-white" style="min-width: 90px;"
+                            onclick="conditionForm()" onclick="return checkbae()">ยืนยัน</button>
+
+                    </form>
+                    <div id="valid" style="display: none;color:red ;font-size: 10px;font-weight: 1000">ฟิลด์นี้จำเป็น
+                    </div>
+                    <div id="emailvalid" style="display: none;color:red ;font-size: 10pxS;font-weight: 1000">
+                        กรุณากรอกที่อยู่อีเมลที่ถูกต้อง (เช่น johndoe@domain.com)</div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="container-fluid pt-3" style="background-color: #1f1f1f; margin-top: 2%">
+            <div class="row">
+                <div class="col-sm-3 mt-5" style="overflow: hidden;">
+                    <img src="Logo_Loga_footer.png" style="width: 30%; margin-left: 2%;">
+                </div>
+                <div class="col-sm-2 mt-3 ">
+                    <div class="row">
+                        <h5 class='fs-6 ' style="color: white; padding-left:9.5%">Customer Services</h5>
+                    </div>
+                    <div class="row mt-1">
+                        <a href="" style="color: rgb(195, 195, 195);">
+                            <p id="footer-info" style="font-size: 14px;">วิธีการแก้ปัญหาเบื้องต้น</p>
+                        </a>
+                    </div>
+                    <div class="row">
+                        <a href="" style="color: rgb(195, 195, 195);">
+                            <p id="footer-info" style="font-size: 14px;">รับประกันสินค้า</p>
+                        </a>
+                    </div>
+                    <div class="row">
+                        <a href="" style="color: rgb(195, 195, 195);">
+                            <p id="footer-info" style="font-size: 14px;">ข้อตกลงและเงื่อนไข</p>
+                        </a>
+                    </div>
+                    <div class="row">
+                        <a href="" style="color: rgb(195, 195, 195);">
+                            <p id="footer-info" style="font-size: 14px;">บทความ</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-2 mt-3 ">
+                    <div class="row ">
+                        <h5 class='fs-6 ' style="color: white; padding-left:9.5%">Company Information</h5>
+                    </div>
+                    <div class="row mt-1">
+                        <a href="" style="color: rgb(195, 195, 195);">
+                            <p id="footer-info" style="font-size: 14px;">เกี่ยวกับเรา</p>
+                        </a>
+                    </div>
+                    <div class="row">
+                        <a href="" style="color: rgb(195, 195, 195);">
+                            <p id="footer-info" style="font-size: 14px;">ติดต่อเรา</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-2 mt-3 ">
+                    <div class="row">
+                        <h5 class='fs-6 ' style="color: white; padding-left:25%">Payment & Shipping
+                        </h5>
+                    </div>
+                    <div class="row mt-1">
+                        <a href="" style="color: rgb(195, 195, 195);">
+                            <p id="footer-info2" style="font-size: 14px;">ตะกร้าของฉัน</p>
+                        </a>
+                    </div>
+                    <div class="row">
+                        <a href="" style="color: rgb(195, 195, 195);">
+                            <p id="footer-info2" style="font-size: 14px;">ติดตามคำสั่งซื้อ</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-3 mt-3  " style="overflow: hidden;">
+                    <div class="row ">
+                        <h5 class='fs-6 ' style="color: white; padding-left:25%">Let’s Talk
+                        </h5>
+                    </div>
+                    <div class="row mt-0" style="flex-wrap:nowrap;flex-shrink: 1;">
+                        <img src="iconmonstr-line-1-32 (1).png"
+                            style="width:50px;height: 22px;margin-left: 22%; display: inline-block;">
+                        <a href="" style="color: rgb(255, 255, 255);margin-left: -4%;">
+                            <p id="footer-info2" style="top: 0%;padding: 0%;margin-right: 0%;font-size: 14px;">
+                                @Logathailand</p>
+                        </a>
+                    </div>
+                    <div class="row mt-0" style="flex-wrap:nowrap;flex-shrink: 1;">
+                        <img src="iconmonstr-email-2-32.png"
+                            style="width:50px;min-width:20px;height: 22px;margin-left: 22%;margin-top: 2.5px;">
+                        <a href="" style="color: rgb(255, 255, 255);margin-left: -4%;">
+                            <p id="footer-info2"
+                                style="position: relative;top: 0%;padding:0%;margin-right: 0%;font-size: 14px;">
+                                support@logaworld.com</p>
+                        </a>
+                    </div>
+                    <div class="row mt-2">
+                        <img id="social" src="iconmonstr-facebook-1-32.png"
+                            style="margin-left: 25%;width: 30px;height: 30px;">
+                        <img id="social" src="iconmonstr-youtube-6-32.png" style="width: 30px;height: 30px;">
+                        <img id="social" src="iconmonstr-instagram-11-32.png" style="width: 30px;height: 30px;">
+                        <img id="social" src="iconmonstr-line-1-32.png" style="width: 30px;height: 30px;">
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="container-fluid">
+                        <hr class='m-1' style="color: white;height:1.5px;">
+                        <p class='text-center m-1' style="color: white;font-size: 12px;">© 2021 Logathailand. All
+                            Rights
+                            Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+
+    var mybutton = document.getElementById("myBtn");
+    window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+            mybutton.style.visibility = "visible";
+            mybutton.style.animation = "slidein 300ms";
+        }
+        else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.animation = "slideout 300ms";
+        }
+    }
+
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+    function conditionForm() {
+   
+
+        var email = document.forms["myForm"]["email"].value;
+        if (email.length == 0) {
+            document.getElementById("valid").style.display = "block";
+            return false;
+
+        }
+
+      
+        checkbae();
+
+        reset();
+
+    }
+    function reset(){
+        if (document.getElementById("vlid").style.display = "block") {
+            document.getElementById("valid").style.display = "none"
+        }
+    }
+    function checkemail() {
+        var str = document.myForm.emailcheck.value
+        var filter = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i
+        if (filter.test(str))
+            testresults = true
+
+        else {
+            document.getElementById("emailvalid").style.display = "block";
+            testresults = false
+        }
+
+        return (testresults)
+    }
+
+    function checkbae() {
+        if (document.layers || document.getElementById || document.all)
+            return checkemail()
+        else
+
+            return true
+    }
+
+</script>
