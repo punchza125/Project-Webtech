@@ -778,6 +778,7 @@
             </div>
         </div>
     </div>
+    <button onclick="topFunction()" id="myBtn"><i class="fas fa-angle-up"></i></button>
     <script>
         var slideIndex = 1;
         showSlides(slideIndex);
@@ -878,6 +879,26 @@
                 }, false);
             });
         })();
+
+        var mybutton = document.getElementById("myBtn");
+    window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+            mybutton.style.visibility = "visible";
+            mybutton.style.animation = "slidein 300ms";
+        }
+        else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.animation = "slideout 300ms";
+        }
+    }
+
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
     </script>
 
 </body>
