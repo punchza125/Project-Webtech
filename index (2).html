@@ -1,1323 +1,1512 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>สินค้า</title>
-  <script src="https://kit.fontawesome.com/de3473a09c.js" crossorigin="anonymous"></script>
-  <!--bootstrap-->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สินค้า</title>
+    <script src="https://kit.fontawesome.com/de3473a09c.js" crossorigin="anonymous"></script>
+    <!--bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-  <!--icon-->
-  <link rel="icon" href="logo_loga.png" type="image/x-icon">
+    <!--icon-->
+    <link rel="icon" href="logo_loga.png" type="image/x-icon">
 
-  <!--jquery-->
-  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!--jquery-->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
-  <!--Font-->
+    <!--Font-->
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap" rel="stylesheet">
 
-  <style>
-    body {
-        font-family: 'Prompt', sans-serif;
-    }
-
-    h4 {
-        border-bottom: 2px solid #9a258e;
-        font-size: 20px;
-        margin-left: 19px;
-        width: 95px;
-    }
-
-    .topnav {
-        overflow: hidden;
-        background-color: white;
-        width: 100%;
-        top: 0;
-        height: 48px;
-        position: fixed;
-    }
-
-    .topnav a {
-        float: left;
-        color: #f2f2f2;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-    }
-
-    .topnav a:hover {
-        background-color: #ddd;
-        color: black;
-    }
-
-    .topnav a.active {
-        background-color: #04AA6D;
-        color: white;
-    }
-
-    .box {
-        background-color: red;
-        height: 500%;
-    }
-
-    .logo {
-        height: 100%;
-        width: 100%;
-    }
-
-    .product-background-title {
-        height: 210px;
-        width: 100%;
-        background-size: cover;
-        text-align: center;
-    }
-
-    .page-title {
-        text-align: center;
-        top: 50%;
-        left: 50%;
-        color: white;
-    }
-
-    .container-fluid {
-        position: relative;
-        text-align: center;
-        color: white;
-    }
-
-    .centered {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-
-    .head-text {
-        font-size: 12px;
-    }
-
-    .container {
-        padding-top: 35px;
-        padding-left: 0px;
-        max-width: 1280px;
-    }
-
-    .sorter-options {
-        width: 110px;
-        background-color: #E5E5E5;
-        height: 35px;
-        padding: 0 20px 0 10px;
-        border: none;
-    }
-
-    .more::before {
-        content: ">";
-        padding-left: 20px;
-        padding-right: 20px;
-
-    }
-
-    .card-title:hover {
-        color: #9A258F;
-        text-decoration: none;
-    }
-
-    .card-title {
-        font-size: 16px;
-        color: black;
-        font-weight: 500;
-        text-decoration: none;
-    }
-
-    .card-text {
-        color: #C60000;
-        font-weight: 500;
-    }
-
-    .cart:hover {
-        background-color: #343a40;
-        color: white;
-    }
-
-    .cart {
-        background-color: #9A258F;
-        color: white;
-        font-size: 14px;
-        font-weight: 400;
-        border-radius: 3px;
-        width: 100%;
-        height: 35px;
-    }
-
-    .next {
-        display: inline-block;
-        padding: 2px 10px;
-        background-color: #F5F5F5;
-        color: #AAAAAA;
-        font-size: 14px;
-        margin-left: 5px;
-        text-decoration: none;
-    }
-
-    .next:hover {
-        background-color: #9A258F;
-        color: white;
-
-    }
-
-    .select-color {
-        width: 20px;
-        height: 20px;
-        background-color: red;
-        border-radius: 20px;
-        margin-left: 5px;
-        float: left;
-        border: 1px solid #ddd;
-        cursor: pointer
-    }
-
-    .txt:after {
-        content: '\2212';
-        font-weight: bold;
-        float: right;
-        margin-left: 5px;
-        font-size: 20px;
-    }
-
-    .active:after {
-        content: "\002B";
-    }
-
-    .table {
-        cursor: pointer;
-    }
-
-    .table:hover {
-        color: purple;
-    }
-
-    .value {
-        position: absolute;
-        top: 30px;
-        left: 50%;
-        margin: 0 0 0 -20px;
-        width: 40px;
-        text-align: center;
-        font-weight: normal;
-        font-size: 14px;
-        color: #333;
-    }
-
-    .price-range-both.value {
-        width: 100px;
-        margin: 0 0 0 -50px;
-        top: 20px;
-    }
-
-    .price-range-both {
-        display: none;
-
-    }
-
-    .value i {
-        font-style: normal;
-    }
-
-    .selectmodal {
-        width: 100%;
-        height: 40px;
-        outline: 0;
-        border: 1px solid #e5e5e5;
-        padding: 0 20px 0 15px;
-        margin-top: 10px;
-    }
-
-    .cart-black {
-        background-color: #000000;
-        color: white;
-        font-size: 14px;
-        font-weight: 400;
-        border-radius: 3px;
-        width: 15%;
-        height: 35px;
-    }
-
-    .cart-black:hover {
-        background-color: #9A258F;
-        color: white;
-    }
-
-    .prodamount {
-        position: relative;
-    }
-
-    .fas.fa-minus {
-        position: absolute;
-        top: 35%;
-        left: 15%;
-        font-size: 9px;
-    }
-
-    .fas.fa-plus {
-        position: absolute;
-        top: 34%;
-        right: 15%;
-        font-size: 9px;
-    }
-
-    .amountdrop {
-        display: flex;
-        align-items: center;
-        float: left;
-        flex-basis: 100%;
-    }
-
-    .useramount {
-        height: 35px;
-        width: 90px;
-        padding: 0 30px;
-        text-align: center;
-        border: 1px solid #e5e5e5;
-        outline: none;
-        background-color: #fff;
-        font-size: 14px;
-    }
-
-    .modal-footer.drop {
-        justify-content: flex-start;
-    }
-
-    #myBtn {
-        display: none;
-        position: fixed;
-        bottom: 10px;
-        right: 20px;
-        z-index: 99;
-        font-size: 18px;
-        border: none;
-        outline: none;
-        background-color: rgb(255, 255, 255);
-        color: #AE0496;
-        cursor: pointer;
-        border: solid 1px black;
-        padding-left: 9px;
-        padding-right: 9px;
-        transition: 0.5s;
-        animation: slidein 0.2s forwards;
-    }
-
-    #myBtn:hover {
-        background-color: #000000;
-        color: #ffffff;
-    }
-
-    @keyframes slidein {
-        from {
-            bottom: 0px;
+    <style>
+        body {
+            font-family: 'Prompt', sans-serif;
         }
 
-        to {
+        h4 {
+            border-bottom: 2px solid #9a258e;
+            font-size: 20px;
+            margin-left: 19px;
+            width: 95px;
+        }
+
+        .topnav {
+            overflow: hidden;
+            background-color: white;
+            width: 100%;
+            top: 0;
+            height: 48px;
+            position: fixed;
+        }
+
+        .topnav a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .topnav a.active {
+            background-color: #04AA6D;
+            color: white;
+        }
+
+        .box {
+            background-color: red;
+            height: 500%;
+        }
+
+        .logo {
+            height: 100%;
+            width: 100%;
+        }
+
+        .product-background-title {
+            height: 210px;
+            width: 100%;
+            background-size: cover;
+            text-align: center;
+        }
+
+        .page-title {
+            text-align: center;
+            top: 50%;
+            left: 50%;
+            color: white;
+        }
+
+        .cf {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+
+        .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .head-text {
+            font-size: 12px;
+        }
+
+        .container {
+            padding-top: 35px;
+            padding-left: 0px;
+            max-width: 1280px;
+        }
+
+        .sorter-options {
+            width: 110px;
+            background-color: #E5E5E5;
+            height: 35px;
+            padding: 0 20px 0 10px;
+            border: none;
+        }
+
+        .more::before {
+            content: ">";
+            padding-left: 20px;
+            padding-right: 20px;
+
+        }
+
+        .card-title:hover {
+            color: #9A258F;
+            text-decoration: none;
+        }
+
+        .card-title {
+            font-size: 16px;
+            color: black;
+            font-weight: 500;
+            text-decoration: none;
+        }
+
+        .card-text {
+            color: #C60000;
+            font-weight: 500;
+        }
+
+        .cart:hover {
+            background-color: #343a40;
+            color: white;
+        }
+
+        .cart {
+            background-color: #9A258F;
+            color: white;
+            font-size: 14px;
+            font-weight: 400;
+            border-radius: 3px;
+            width: 100%;
+            height: 35px;
+        }
+
+        .next {
+            display: inline-block;
+            padding: 2px 10px;
+            background-color: #F5F5F5;
+            color: #AAAAAA;
+            font-size: 14px;
+            margin-left: 5px;
+            text-decoration: none;
+        }
+
+        .next:hover {
+            background-color: #9A258F;
+            color: white;
+
+        }
+
+        .select-color {
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            border-radius: 20px;
+            margin-left: 5px;
+            float: left;
+            border: 1px solid #ddd;
+            cursor: pointer
+        }
+
+        .txt:after {
+            content: '\2212';
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+            font-size: 20px;
+        }
+
+        .active:after {
+            content: "\002B";
+        }
+
+        .table {
+            cursor: pointer;
+        }
+
+        .table:hover {
+            color: purple;
+        }
+
+        .value {
+            position: absolute;
+            top: 30px;
+            left: 50%;
+            margin: 0 0 0 -20px;
+            width: 40px;
+            text-align: center;
+            font-weight: normal;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .price-range-both.value {
+            width: 100px;
+            margin: 0 0 0 -50px;
+            top: 20px;
+        }
+
+        .price-range-both {
+            display: none;
+
+        }
+
+        .value i {
+            font-style: normal;
+        }
+
+        .selectmodal {
+            width: 100%;
+            height: 40px;
+            outline: 0;
+            border: 1px solid #e5e5e5;
+            padding: 0 20px 0 15px;
+            margin-top: 10px;
+        }
+
+        .cart-black {
+            background-color: #000000;
+            color: white;
+            font-size: 14px;
+            font-weight: 400;
+            border-radius: 3px;
+            width: 15%;
+            height: 35px;
+        }
+
+        .cart-black:hover {
+            background-color: #9A258F;
+            color: white;
+        }
+
+        .prodamount {
+            position: relative;
+        }
+
+        .fas.fa-minus {
+            position: absolute;
+            top: 35%;
+            left: 15%;
+            font-size: 9px;
+        }
+
+        .fas.fa-plus {
+            position: absolute;
+            top: 34%;
+            right: 15%;
+            font-size: 9px;
+        }
+
+        .amountdrop {
+            display: flex;
+            align-items: center;
+            float: left;
+            flex-basis: 100%;
+        }
+
+        .useramount {
+            height: 35px;
+            width: 90px;
+            padding: 0 30px;
+            text-align: center;
+            border: 1px solid #e5e5e5;
+            outline: none;
+            background-color: #fff;
+            font-size: 14px;
+        }
+
+        .modal-footer.drop {
+            justify-content: flex-start;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .container-fluid.p-0 {
+            position: relative;
+            color: white;
+        }
+
+        #myBtn {
+            display: block;
+            visibility: hidden;
+            position: fixed;
             bottom: 20px;
+            right: 20px;
+            z-index: 99;
+            font-size: 20px;
+            height: 35px;
+            width: 35px;
+            border: 1px solid #000;
+            outline: none;
+            background-color: rgb(255, 255, 255);
+            color: #000;
+            cursor: pointer;
+            padding-left: 9px;
+            padding-right: 9px;
+            transition: all 300ms;
         }
-    }
 
+        #myBtn:hover {
+            background-color: #000000;
+            color: #ffffff;
+        }
 
-    #myBtn:hover {
-        background-color: #555;
-    }
-</style>
+        @keyframes slidein {
+            from {
+                bottom: 0px;
+            }
+
+            to {
+                bottom: 20px;
+            }
+        }
+
+        @keyframes slideout {
+            from {
+                bottom: 20px;
+            }
+
+            to {
+                bottom: -40px;
+            }
+        }
+
+        #social {
+            transition: 0.3s;
+            padding: 0%;
+            width: 5%;
+            height: 5%;
+            margin-left: 10px;
+        }
+
+        #social:hover {
+            cursor: pointer;
+            opacity: 0.7;
+        }
+
+        #fname {
+            width: 60%;
+            transform: translateY(2px);
+            height: 40px;
+            border: 1px solid #ccc;
+        }
+
+        #footer-info {
+            font-size: 70%;
+            margin: 0.5%;
+            padding-left: 7%;
+            transition: 0.5s;
+            font-family: "Prompt", arial, tahoma;
+        }
+
+        #footer-info:hover {
+            color: #AE0496;
+        }
+
+        #footer-info2 {
+            font-size: 70%;
+            margin-bottom: 0.5%;
+            padding-left: 23%;
+            transition: 0.5s;
+            font-family: "Prompt", arial, tahoma;
+
+        }
+
+        #footer-info2:hover {
+            color: #AE0496;
+        }
+
+        .link {
+            font-size: 12px;
+            color: #696969;
+            text-decoration: none;
+        }
+
+        .link:hover {
+            color: #9A258F;
+            text-decoration: none;
+        }
+    </style>
 </head>
 
 <body>
-  <!-- header menu bar -->
-  <!-- <div class="topnav">
+    <!-- header menu bar -->
+    <!-- <div class="topnav">
         <img src="https://www.logaworld.com/pub/media/loga_logo.svg"
             style="height: 100%; width: 5%; align-items: center; float: left; padding: 3px;">
         <a href="#contact"><strong>สินค้า</strong></a>
         <a href="#about">ติตต่อเรา</a>
     </div> -->
-  <!-- background-title -->
-  <div class="container-fluid">
-    <div class="row">
-      <div class="topnav">
-        <img src="https://www.logaworld.com/pub/media/loga_logo.svg"
-          style="height: 100%; width: 5%; align-items: center; float: left; padding: 3px;">
-        <a href="#contact"><strong>สินค้า</strong></a>
-        <a href="#about">ติตต่อเรา</a>
-      </div>
-    </div>
-    <div class="row" style="height: 260px">
-      <img src="https://www.logaworld.com/pub/media/bg_pagetitle/default/bg_catalog.png"
-        style="height: 260px; width: 100%;">
-      <div class="centered">สินค้า</div>
-    </div>
-    <!-- <img src="https://www.logaworld.com/pub/media/bg_pagetitle/default/bg_catalog.png">
-        <div class="centered">สินค้า</div> -->
-  </div>
-  <!-- main--->
-  <div class="container">
-    <p style="font-size:12px; display: inline;"><a class="link" href="" style="text-decoration: none;">หน้าแรก</a>
-    </p>
-    <p class="more" style="font-size:12px; color: black; display: inline;">สินค้า</p>
-
-  </div>
-  </div>
-
-  <div class="container">
-    <div class="row">
-      <div class="col-md-3">
-        <h4>กรองข้อมูล</h4>
-        <div class="card" style="border-top: none; border-left: none; border-right: none; cursor: pointer;">
-
-          <header class="card-header " style="border: none; background-color: white; padding-left: 0px;">
-            <a data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-current="false">
-              <h6 class="txt" style="font-weight: bold; font-size: 14px; color: #222222;">ประเภท</h6>
-            </a>
-          </header>
-          <div class="collapse show" id="collapse1">
-            <div class="card-body " style="margin-top: -25px; font-size: 14px; color: #333333; padding-left: 0px;">
-              <div class="form-check ">
-                <input class="form-check-input" style="cursor:pointer" type="checkbox">
-                <label class="table" style="margin-bottom: 6px;">คอลเลคชั่นใหม่</label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" style="cursor:pointer" type="checkbox">
-                <label class="table" style="margin-bottom: 6px;">Keyboard</label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" style="cursor:pointer" type="checkbox">
-                <label class="table" style="margin-bottom: 6px;">Mice</label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" style="cursor:pointer" type="checkbox">
-                <label class="table" style="margin-bottom: 6px;">Mousepad</label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" style="cursor:pointer" type="checkbox">
-                <label class="table" style="margin-bottom: 6px;">Others</label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" style="cursor:pointer" type="checkbox">
-                <label class="table">Limited</label>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card" style="border-top: none; border-left: none; border-right: none; cursor: pointer;">
-          <header class="card-header " style="border: none; background-color: white; padding-left: 0px;">
-            <a data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-current="false">
-              <h6 class="txt" style="font-weight: bold; font-size: 14px; color: #222222;">รูปทรง</h6>
-            </a>
-          </header>
-          <div class="collapse show" id="collapse2">
-            <div class="card-body" style="margin-top: -25px; font-size: 14px; color: #333333; padding-left: 0px;">
-              <div class="form-check">
-                <input class="form-check-input" style="cursor:pointer" type="checkbox">
-                <label class="table">Ambidexterous</label>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card" style="border-top: none; border-left: none; border-right: none; cursor: pointer;">
-          <header class="card-header " style="border: none; background-color: white; padding-left: 0px;">
-            <a data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-current="false">
-              <h6 class="txt" style="font-weight: bold; font-size: 14px; color: #222222;">เชื่อมต่อ</h6>
-            </a>
-          </header>
-          <div class="collapse show" id="collapse3">
-            <div class="card-body" style="margin-top: -25px; font-size: 14px; color: #333333; padding-left: 0px;">
-              <div class="form-check">
-                <input class="form-check-input" style="cursor:pointer" type="checkbox">
-                <label class="table">Wireless</label>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card" style="border-top: none; border-left: none; border-right: none; cursor: pointer;">
-          <header class="card-header " style="border: none; background-color: white; padding-left: 0px;">
-            <a data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-current="false">
-              <h6 class="txt" style="font-weight: bold; font-size: 14px; color: #222222;">ชนิด</h6>
-            </a>
-          </header>
-          <div class="collapse show" id="collapse4">
-            <div class="card-body" style="margin-top: -25px; font-size: 14px; color: #333333; padding-left: 0px;">
-              <div class="form-check">
-                <input class="form-check-input" style="cursor:pointer" type="checkbox">
-                <label class="table" style="margin-bottom: 6px;">None-Waterproof</label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" style="cursor:pointer" type="checkbox">
-                <label class="table" style="margin-bottom: 6px;">Waterproof</label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" style="cursor:pointer" type="checkbox">
-                <label class="table" style="margin-bottom: 6px;">Cloth</label>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card" style="border-top: none; border-left: none; border-right: none; cursor: pointer;">
-          <header class="card-header " style="border: none; background-color: white; padding-left: 0px;">
-            <a data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-current="false">
-              <h6 class="txt" style="font-weight: bold; font-size: 14px; color: #222222;">คอลเลคชั่น</h6>
-            </a>
-          </header>
-          <div class="collapse show" id="collapse5">
-            <div class="card-body" style="margin-top: -25px; font-size: 14px; color: #333333; padding-left: 0px;">
-              <div class="form-check">
-                <input class="form-check-input" style="cursor:pointer" type="checkbox">
-                <label class="table" style="margin-bottom: 6px;">Mice</label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" style="cursor:pointer" type="checkbox">
-                <label class="table" style="margin-bottom: 6px;">Keyboard</label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" style="cursor:pointer" type="checkbox">
-                <label class="table" style="margin-bottom: 6px;">Mousepad</label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" style="cursor:pointer" type="checkbox">
-                <label class="table" style="margin-bottom: 6px;">Accessories</label>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card" style="border-top: none; border-left: none; border-right: none; cursor: pointer;">
-          <header class="card-header " style="border: none; background-color: white; padding-left: 0px;">
-            <a data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="false" aria-current="false">
-              <h6 class="txt" style="font-weight: bold; font-size: 14px; color: #222222;">ขนาด</h6>
-            </a>
-          </header>
-          <div class="collapse show" id="collapse6">
-            <div class="card-body" style="margin-top: -25px; font-size: 14px; padding-left: 0px;">
-              <div class="form-check">
-                <span class="btn btn-light rounded-circle mw-100 p-2" data-toggle="tooltip" data-placement="top"
-                  title="S">S </span>
-                <span class="btn btn-light rounded-circle mw-100 p-2" data-toggle="tooltip" data-placement="top"
-                  title="L">L </span>
-                <span class="btn btn-light rounded-circle mw-100 p-1" data-toggle="tooltip" data-placement="top"
-                  title="96%">96% </span>
-                <span class="btn btn-light rounded-circle mw-100 p-1" data-toggle="tooltip" data-placement="top"
-                  title="2L">2L </span>
-                <span class="btn btn-light rounded-circle mw-100 p-1" data-toggle="tooltip" data-placement="top"
-                  title="XL">XL </span>
-                <span class="btn btn-light rounded-circle mw-100 p-1" data-toggle="tooltip" data-placement="top"
-                  title="XXL">XXL </span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card" style="border-top: none; border-left: none; border-right: none; cursor: pointer;">
-          <header class="card-header " style="border: none; background-color: white; padding-left: 0px;">
-            <a data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="false" aria-current="false">
-              <h6 class="txt" style="font-weight: bold; font-size: 14px; color: #222222;">สี</h6>
-            </a>
-          </header>
-          <div class="collapse show" id="collapse7">
-            <div class="card-body" style="margin-top: -25px; font-size: 14px; padding-left: 0px;">
-              <div class="form-check">
-                <span class="btn btn-dark rounded-circle p-3 " data-toggle="tooltip" data-placement="top"
-                  title="Black"></span>
-                <span class="btn btn-light rounded-circle p-3 " data-toggle="tooltip" data-placement="top"
-                  title="White"></span>
-                <span class="btn btn-dark rounded-circle p-3 " data-toggle="tooltip" data-placement="top"
-                  title="Black (blue switch)"></span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <header class="card-header " style="border: none; background-color: white; padding-left: 0px;">
-          <a data-bs-toggle="collapse" data-bs-target="#collapse8" aria-expanded="false" aria-current="false">
-            <h6 class="txt" style="cursor:pointer; font-weight: bold; font-size: 14px; color: #222222;">ราคา
-            </h6>
-            <br>
-          </a>
-        </header>
-        <div class="collapse sh ow" id="collapse8">
-          <div class="card-body" style="margin-top: -25px; font-size: 14px; padding-left: 0px;">
-            <div id="slider"></div>
-          </div>
-        </div>
-      </div>
-
-      <script>
-        var coll = document.getElementsByClassName("txt");
-        var i;
-
-        for (i = 0; i < coll.length; i++) {
-          coll[i].addEventListener("click", function () {
-            this.classList.toggle("active");
-          });
-        }
-      </script>
-
-
-      <div class="col-md-9">
+    <!-- background-title -->
+    <div class="container-fluid cf">
         <div class="row">
-
-          <div class="col-md-4">
-            <i class="fas fa-th" style="color: purple;"></i>
-            <i class="fas fa-list"></i>
-          </div>
-          <div class="col-md-4">
-            <a name="text-list">สินค้า 1-12 ของ 27</a>
-
-          </div>
-
-          <div class="col-md-4" style="text-align: right;">
-            <label class="sorter-label" for="sorter">เรียงจาก</label>
-            <select id="sorter" data-role="sorter" class="sorter-options">
-              <option value="position" selected="selected">ตำแหน่ง</option>
-              <option value="name">ชื่อสินค้า</option>
-              <option value="price">ราคา</option>
-            </select>
-            <i class="fas fa-arrow-up"></i>
-          </div>
-
-
+            <div class="topnav">
+                <img src="https://www.logaworld.com/pub/media/loga_logo.svg"
+                    style="height: 100%; width: 5%; align-items: center; float: left; padding: 3px;">
+                <a href="#contact"><strong>สินค้า</strong></a>
+                <a href="#about">ติตต่อเรา</a>
+            </div>
         </div>
-        <!--แถว1--->
-        <div class="row" style="margin-top: 5%;">
-          <div class="col-md-4">
-            <div class="row">
-              <div class="col">
-                <div class="card" style="width: 18rem; border: none; height: 476px;">
-                  <img class="card-img-top" src="kb1.jpg" alt="Card image cap">
-                  <div class="card-body" style="padding-left: 0; padding-right: 0;">
-                    <a href="" class="card-title">
-                      <p><b>LOGA RAVANA : 2.4GHz wireless Mechanical
-                          keyboard</b></p>
-                    </a>
-                    <p class="card-text"><b>฿3,490.00</b></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <button class="btn cart" data-bs-toggle="modal"
-                data-bs-target="#loga1">เพิ่มไปยังตะกร้า</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="row">
-              <div class="col">
-                <div class="card" style="width: 18rem; border: none; height: 476px;">
-                  <img class="card-img-top" src="mc1.jpg" alt="Card image cap">
-                  <div class="card-body" style="padding-left: 0; padding-right: 0;">
-                    <a href="" class="card-title">
-                      <p><b>Mouse Cover set (Kirin Pro wireless)</b></p>
-                    </a>
-                    <p class="card-text"><b>฿289.00</b></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <button class="btn cart" data-bs-toggle="modal"
-                data-bs-target="#mouset1">เพิ่มไปยังตะกร้า</button>
-              </div>
-            </div>
-
-
-
-          </div>
-          <div class="col-md-4">
-            <div class="row">
-              <div class="col">
-                <div class="card" style="width: 18rem; border: none; height: 476px;">
-                  <img class="card-img-top" src="zo1.jpg" alt="Card image cap">
-                  <div class="card-body" style="padding-left: 0; padding-right: 0;">
-                    <a href="" class="card-title">
-                      <p><b>Zodiac Collection Sagittarius Keycap (new)</b></p>
-                    </a>
-                    <p class="card-text"><b>฿269.00</b></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <button class="btn cart" data-bs-toggle="modal"
-                data-bs-target="#sagit">เพิ่มไปยังตะกร้า</button>
-              </div>
-            </div>
-          </div>
-
+        <div class="row" style="height: 260px">
+            <img src="https://www.logaworld.com/pub/media/bg_pagetitle/default/bg_catalog.png"
+                style="height: 260px; width: 100%;">
+            <div class="centered">สินค้า</div>
         </div>
-        <!--แถว2--->
-        <div class="row" style="margin-top: 3%;">
-          <div class="col-md-4">
-            <div class="row">
-              <div class="col">
-                <div class="card" style="width: 18rem; border: none; height: 476px;">
-                  <img class="card-img-top" src="zol1.jpg" alt="Card image cap">
-                  <div class="card-body" style="padding-left: 0; padding-right: 0;">
-                    <a href="" class="card-title">
-                      <p><b>Zodiac Collection LEO Keycap</b></p>
-                    </a>
-                    <p class="card-text"><b>฿269.00</b></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <button class="btn cart" data-bs-toggle="modal"
-                data-bs-target="#leo">เพิ่มไปยังตะกร้า</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="row">
-              <div class="col">
-                <div class="card" style="width: 18rem; border: none; height: 476px;">
-                  <img class="card-img-top" src="zoli1.jpg" alt="Card image cap">
-                  <div class="card-body" style="padding-left: 0; padding-right: 0;">
-                    <a href="" class="card-title">
-                      <p><b>Zodiac Collection Libra Keycap</b></p>
-                    </a>
-                    <p class="card-text"><b>฿269.00</b></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <button class="btn cart" data-bs-toggle="modal"
-                data-bs-target="#libra">เพิ่มไปยังตะกร้า</button>
-              </div>
-            </div>
-
-
-
-          </div>
-          <div class="col-md-4">
-            <div class="row">
-              <div class="col">
-                <div class="card" style="width: 18rem; border: none; height: 476px;">
-                  <img class="card-img-top" src="zog1.jpg" alt="Card image cap">
-                  <div class="card-body" style="padding-left: 0; padding-right: 0;">
-                    <a href="" class="card-title">
-                      <p><b>Zodiac Collection Gemini Keycap</b></p>
-                    </a>
-                    <p class="card-text"><b>฿269.00</b></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <button class="btn cart" data-bs-toggle="modal"
-                data-bs-target="#gemini">เพิ่มไปยังตะกร้า</button>
-              </div>
-            </div>
-          </div>
-
-        </div>
-        <!--แถว3--->
-        <div class="row" style="margin-top: 3%;">
-          <div class="col-md-4">
-            <div class="row">
-              <div class="col">
-                <div class="card" style="width: 18rem; border: none; height: 476px;">
-                  <img class="card-img-top" src="cancer1.jpg" alt="Card image cap">
-                  <div class="card-body" style="padding-left: 0; padding-right: 0;">
-                    <a href="" class="card-title">
-                      <p><b>Zodiac Collection Cancer Keycap</b></p>
-                    </a>
-                    <p class="card-text"><b>฿269.00</b></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <button class="btn cart" data-bs-toggle="modal"
-                data-bs-target="#cancer">เพิ่มไปยังตะกร้า</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="row">
-              <div class="col">
-                <div class="card" style="width: 18rem; border: none; height: 476px;">
-                  <img class="card-img-top" src="taurus1.jpg" alt="Card image cap">
-                  <div class="card-body" style="padding-left: 0; padding-right: 0;">
-                    <a href="" class="card-title">
-                      <p><b>Zodiac Collection Taurus Keycap</b></p>
-                    </a>
-                    <p class="card-text"><b>฿269.00</b></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <button class="btn cart" data-bs-toggle="modal"
-                data-bs-target="#taurus">เพิ่มไปยังตะกร้า</button>
-              </div>
-            </div>
-
-
-
-          </div>
-          <div class="col-md-4">
-            <div class="row">
-              <div class="col">
-                <div class="card" style="width: 18rem; border: none; height: 476px;">
-                  <img class="card-img-top" src="scor1.jpg" alt="Card image cap">
-                  <div class="card-body" style="padding-left: 0; padding-right: 0;">
-                    <a href="" class="card-title">
-                      <p><b>Zodiac Collection Scorpio Keycap</b></p>
-                    </a>
-                    <p class="card-text"><b>฿269.00</b></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <button class="btn cart" data-bs-toggle="modal"
-                data-bs-target="#scorpio">เพิ่มไปยังตะกร้า</button>
-              </div>
-            </div>
-          </div>
-
-        </div>
-        <!--แถว4--->
-        <div class="row" style="margin-top: 3%;">
-          <div class="col-md-4">
-            <div class="row">
-              <div class="col">
-                <div class="card" style="width: 18rem; border: none; height: 476px;">
-                  <img class="card-img-top" src="mantra1.jpg" alt="Card image cap">
-                  <div class="card-body" style="padding-left: 0; padding-right: 0;">
-                    <a href="" class="card-title">
-                      <p><b>Mantra Pro : LOG Series</b></p>
-                    </a>
-                    <p class="card-text"><b>฿890.00</b></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <button class="btn cart">เพิ่มไปยังตะกร้า</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="row">
-              <div class="col">
-                <div class="card" style="width: 18rem; border: none; height: 476px;">
-                  <img class="card-img-top" src="mantra2.jpg" alt="Card image cap">
-                  <div class="card-body" style="padding-left: 0; padding-right: 0;">
-                    <a href="" class="card-title">
-                      <p><b>(Pre-Order) Mantra Pro : Armory Gaming Edition</b></p>
-                    </a>
-                    <p class="card-text"><b>฿890.00</b></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <button class="btn cart">เพิ่มไปยังตะกร้า</button>
-              </div>
-            </div>
-
-
-
-          </div>
-          <div class="col-md-4">
-            <div class="row">
-              <div class="col">
-                <div class="card" style="width: 18rem; border: none; height: 476px;">
-                  <img class="card-img-top" id="kirin-product" src="kirin1.jpg" alt="Card image cap">
-                  <div class="card-body" style="padding-left: 0; padding-right: 0;">
-                    <a href="" class="card-title">
-                      <p><b>Kirin PRO wireless</b></p>
-                    </a>
-                    <p class="card-text"><b>฿2,490.00</b></p>
-                    <div class="select-color" style="background: url(black.jpg) no-repeat center;"
-                      onclick="kirinproductblack();" data-toggle="tooltip" data-placement="top" title="Black"></div>
-                    <div class="select-color" style="background: url(white.jpg) no-repeat center;"
-                      onclick="kirinproductwhite();" data-toggle="tooltip" data-placement="top" title="White"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <button class="btn cart">เพิ่มไปยังตะกร้า</button>
-              </div>
-            </div>
-          </div>
-
-        </div>
-        <!--เลือกหน้า--->
-        <div class="row" style="margin-top: 10%;">
-          <div class="col-md-4"></div>
-          <div class="col-md-4"></div>
-          <div class="col-md-4" style="text-align: right;"><a href="#" class="next">1</a>
-            <a href="#" class="next">2</a>
-            <a href="#" class="next">3</a>
-            <a href="#" class="next">&#8250;</a>
-          </div>
-        </div>
-        <div class="container"></div>
-      </div>
+        <!-- <img src="https://www.logaworld.com/pub/media/bg_pagetitle/default/bg_catalog.png">
+        <div class="centered">สินค้า</div> -->
     </div>
-    <button onclick="topFunction()" id="myBtn"><i class="fas fa-angle-up"></i></button>
-  </div>
+    <!-- main--->
+    <div class="container">
+        <p style="font-size:12px; display: inline;"><a class="link" href="" style="text-decoration: none;">หน้าแรก</a>
+        </p>
+        <p class="more" style="font-size:12px; color: black; display: inline;">สินค้า</p>
 
+    </div>
+    </div>
 
-  <!-- Modal -->
-  <div class="modal fade" id="loga1" tabindex="-1" aria-labelledby="loga1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" style="max-width: 750px;" role="document">
-      <div class="modal-content" style="border-radius: 0; padding: 15px; height: 400px;">
-        <div class="modal-header" style="border-bottom: 0 none;">
-          <span class="modal-title" id="exampleModalLabel"><strong>LOGA RAVANA : 2.4GHz wireless Mechanical
-              keyboard</strong></span>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <div class="row">
-            <div class="col">
-              <span style="color: #c60000; font-size: 16px; font-weight: 500;"><strong>฿3,490.00</strong></span><br>
-              <span style="color: #000000;"><strong>Language layout </strong></span>
-              <span style="color: #c60000;">*</span>
-              <br>
-              <select class="selectmodal">
-                <option selected>เลือกตัวเลือก...
-                </option>
-                <option value="1">English</option>
-                <option value="2">English/Thai</option>
-              </select>
-              <br>
-              <hr>
-              <div class="amountdrop">
-                <span style="margin-right:10px;">จำนวน</span>
-                <div class="prodamount">
-                  <i class="fas fa-minus"></i>
-                  <input type="number" value="1" class="useramount">
-                  <i class="fas fa-plus"></i>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <h4>กรองข้อมูล</h4>
+                <div class="card" style="border-top: none; border-left: none; border-right: none; cursor: pointer;">
+
+                    <header class="card-header " style="border: none; background-color: white; padding-left: 0px;">
+                        <a data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false"
+                            aria-current="false">
+                            <h6 class="txt" style="font-weight: bold; font-size: 14px; color: #222222;">ประเภท</h6>
+                        </a>
+                    </header>
+                    <div class="collapse show" id="collapse1">
+                        <div class="card-body "
+                            style="margin-top: -25px; font-size: 14px; color: #333333; padding-left: 0px;">
+                            <div class="form-check ">
+                                <input class="form-check-input" style="cursor:pointer" type="checkbox">
+                                <label class="table" style="margin-bottom: 6px;">คอลเลคชั่นใหม่</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" style="cursor:pointer" type="checkbox">
+                                <label class="table" style="margin-bottom: 6px;">Keyboard</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" style="cursor:pointer" type="checkbox">
+                                <label class="table" style="margin-bottom: 6px;">Mice</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" style="cursor:pointer" type="checkbox">
+                                <label class="table" style="margin-bottom: 6px;">Mousepad</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" style="cursor:pointer" type="checkbox">
+                                <label class="table" style="margin-bottom: 6px;">Others</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" style="cursor:pointer" type="checkbox">
+                                <label class="table">Limited</label>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <br>
-              <br>
-              <button type="button" class="btn btn cart" data-bs-dismiss="modal"
-                style="width: 150px; height: 40px;">เพิ่มในตะกร้า</button>
-
-
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal fade" id="mouset1" tabindex="-1" aria-labelledby="loga1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" style="max-width: 750px;" role="document">
-      <div class="modal-content" style="border-radius: 0; padding: 15px; height: 400px;">
-        <div class="modal-header" style="border-bottom: 0 none;">
-          <span class="modal-title" id="exampleModalLabel"><strong>Mouse Cover set (Kirin Pro wireless)
-            </strong></span>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <div class="row">
-            <div class="col">
-              <span style="color: #c60000; font-size: 16px; font-weight: 500;"><strong>฿289.00</strong></span><br>
-              <span style="color: #000000;"><strong>Kirin cover set </strong></span>
-              <span style="color: #c60000;">*</span>
-              <br>
-              <select class="selectmodal">
-                <option selected>เลือกตัวเลือก...
-                </option>
-                <option value="1">สีฟ้า</option>
-                <option value="2">สีเหลือง</option>
-                <option value="3">เขียวมิ้นต์</option>
-                <option value="4">ชมพู</option>
-              </select>
-              <br>
-              <hr>
-              <div class="amountdrop">
-                <span style="margin-right:10px;">จำนวน</span>
-                <div class="prodamount">
-                  <i class="fas fa-minus"></i>
-                  <input type="number" value="1" class="useramount">
-                  <i class="fas fa-plus"></i>
+                <div class="card" style="border-top: none; border-left: none; border-right: none; cursor: pointer;">
+                    <header class="card-header " style="border: none; background-color: white; padding-left: 0px;">
+                        <a data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false"
+                            aria-current="false">
+                            <h6 class="txt" style="font-weight: bold; font-size: 14px; color: #222222;">รูปทรง</h6>
+                        </a>
+                    </header>
+                    <div class="collapse show" id="collapse2">
+                        <div class="card-body"
+                            style="margin-top: -25px; font-size: 14px; color: #333333; padding-left: 0px;">
+                            <div class="form-check">
+                                <input class="form-check-input" style="cursor:pointer" type="checkbox">
+                                <label class="table">Ambidexterous</label>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <br>
-              <br>
-              <button type="button" class="btn btn cart" data-bs-dismiss="modal"
-                style="width: 150px; height: 40px;">เพิ่มในตะกร้า</button>
+                <div class="card" style="border-top: none; border-left: none; border-right: none; cursor: pointer;">
+                    <header class="card-header " style="border: none; background-color: white; padding-left: 0px;">
+                        <a data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false"
+                            aria-current="false">
+                            <h6 class="txt" style="font-weight: bold; font-size: 14px; color: #222222;">เชื่อมต่อ</h6>
+                        </a>
+                    </header>
+                    <div class="collapse show" id="collapse3">
+                        <div class="card-body"
+                            style="margin-top: -25px; font-size: 14px; color: #333333; padding-left: 0px;">
+                            <div class="form-check">
+                                <input class="form-check-input" style="cursor:pointer" type="checkbox">
+                                <label class="table">Wireless</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" style="border-top: none; border-left: none; border-right: none; cursor: pointer;">
+                    <header class="card-header " style="border: none; background-color: white; padding-left: 0px;">
+                        <a data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false"
+                            aria-current="false">
+                            <h6 class="txt" style="font-weight: bold; font-size: 14px; color: #222222;">ชนิด</h6>
+                        </a>
+                    </header>
+                    <div class="collapse show" id="collapse4">
+                        <div class="card-body"
+                            style="margin-top: -25px; font-size: 14px; color: #333333; padding-left: 0px;">
+                            <div class="form-check">
+                                <input class="form-check-input" style="cursor:pointer" type="checkbox">
+                                <label class="table" style="margin-bottom: 6px;">None-Waterproof</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" style="cursor:pointer" type="checkbox">
+                                <label class="table" style="margin-bottom: 6px;">Waterproof</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" style="cursor:pointer" type="checkbox">
+                                <label class="table" style="margin-bottom: 6px;">Cloth</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" style="border-top: none; border-left: none; border-right: none; cursor: pointer;">
+                    <header class="card-header " style="border: none; background-color: white; padding-left: 0px;">
+                        <a data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false"
+                            aria-current="false">
+                            <h6 class="txt" style="font-weight: bold; font-size: 14px; color: #222222;">คอลเลคชั่น</h6>
+                        </a>
+                    </header>
+                    <div class="collapse show" id="collapse5">
+                        <div class="card-body"
+                            style="margin-top: -25px; font-size: 14px; color: #333333; padding-left: 0px;">
+                            <div class="form-check">
+                                <input class="form-check-input" style="cursor:pointer" type="checkbox">
+                                <label class="table" style="margin-bottom: 6px;">Mice</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" style="cursor:pointer" type="checkbox">
+                                <label class="table" style="margin-bottom: 6px;">Keyboard</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" style="cursor:pointer" type="checkbox">
+                                <label class="table" style="margin-bottom: 6px;">Mousepad</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" style="cursor:pointer" type="checkbox">
+                                <label class="table" style="margin-bottom: 6px;">Accessories</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" style="border-top: none; border-left: none; border-right: none; cursor: pointer;">
+                    <header class="card-header " style="border: none; background-color: white; padding-left: 0px;">
+                        <a data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="false"
+                            aria-current="false">
+                            <h6 class="txt" style="font-weight: bold; font-size: 14px; color: #222222;">ขนาด</h6>
+                        </a>
+                    </header>
+                    <div class="collapse show" id="collapse6">
+                        <div class="card-body" style="margin-top: -25px; font-size: 14px; padding-left: 0px;">
+                            <div class="form-check">
+                                <span class="btn btn-light rounded-circle mw-100 p-2" data-toggle="tooltip"
+                                    data-placement="top" title="S">S </span>
+                                <span class="btn btn-light rounded-circle mw-100 p-2" data-toggle="tooltip"
+                                    data-placement="top" title="L">L </span>
+                                <span class="btn btn-light rounded-circle mw-100 p-1" data-toggle="tooltip"
+                                    data-placement="top" title="96%">96% </span>
+                                <span class="btn btn-light rounded-circle mw-100 p-1" data-toggle="tooltip"
+                                    data-placement="top" title="2L">2L </span>
+                                <span class="btn btn-light rounded-circle mw-100 p-1" data-toggle="tooltip"
+                                    data-placement="top" title="XL">XL </span>
+                                <span class="btn btn-light rounded-circle mw-100 p-1" data-toggle="tooltip"
+                                    data-placement="top" title="XXL">XXL </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" style="border-top: none; border-left: none; border-right: none; cursor: pointer;">
+                    <header class="card-header " style="border: none; background-color: white; padding-left: 0px;">
+                        <a data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="false"
+                            aria-current="false">
+                            <h6 class="txt" style="font-weight: bold; font-size: 14px; color: #222222;">สี</h6>
+                        </a>
+                    </header>
+                    <div class="collapse show" id="collapse7">
+                        <div class="card-body" style="margin-top: -25px; font-size: 14px; padding-left: 0px;">
+                            <div class="form-check">
+                                <span class="btn btn-dark rounded-circle p-3 " data-toggle="tooltip"
+                                    data-placement="top" title="Black"></span>
+                                <span class="btn btn-light rounded-circle p-3 " data-toggle="tooltip"
+                                    data-placement="top" title="White"></span>
+                                <span class="btn btn-dark rounded-circle p-3 " data-toggle="tooltip"
+                                    data-placement="top" title="Black (blue switch)"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-
+                <header class="card-header " style="border: none; background-color: white; padding-left: 0px;">
+                    <a data-bs-toggle="collapse" data-bs-target="#collapse8" aria-expanded="false" aria-current="false">
+                        <h6 class="txt" style="cursor:pointer; font-weight: bold; font-size: 14px; color: #222222;">ราคา
+                        </h6>
+                        <br>
+                    </a>
+                </header>
+                <div class="collapse sh ow" id="collapse8">
+                    <div class="card-body" style="margin-top: -25px; font-size: 14px; padding-left: 0px;">
+                        <div id="slider"></div>
+                    </div>
+                </div>
             </div>
 
-          </div>
+            <script>
+                var coll = document.getElementsByClassName("txt");
+                var i;
+
+                for (i = 0; i < coll.length; i++) {
+                    coll[i].addEventListener("click", function () {
+                        this.classList.toggle("active");
+                    });
+                }
+            </script>
+
+
+            <div class="col-md-9">
+                <div class="row">
+
+                    <div class="col-md-4">
+                        <i class="fas fa-th" style="color: purple;"></i>
+                        <i class="fas fa-list"></i>
+                    </div>
+                    <div class="col-md-4">
+                        <a name="text-list">สินค้า 1-12 ของ 27</a>
+
+                    </div>
+
+                    <div class="col-md-4" style="text-align: right;">
+                        <label class="sorter-label" for="sorter">เรียงจาก</label>
+                        <select id="sorter" data-role="sorter" class="sorter-options">
+                            <option value="position" selected="selected">ตำแหน่ง</option>
+                            <option value="name">ชื่อสินค้า</option>
+                            <option value="price">ราคา</option>
+                        </select>
+                        <i class="fas fa-arrow-up"></i>
+                    </div>
+
+
+                </div>
+                <!--แถว1--->
+                <div class="row" style="margin-top: 5%;">
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="col">
+                                <div class="card" style="width: 18rem; border: none; height: 476px;">
+                                    <img class="card-img-top" src="kb1.jpg" alt="Card image cap">
+                                    <div class="card-body" style="padding-left: 0; padding-right: 0;">
+                                        <a href="" class="card-title">
+                                            <p><b>LOGA RAVANA : 2.4GHz wireless Mechanical
+                                                    keyboard</b></p>
+                                        </a>
+                                        <p class="card-text"><b>฿3,490.00</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <button class="btn cart" data-bs-toggle="modal"
+                                    data-bs-target="#loga1">เพิ่มไปยังตะกร้า</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="col">
+                                <div class="card" style="width: 18rem; border: none; height: 476px;">
+                                    <img class="card-img-top" src="mc1.jpg" alt="Card image cap">
+                                    <div class="card-body" style="padding-left: 0; padding-right: 0;">
+                                        <a href="" class="card-title">
+                                            <p><b>Mouse Cover set (Kirin Pro wireless)</b></p>
+                                        </a>
+                                        <p class="card-text"><b>฿289.00</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <button class="btn cart" data-bs-toggle="modal"
+                                    data-bs-target="#mouset1">เพิ่มไปยังตะกร้า</button>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="col">
+                                <div class="card" style="width: 18rem; border: none; height: 476px;">
+                                    <img class="card-img-top" src="zo1.jpg" alt="Card image cap">
+                                    <div class="card-body" style="padding-left: 0; padding-right: 0;">
+                                        <a href="" class="card-title">
+                                            <p><b>Zodiac Collection Sagittarius Keycap (new)</b></p>
+                                        </a>
+                                        <p class="card-text"><b>฿269.00</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <button class="btn cart" data-bs-toggle="modal"
+                                    data-bs-target="#sagit">เพิ่มไปยังตะกร้า</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!--แถว2--->
+                <div class="row" style="margin-top: 3%;">
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="col">
+                                <div class="card" style="width: 18rem; border: none; height: 476px;">
+                                    <img class="card-img-top" src="zol1.jpg" alt="Card image cap">
+                                    <div class="card-body" style="padding-left: 0; padding-right: 0;">
+                                        <a href="" class="card-title">
+                                            <p><b>Zodiac Collection LEO Keycap</b></p>
+                                        </a>
+                                        <p class="card-text"><b>฿269.00</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <button class="btn cart" data-bs-toggle="modal"
+                                    data-bs-target="#leo">เพิ่มไปยังตะกร้า</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="col">
+                                <div class="card" style="width: 18rem; border: none; height: 476px;">
+                                    <img class="card-img-top" src="zoli1.jpg" alt="Card image cap">
+                                    <div class="card-body" style="padding-left: 0; padding-right: 0;">
+                                        <a href="" class="card-title">
+                                            <p><b>Zodiac Collection Libra Keycap</b></p>
+                                        </a>
+                                        <p class="card-text"><b>฿269.00</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <button class="btn cart" data-bs-toggle="modal"
+                                    data-bs-target="#libra">เพิ่มไปยังตะกร้า</button>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="col">
+                                <div class="card" style="width: 18rem; border: none; height: 476px;">
+                                    <img class="card-img-top" src="zog1.jpg" alt="Card image cap">
+                                    <div class="card-body" style="padding-left: 0; padding-right: 0;">
+                                        <a href="" class="card-title">
+                                            <p><b>Zodiac Collection Gemini Keycap</b></p>
+                                        </a>
+                                        <p class="card-text"><b>฿269.00</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <button class="btn cart" data-bs-toggle="modal"
+                                    data-bs-target="#gemini">เพิ่มไปยังตะกร้า</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!--แถว3--->
+                <div class="row" style="margin-top: 3%;">
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="col">
+                                <div class="card" style="width: 18rem; border: none; height: 476px;">
+                                    <img class="card-img-top" src="cancer1.jpg" alt="Card image cap">
+                                    <div class="card-body" style="padding-left: 0; padding-right: 0;">
+                                        <a href="" class="card-title">
+                                            <p><b>Zodiac Collection Cancer Keycap</b></p>
+                                        </a>
+                                        <p class="card-text"><b>฿269.00</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <button class="btn cart" data-bs-toggle="modal"
+                                    data-bs-target="#cancer">เพิ่มไปยังตะกร้า</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="col">
+                                <div class="card" style="width: 18rem; border: none; height: 476px;">
+                                    <img class="card-img-top" src="taurus1.jpg" alt="Card image cap">
+                                    <div class="card-body" style="padding-left: 0; padding-right: 0;">
+                                        <a href="" class="card-title">
+                                            <p><b>Zodiac Collection Taurus Keycap</b></p>
+                                        </a>
+                                        <p class="card-text"><b>฿269.00</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <button class="btn cart" data-bs-toggle="modal"
+                                    data-bs-target="#taurus">เพิ่มไปยังตะกร้า</button>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="col">
+                                <div class="card" style="width: 18rem; border: none; height: 476px;">
+                                    <img class="card-img-top" src="scor1.jpg" alt="Card image cap">
+                                    <div class="card-body" style="padding-left: 0; padding-right: 0;">
+                                        <a href="" class="card-title">
+                                            <p><b>Zodiac Collection Scorpio Keycap</b></p>
+                                        </a>
+                                        <p class="card-text"><b>฿269.00</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <button class="btn cart" data-bs-toggle="modal"
+                                    data-bs-target="#scorpio">เพิ่มไปยังตะกร้า</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!--แถว4--->
+                <div class="row" style="margin-top: 3%;">
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="col">
+                                <div class="card" style="width: 18rem; border: none; height: 476px;">
+                                    <img class="card-img-top" src="mantra1.jpg" alt="Card image cap">
+                                    <div class="card-body" style="padding-left: 0; padding-right: 0;">
+                                        <a href="" class="card-title">
+                                            <p><b>Mantra Pro : LOG Series</b></p>
+                                        </a>
+                                        <p class="card-text"><b>฿890.00</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <button class="btn cart">เพิ่มไปยังตะกร้า</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="col">
+                                <div class="card" style="width: 18rem; border: none; height: 476px;">
+                                    <img class="card-img-top" src="mantra2.jpg" alt="Card image cap">
+                                    <div class="card-body" style="padding-left: 0; padding-right: 0;">
+                                        <a href="" class="card-title">
+                                            <p><b>(Pre-Order) Mantra Pro : Armory Gaming Edition</b></p>
+                                        </a>
+                                        <p class="card-text"><b>฿890.00</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <button class="btn cart">เพิ่มไปยังตะกร้า</button>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="col">
+                                <div class="card" style="width: 18rem; border: none; height: 476px;">
+                                    <img class="card-img-top" id="kirin-product" src="kirin1.jpg" alt="Card image cap">
+                                    <div class="card-body" style="padding-left: 0; padding-right: 0;">
+                                        <a href="" class="card-title">
+                                            <p><b>Kirin PRO wireless</b></p>
+                                        </a>
+                                        <p class="card-text"><b>฿2,490.00</b></p>
+                                        <div class="select-color" style="background: url(black.jpg) no-repeat center;"
+                                            onclick="kirinproductblack();" data-toggle="tooltip" data-placement="top"
+                                            title="Black"></div>
+                                        <div class="select-color" style="background: url(white.jpg) no-repeat center;"
+                                            onclick="kirinproductwhite();" data-toggle="tooltip" data-placement="top"
+                                            title="White"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <button class="btn cart">เพิ่มไปยังตะกร้า</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!--เลือกหน้า--->
+                <div class="row" style="margin-top: 10%;">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4" style="text-align: right;"><a href="#" class="next">1</a>
+                        <a href="#" class="next">2</a>
+                        <a href="#" class="next">3</a>
+                        <a href="#" class="next">&#8250;</a>
+                    </div>
+                </div>
+                <div class="container"></div>
+            </div>
         </div>
-      </div>
+        <button onclick="topFunction()" id="myBtn"><i class="fas fa-angle-up"></i></button>
     </div>
-  </div>
 
-  <div class="modal fade" id="sagit" tabindex="-1" aria-labelledby="sagit" aria-hidden="true"
-    style="border-radius: none;">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <span class="modal-title" id="exampleModalLabel"><strong>เพิ่ม 1 รายการในรถเข็นคุณ</strong></span>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <div class="row">
-            <div class="col-sm-3" style="text-align: center;">
-              <img src="zo1.jpg" width="100px">
+
+    <!-- Modal -->
+    <div class="modal fade" id="loga1" tabindex="-1" aria-labelledby="loga1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" style="max-width: 750px;" role="document">
+            <div class="modal-content" style="border-radius: 0; padding: 15px; height: 400px;">
+                <div class="modal-header" style="border-bottom: 0 none;">
+                    <span class="modal-title" id="exampleModalLabel"><strong>LOGA RAVANA : 2.4GHz wireless Mechanical
+                            keyboard</strong></span>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col">
+                            <span
+                                style="color: #c60000; font-size: 16px; font-weight: 500;"><strong>฿3,490.00</strong></span><br>
+                            <span style="color: #000000;"><strong>Language layout </strong></span>
+                            <span style="color: #c60000;">*</span>
+                            <br>
+                            <select class="selectmodal">
+                                <option selected>เลือกตัวเลือก...
+                                </option>
+                                <option value="1">English</option>
+                                <option value="2">English/Thai</option>
+                            </select>
+                            <br>
+                            <hr>
+                            <div class="amountdrop">
+                                <span style="margin-right:10px;">จำนวน</span>
+                                <div class="prodamount">
+                                    <i class="fas fa-minus"></i>
+                                    <input type="number" value="1" class="useramount">
+                                    <i class="fas fa-plus"></i>
+                                </div>
+                            </div>
+                            <br>
+                            <br>
+                            <button type="button" class="btn btn cart" data-bs-dismiss="modal"
+                                style="width: 150px; height: 40px;">เพิ่มในตะกร้า</button>
+
+
+                        </div>
+
+                    </div>
+                </div>
             </div>
-            <div class="col-sm-9">
-              <div class="modal-header2"><strong>Zodiac Collection Sagittarius Keycap (new)</strong>
-              </div>
-              <span style="color: #969696;">จำนวน: </span>
-              <span>1</span>
-              <br>
-              <span style="color: #969696;">ตะกร้ายอดรวม: </span>
-              <span>-</span>
-
-
-            </div>
-
-          </div>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn cart" data-bs-dismiss="modal"
-            style="width: 150px; height: 40px;">เลือกซื้อสินค้าต่อ</button>
-          <button type="button" class="btn btn cart-black"
-            style="width: 150px; height: 40px;">ไปยังตะกร้าสินค้า</button>
-        </div>
-      </div>
     </div>
-  </div>
 
-  <div class="modal fade" id="leo" tabindex="-1" aria-labelledby="leo" aria-hidden="true" style="border-radius: none;">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <span class="modal-title" id="exampleModalLabel"><strong>เพิ่ม 1 รายการในรถเข็นคุณ</strong></span>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <div class="row">
-            <div class="col-sm-3" style="text-align: center;">
-              <img src="zol1.jpg" width="100px">
+    <div class="modal fade" id="mouset1" tabindex="-1" aria-labelledby="loga1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" style="max-width: 750px;" role="document">
+            <div class="modal-content" style="border-radius: 0; padding: 15px; height: 400px;">
+                <div class="modal-header" style="border-bottom: 0 none;">
+                    <span class="modal-title" id="exampleModalLabel"><strong>Mouse Cover set (Kirin Pro wireless)
+                        </strong></span>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col">
+                            <span
+                                style="color: #c60000; font-size: 16px; font-weight: 500;"><strong>฿289.00</strong></span><br>
+                            <span style="color: #000000;"><strong>Kirin cover set </strong></span>
+                            <span style="color: #c60000;">*</span>
+                            <br>
+                            <select class="selectmodal">
+                                <option selected>เลือกตัวเลือก...
+                                </option>
+                                <option value="1">สีฟ้า</option>
+                                <option value="2">สีเหลือง</option>
+                                <option value="3">เขียวมิ้นต์</option>
+                                <option value="4">ชมพู</option>
+                            </select>
+                            <br>
+                            <hr>
+                            <div class="amountdrop">
+                                <span style="margin-right:10px;">จำนวน</span>
+                                <div class="prodamount">
+                                    <i class="fas fa-minus"></i>
+                                    <input type="number" value="1" class="useramount">
+                                    <i class="fas fa-plus"></i>
+                                </div>
+                            </div>
+                            <br>
+                            <br>
+                            <button type="button" class="btn btn cart" data-bs-dismiss="modal"
+                                style="width: 150px; height: 40px;">เพิ่มในตะกร้า</button>
+
+
+                        </div>
+
+                    </div>
+                </div>
             </div>
-            <div class="col-sm-9">
-              <div class="modal-header2"><strong>Zodiac Collection LEO Keycap</strong>
-              </div>
-              <span style="color: #969696;">จำนวน: </span>
-              <span>1</span>
-              <br>
-              <span style="color: #969696;">ตะกร้ายอดรวม: </span>
-              <span>-</span>
-
-
-            </div>
-
-          </div>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn cart" data-bs-dismiss="modal"
-            style="width: 150px; height: 40px;">เลือกซื้อสินค้าต่อ</button>
-          <button type="button" class="btn btn cart-black"
-            style="width: 150px; height: 40px;">ไปยังตะกร้าสินค้า</button>
-        </div>
-      </div>
     </div>
-  </div>
 
-  <div class="modal fade" id="libra" tabindex="-1" aria-labelledby="libra" aria-hidden="true"
-    style="border-radius: none;">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <span class="modal-title" id="exampleModalLabel"><strong>เพิ่ม 1 รายการในรถเข็นคุณ</strong></span>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <div class="row">
-            <div class="col-sm-3" style="text-align: center;">
-              <img src="zoli1.jpg" width="100px">
+    <div class="modal fade" id="sagit" tabindex="-1" aria-labelledby="sagit" aria-hidden="true"
+        style="border-radius: none;">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="modal-title" id="exampleModalLabel"><strong>เพิ่ม 1 รายการในรถเข็นคุณ</strong></span>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-sm-3" style="text-align: center;">
+                            <img src="zo1.jpg" width="100px">
+                        </div>
+                        <div class="col-sm-9">
+                            <div class="modal-header2"><strong>Zodiac Collection Sagittarius Keycap (new)</strong>
+                            </div>
+                            <span style="color: #969696;">จำนวน: </span>
+                            <span>1</span>
+                            <br>
+                            <span style="color: #969696;">ตะกร้ายอดรวม: </span>
+                            <span>-</span>
+
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn cart" data-bs-dismiss="modal"
+                        style="width: 150px; height: 40px;">เลือกซื้อสินค้าต่อ</button>
+                    <button type="button" class="btn btn cart-black"
+                        style="width: 150px; height: 40px;">ไปยังตะกร้าสินค้า</button>
+                </div>
             </div>
-            <div class="col-sm-9">
-              <div class="modal-header2"><strong>ZODIAC COLLECTION LIBRA KEYCAP</strong>
-              </div>
-              <span style="color: #969696;">จำนวน: </span>
-              <span>1</span>
-              <br>
-              <span style="color: #969696;">ตะกร้ายอดรวม: </span>
-              <span>-</span>
-
-
-            </div>
-
-          </div>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn cart" data-bs-dismiss="modal"
-            style="width: 150px; height: 40px;">เลือกซื้อสินค้าต่อ</button>
-          <button type="button" class="btn btn cart-black"
-            style="width: 150px; height: 40px;">ไปยังตะกร้าสินค้า</button>
-        </div>
-      </div>
     </div>
-  </div>
 
-  <div class="modal fade" id="gemini" tabindex="-1" aria-labelledby="gemini" aria-hidden="true"
-    style="border-radius: none;">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <span class="modal-title" id="exampleModalLabel"><strong>เพิ่ม 1 รายการในรถเข็นคุณ</strong></span>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <div class="row">
-            <div class="col-sm-3" style="text-align: center;">
-              <img src="zog1.jpg" width="100px">
+    <div class="modal fade" id="leo" tabindex="-1" aria-labelledby="leo" aria-hidden="true"
+        style="border-radius: none;">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="modal-title" id="exampleModalLabel"><strong>เพิ่ม 1 รายการในรถเข็นคุณ</strong></span>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-sm-3" style="text-align: center;">
+                            <img src="zol1.jpg" width="100px">
+                        </div>
+                        <div class="col-sm-9">
+                            <div class="modal-header2"><strong>Zodiac Collection LEO Keycap</strong>
+                            </div>
+                            <span style="color: #969696;">จำนวน: </span>
+                            <span>1</span>
+                            <br>
+                            <span style="color: #969696;">ตะกร้ายอดรวม: </span>
+                            <span>-</span>
+
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn cart" data-bs-dismiss="modal"
+                        style="width: 150px; height: 40px;">เลือกซื้อสินค้าต่อ</button>
+                    <button type="button" class="btn btn cart-black"
+                        style="width: 150px; height: 40px;">ไปยังตะกร้าสินค้า</button>
+                </div>
             </div>
-            <div class="col-sm-9">
-              <div class="modal-header2"><strong>ZODIAC COLLECTION GEMINI KEYCAP</strong>
-              </div>
-              <span style="color: #969696;">จำนวน: </span>
-              <span>1</span>
-              <br>
-              <span style="color: #969696;">ตะกร้ายอดรวม: </span>
-              <span>-</span>
-
-
-            </div>
-
-          </div>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn cart" data-bs-dismiss="modal"
-            style="width: 150px; height: 40px;">เลือกซื้อสินค้าต่อ</button>
-          <button type="button" class="btn btn cart-black"
-            style="width: 150px; height: 40px;">ไปยังตะกร้าสินค้า</button>
-        </div>
-      </div>
     </div>
-  </div>
 
-  <div class="modal fade" id="cancer" tabindex="-1" aria-labelledby="cancer" aria-hidden="true"
-    style="border-radius: none;">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <span class="modal-title" id="exampleModalLabel"><strong>เพิ่ม 1 รายการในรถเข็นคุณ</strong></span>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <div class="row">
-            <div class="col-sm-3" style="text-align: center;">
-              <img src="cancer1.jpg" width="100px">
+    <div class="modal fade" id="libra" tabindex="-1" aria-labelledby="libra" aria-hidden="true"
+        style="border-radius: none;">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="modal-title" id="exampleModalLabel"><strong>เพิ่ม 1 รายการในรถเข็นคุณ</strong></span>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-sm-3" style="text-align: center;">
+                            <img src="zoli1.jpg" width="100px">
+                        </div>
+                        <div class="col-sm-9">
+                            <div class="modal-header2"><strong>ZODIAC COLLECTION LIBRA KEYCAP</strong>
+                            </div>
+                            <span style="color: #969696;">จำนวน: </span>
+                            <span>1</span>
+                            <br>
+                            <span style="color: #969696;">ตะกร้ายอดรวม: </span>
+                            <span>-</span>
+
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn cart" data-bs-dismiss="modal"
+                        style="width: 150px; height: 40px;">เลือกซื้อสินค้าต่อ</button>
+                    <button type="button" class="btn btn cart-black"
+                        style="width: 150px; height: 40px;">ไปยังตะกร้าสินค้า</button>
+                </div>
             </div>
-            <div class="col-sm-9">
-              <div class="modal-header2"><strong>Zodiac Collection Cancer Keycap</strong>
-              </div>
-              <span style="color: #969696;">จำนวน: </span>
-              <span>1</span>
-              <br>
-              <span style="color: #969696;">ตะกร้ายอดรวม: </span>
-              <span>-</span>
-
-
-            </div>
-
-          </div>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn cart" data-bs-dismiss="modal"
-            style="width: 150px; height: 40px;">เลือกซื้อสินค้าต่อ</button>
-          <button type="button" class="btn btn cart-black"
-            style="width: 150px; height: 40px;">ไปยังตะกร้าสินค้า</button>
-        </div>
-      </div>
     </div>
-  </div>
 
-  <div class="modal fade" id="taurus" tabindex="-1" aria-labelledby="taurus" aria-hidden="true"
-    style="border-radius: none;">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <span class="modal-title" id="exampleModalLabel"><strong>เพิ่ม 1 รายการในรถเข็นคุณ</strong></span>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <div class="row">
-            <div class="col-sm-3" style="text-align: center;">
-              <img src="taurus1.jpg" width="100px">
+    <div class="modal fade" id="gemini" tabindex="-1" aria-labelledby="gemini" aria-hidden="true"
+        style="border-radius: none;">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="modal-title" id="exampleModalLabel"><strong>เพิ่ม 1 รายการในรถเข็นคุณ</strong></span>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-sm-3" style="text-align: center;">
+                            <img src="zog1.jpg" width="100px">
+                        </div>
+                        <div class="col-sm-9">
+                            <div class="modal-header2"><strong>ZODIAC COLLECTION GEMINI KEYCAP</strong>
+                            </div>
+                            <span style="color: #969696;">จำนวน: </span>
+                            <span>1</span>
+                            <br>
+                            <span style="color: #969696;">ตะกร้ายอดรวม: </span>
+                            <span>-</span>
+
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn cart" data-bs-dismiss="modal"
+                        style="width: 150px; height: 40px;">เลือกซื้อสินค้าต่อ</button>
+                    <button type="button" class="btn btn cart-black"
+                        style="width: 150px; height: 40px;">ไปยังตะกร้าสินค้า</button>
+                </div>
             </div>
-            <div class="col-sm-9">
-              <div class="modal-header2"><strong>ZODIAC COLLECTION TAURUS KEYCAP</strong>
-              </div>
-              <span style="color: #969696;">จำนวน: </span>
-              <span>1</span>
-              <br>
-              <span style="color: #969696;">ตะกร้ายอดรวม: </span>
-              <span>-</span>
-
-
-            </div>
-
-          </div>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn cart" data-bs-dismiss="modal"
-            style="width: 150px; height: 40px;">เลือกซื้อสินค้าต่อ</button>
-          <button type="button" class="btn btn cart-black"
-            style="width: 150px; height: 40px;">ไปยังตะกร้าสินค้า</button>
-        </div>
-      </div>
     </div>
-  </div>
 
-  <div class="modal fade" id="scorpio" tabindex="-1" aria-labelledby="scorpio" aria-hidden="true"
-    style="border-radius: none;">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <span class="modal-title" id="exampleModalLabel"><strong>เพิ่ม 1 รายการในรถเข็นคุณ</strong></span>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <div class="row">
-            <div class="col-sm-3" style="text-align: center;">
-              <img src="scor1.jpg" width="100px">
+    <div class="modal fade" id="cancer" tabindex="-1" aria-labelledby="cancer" aria-hidden="true"
+        style="border-radius: none;">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="modal-title" id="exampleModalLabel"><strong>เพิ่ม 1 รายการในรถเข็นคุณ</strong></span>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-sm-3" style="text-align: center;">
+                            <img src="cancer1.jpg" width="100px">
+                        </div>
+                        <div class="col-sm-9">
+                            <div class="modal-header2"><strong>Zodiac Collection Cancer Keycap</strong>
+                            </div>
+                            <span style="color: #969696;">จำนวน: </span>
+                            <span>1</span>
+                            <br>
+                            <span style="color: #969696;">ตะกร้ายอดรวม: </span>
+                            <span>-</span>
+
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn cart" data-bs-dismiss="modal"
+                        style="width: 150px; height: 40px;">เลือกซื้อสินค้าต่อ</button>
+                    <button type="button" class="btn btn cart-black"
+                        style="width: 150px; height: 40px;">ไปยังตะกร้าสินค้า</button>
+                </div>
             </div>
-            <div class="col-sm-9">
-              <div class="modal-header2"><strong>ZODIAC COLLECTION SCORPIO KEYCAP</strong>
-              </div>
-              <span style="color: #969696;">จำนวน: </span>
-              <span>1</span>
-              <br>
-              <span style="color: #969696;">ตะกร้ายอดรวม: </span>
-              <span>-</span>
-
-
-            </div>
-
-          </div>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn cart" data-bs-dismiss="modal"
-            style="width: 150px; height: 40px;">เลือกซื้อสินค้าต่อ</button>
-          <button type="button" class="btn btn cart-black"
-            style="width: 150px; height: 40px;">ไปยังตะกร้าสินค้า</button>
-        </div>
-      </div>
     </div>
-  </div>
+
+    <div class="modal fade" id="taurus" tabindex="-1" aria-labelledby="taurus" aria-hidden="true"
+        style="border-radius: none;">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="modal-title" id="exampleModalLabel"><strong>เพิ่ม 1 รายการในรถเข็นคุณ</strong></span>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-sm-3" style="text-align: center;">
+                            <img src="taurus1.jpg" width="100px">
+                        </div>
+                        <div class="col-sm-9">
+                            <div class="modal-header2"><strong>ZODIAC COLLECTION TAURUS KEYCAP</strong>
+                            </div>
+                            <span style="color: #969696;">จำนวน: </span>
+                            <span>1</span>
+                            <br>
+                            <span style="color: #969696;">ตะกร้ายอดรวม: </span>
+                            <span>-</span>
+
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn cart" data-bs-dismiss="modal"
+                        style="width: 150px; height: 40px;">เลือกซื้อสินค้าต่อ</button>
+                    <button type="button" class="btn btn cart-black"
+                        style="width: 150px; height: 40px;">ไปยังตะกร้าสินค้า</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="scorpio" tabindex="-1" aria-labelledby="scorpio" aria-hidden="true"
+        style="border-radius: none;">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="modal-title" id="exampleModalLabel"><strong>เพิ่ม 1 รายการในรถเข็นคุณ</strong></span>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-sm-3" style="text-align: center;">
+                            <img src="scor1.jpg" width="100px">
+                        </div>
+                        <div class="col-sm-9">
+                            <div class="modal-header2"><strong>ZODIAC COLLECTION SCORPIO KEYCAP</strong>
+                            </div>
+                            <span style="color: #969696;">จำนวน: </span>
+                            <span>1</span>
+                            <br>
+                            <span style="color: #969696;">ตะกร้ายอดรวม: </span>
+                            <span>-</span>
+
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn cart" data-bs-dismiss="modal"
+                        style="width: 150px; height: 40px;">เลือกซื้อสินค้าต่อ</button>
+                    <button type="button" class="btn btn cart-black"
+                        style="width: 150px; height: 40px;">ไปยังตะกร้าสินค้า</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="container-fluid pt-3" style="background-color: #1f1f1f; margin-top: 2%">
+        <div class="row">
+            <div class="col-sm-3 mt-5" style="overflow: hidden;">
+                <img src="Logo_Loga_footer.png" style="width: 30%; margin-left: 2%;">
+            </div>
+            <div class="col-sm-2 mt-3 ">
+                <div class="row">
+                    <h5 class='fs-6 ' style="color: white; padding-left:9.5%">Customer Services</h5>
+                </div>
+                <div class="row mt-1">
+                    <a href="" style="color: rgb(195, 195, 195);">
+                        <p id="footer-info" style="font-size: 14px;">วิธีการแก้ปัญหาเบื้องต้น</p>
+                    </a>
+                </div>
+                <div class="row">
+                    <a href="" style="color: rgb(195, 195, 195);">
+                        <p id="footer-info" style="font-size: 14px;">รับประกันสินค้า</p>
+                    </a>
+                </div>
+                <div class="row">
+                    <a href="" style="color: rgb(195, 195, 195);">
+                        <p id="footer-info" style="font-size: 14px;">ข้อตกลงและเงื่อนไข</p>
+                    </a>
+                </div>
+                <div class="row">
+                    <a href="" style="color: rgb(195, 195, 195);">
+                        <p id="footer-info" style="font-size: 14px;">บทความ</p>
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-2 mt-3 ">
+                <div class="row ">
+                    <h5 class='fs-6 ' style="color: white; padding-left:9.5%">Company Information</h5>
+                </div>
+                <div class="row mt-1">
+                    <a href="" style="color: rgb(195, 195, 195);">
+                        <p id="footer-info" style="font-size: 14px;">เกี่ยวกับเรา</p>
+                    </a>
+                </div>
+                <div class="row">
+                    <a href="" style="color: rgb(195, 195, 195);">
+                        <p id="footer-info" style="font-size: 14px;">ติดต่อเรา</p>
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-2 mt-3 ">
+                <div class="row">
+                    <h5 class='fs-6 ' style="color: white; padding-left:25%">Payment & Shipping
+                    </h5>
+                </div>
+                <div class="row mt-1">
+                    <a href="" style="color: rgb(195, 195, 195);">
+                        <p id="footer-info2" style="font-size: 14px;">ตะกร้าของฉัน</p>
+                    </a>
+                </div>
+                <div class="row">
+                    <a href="" style="color: rgb(195, 195, 195);">
+                        <p id="footer-info2" style="font-size: 14px;">ติดตามคำสั่งซื้อ</p>
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-3 mt-3  " style="overflow: hidden;">
+                <div class="row ">
+                    <h5 class='fs-6 ' style="color: white; padding-left:25%">Let’s Talk
+                    </h5>
+                </div>
+                <div class="row mt-0" style="flex-wrap:nowrap;flex-shrink: 1;">
+                    <img src="iconmonstr-line-1-32 (1).png"
+                        style="width:50px;height: 22px;margin-left: 22%; display: inline-block;">
+                    <a href="" style="color: rgb(255, 255, 255);margin-left: -4%;">
+                        <p id="footer-info2" style="top: 0%;padding: 0%;margin-right: 0%;font-size: 14px;">
+                            @Logathailand</p>
+                    </a>
+                </div>
+                <div class="row mt-0" style="flex-wrap:nowrap;flex-shrink: 1;">
+                    <img src="iconmonstr-email-2-32.png"
+                        style="width:50px;min-width:20px;height: 22px;margin-left: 22%;margin-top: 2.5px;">
+                    <a href="" style="color: rgb(255, 255, 255);margin-left: -4%;">
+                        <p id="footer-info2"
+                            style="position: relative;top: 0%;padding:0%;margin-right: 0%;font-size: 14px;">
+                            support@logaworld.com</p>
+                    </a>
+                </div>
+                <div class="row mt-2">
+                    <img id="social" src="iconmonstr-facebook-1-32.png"
+                        style="margin-left: 25%;width: 30px;height: 30px;">
+                    <img id="social" src="iconmonstr-youtube-6-32.png" style="width: 30px;height: 30px;">
+                    <img id="social" src="iconmonstr-instagram-11-32.png" style="width: 30px;height: 30px;">
+                    <img id="social" src="iconmonstr-line-1-32.png" style="width: 30px;height: 30px;">
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="container-fluid">
+                    <hr class='m-1' style="color: white;height:1.5px;">
+                    <p class='text-center m-1' style="color: white;font-size: 12px;">© 2021 Logathailand. All
+                        Rights
+                        Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 <script>
-  var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-  var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-    return new bootstrap.Tooltip(tooltipTriggerEl)
-  })
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
 
-  function kirinproductblack() {
-    document.getElementById("kirin-product").src = "kirin3.jpg";
-  }
-  function kirinproductwhite() {
-    document.getElementById("kirin-product").src = "kirin2.jpg";
-  }
-
-  function collision($div1, $div2) {
-    var x1 = $div1.offset().left;
-    var w1 = 48;
-    var r1 = x1 + w1;
-    var x2 = $div2.offset().left;
-    var w2 = 48;
-    var r2 = x2 + w2;
-
-    if (r1 < x2 || x1 > r2) return false;
-    return true;
-
-  }
-  $('#slider').slider({
-    range: true,
-    min: 0,
-    max: 3490,
-    values: [0, 3490],
-    slide: function (event, ui) {
-
-      $('.ui-slider-handle:eq(0) .price-range-min').html('฿' + ui.values[0]);
-      $('.ui-slider-handle:eq(1) .price-range-max').html('฿' + ui.values[1]);
-      $('.price-range-both').html('<i>฿' + ui.values[0] + ' - </i>฿' + ui.values[1]);
-
-      if (ui.values[0] == ui.values[1]) {
-        $('.price-range-both i').css('display', 'none');
-      } else {
-        $('.price-range-both i').css('display', 'inline');
-      }
-
-      if (collision($('.price-range-min'), $('.price-range-max')) == true) {
-        $('.price-range-min, .price-range-max').css('opacity', '0');
-        $('.price-range-both').css('display', 'block');
-      } else {
-        $('.price-range-min, .price-range-max').css('opacity', '1');
-        $('.price-range-both').css('display', 'none');
-      }
-
+    function kirinproductblack() {
+        document.getElementById("kirin-product").src = "kirin3.jpg";
     }
-  });
-
-  $('.ui-slider-range').append('<span class="price-range-both value"><i>$' + $('#slider').slider('values', 0) + ' - </i>' + $('#slider').slider('values', 1) + '</span>');
-
-  $('.ui-slider-handle:eq(0)').append('<span class="price-range-min value">$' + $('#slider').slider('values', 0) + '</span>');
-
-  $('.ui-slider-handle:eq(1)').append('<span class="price-range-max value">$' + $('#slider').slider('values', 1) + '</span>');
-
-  var mybutton = document.getElementById("myBtn");
-
-
-  window.onscroll = function () { scrollFunction() };
-
-  function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-      mybutton.style.display = "block";
-
-    } else {
-      mybutton.style.display = "none";
+    function kirinproductwhite() {
+        document.getElementById("kirin-product").src = "kirin2.jpg";
     }
 
-  }
+    function collision($div1, $div2) {
+        var x1 = $div1.offset().left;
+        var w1 = 48;
+        var r1 = x1 + w1;
+        var x2 = $div2.offset().left;
+        var w2 = 48;
+        var r2 = x2 + w2;
 
+        if (r1 < x2 || x1 > r2) return false;
+        return true;
 
-  function topFunction() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-  }
+    }
+    $('#slider').slider({
+        range: true,
+        min: 0,
+        max: 3490,
+        values: [0, 3490],
+        slide: function (event, ui) {
+
+            $('.ui-slider-handle:eq(0) .price-range-min').html('฿' + ui.values[0]);
+            $('.ui-slider-handle:eq(1) .price-range-max').html('฿' + ui.values[1]);
+            $('.price-range-both').html('<i>฿' + ui.values[0] + ' - </i>฿' + ui.values[1]);
+
+            if (ui.values[0] == ui.values[1]) {
+                $('.price-range-both i').css('display', 'none');
+            } else {
+                $('.price-range-both i').css('display', 'inline');
+            }
+
+            if (collision($('.price-range-min'), $('.price-range-max')) == true) {
+                $('.price-range-min, .price-range-max').css('opacity', '0');
+                $('.price-range-both').css('display', 'block');
+            } else {
+                $('.price-range-min, .price-range-max').css('opacity', '1');
+                $('.price-range-both').css('display', 'none');
+            }
+
+        }
+    });
+
+    $('.ui-slider-range').append('<span class="price-range-both value"><i>$' + $('#slider').slider('values', 0) + ' - </i>' + $('#slider').slider('values', 1) + '</span>');
+
+    $('.ui-slider-handle:eq(0)').append('<span class="price-range-min value">$' + $('#slider').slider('values', 0) + '</span>');
+
+    $('.ui-slider-handle:eq(1)').append('<span class="price-range-max value">$' + $('#slider').slider('values', 1) + '</span>');
+
+    var mybutton = document.getElementById("myBtn");
+    window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+            mybutton.style.visibility = "visible";
+            mybutton.style.animation = "slidein 300ms";
+        }
+        else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.animation = "slideout 300ms";
+        }
+    }
+
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
 </script>
