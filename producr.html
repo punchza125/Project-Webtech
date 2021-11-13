@@ -23,6 +23,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap" rel="stylesheet">
+    <link href="home.css" rel="stylesheet">
 
     <style>
         body {
@@ -265,6 +266,7 @@
 
 <body>
 
+
     <!-- main--->
     <div class="container">
         <p style="font-size:12px; display: inline;"><a href="" style="text-decoration: none; color: black;">หน้าแรก</a>
@@ -278,47 +280,36 @@
             <div class="col-md-6 slideshow">
                 <div class="apic" onmouseover="mouseOver1()" onmouseout="mouseOut1()">
                     <div class="pic">
-                        <img src="kb1.jpg"
-                            style="width: 100%;">
+                        <img src="kb1.jpg" style="width: 100%;">
                     </div>
                     <div class="pic">
-                        <img src="kb2.jpg"
-                            style="width: 100%;">
+                        <img src="kb2.jpg" style="width: 100%;">
                     </div>
                     <div class="pic">
-                        <img src="kb3.jpg"
-                            style="width: 100%;">
+                        <img src="kb3.jpg" style="width: 100%;">
                     </div>
                     <div class="pic">
-                        <img src="kb4.jpg"
-                            style="width: 100%;">
+                        <img src="kb4.jpg" style="width: 100%;">
                     </div>
                     <div class="pic">
-                        <img src="kb5.jpg"
-                            style="width: 100%;">
+                        <img src="kb5.jpg" style="width: 100%;">
                     </div>
                     <div class="pic">
-                        <img src="kb6.jpg"
-                            style="width: 100%;">
+                        <img src="kb6.jpg" style="width: 100%;">
                     </div>
                     <div class="pic">
-                        <img src="kb7.jpg"
-                            style="width: 100%;">
+                        <img src="kb7.jpg" style="width: 100%;">
                     </div>
                     <div class="pic">
-                        <img src="kb8.jpg"
-                            style="width: 100%;">
+                        <img src="kb8.jpg" style="width: 100%;">
                     </div>
                     <div class="pic">
-                        <img src="kb9.jpg"
-                            style="width: 100%;">
+                        <img src="kb9.jpg" style="width: 100%;">
                     </div>
                 </div>
-                <div class="butt" id="but">
-                    <a class="prev1" id="pre" onmouseover="mouseOver2()" onmouseout="mouseOut2()"
-                        onclick="plusSlides(-1)">&#10094;</a>
-                    <a class="next1" id="nex" onmouseover="mouseOver3()" onmouseout="mouseOut3()"
-                        onclick="plusSlides(1)">&#10095;</a>
+                <div class="butt" id="but" onmouseover="mouseOver2()" onmouseout="mouseOut2()">
+                    <a class="prev1" id="pre" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next1" id="nex" onclick="plusSlides(1)">&#10095;</a>
                 </div>
             </div>
             <div class="col-md-6">
@@ -344,6 +335,7 @@
                         style="color: #9A258F;">ที่นี่</a><br></span><br>
                 <hr style="width: 550px; color: #696969">
                 <br>
+                <br>
                 <b><span>Share this product :</span></b>
                 <br>
                 <div class="col-10">
@@ -367,40 +359,31 @@
                     <div id="carousel">
                         <div id="content">
                             <div>
-                                <img src="kb1.jpg"
-                                    class="item" onclick="currentSlide(1)">
+                                <img src="kb1.jpg" class="item" onclick="currentSlide(1)">
                             </div>
                             <div>
-                                <img src="kb2.jpg"
-                                    class="item" onclick="currentSlide(2)">
+                                <img src="kb2.jpg" class="item" onclick="currentSlide(2)">
                             </div>
                             <div>
-                                <img src="kb3.jpg"
-                                    class="item" onclick="currentSlide(3)">
+                                <img src="kb3.jpg" class="item" onclick="currentSlide(3)">
                             </div>
                             <div>
-                                <img src="kb4.jpg"
-                                    class="item" onclick="currentSlide(4)">
+                                <img src="kb4.jpg" class="item" onclick="currentSlide(4)">
                             </div>
                             <div>
-                                <img src="kb5.jpg"
-                                    class="item" onclick="currentSlide(5)">
+                                <img src="kb5.jpg" class="item" onclick="currentSlide(5)">
                             </div>
                             <div>
-                                <img src="kb6.jpg"
-                                    class="item" onclick="currentSlide(6)">
+                                <img src="kb6.jpg" class="item" onclick="currentSlide(6)">
                             </div>
                             <div>
-                                <img src="kb7.jpg"
-                                    class="item" onclick="currentSlide(7)">
+                                <img src="kb7.jpg" class="item" onclick="currentSlide(7)">
                             </div>
                             <div>
-                                <img src="kb8.jpg"
-                                    class="item" onclick="currentSlide(8)">
+                                <img src="kb8.jpg" class="item" onclick="currentSlide(8)">
                             </div>
                             <div>
-                                <img src="kb9.jpg"
-                                    class="item" onclick="currentSlide(9)">
+                                <img src="kb9.jpg" class="item" onclick="currentSlide(9)">
                             </div>
 
                             <button id="prev">
@@ -441,7 +424,7 @@
         </div>
         <div class="col-12">
             <div class="tab-content" id="myTabContent">
-                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab" style="margin-top: 30px;">
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                     LOGA Ravana<br><br>
                     Keyboard 96 % ไร้สายแบบ 2.4GHz สำหรับการใช้งานที่หลากหลายรูปแบบ ทั้งเล่นเกมระดับโปร
                     จนไปถึงการทำงานระดับมืออาชีพ ด้วยขนาดที่เล็กลงแต่ยังคงในส่วน numpad ไว้ ทำให้ผู้ที่ต้องใช้งานตรง
@@ -494,7 +477,7 @@
                 </div>
 
                 <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                    <table class="table table-bordered" style="margin-top: 30px;">
+                    <table class="table table-bordered">
                         <tbody>
                             <tr>
                                 <td>ขนาด</td>
@@ -510,7 +493,7 @@
                 </div>
                 <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
                     <div class="col-12">
-                        <p style="border-bottom: 1px solid #ccc; display: block; width: 900px; margin-top: 30px;">เขียนรีวิวของคุณเอง</p>
+                        <p style="border-bottom: 1px solid #ccc; display: block; width: 900px;">เขียนรีวิวของคุณเอง</p>
                         <div class="rc-anchor rc-anchor-normal rc-anchor-light">
                             <div class="rc-anchor-content">
                                 <div class="rc-inline-block">
@@ -533,7 +516,7 @@
                         </div>
                         <br>
                         <div class="col-12">
-                            <p style="display: block; width: 900px;">
+                            <p style="border-bottom: 1px solid #ccc; display: block; width: 900px;">
                                 <b>คุณกำลังรีวิว:LOGA RAVANA : 2.4GHz wireless Mechanical keyboard</b>
                             </p>
                         </div>
@@ -589,29 +572,29 @@
                         <form class="row needs-validation" novalidate>
                             <div class="col-md-6">
                                 <label for="validationCustom01" class="form-label more3"><b>ชื่อเล่น</b></label>
-                                <input type="text" class="form-control" id="validationCustom01" value=""
-                                    placeholder="ชื่อเล่น" required>
+                                <input type="text" class="form-control-plaintext" id="validationCustom01" value=""
+                                    placeholder="ชื่อเล่น" required><br>
                                 <div class="invalid-feedback">
                                     ฟิลด์นี้จำเป็น
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <label for="validationCustom02" class="form-label more3"><b>สรุป</b></label>
-                                <input type="text" class="form-control" id="validationCustom02" value=""
-                                    placeholder="สรุป" required>
+                                <input type="text" class="form-control-plaintext" id="validationCustom02" value=""
+                                    placeholder="สรุป" required><br>
                                 <div class="invalid-feedback">
                                     ฟิลด์นี้จำเป็น
                                 </div>
                             </div>
-                            <div class="col-12 " style="margin-top: 30px;">
+                            <div class="col-12 ">
                                 <label for="validationCustom02" class="form-label more3"><b>รีวิว</b></label>
                                 <input type="text" placeholder="รีวิว" style="height: 100px;"
-                                    class="form-control" id="validationCustom02" value="" required>
+                                    class="form-control-plaintext" id="validationCustom02" value="" required><br>
                                 <div class="invalid-feedback">
                                     ฟิลด์นี้จำเป็น
                                 </div>
                             </div>
-                            <div class="col-6" style="margin-top: 30px;">
+                            <div class="col-6">
                                 <button class="btn cart" type="submit">ยืนยันรีวิว</button>
                             </div>
 
@@ -620,8 +603,117 @@
                 </div>
             </div>
         </div>
-
-
+    </div>
+    <br>
+    <br>
+    <br>
+    <div style="overflow: hidden;">
+        <div class="row">
+            <div class="container-fluid pt-3" style="background-color: rgb(39, 38, 38);">
+                <div class="row">
+                    <div class="col-sm-3 mt-5" style="overflow: hidden;">
+                        <img src="Logo_Loga_footer.png" style="width: 30%; margin-left: 2%;">
+                    </div>
+                    <div class="col-sm-2 mt-3 ">
+                        <div class="row">
+                            <h5 class='fs-6 ' style="color: white; padding-left:9.5%;font-size: 18px;">
+                                Customer Services</h5>
+                        </div>
+                        <div class="row mt-1">
+                            <a href="" style="color: rgb(195, 195, 195);">
+                                <p id="footer-info" style="font-size: 14px;">วิธีการแก้ปัญหาเบื้องต้น</p>
+                            </a>
+                        </div>
+                        <div class="row">
+                            <a href="" style="color: rgb(195, 195, 195);">
+                                <p id="footer-info" style="font-size: 14px;">รับประกันสินค้า</p>
+                            </a>
+                        </div>
+                        <div class="row">
+                            <a href="" style="color: rgb(195, 195, 195);">
+                                <p id="footer-info" style="font-size: 14px;">ข้อตกลงและเงื่อนไข</p>
+                            </a>
+                        </div>
+                        <div class="row">
+                            <a href="" style="color: rgb(195, 195, 195);">
+                                <p id="footer-info" style="font-size: 14px;">บทความ</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-2 mt-3 ">
+                        <div class="row ">
+                            <h5 class='fs-6 ' style="color: white; padding-left:9.5%">Company Information
+                            </h5>
+                        </div>
+                        <div class="row mt-1">
+                            <a href="" style="color: rgb(195, 195, 195);">
+                                <p id="footer-info" style="font-size: 14px;">เกี่ยวกับเรา</p>
+                            </a>
+                        </div>
+                        <div class="row">
+                            <a href="" style="color: rgb(195, 195, 195);">
+                                <p id="footer-info" style="font-size: 14px;">ติดต่อเรา</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-2 mt-3 ">
+                        <div class="row">
+                            <h5 class='fs-6 ' style="color: white; padding-left:25%">Payment & Shipping
+                            </h5>
+                        </div>
+                        <div class="row mt-1">
+                            <a href="" style="color: rgb(195, 195, 195);">
+                                <p id="footer-info2" style="font-size: 14px;">ตะกร้าของฉัน</p>
+                            </a>
+                        </div>
+                        <div class="row">
+                            <a href="" style="color: rgb(195, 195, 195);">
+                                <p id="footer-info2" style="font-size: 14px;">ติดตามคำสั่งซื้อ</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 mt-3  " style="overflow: hidden;">
+                        <div class="row ">
+                            <h5 class='fs-6 ' style="color: white; padding-left:25%">Let’s Talk
+                            </h5>
+                        </div>
+                        <div class="row mt-0" style="flex-wrap:nowrap;flex-shrink: 1;">
+                            <img src="iconmonstr-line-1-32_1.png"
+                                style="width:50px;height: 22px;margin-left: 22%; display: inline-block;">
+                            <a href="" style="color: rgb(255, 255, 255);margin-left: -4%;">
+                                <p id="footer-info2" style="top: 0%;padding: 0%;margin-right: 0%;font-size: 14px;">
+                                    @Logathailand
+                                </p>
+                            </a>
+                        </div>
+                        <div class="row mt-0" style="flex-wrap:nowrap;flex-shrink: 1;">
+                            <img src="iconmonstr-email-2-32.png"
+                                style="width:50px;min-width:20px;height: 22px;margin-left: 22%;margin-top: 2.5px;">
+                            <a href="" style="color: rgb(255, 255, 255);margin-left: -4%;">
+                                <p id="footer-info2"
+                                    style="position: relative;top: 0%;padding:0%;margin-right: 0%;font-size: 14px;">
+                                    support@logaworld.com</p>
+                            </a>
+                        </div>
+                        <div class="row d-flex" style="margin-top: 15px;">
+                            <img id="social" src="iconmonstr-facebook-1-32.png"
+                                style="margin-left: 25%;width: 30px;height: 30px;">
+                            <img id="social" src="iconmonstr-youtube-6-32.png" style="width: 30px;height: 30px;">
+                            <img id="social" src="iconmonstr-instagram-11-32.png" style="width: 30px;height: 30px;">
+                            <img id="social" src="iconmonstr-line-1-32.png" style="width: 30px;height: 30px;">
+                        </div>
+                    </div>
+                    <div class="row mt-5">
+                        <div class="container-fluid">
+                            <hr class='m-1' style="color: white;height:1.5px;">
+                            <p class='text-center m-1' style="color: white;font-size: 12px;">© 2021
+                                Logathailand.
+                                All Rights Reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <script>
         var slideIndex = 1;
@@ -657,22 +749,14 @@
 
         function mouseOver2() {
             document.getElementById("pre").style.backgroundColor = "#FFFFFF4D";
+            document.getElementById("nex").style.backgroundColor = "#FFFFFF4D";
             document.getElementById("pre").style.color = "#333333";
+            document.getElementById("nex").style.color = "#333333";
             document.getElementById("but").style.opacity = "1";
         }
 
         function mouseOut2() {
             document.getElementById("pre").style.backgroundColor = "transparent";
-            document.getElementById("but").style.opacity = "0";
-        }
-
-        function mouseOver3() {
-            document.getElementById("nex").style.backgroundColor = "#FFFFFF4D";
-            document.getElementById("nex").style.color = "#333333";
-            document.getElementById("but").style.opacity = "1";
-        }
-
-        function mouseOut3() {
             document.getElementById("nex").style.backgroundColor = "transparent";
             document.getElementById("but").style.opacity = "0";
         }
