@@ -284,22 +284,31 @@
                         </div>
                         <div class="row">
                             <div class="col-1">
-                                <input type="checkbox" id="check" name="check" value="check">
+                                <input type="checkbox" id="myCheck">
                             </div>
+                            
+
+
+
+
                             <div class="col-11">
                                 <label for="form">
                                     การใช้แบบฟอร์มนี้แสดงว่าคุณเห็นด้วยกับการจัดเก็บและการจัดการข้อมูลของคุณโดยเว็บไซต์นี้</label><br>
                             </div>
+                            <div id="valid" style="display: none;color:red ;font-size: 10px;font-weight: 1000">ฟิลด์นี้จำเป็น
+                            </div>
+                            <p id="demo"></p>
+                         
                         </div>
                         <div class="text-center">
-                            <button type="button" class="subbutton mt-4 text-white" onclick="conditionForm()"
-                                onclick="return checkbae()">เข้าสู่ระบบ</button>
+                            <button type="button" class="subbutton mt-4 text-white" onclick="myFunction()"
+                                >เข้าสู่ระบบ</button>
                         </div>
                         <br>
                         <div class="text-center">
                             <p style="display: inline; font-weight: 700;">
-                                <a href="forgot.html" style="text-decoration: none; color:rgb(224, 42, 42);"
-                                    id="forgot">
+                                <a href="forget.html" style="text-decoration: none; color:rgb(224, 42, 42);"
+                                    id="forget">
                                     ลืมรหัสผ่านหรือไม่?</a>
                             </p>
                         </div>
@@ -335,7 +344,7 @@
                         <div class="hoversign"></div>
                     </div>
                     <div class="sign">
-                        <img class="signin" src="google.png">
+                        <img class="signin" src="googleplus.png">
                         <div class="hoversign" style="left:60%;"></div>
                     </div>
                 </div>
@@ -408,7 +417,7 @@
                         </h5>
                     </div>
                     <div class="row mt-0" style="flex-wrap:nowrap;flex-shrink: 1;">
-                        <img src="iconmonstr-line-1-32_1.png"
+                        <img src="iconmonstr-line-1-32 (1).png"
                             style="width:50px;height: 22px;margin-left: 22%; display: inline-block;">
                         <a href="" style="color: rgb(255, 255, 255);margin-left: -4%;">
                             <p id="footer-info2" style="top: 0%;padding: 0%;margin-right: 0%;font-size: 14px;">
@@ -465,5 +474,32 @@
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
     }
+
+    function myFunction() {
+    var x = document.getElementById("myCheck").checked;
+    if(x == false){
+        document.getElementById("valid").style.display = "block";
+    }
+    else if(x == true){
+        if (document.getElementById("valid").style.display = "block") {
+            document.getElementById("valid").style.display = "none"
+        }
+        else {
+        document.getElementById("vlid").style.display = "none"
+        }
+
+    }
+    
+    
+
+
+}
+
+
+   
+
+ 
+ 
+
 
 </script>
