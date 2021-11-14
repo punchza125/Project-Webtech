@@ -366,6 +366,54 @@
         #footer-info2:hover {
             color: #AE0496;
         }
+
+        .amountdrop {
+            display: flex;
+            align-items: center;
+            flex-basis: 100%;
+        }
+
+        .prodamount {
+            position: relative;
+        }
+
+        input[type=number] {
+            -moz-appearance: textfield;
+            -webkit-appearance: none;
+        }
+
+        input[type=number]::-webkit-inner-spin-button,
+        input[type=number]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        .fas.fa-minus {
+            position: absolute;
+            top: 35%;
+            left: 15%;
+            font-size: 9px;
+            cursor: pointer;
+        }
+
+        .input-number {
+            height: 35px;
+            width: 90px;
+            padding: 0 30px;
+            text-align: center;
+            border: 1px solid #e5e5e5;
+            outline: none;
+            background-color: #fff;
+            font-size: 14px;
+        }
+
+        .fas.fa-plus {
+            position: absolute;
+            top: 34%;
+            right: 15%;
+            font-size: 9px;
+            cursor: pointer;
+        }
     </style>
 
 </head>
@@ -425,10 +473,15 @@
                 <br>
                 <hr style="width: 550px; color: #696969;">
                 <br>
-                <p>จำนวน &nbsp<span class="input-number-decrement">–</span><input class="input-number" type="text"
-                        value="1" min="0" max=""><span class="input-number-increment">+</span>
-                </p>
-                <div class="row">
+                <div class="amountdrop">
+                    <span style="margin-right:10px;">จำนวน</span>
+                    <div class="prodamount">
+                        <i class="fas fa-minus"></i>
+                        <input type="number" value="1" min="1" class="input-number">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                </div>
+                <div class="row" style="margin: 20px; margin-left: -15px;">
                     <div class="col-3">
                         <a href="#" class="btn cart2">เพิ่มไปตะกร้า</a>
                     </div>
