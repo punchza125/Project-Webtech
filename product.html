@@ -347,6 +347,7 @@
         #footer-info2:hover {
             color: #AE0496;
         }
+
     </style>
 
 </head>
@@ -881,24 +882,24 @@
         })();
 
         var mybutton = document.getElementById("myBtn");
-    window.onscroll = function () { scrollFunction() };
+        window.onscroll = function () { scrollFunction() };
 
-    function scrollFunction() {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            mybutton.style.display = "block";
-            mybutton.style.visibility = "visible";
-            mybutton.style.animation = "slidein 300ms";
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+                mybutton.style.visibility = "visible";
+                mybutton.style.animation = "slidein 300ms";
+            }
+            else {
+                mybutton.style.visibility = "hidden";
+                mybutton.style.animation = "slideout 300ms";
+            }
         }
-        else {
-            mybutton.style.visibility = "hidden";
-            mybutton.style.animation = "slideout 300ms";
-        }
-    }
 
-    function topFunction() {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-    }
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
     </script>
 
 </body>
