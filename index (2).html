@@ -259,43 +259,6 @@
             background-color: #9A258F;
             color: white;
         }
-
-        .prodamount {
-            position: relative;
-        }
-
-        .fas.fa-minus {
-            position: absolute;
-            top: 35%;
-            left: 15%;
-            font-size: 9px;
-        }
-
-        .fas.fa-plus {
-            position: absolute;
-            top: 34%;
-            right: 15%;
-            font-size: 9px;
-        }
-
-        .amountdrop {
-            display: flex;
-            align-items: center;
-            float: left;
-            flex-basis: 100%;
-        }
-
-        .useramount {
-            height: 35px;
-            width: 90px;
-            padding: 0 30px;
-            text-align: center;
-            border: 1px solid #e5e5e5;
-            outline: none;
-            background-color: #fff;
-            font-size: 14px;
-        }
-
         .modal-footer.drop {
             justify-content: flex-start;
         }
@@ -408,6 +371,65 @@
         .link:hover {
             color: #9A258F;
             text-decoration: none;
+        }
+
+        .amountdrop {
+            display: flex;
+            align-items: center;
+            flex-basis: 100%;
+        }
+
+        .prodamount {
+            position: relative;
+        }
+
+        input[type=number] {
+            -moz-appearance: textfield;
+            -webkit-appearance: none;
+        }
+
+        input[type=number]::-webkit-inner-spin-button,
+        input[type=number]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        .fas.fa-minus {
+            position: absolute;
+            top: 35%;
+            left: 15%;
+            font-size: 9px;
+            cursor: pointer;
+        }
+
+        .input-number {
+            height: 35px;
+            width: 90px;
+            padding: 0 30px;
+            text-align: center;
+            border: 1px solid #e5e5e5;
+            outline: none;
+            background-color: #fff;
+            font-size: 14px;
+        }
+
+        .input-number1 {
+            height: 35px;
+            width: 90px;
+            padding: 0 30px;
+            text-align: center;
+            border: 1px solid #e5e5e5;
+            outline: none;
+            background-color: #fff;
+            font-size: 14px;
+        }
+
+        .fas.fa-plus {
+            position: absolute;
+            top: 34%;
+            right: 15%;
+            font-size: 9px;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -637,18 +659,6 @@
                     </div>
                 </div>
             </div>
-
-            <script>
-                var coll = document.getElementsByClassName("txt");
-                var i;
-
-                for (i = 0; i < coll.length; i++) {
-                    coll[i].addEventListener("click", function () {
-                        this.classList.toggle("active");
-                    });
-                }
-            </script>
-
 
             <div class="col-md-9">
                 <div class="row">
@@ -982,7 +992,8 @@
                 <div class="modal-header" style="border-bottom: 0 none;">
                     <span class="modal-title" id="exampleModalLabel"><strong>LOGA RAVANA : 2.4GHz wireless Mechanical
                             keyboard</strong></span>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close" id="close1" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <div class="row">
@@ -1004,7 +1015,7 @@
                                 <span style="margin-right:10px;">จำนวน</span>
                                 <div class="prodamount">
                                     <i class="fas fa-minus"></i>
-                                    <input type="number" value="1" class="useramount">
+                                    <input type="number" value="1" min="1" class="input-number">
                                     <i class="fas fa-plus"></i>
                                 </div>
                             </div>
@@ -1028,7 +1039,8 @@
                 <div class="modal-header" style="border-bottom: 0 none;">
                     <span class="modal-title" id="exampleModalLabel"><strong>Mouse Cover set (Kirin Pro wireless)
                         </strong></span>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close" id="close2" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <div class="row">
@@ -1052,7 +1064,7 @@
                                 <span style="margin-right:10px;">จำนวน</span>
                                 <div class="prodamount">
                                     <i class="fas fa-minus"></i>
-                                    <input type="number" value="1" class="useramount">
+                                    <input type="number" value="1" min="1" class="input-number1">
                                     <i class="fas fa-plus"></i>
                                 </div>
                             </div>
@@ -1509,4 +1521,109 @@
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
     }
+
+    (function () {
+
+        window.inputNumber = function (el) {
+
+            var min = el.attr('min') || false;
+            var max = el.attr('max') || false;
+
+            var els = {};
+
+            els.dec = el.prev();
+            els.inc = el.next();
+
+            el.each(function () {
+                init($(this));
+            });
+
+            function init(el) {
+
+                els.dec.on('click', decrement);
+                els.inc.on('click', increment);
+
+                function decrement() {
+                    var value = el[0].value;
+                    value--;
+                    if (!min || value >= min) {
+                        el[0].value = value;
+                    }
+                }
+
+                function increment() {
+                    var value = el[0].value;
+                    value++;
+                    if (!max || value <= max) {
+                        el[0].value = value++;
+                    }
+                }
+            }
+        }
+    })();
+
+    inputNumber($('.input-number'));
+
+    (function () {
+
+        window.inputNumber = function (el) {
+
+            var min = el.attr('min') || false;
+            var max = el.attr('max') || false;
+
+            var els = {};
+
+            els.dec = el.prev();
+            els.inc = el.next();
+
+            el.each(function () {
+                init($(this));
+            });
+
+            function init(el) {
+
+                els.dec.on('click', decrement);
+                els.inc.on('click', increment);
+
+                function decrement() {
+                    var value = el[0].value;
+                    value--;
+                    if (!min || value >= min) {
+                        el[0].value = value;
+                    }
+                }
+
+                function increment() {
+                    var value = el[0].value;
+                    value++;
+                    if (!max || value <= max) {
+                        el[0].value = value++;
+                    }
+                }
+            }
+        }
+    })();
+
+    inputNumber($('.input-number1'));
+
+    document.getElementById("close1").onclick = function () { exit1() };
+    function exit1() {
+        document.querySelector(".input-number").value = "1";
+    }
+
+    document.getElementById("close2").onclick = function () { exit2() };
+    function exit2() {
+        document.querySelector(".input-number1").value = "1";
+    }
+
+    var coll = document.getElementsByClassName("txt");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+        });
+    }
+
+
 </script>
