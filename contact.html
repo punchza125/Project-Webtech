@@ -270,9 +270,9 @@
                             onclick="conditionForm()" onclick="return checkbae()">ยืนยัน</button>
 
                     </form>
-                    <div id="valid" style="display: none;color:red ;font-size: 55%;font-weight: 1000">ฟิลด์นี้จำเป็น
+                    <div id="valid" style="display: none;color:red ;font-size: 10px;font-weight: 1000">ฟิลด์นี้จำเป็น
                     </div>
-                    <div id="emailvalid" style="display: none;color:red ;font-size: 55%;font-weight: 1000">
+                    <div id="emailvalid" style="display: none;color:red ;font-size: 10px;font-weight: 1000">
                         กรุณากรอกที่อยู่อีเมลที่ถูกต้อง (เช่น johndoe@domain.com)</div>
 
 
@@ -448,8 +448,14 @@
         }
 
 
-        if (document.getElementById("vlid").style.display = "block") {
+        if (document.getElementById("valid").style.display = "block") {
             document.getElementById("valid").style.display = "none"
+        }
+        if(checkbae()==true){
+            if(document.getElementById("emailvalid").style.display = "block"){
+               document.getElementById("emailvalid").style.display = "none"; 
+            }
+            
         }
 
     }

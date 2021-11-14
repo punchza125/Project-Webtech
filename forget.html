@@ -275,8 +275,8 @@
             </div>
             <button onclick="topFunction()" id="myBtn"> <i class="fas fa-angle-up"></i></button>
             <div class="row mt-5 ">
-                <div class="col-3"></div>
-                <div class="col-7  text-dark"
+                <div class="col-2"></div>
+                <div class="col-8  text-dark"
                     style="padding: 2%;padding-top: 2%;">
                     <p class="mb-2" style="margin: 0%;font-size: 13px;color: rgb(114, 114, 114);"><i>โปรดป้อนที่อยู่อีเมลของคุณด้านล่างเพื่อรับลิงค์รีเซ็ตรหัสผ่าน</i></p><br>
                    
@@ -286,26 +286,32 @@
                             <label for="exampleInputEmail1" class="mb-2"
                                 style="font-size: 14px;">อีเมล</label><span class="text-danger"> *</span>
                             <input type="email" name="emailcheck" class="form-control w-100" id="email">
+                            <div class="row mt-3">
+                            
+                                <img src="Invisable-reCAPTCHA.png" style="width: 22%;">
+                                
+                            </div>
                         </div>
+                        
                         <p style="display: inline; font-weight: 700;">
                             <a href="login.html" style="text-decoration: none; "
                                 id="forgot">
                                 ย้อนกลับ</a>
                         </p>
                         
-                        <button type="button" class="subbutton mt-4 rounded text-white" style="min-width: 90px;"
-                            onclick="conditionForm()" onclick="return checkbae()">ยืนยัน</button>
+                        <button type="button" class="subbutton  rounded text-white" style="min-width: 90px;"
+                            onclick="conditionForm()" onclick="return checkbae()">รีเซ็ตรหัสผ่านของฉัน</button>
 
                     </form>
-                    <div id="valid" style="display: none;color:red ;font-size: 10px;font-weight: 1000">ฟิลด์นี้จำเป็น
+                    <div id="valid" style="display: none;color:red ;font-size: 10px;">ฟิลด์นี้จำเป็น
                     </div>
-                    <div id="emailvalid" style="display: none;color:red ;font-size: 10pxS;font-weight: 1000">
+                    <div id="emailvalid" style="display: none;color:red ;font-size: 10px;">
                         กรุณากรอกที่อยู่อีเมลที่ถูกต้อง (เช่น johndoe@domain.com)</div>
                 </div>
                 
             </div>
         </div>
-        <div class="container-fluid pt-3" style="background-color: #1f1f1f; margin-top: 2%">
+        <div class="container-fluid pt-3" style="background-color: #1f1f1f; margin-top: 10%">
             <div class="row">
                 <div class="col-sm-3 mt-5" style="overflow: hidden;">
                     <img src="Logo_Loga_footer.png" style="width: 30%; margin-left: 2%;">
@@ -438,18 +444,22 @@
             return false;
 
         }
+        else if(document.getElementById("valid").style.display = "block") {
+            document.getElementById("valid").style.display = "none"}
 
       
         checkbae();
-
-        reset();
-
-    }
-    function reset(){
-        if (document.getElementById("vlid").style.display = "block") {
-            document.getElementById("valid").style.display = "none"
+        if(checkbae()==true){
+            if(document.getElementById("emailvalid").style.display = "block"){
+               document.getElementById("emailvalid").style.display = "none"; 
+            }
+            
         }
+       
+        
+
     }
+    
     function checkemail() {
         var str = document.myForm.emailcheck.value
         var filter = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i
