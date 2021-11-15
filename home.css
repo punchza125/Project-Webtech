@@ -1028,6 +1028,28 @@ h3 {
     font-size: 14px;
 }
 
+.useramount1 {
+    height: 35px;
+    width: 90px;
+    padding: 0 30px;
+    text-align: center;
+    border: 1px solid #e5e5e5;
+    outline: none;
+    background-color: #fff;
+    font-size: 14px;
+}
+
+.useramount2 {
+    height: 35px;
+    width: 90px;
+    padding: 0 30px;
+    text-align: center;
+    border: 1px solid #e5e5e5;
+    outline: none;
+    background-color: #fff;
+    font-size: 14px;
+}
+
 .fas.fa-plus {
     position: absolute;
     top: 34%;
