@@ -424,6 +424,7 @@
             background-size: cover;
             padding: 4% 0 4%;
         }
+
         .cart-black {
             background-color: #000000;
             color: white;
@@ -438,6 +439,7 @@
             background-color: #9A258F;
             color: white;
         }
+
         .prodamount {
             position: relative;
         }
@@ -473,6 +475,7 @@
             background-color: #fff;
             font-size: 14px;
         }
+
         .selectmodal {
             width: 100%;
             height: 40px;
@@ -489,7 +492,8 @@
     <div class="centered mx-auto h5 text-center text-white ">Mouse Cover set (Kirin Pro wireless)</div>
     <!-- main--->
     <div class="container">
-        <p style="font-size:12px; display: inline;"><a href="index.html" class="link" style="text-decoration: none;">หน้าแรก</a>
+        <p style="font-size:12px; display: inline;"><a href="index.html" class="link"
+                style="text-decoration: none;">หน้าแรก</a>
         </p>
         <p class="more" style="font-size:12px; color: black; display: inline;">Mouse Cover set (Kirin Pro wireless)
         </p>
@@ -562,8 +566,7 @@
                 <br>
                 <div class="row" style="margin: 20px; margin-left: -15px;">
                     <div class="col-3">
-                        <a href="#" class="btn cart2" data-bs-toggle="modal"
-                        data-bs-target="#mouset1">เพิ่มไปตะกร้า</a>
+                        <a href="#" class="btn cart2" data-bs-toggle="modal" data-bs-target="#mouset1">เพิ่มไปตะกร้า</a>
                     </div>
                     <div class="col-3">
                         <a href="#" class="btn cart3">ซื้อเลย</a>
@@ -665,7 +668,7 @@
                     <br>
                 </div>
 
-                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab" style="margin-top: 30px;"> 
                     <table class="table table-bordered">
                         <tbody>
                             <tr>
@@ -678,7 +681,7 @@
                 </div>
                 <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
                     <div class="col-12">
-                        <p style="border-bottom: 1px solid #ccc; display: block; width: 900px;">เขียนรีวิวของคุณเอง
+                        <p style="border-bottom: 1px solid #ccc; display: block; width: 900px; margin-top: 30px;">เขียนรีวิวของคุณเอง
                         </p>
                         <div class="col-12">
                             <div class="rc-anchor-normal-footer">
@@ -757,7 +760,7 @@
                                     ฟิลด์นี้จำเป็น
                                 </div>
                             </div>
-                            <div class="col-12 ">
+                            <div class="col-12 " style="margin-top: 30px;">
                                 <label for="validationCustom02" class="form-label more3"><b>รีวิว</b></label>
                                 <input type="text" placeholder="รีวิว" style="height: 100px;" class="form-control"
                                     id="validationCustom02" value="" required>
@@ -765,7 +768,7 @@
                                     ฟิลด์นี้จำเป็น
                                 </div>
                             </div>
-                            <div class="col-6">
+                            <div class="col-6" style="margin-top: 30px;">
                                 <button class="btn cart" type="submit">ยืนยันรีวิว</button>
                             </div>
 
@@ -776,7 +779,7 @@
         </div>
     </div>
     <br>
-    <div class="container-fluid pt-3" style="background-color: #1f1f1f;margin-top: 22.5%;">
+    <div class="container-fluid pt-3" style="background-color: #1f1f1f;margin-top: 60px;">
         <div class="row">
             <div class="col-sm-3 mt-5" style="overflow: hidden;">
                 <img src="Logo_Loga_footer.png" style="width: 160px; margin-left: 2%;">
@@ -1011,54 +1014,103 @@
 
     </script>
 
-<div class="modal fade" id="mouset1" tabindex="-1" aria-labelledby="loga1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" style="max-width: 750px;" role="document">
-        <div class="modal-content" style="border-radius: 0; padding: 15px; height: 400px;">
-            <div class="modal-header" style="border-bottom: 0 none;">
-                <span class="modal-title" id="exampleModalLabel"><strong>Mouse Cover set (Kirin Pro wireless)
-                    </strong></span>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <div class="row">
-                    <div class="col">
-                        <span
-                            style="color: #c60000; font-size: 16px; font-weight: 500;"><strong>฿289.00</strong></span><br>
-                        <span style="color: #000000;"><strong>Kirin cover set </strong></span>
-                        <span style="color: #c60000;">*</span>
-                        <br>
-                        <select class="selectmodal">
-                            <option selected>เลือกตัวเลือก...
-                            </option>
-                            <option value="1">สีฟ้า</option>
-                            <option value="2">สีเหลือง</option>
-                            <option value="3">เขียวมิ้นต์</option>
-                            <option value="4">ชมพู</option>
-                        </select>
-                        <br>
-                        <hr>
-                        <div class="amountdrop">
-                            <span style="margin-right:10px;">จำนวน</span>
-                            <div class="prodamount">
-                                <i class="fas fa-minus"></i>
-                                <input type="number" value="1" class="useramount">
-                                <i class="fas fa-plus"></i>
+    <div class="modal fade" id="mouset1" tabindex="-1" aria-labelledby="loga1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" style="max-width: 750px;" role="document">
+            <div class="modal-content" style="border-radius: 0; padding: 15px; height: 400px;">
+                <div class="modal-header" style="border-bottom: 0 none;">
+                    <span class="modal-title" id="exampleModalLabel"><strong>Mouse Cover set (Kirin Pro wireless)
+                        </strong></span>
+                    <button type="button" class="btn-close" id="close1" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col">
+                            <span
+                                style="color: #c60000; font-size: 16px; font-weight: 500;"><strong>฿289.00</strong></span><br>
+                            <span style="color: #000000;"><strong>Kirin cover set </strong></span>
+                            <span style="color: #c60000;">*</span>
+                            <br>
+                            <select class="selectmodal">
+                                <option selected>เลือกตัวเลือก...
+                                </option>
+                                <option value="1">สีฟ้า</option>
+                                <option value="2">สีเหลือง</option>
+                                <option value="3">เขียวมิ้นต์</option>
+                                <option value="4">ชมพู</option>
+                            </select>
+                            <br>
+                            <hr>
+                            <div class="amountdrop">
+                                <span style="margin-right:10px;">จำนวน</span>
+                                <div class="prodamount">
+                                    <i class="fas fa-minus"></i>
+                                    <input type="number" value="1" min="1" class="useramount">
+                                    <i class="fas fa-plus"></i>
+                                </div>
                             </div>
-                        </div>
-                        <br>
-                        <br>
-                        <br>
-                        <button type="button" class="btn btn cart" data-bs-dismiss="modal"
-                            style="width: 150px; height: 40px;">เพิ่มในตะกร้า</button>
+                            <br>
+                            <br>
+                            <br>
+                            <button type="button" class="btn btn cart" data-bs-dismiss="modal"
+                                style="width: 150px; height: 40px;">เพิ่มในตะกร้า</button>
 
+
+                        </div>
 
                     </div>
-
                 </div>
             </div>
         </div>
     </div>
-</div>
+
+    <script>
+        (function () {
+
+            window.inputNumber = function (el) {
+
+                var min = el.attr('min') || false;
+                var max = el.attr('max') || false;
+
+                var els = {};
+
+                els.dec = el.prev();
+                els.inc = el.next();
+
+                el.each(function () {
+                    init($(this));
+                });
+
+                function init(el) {
+
+                    els.dec.on('click', decrement);
+                    els.inc.on('click', increment);
+
+                    function decrement() {
+                        var value = el[0].value;
+                        value--;
+                        if (!min || value >= min) {
+                            el[0].value = value;
+                        }
+                    }
+
+                    function increment() {
+                        var value = el[0].value;
+                        value++;
+                        if (!max || value <= max) {
+                            el[0].value = value++;
+                        }
+                    }
+                }
+            }
+        })();
+
+        inputNumber($('.useramount'));
+
+        document.getElementById("close1").onclick = function () { exit1() };
+        function exit1() {
+            document.querySelector(".useramount").value = "1";
+        }
+    </script>
 
 </body>
 
