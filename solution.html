@@ -31,26 +31,223 @@
 </head>
 <style>
     body {
-                font-family: 'Prompt', sans-serif;
-                font-size: 14px;
-            }
-    
-            .wrap {
-                overflow: hidden;
-            }
-    
-            h4 {
-    
-                font-size: 20px;
-                margin-left: 19px;
-                width: 100%;
-            }
-    
-            a {
-                text-decoration: none;
-            }
-    
-            .container-fluid.p-0 {
+        font-family: 'Prompt', sans-serif;
+    }
+
+    .container {
+        padding-top: 35px;
+        padding-left: 0px;
+        max-width: 1280px;
+    }
+
+    .more::before {
+        content: ">";
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .more2::after {
+        content: ":";
+    }
+
+    .more3::after {
+        content: "*";
+        color: red;
+    }
+
+    .rpic:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .slideshow {
+        position: relative;
+        margin: auto;
+    }
+
+    #content {
+        display: grid;
+        grid-gap: 20px;
+        grid-auto-flow: column;
+        margin: auto;
+        box-sizing: border-box;
+    }
+
+    #wrapper {
+        position: relative;
+        width: 100%;
+    }
+
+    #carousel {
+        overflow: auto;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+    }
+
+    #carousel::-webkit-scrollbar {
+        height: 0;
+    }
+
+    .item {
+        width: 90px;
+        height: 90px;
+    }
+
+    .link {
+        font-size: 12px;
+        color: #696969;
+        text-decoration: none;
+    }
+
+    .link:hover {
+        color: #9A258F;
+        text-decoration: none;
+    }
+
+    .a:hover {
+        background-color: grey;
+    }
+
+    .butt {
+        opacity: 0;
+    }
+
+    .nbar:hover {
+        border-bottom: solid 2px #9A258F;
+        font-weight: 800;
+    }
+
+    a.active {
+        border-bottom: solid 2px #9A258F;
+        font-weight: 800;
+    }
+
+    .rc-anchor-center-container {
+        display: table;
+        height: 100%;
+    }
+
+    .rc-anchor-normal .rc-anchor-content {
+        height: 65px;
+        width: 206px;
+        float: left;
+    }
+
+    .cart:hover {
+        background-color: #343a40;
+        color: white;
+    }
+
+    .cart {
+        background-color: #9A258F;
+        color: white;
+        font-size: 14px;
+        font-weight: 400;
+        border-radius: 3px;
+        width: 15%;
+        height: 35px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .container-fluid.p-0 {
+        position: relative;
+        color: white;
+    }
+
+    #myBtn {
+        display: block;
+        visibility: hidden;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 99;
+        font-size: 20px;
+        height: 35px;
+        width: 35px;
+        border: 1px solid #000;
+        outline: none;
+        background-color: rgb(255, 255, 255);
+        color: #000;
+        cursor: pointer;
+        padding-left: 9px;
+        padding-right: 9px;
+        transition: all 300ms;
+    }
+
+    #myBtn:hover {
+        background-color: #000000;
+        color: #ffffff;
+    }
+
+    @keyframes slidein {
+        from {
+            bottom: 0px;
+        }
+
+        to {
+            bottom: 20px;
+        }
+    }
+
+    @keyframes slideout {
+        from {
+            bottom: 20px;
+        }
+
+        to {
+            bottom: -40px;
+        }
+    }
+
+    #social {
+        transition: 0.3s;
+        padding: 0%;
+        width: 5%;
+        height: 5%;
+        margin-left: 10px;
+    }
+
+    #social:hover {
+        cursor: pointer;
+        opacity: 0.7;
+    }
+
+    #fname {
+        width: 60%;
+        transform: translateY(2px);
+        height: 40px;
+        border: 1px solid #ccc;
+    }
+
+    #footer-info {
+        font-size: 70%;
+        margin: 0.5%;
+        padding-left: 7%;
+        transition: 0.5s;
+        font-family: "Prompt", arial, tahoma;
+    }
+
+    #footer-info:hover {
+        color: #AE0496;
+    }
+
+    #footer-info2 {
+        font-size: 70%;
+        margin-bottom: 0.5%;
+        padding-left: 23%;
+        transition: 0.5s;
+        font-family: "Prompt", arial, tahoma;
+
+    }
+
+    #footer-info2:hover {
+        color: #AE0496;
+    }
+    .container-fluid.p-0 {
                 position: relative;
                 color: white;
             }
@@ -64,131 +261,12 @@
                 background-size: cover;
                 padding: 4% 0 4%;
             }
-    
-            #myBtn {
-                display: block;
-                visibility: hidden;
-                position: fixed;
-                bottom: 20px;
-                right: 20px;
-                z-index: 99;
-                font-size: 20px;
-                height: 35px;
-                width: 35px;
-                border: 1px solid #000;
-                outline: none;
-                background-color: rgb(255, 255, 255);
-                color: #000;
-                cursor: pointer;
-                padding-left: 9px;
-                padding-right: 9px;
-                transition: all 300ms;
-            }
-    
-            #myBtn:hover {
-                background-color: #000000;
-                color: #ffffff;
-            }
-    
-            @keyframes slidein {
-                from {
-                    bottom: 0px;
-                }
-    
-                to {
-                    bottom: 20px;
-                }
-            }
-    
-            @keyframes slideout {
-                from {
-                    bottom: 20px;
-                }
-    
-                to {
-                    bottom: -40px;
-                }
-            }
-    
-            #home {
-                color: #000;
-                transition: 0.5s;
-            }
-    
-            #home:hover {
-                color: #AE0496;
-            }
-    
-            .more::before {
-                content: ">";
-                padding-left: 20px;
-                padding-right: 20px;
-            }
-    
-            .subbutton {
-                padding: 5px 8px;
-                border-radius: 3px;
-                border: 1px solid #9a258f;
-                min-width: 178px;
-                background-color: #9a258f;
-                transition: all .15s;
-            }
-    
-            .subbutton:hover {
-                background-color: #333;
-                border: 1px solid #000;
-            }
-    
-            #social {
-                transition: 0.3s;
-                padding: 0%;
-                width: 5%;
-                height: 5%;
-                margin-left: 10px;
-            }
-    
-            #social:hover {
-                cursor: pointer;
-                opacity: 0.7;
-            }
-    
-            #fname {
-                width: 60%;
-                transform: translateY(2px);
-                height: 40px;
-                border: 1px solid #ccc;
-            }
-    
-            #footer-info {
-                font-size: 70%;
-                margin: 0.5%;
-                padding-left: 7%;
-                transition: 0.5s;
-                font-family: "Prompt", arial, tahoma;
-            }
-    
-            #footer-info:hover {
-                color: #AE0496;
-            }
-    
-            #footer-info2 {
-                font-size: 70%;
-                margin-bottom: 0.5%;
-                padding-left: 23%;
-                transition: 0.5s;
-                font-family: "Prompt", arial, tahoma;
-    
-            }
-    
-            #footer-info2:hover {
-                color: #AE0496;
-            }
 </style>
 
 <body>
-    
-        <div class="centered mx-auto h5 text-center text-white">วิธีการแก้ปัญหาเบื้องต้น</div>
-    
+  
+        <div class="centered mx-auto h5 text-center text-white ">ติดต่อเรา</div>
+ 
     <div class="container">
         
         <p style="font-size:12px; display: inline;"><a href="index.html" class="link" style="text-decoration: none;">หน้าแรก</a>
