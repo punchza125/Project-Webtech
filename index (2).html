@@ -41,68 +41,9 @@
             width: 95px;
         }
 
-        .topnav {
-            overflow: hidden;
-            background-color: white;
-            width: 100%;
-            top: 0;
-            height: 48px;
-            position: fixed;
-        }
-
-        .topnav a {
-            float: left;
-            color: #f2f2f2;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-
-        .topnav a:hover {
-            background-color: #ddd;
-            color: black;
-        }
-
-        .topnav a.active {
-            background-color: #04AA6D;
-            color: white;
-        }
-
-        .box {
-            background-color: red;
-            height: 500%;
-        }
-
         .logo {
             height: 100%;
             width: 100%;
-        }
-
-        .product-background-title {
-            height: 210px;
-            width: 100%;
-            background-size: cover;
-            text-align: center;
-        }
-
-        .page-title {
-            text-align: center;
-            top: 50%;
-            left: 50%;
-            color: white;
-        }
-
-        .cf {
-            position: relative;
-            text-align: center;
-            color: white;
-        }
-
-        .centered {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
         }
 
         .head-text {
@@ -160,6 +101,15 @@
             border-radius: 3px;
             width: 100%;
             height: 35px;
+        }
+        .next1{
+            display: inline-block;
+            padding: 2px 10px;
+            background-color: #9A258F;
+            color: white;
+            font-size: 14px;
+            margin-left: 5px;
+            text-decoration: none;
         }
 
         .next {
@@ -259,6 +209,7 @@
             background-color: #9A258F;
             color: white;
         }
+
         .modal-footer.drop {
             justify-content: flex-start;
         }
@@ -431,42 +382,27 @@
             font-size: 9px;
             cursor: pointer;
         }
+
+        .centered.mx-auto.h5.text-center {
+            font-size: 24px;
+            background-image: url(bg_catalog.png);
+            background-color: transparent;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            padding: 4% 0 4%;
+        }
     </style>
 </head>
 
 <body>
-    <!-- header menu bar -->
-    <!-- <div class="topnav">
-        <img src="https://www.logaworld.com/pub/media/loga_logo.svg"
-            style="height: 100%; width: 5%; align-items: center; float: left; padding: 3px;">
-        <a href="#contact"><strong>สินค้า</strong></a>
-        <a href="#about">ติตต่อเรา</a>
-    </div> -->
-    <!-- background-title -->
-    <div class="container-fluid cf">
-        <div class="row">
-            <div class="topnav">
-                <img src="https://www.logaworld.com/pub/media/loga_logo.svg"
-                    style="height: 100%; width: 5%; align-items: center; float: left; padding: 3px;">
-                <a href="#contact"><strong>สินค้า</strong></a>
-                <a href="#about">ติตต่อเรา</a>
-            </div>
-        </div>
-        <div class="row" style="height: 260px">
-            <img src="https://www.logaworld.com/pub/media/bg_pagetitle/default/bg_catalog.png"
-                style="height: 260px; width: 100%;">
-            <div class="centered">สินค้า</div>
-        </div>
-        <!-- <img src="https://www.logaworld.com/pub/media/bg_pagetitle/default/bg_catalog.png">
-        <div class="centered">สินค้า</div> -->
-    </div>
+    <div class="centered mx-auto h5 text-center text-white ">สินค้า</div>
     <!-- main--->
     <div class="container">
-        <p style="font-size:12px; display: inline;"><a class="link" href="" style="text-decoration: none;">หน้าแรก</a>
+        <p style="font-size:12px; display: inline;"><a class="link" href="index.html" style="text-decoration: none;">หน้าแรก</a>
         </p>
         <p class="more" style="font-size:12px; color: black; display: inline;">สินค้า</p>
 
-    </div>
     </div>
 
     <div class="container">
@@ -969,10 +905,10 @@
 
                 </div>
                 <!--เลือกหน้า--->
-                <div class="row" style="margin-top: 10%;">
+                <div class="row" style="margin-top: 60px;">
                     <div class="col-md-4"></div>
                     <div class="col-md-4"></div>
-                    <div class="col-md-4" style="text-align: right;"><a href="#" class="next">1</a>
+                    <div class="col-md-4" style="text-align: right;"><a href="#" class="next1">1</a>
                         <a href="#" class="next">2</a>
                         <a href="#" class="next">3</a>
                         <a href="#" class="next">&#8250;</a>
@@ -1340,79 +1276,81 @@
             </div>
         </div>
     </div>
-    <br>
-    <div class="container-fluid pt-3" style="background-color: #1f1f1f; margin-top: 2%">
+    <div class="container-fluid pt-3" style="background-color: #1f1f1f;margin-top: 5px;">
         <div class="row">
             <div class="col-sm-3 mt-5" style="overflow: hidden;">
-                <img src="Logo_Loga_footer.png" style="width: 30%; margin-left: 2%;">
+                <img src="Logo_Loga_footer.png" style="width: 160px; margin-left: 2%;">
             </div>
             <div class="col-sm-2 mt-3 ">
                 <div class="row">
-                    <h5 class='fs-6 ' style="color: white; padding-left:9.5%">Customer Services</h5>
+                    <h5 class='fs-6 ' style="color: white; padding-left:9.5%;font-size: 18px;">
+                        Customer Services</h5>
                 </div>
                 <div class="row mt-1">
-                    <a href="" style="color: rgb(195, 195, 195);">
+                    <a href="solution.html" style="color: rgb(195, 195, 195);">
                         <p id="footer-info" style="font-size: 14px;">วิธีการแก้ปัญหาเบื้องต้น</p>
                     </a>
                 </div>
                 <div class="row">
-                    <a href="" style="color: rgb(195, 195, 195);">
+                    <a href="guarantee.html" style="color: rgb(195, 195, 195);">
                         <p id="footer-info" style="font-size: 14px;">รับประกันสินค้า</p>
                     </a>
                 </div>
                 <div class="row">
-                    <a href="" style="color: rgb(195, 195, 195);">
+                    <a href="condition.html" style="color: rgb(195, 195, 195);">
                         <p id="footer-info" style="font-size: 14px;">ข้อตกลงและเงื่อนไข</p>
                     </a>
                 </div>
                 <div class="row">
-                    <a href="" style="color: rgb(195, 195, 195);">
-                        <p id="footer-info" style="font-size: 14px;">บทความ</p>
+                    <a href="product-software.html" style="color: rgb(195, 195, 195);">
+                        <p id="footer-info" style="font-size: 14px;">ซอฟท์แวร์</p>
                     </a>
                 </div>
             </div>
             <div class="col-sm-2 mt-3 ">
                 <div class="row ">
-                    <h5 class='fs-6 ' style="color: white; padding-left:9.5%">Company Information</h5>
+                    <h5 class='fs-6 ' style="color: white; padding-left:9.5%">Company Information
+                    </h5>
                 </div>
                 <div class="row mt-1">
-                    <a href="" style="color: rgb(195, 195, 195);">
+                    <a href="about.html" style="color: rgb(195, 195, 195);">
                         <p id="footer-info" style="font-size: 14px;">เกี่ยวกับเรา</p>
                     </a>
                 </div>
                 <div class="row">
-                    <a href="" style="color: rgb(195, 195, 195);">
+                    <a href="contact.html" style="color: rgb(195, 195, 195);">
                         <p id="footer-info" style="font-size: 14px;">ติดต่อเรา</p>
                     </a>
                 </div>
             </div>
             <div class="col-sm-2 mt-3 ">
                 <div class="row">
-                    <h5 class='fs-6 ' style="color: white; padding-left:25%">Payment & Shipping
+                    <h5 class='fs-6' style="color: white; padding-left:25%">Payment & Shipping
                     </h5>
                 </div>
                 <div class="row mt-1">
-                    <a href="" style="color: rgb(195, 195, 195);">
+                    <a href="cart.html" style="color: rgb(195, 195, 195);">
                         <p id="footer-info2" style="font-size: 14px;">ตะกร้าของฉัน</p>
                     </a>
                 </div>
                 <div class="row">
-                    <a href="" style="color: rgb(195, 195, 195);">
+                    <a href="login.html" style="color: rgb(195, 195, 195);">
                         <p id="footer-info2" style="font-size: 14px;">ติดตามคำสั่งซื้อ</p>
                     </a>
                 </div>
             </div>
-            <div class="col-sm-3 mt-3  " style="overflow: hidden;">
-                <div class="row ">
-                    <h5 class='fs-6 ' style="color: white; padding-left:25%">Let’s Talk
+            <div class="col-sm-3 mt-3" style="overflow: hidden;">
+                <div class="row">
+                    <h5 class='fs-6' style="color: white; padding-left:25%">Let’s Talk
                     </h5>
                 </div>
                 <div class="row mt-0" style="flex-wrap:nowrap;flex-shrink: 1;">
-                    <img src="iconmonstr-line-1-32 (1).png"
+                    <img src="iconmonstr-line-1-32_1.png"
                         style="width:50px;height: 22px;margin-left: 22%; display: inline-block;">
                     <a href="" style="color: rgb(255, 255, 255);margin-left: -4%;">
                         <p id="footer-info2" style="top: 0%;padding: 0%;margin-right: 0%;font-size: 14px;">
-                            @Logathailand</p>
+                            @Logathailand
+                        </p>
                     </a>
                 </div>
                 <div class="row mt-0" style="flex-wrap:nowrap;flex-shrink: 1;">
@@ -1424,7 +1362,7 @@
                             support@logaworld.com</p>
                     </a>
                 </div>
-                <div class="row mt-2">
+                <div class="row d-flex" style="margin-top: 15px;">
                     <img id="social" src="iconmonstr-facebook-1-32.png"
                         style="margin-left: 25%;width: 30px;height: 30px;">
                     <img id="social" src="iconmonstr-youtube-6-32.png" style="width: 30px;height: 30px;">
@@ -1435,9 +1373,9 @@
             <div class="row mt-5">
                 <div class="container-fluid">
                     <hr class='m-1' style="color: white;height:1.5px;">
-                    <p class='text-center m-1' style="color: white;font-size: 12px;">© 2021 Logathailand. All
-                        Rights
-                        Reserved.</p>
+                    <p class='text-center m-1' style="color: white;font-size: 12px;">© 2021
+                        Logathailand.
+                        All Rights Reserved.</p>
                 </div>
             </div>
         </div>
