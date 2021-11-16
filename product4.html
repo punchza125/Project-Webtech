@@ -1,3 +1,1380 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zodiac Collection Sagittarius Keycap (new)</title>
+    <script src="https://kit.fontawesome.com/de3473a09c.js" crossorigin="anonymous"></script>
+    <!--bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!--icon-->
+    <link rel="icon" href="logo_loga.png" type="image/x-icon">
+
+    <!--Font-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Prompt', sans-serif;
+
+        }
+
+        .container {
+            padding-top: 35px;
+            padding-left: 0px;
+            max-width: 1280px;
+        }
+
+        .more::before {
+            content: ">";
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .more2::after {
+            content: ":";
+        }
+
+        .more3::after {
+            content: "*";
+            color: red;
+        }
+
+        .rpic:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .slideshow {
+            position: relative;
+            margin: auto;
+        }
+
+        .item {
+            width: 90px;
+            height: 90px;
+            float: left;
+            margin-right: 20px;
+        }
+
+        .prev1 {
+            cursor: pointer;
+            position: absolute;
+            top: 0%;
+            width: 80px;
+            padding: 40px;
+            padding-top: 320px;
+            padding-bottom: 275px;
+            color: #333333;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            text-decoration: none;
+        }
+
+        .next1 {
+            cursor: pointer;
+            position: absolute;
+            top: 0%;
+            width: 80px;
+            padding: 40px;
+            padding-top: 320px;
+            padding-bottom: 275px;
+            color: #333333;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            text-decoration: none;
+        }
+
+        .next1 {
+            right: 12;
+            border-radius: 3px 0 0 3px;
+        }
+
+        img {
+            vertical-align: middle;
+        }
+
+        .link {
+            font-size: 12px;
+            color: #696969;
+            text-decoration: none;
+        }
+
+        .link:hover {
+            color: #9A258F;
+            text-decoration: none;
+        }
+
+        .a:hover {
+            background-color: grey;
+        }
+
+        .butt {
+            opacity: 0;
+        }
+
+        .nbar:hover {
+            border-bottom: solid 2px #9A258F;
+            font-weight: 800;
+        }
+
+        #home-tab.active {
+            border-bottom: solid 2px #9A258F;
+            font-weight: 800;
+        }
+
+        #profile-tab.active {
+            border-bottom: solid 2px #9A258F;
+            font-weight: 800;
+        }
+
+        #contact-tab.active {
+            border-bottom: solid 2px #9A258F;
+            font-weight: 800;
+        }
+
+        .cart:hover {
+            background-color: #343a40;
+            color: white;
+        }
+
+        .cart {
+            background-color: #9A258F;
+            color: white;
+            font-size: 14px;
+            font-weight: 400;
+            border-radius: 3px;
+            width: 15%;
+            height: 35px;
+        }
+
+        .cart2:hover {
+            background-color: #343a40;
+            color: white;
+        }
+
+        .cart2 {
+            background-color: #9A258F;
+            color: white;
+            font-size: 16px;
+            font-weight: 400;
+            border-radius: 3px;
+            width: 100%;
+            height: 40px;
+        }
+
+        .cart3:hover {
+            background-color: #343a40;
+            color: white;
+        }
+
+        .cart3 {
+            border: solid 1px #9A258F;
+            color: #9A258F;
+            font-size: 16px;
+            font-weight: 400;
+            border-radius: 3px;
+            width: 70%;
+            height: 40px;
+        }
+
+        div.stars {
+            width: 260px;
+        }
+
+        input.star {
+            display: none
+        }
+
+        label.star {
+            cursor: pointer;
+            float: right;
+            padding: 3px;
+            font-size: 20px;
+            transition: all .2s
+        }
+
+        input.star:checked~label.star:before {
+            content: '\f005';
+            color: #FD4;
+            transition: all .25s
+        }
+
+
+        input.star-1:checked~label.star:before {
+            color: #F62
+        }
+
+        label.star:hover {
+            transform: rotate(-15deg) scale(1.3)
+        }
+
+        label.star:before {
+            content: '\f006';
+            font-family: FontAwesome
+        }
+
+        .input-number {
+            width: 80px;
+            padding: 0 12px;
+            vertical-align: top;
+            text-align: center;
+            outline: none;
+        }
+
+
+        .input-number,
+        .input-number-decrement,
+        .input-number-increment {
+            border: 1px solid #ccc;
+            height: 40px;
+            user-select: none;
+        }
+
+
+        .input-number-decrement,
+        .input-number-increment {
+            display: inline-block;
+            width: 30px;
+            line-height: 38px;
+            background: #f1f1f1;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .input-number-decrement {
+            border-right: none;
+        }
+
+        .input-number-increment {
+            border-left: none;
+        }
+
+        .hearts {
+            color: #333333;
+        }
+
+        .hearts:hover {
+            color: #9A258F;
+            cursor: pointer;
+        }
+
+        .fa-random {
+            color: #9A258F;
+            cursor: pointer;
+        }
+
+        a {
+            color: #333333;
+            text-decoration: none;
+        }
+
+        .container-fluid.p-0 {
+            position: relative;
+            color: white;
+        }
+
+        #myBtn {
+            display: block;
+            visibility: hidden;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 99;
+            font-size: 20px;
+            height: 35px;
+            width: 35px;
+            border: 1px solid #000;
+            outline: none;
+            background-color: rgb(255, 255, 255);
+            color: #000;
+            cursor: pointer;
+            padding-left: 9px;
+            padding-right: 9px;
+            transition: all 300ms;
+        }
+
+        #myBtn:hover {
+            background-color: #000000;
+            color: #ffffff;
+        }
+
+        @keyframes slidein {
+            from {
+                bottom: 0px;
+            }
+
+            to {
+                bottom: 20px;
+            }
+        }
+
+        @keyframes slideout {
+            from {
+                bottom: 20px;
+            }
+
+            to {
+                bottom: -40px;
+            }
+        }
+
+        #social {
+            transition: 0.3s;
+            padding: 0%;
+            width: 5%;
+            height: 5%;
+            margin-left: 10px;
+        }
+
+        #social:hover {
+            cursor: pointer;
+            opacity: 0.7;
+        }
+
+        #fname {
+            width: 60%;
+            transform: translateY(2px);
+            height: 40px;
+            border: 1px solid #ccc;
+        }
+
+        #footer-info {
+            font-size: 70%;
+            margin: 0.5%;
+            padding-left: 7%;
+            transition: 0.5s;
+            font-family: "Prompt", arial, tahoma;
+        }
+
+        #footer-info:hover {
+            color: #AE0496;
+        }
+
+        #footer-info2 {
+            font-size: 70%;
+            margin-bottom: 0.5%;
+            padding-left: 23%;
+            transition: 0.5s;
+            font-family: "Prompt", arial, tahoma;
+
+        }
+
+        #footer-info2:hover {
+            color: #AE0496;
+        }
+
+        .amountdrop {
+            display: flex;
+            align-items: center;
+            flex-basis: 100%;
+        }
+
+        .prodamount {
+            position: relative;
+        }
+
+        input[type=number] {
+            -moz-appearance: textfield;
+            -webkit-appearance: none;
+        }
+
+        input[type=number]::-webkit-inner-spin-button,
+        input[type=number]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        .fas.fa-minus {
+            position: absolute;
+            top: 35%;
+            left: 15%;
+            font-size: 9px;
+            cursor: pointer;
+        }
+
+        .input-number {
+            height: 35px;
+            width: 90px;
+            padding: 0 30px;
+            text-align: center;
+            border: 1px solid #e5e5e5;
+            outline: none;
+            background-color: #fff;
+            font-size: 14px;
+        }
+
+        .fas.fa-plus {
+            position: absolute;
+            top: 34%;
+            right: 15%;
+            font-size: 9px;
+            cursor: pointer;
+        }
+
+        .cart-black {
+            background-color: #000000;
+            color: white;
+            font-size: 14px;
+            font-weight: 400;
+            border-radius: 3px;
+            width: 15%;
+            height: 35px;
+        }
+
+        .cart-black:hover {
+            background-color: #9A258F;
+            color: white;
+        }
+
+        .centered.mx-auto.h5.text-center {
+            font-size: 24px;
+            background-image: url(bg_catalog.png);
+            background-color: transparent;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            padding: 4% 0 4%;
+        }
+
+        ul,
+        li {
+            list-style: none;
+        }
+
+        ol,
+        ul {
+            padding: 0;
+        }
+
+        a,
+        i,
+        button {
+            cursor: pointer;
+        }
+
+        .navformobile {
+            display: none;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: -400px;
+            z-index: 99;
+            width: 400px;
+            background-color: #fff;
+            max-height: 100vh;
+            overflow-y: auto;
+            box-shadow: 0 0 5px 0 rgb(255 255 255 / 75%);
+        }
+
+        @keyframes MobileLeft {
+            from {
+                position: fixed;
+                left: -400px;
+            }
+
+            to {
+                display: block;
+                position: fixed;
+                left: 0px;
+            }
+        }
+
+        @keyframes MobileRight {
+            from {
+                display: block;
+                position: fixed;
+                left: 0px;
+            }
+
+            to {
+                display: none;
+                position: fixed;
+                left: -400px;
+            }
+        }
+
+        .nav-content {
+            margin-bottom: 30px;
+            border: none;
+            background-color: #222;
+            display: flex;
+            flex-wrap: wrap;
+            padding-left: 0;
+        }
+
+        .innav {
+            flex: 1;
+            margin-bottom: -1px;
+        }
+
+        .mobilenav {
+            display: block;
+            text-align: center;
+            margin: 0;
+            border: none;
+            font-weight: 500;
+            color: #fff;
+            background-color: #222;
+            border-bottom: 1px solid #222;
+            padding: 20px 0;
+        }
+
+        .mobilenav:hover {
+            color: #fff;
+        }
+
+        .fade.show {
+            opacity: 1;
+        }
+
+        .firstmb {
+            color: #222;
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .firstmb:hover {
+            color: #222;
+        }
+
+        .contentmobile {
+            margin-top: 40px;
+        }
+
+        .mainmenumb {
+            display: block;
+            padding: 0;
+            height: 100%;
+        }
+
+        .header {
+            position: relative;
+            top: 0;
+            right: 0;
+            left: 0;
+            z-index: 20;
+        }
+
+        .header-active-sticky {
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            z-index: 20;
+            background-color: #fff;
+            box-shadow: 0 1px 1px #ececec;
+        }
+
+        .container-fluid {
+            width: 100%;
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .wrapper-head {
+            display: flex;
+        }
+
+        .nav-mobile {
+            display: none;
+            position: relative;
+            flex: 1;
+        }
+
+        .menumobile {
+            position: relative;
+        }
+
+        .menu_nav.nav-link.active.navmobile {
+            padding: 5px 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        #showmobile {
+            font-size: 13px;
+            margin-left: 2px;
+            margin-top: 5px;
+            position: relative;
+            left: 90%;
+            transform: rotate(-90deg);
+            cursor: default;
+            border-bottom: 1px solid #eee;
+        }
+
+        .menuproductmb {
+            padding: 10px 0 10px 20px;
+            display: none;
+        }
+
+        .inmenumobile {
+            width: 100%;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 2;
+        }
+
+        .inmenumobile:hover {
+            color: #9A258F;
+        }
+
+        .inmenumobile2 {
+            display: inline-block;
+            padding-bottom: 3px;
+            margin-bottom: 10px;
+            width: 100%;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 2;
+        }
+
+        .inmenumobile2:hover {
+            color: #9A258F;
+        }
+
+        .mobilemenu {
+            position: relative;
+            padding: 10px 18px 10px 0;
+            font-size: 20px;
+            top: 0%;
+            transform: translateY(25%);
+        }
+
+        .innavmobile-2 {
+            border-bottom: 1px solid #eee;
+            padding: 9px 40px 9px 15px;
+            display: block;
+        }
+
+        .innavmobile-2:hover {
+            color: #9A258F;
+        }
+
+        .secmenu {
+            display: none;
+            height: 100%;
+        }
+
+        .translate-mobile {
+            display: none;
+            height: 100%;
+        }
+
+        .dropdown-mb {
+            position: relative;
+        }
+
+        .dropdownflag {
+            display: flex;
+            width: 100%;
+            padding: 8px 15px 9px;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+
+        .flagindropdown {
+            background-image: url(flag_th.png);
+            display: inline-block;
+            width: 95%;
+            background-repeat: no-repeat;
+            background-size: auto 100%;
+            height: 20px;
+        }
+
+        .dropdownflag.eng a {
+            display: none;
+            background-image: url(flag_en.png);
+            height: 20px;
+            padding-left: 40px;
+            background-size: auto 100%;
+            background-repeat: no-repeat;
+        }
+
+        .dropdownflag.eng:hover {
+            box-shadow: 0 5px 8px 0 #aaa;
+        }
+
+        .dropdownflag.eng a:hover {
+            color: #9A258F;
+        }
+
+        .logo {
+            margin: 0;
+            padding: 15px 0 15px;
+            max-width: 100%;
+            display: block;
+        }
+
+        #loga_logo {
+            height: 45px;
+        }
+
+        .menu {
+            display: flex;
+            width: 100%;
+            padding: 0;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .mainmenu {
+            display: inline-block;
+            padding: 0;
+        }
+
+        #Menu {
+            margin-left: 10vw;
+            font-family: "Prompt";
+        }
+
+        .nav-menu {
+            justify-content: center;
+            flex: 3;
+        }
+
+        .nav-item1,
+        .nav-item2,
+        .nav-item3,
+        .nav-item4,
+        .nav-item5 {
+            position: static;
+            padding: 0 0px 25px;
+            margin-bottom: -25px;
+        }
+
+        .menuhover {
+            position: absolute;
+            margin: 0 auto;
+            right: 0;
+            left: 0;
+            top: 130%;
+            width: 85vw;
+            display: none;
+            opacity: 0;
+            visibility: hidden;
+            border-top: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+            padding: 30px 5%;
+            z-index: 10;
+            background-color: #fff;
+            transform: translateY(2px);
+        }
+
+        .productmenu {
+            width: 100%;
+            padding: 0;
+            float: left;
+            display: flex;
+        }
+
+        .col1 {
+            width: 16.6666666667%;
+            padding: 0 15px;
+            float: left;
+            display: flex;
+            border-right: 1px solid #dfdfdf;
+        }
+
+        .col2 {
+            width: 83.3333333333%;
+            padding: 0 15px;
+            float: left;
+            display: flex;
+        }
+
+        .inmenu {
+            font-size: 16px;
+            line-height: 2;
+        }
+
+        .inmenu:hover {
+            color: #9A258F;
+        }
+
+        .inproductmenu {
+            padding-bottom: 1px;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+        .menutitle {
+            width: 100%;
+            padding: 0 15px;
+            float: left;
+            display: flex;
+        }
+
+        .txtmenu::after {
+            content: "";
+            width: 45px;
+            height: 1.5px;
+            background-color: #9A258F;
+            display: block;
+        }
+
+        .txtmenu2::after {
+            content: "";
+            width: 45px;
+            height: 1.5px;
+            background-color: #9A258F;
+            display: block;
+        }
+
+        .menutitle2 {
+            width: 16.6666666667%;
+            padding: 0 15px;
+            float: left;
+            display: flex;
+        }
+
+        .menutitle3 {
+            width: 16.6666666667%;
+            padding: 0 15px;
+            float: left;
+            display: flex;
+        }
+
+        .menutitle4 {
+            width: 66.6666666667%;
+            padding: 0 15px;
+            float: left;
+            display: flex;
+            border-left: 1px solid #dfdfdf;
+            text-align: right;
+        }
+
+        #line-1::after {
+            content: "";
+            height: 2px;
+            width: 50px;
+            background-color: #9A258F;
+            display: block;
+        }
+
+        #line1,
+        #line2,
+        #line3,
+        #line4,
+        #line5 {
+            display: none;
+            position: absolute;
+            bottom: 2%;
+            height: 2px;
+            background-color: #9A258F;
+        }
+
+        #line1mb,
+        #line2mb,
+        #line3mb,
+        #line4mb,
+        #line5mb {
+            display: none;
+            position: absolute;
+            bottom: 2%;
+            height: 2px;
+            background-color: #9A258F;
+        }
+
+        .menu_nav.nav-link.active {
+            display: flex;
+            align-items: center;
+            position: relative;
+            color: #333333;
+            padding: 0 20px;
+            letter-spacing: 0.03em;
+            font-size: 16px;
+            font-weight: 500;
+            position: relative;
+        }
+
+        .iconmenu {
+            margin-top: 12px;
+            flex: 2;
+        }
+
+        .searchmenu {
+            padding: 10px 20px;
+            float: right;
+            font-size: 18px;
+        }
+
+        #search {
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background: #fff;
+            align-items: stretch;
+            transform-origin: top;
+            opacity: 0;
+            visibility: hidden;
+            display: flex;
+            height: 75px;
+        }
+
+        .searchclick {
+            width: 900px;
+            margin: 0 auto;
+            height: 100%;
+        }
+
+        .field-search {
+            position: relative;
+            height: 100%;
+        }
+
+        #cross {
+            position: absolute;
+            right: 10px;
+            top: 18%;
+            font-size: 30px;
+            margin: 0 0 9px;
+            display: inline-block;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        .searchtext {
+            border: none;
+            font-size: 20px;
+            background: none;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+            width: 100%;
+            padding: 0 10px;
+            margin: 0;
+            height: 40px;
+            box-shadow: none;
+            outline: none;
+        }
+
+        .usermenu {
+            padding: 12px 20px 13px;
+            cursor: pointer;
+            float: right;
+        }
+
+        .usermenu:hover,
+        .usermenu-active:hover {
+            color: #9A258F;
+        }
+
+        .usermenu-active {
+            padding: 12px 20px 13px;
+            float: right;
+        }
+
+        .userhover {
+            position: absolute;
+            right: 13.5vw;
+            border: 1px solid #eee;
+            display: block;
+            visibility: hidden;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 300ms;
+            background-color: #fff;
+        }
+
+        .userhover ul li {
+            padding: 8px 20px 9px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .inhover:hover {
+            color: #9A258F;
+        }
+
+        .userhover-active {
+            position: absolute;
+            right: 13.5vw;
+            border: 1px solid #eee;
+            display: none;
+            visibility: hidden;
+            opacity: 0;
+            transform: translateY(10px);
+            background-color: #fff;
+        }
+
+        .userhover-active ul li {
+            padding: 8px 20px 9px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .likemenu {
+            padding: 14px 10px 11px;
+            float: right;
+        }
+
+        .fas.fa-heart:hover {
+            color: #9A258F;
+        }
+
+        .cartmenu {
+            padding: 10px 0 10px 20px;
+            cursor: pointer;
+            float: right;
+        }
+
+        #cart:before {
+            content: url(icshoppingbasket24px1@2x.svg);
+            background-size: 16px auto;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 22px;
+            height: 26px;
+            position: relative;
+            top: 3px;
+        }
+
+        .dropdown-cart {
+            position: absolute;
+            top: 100%;
+            right: 100px;
+            display: none;
+            opacity: 0;
+            visibility: hidden;
+            background-color: #fff;
+            box-sizing: border-box;
+            box-shadow: 1px 2px 7px rgb(99 99 99 / 15%);
+            padding: 15px;
+            width: 350px;
+            transform: translateY(-5px);
+            transition: all 300ms;
+        }
+
+        .fas.fa-caret-up {
+            color: #eee;
+            font-size: 28px;
+            position: absolute;
+            z-index: 1;
+            left: auto;
+            top: -20px;
+            right: 20px;
+            height: 0;
+            width: 0;
+        }
+
+        .hovercart {
+            display: block;
+        }
+
+        .carttitle {
+            display: block;
+            font-weight: 600;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+            text-transform: uppercase;
+            color: #333333;
+        }
+
+        .cartempty {
+            background: #9A258F;
+            color: #fff;
+            border-radius: 30px;
+            line-height: 18px;
+            min-width: 18px;
+            display: inline-block;
+            text-align: center;
+            font-size: 10px;
+            font-weight: 700;
+            margin: -5px 0 0 -1px;
+            vertical-align: top;
+        }
+
+        .translatemenu {
+            float: right;
+            margin-top: 7px;
+            display: inline-flex;
+            align-items: center;
+            padding: 11px 11px 12px;
+            position: relative;
+            cursor: pointer;
+        }
+
+        #flag {
+            display: inline-flex;
+        }
+
+        #flagthai {
+            background-image: url(flag_th.png);
+            background-size: 32px auto;
+            width: 32px;
+            height: 20px;
+            background-repeat: no-repeat;
+            margin-right: 5px;
+        }
+
+        .translatehover {
+            display: block;
+            visibility: hidden;
+            opacity: 0;
+            position: absolute;
+            background-color: #fff;
+            top: 100%;
+            right: 0;
+            border: 1px solid #eee;
+            min-width: 100%;
+            box-shadow: 0 1px 1px #eee;
+            padding: 0;
+            margin: 0;
+            transition: all 300ms;
+        }
+
+        .eng {
+            min-width: 140px;
+            padding: 8px 20px 9px;
+            white-space: nowrap;
+        }
+
+        .eng a {
+            background-image: url(flag_en.png);
+            padding-left: 40px;
+            background-size: 32px auto;
+            width: 32px;
+            height: 20px;
+            background-repeat: no-repeat;
+            line-height: 21px;
+            display: inline-flex;
+        }
+
+        @keyframes UpMenu {
+            from {
+                transform: translateY(22px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(2px);
+                opacity: 1;
+            }
+        }
+
+        @keyframes DownMenu {
+            from {
+                transform: translateY(2px);
+                opacity: 1;
+            }
+
+            to {
+                transform: translateY(22px);
+                opacity: 0;
+            }
+        }
+
+        @keyframes UpUser {
+            from {
+                position: absolute;
+                transform: translateY(30px);
+                opacity: 0;
+            }
+
+            to {
+                position: absolute;
+                transform: translateY(10px);
+                opacity: 1;
+            }
+        }
+
+        @keyframes DownUser {
+            from {
+                position: absolute;
+                transform: translateY(10px);
+                opacity: 1;
+            }
+
+            to {
+                position: absolute;
+                transform: translateY(30px);
+                opacity: 0;
+            }
+        }
+
+        @keyframes UpCart {
+            from {
+                transform: translateY(10px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(-5px);
+                opacity: 1;
+            }
+        }
+
+        @keyframes DownCart {
+            from {
+                transform: translateY(-5px);
+                opacity: 1;
+            }
+
+            to {
+                transform: translateY(10px);
+                opacity: 0;
+            }
+        }
+
+        @keyframes UpTranslate {
+            from {
+                position: absolute;
+                transform: translateY(20px);
+                opacity: 0;
+            }
+
+            to {
+                position: absolute;
+                transform: translateY(0px);
+                opacity: 1;
+            }
+        }
+
+        @keyframes DownTranslate {
+            from {
+                position: absolute;
+                transform: translateY(0px);
+                opacity: 1;
+            }
+
+            to {
+                position: absolute;
+                transform: translateY(20px);
+                opacity: 0;
+            }
+        }
+
+        @media (max-width: 1199.98px) {
+
+            .wrapper-head {
+                padding: 0;
+            }
+
+            .nav-mobile {
+                display: block;
+            }
+
+            .logo {
+                justify-content: center;
+            }
+
+            .nav-menu {
+                display: none;
+            }
+
+            .iconmenu {
+                flex: 1;
+            }
+
+            .searchmenu {
+                padding: 0 5px;
+            }
+
+            .usermenu {
+                padding: 2px 5px 2px;
+            }
+
+            .likemenu {
+                padding: 5px 10px 5px;
+            }
+
+            .cartmenu {
+                padding: 0 0 20px;
+            }
+
+            .translatemenu {
+                padding: 7px 5px 0;
+                margin: 0;
+            }
+        }
+
+        @media (min-width: 1200px) and (max-width: 1365px) {
+            .wrapper-head {
+                padding: 0 35px;
+            }
+
+        }
+
+        @media (min-width: 1200px) and (max-width: 1399px) {
+            .searchmenu {
+                padding: 10px 15px;
+            }
+
+            .usermenu {
+                padding: 12px 15px 13px;
+            }
+
+            .likemenu {
+                padding: 14px 10px 11px;
+            }
+
+            .cartmenu {
+                padding: 10px 0 10px 15px;
+            }
+
+            .translatemenu {
+                padding: 11px 15px 12px;
+            }
+        }
+
+        #home {
+            color: #000;
+            transition: 0.5s;
+        }
+
+        #home:hover {
+            color: #AE0496;
+        }
+
+        .more::before {
+            content: ">";
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .subbutton {
+            padding: 5px 8px;
+            border-radius: 3px;
+            border: 1px solid #9a258f;
+            min-width: 178px;
+            background-color: #9a258f;
+            transition: all .15s;
+        }
+
+        .subbutton:hover {
+            background-color: #333;
+            border: 1px solid #000;
+        }
+
+        .modal-backdrop {
+            background-color: rgba(100, 100, 100, 0.15);
+        }
+    </style>
+
+</head>
+
+<body>
     <div class="header" id="header">
         <div class="navformobile" id="navformobile">
             <ul class="nav-content">
@@ -300,3 +1677,1030 @@
             </div>
         </div>
     </div>
+    <div class="centered mx-auto h5 text-center text-white ">Zodiac Collection LEO Keycap</div>
+    <!-- main--->
+    <div class="container">
+        <p style="font-size:12px; display: inline;"><a class="link" href="index.html"
+                style="text-decoration: none;">หน้าแรก</a>
+        </p>
+        <p class="more" style="font-size:12px; color: black; display: inline;">Zodiac Collection LEO Keycap
+        </p>
+    </div>
+
+    <div class="container">
+        <div class="row rpic">
+            <div class="col-md-6 slideshow">
+                <div class="apic" onmouseover="mouseOver1()" onmouseout="mouseOut1()">
+                    <div class="pic">
+                        <img src="zol1.jpg" style="width: 100%;">
+                    </div>
+                    <div class="pic">
+                        <img src="zol2.jpg" style="width: 100%;">
+                    </div>
+                    <div class="pic">
+                        <img src="zol3.jpg" style="width: 100%;">
+                    </div>
+                    <div class="pic">
+                        <img src="zol4.jpg" style="width: 100%;">
+                    </div>
+                    <div class="pic">
+                        <img src="zol5.jpg" style="width: 100%;">
+                    </div>
+
+                </div>
+                <div class="butt" id="but">
+                    <a class="prev1" id="pre" onmouseover="mouseOver2()" onmouseout="mouseOut2()"
+                        onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next1" id="nex" onmouseover="mouseOver3()" onmouseout="mouseOut3()"
+                        onclick="plusSlides(1)">&#10095;</a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <span>
+                    <h1 style="font-size: 24px; color: #333333;"><b>Zodiac Collection LEO Keycap</b></h1>
+                </span>
+                <span style="font-size: 18px; color: #C60000;"><b>฿269.00</b></span><br>
+                <a class="link" href="">เป็นคนแรกที่รีวิวสินค้านี้</a><br>
+                <br>
+                <span style="color: #696969;">คีย์แคป โลกา ซี่รีย์ จักรราศี : สิงห์ (23 กรกฎา ถึง 23 สิงหา นับในแบบ
+                    สายนะ)</span><br>
+                <br>
+                <div class="col-11">
+                    <span style="color: #696969;">เคีย์แคป space bar ขนาด 6.25 U</span><br>
+                    <span style="color: #696969;">และ ปุ่มเล็กแถวบนสุด ขนาด 1 U R4</span>
+                </div>
+                <br>
+                <hr style="width: 550px; color: #696969;">
+                <br>
+                <div class="amountdrop">
+                    <span style="margin-right:10px;">จำนวน</span>
+                    <div class="prodamount">
+                        <i class="fas fa-minus"></i>
+                        <input type="number" value="1" min="1" class="input-number">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                </div>
+                <div class="row" style="margin: 20px; margin-left: -15px;">
+                    <div class="col-3">
+                        <a href="#" class="btn cart2" data-bs-toggle="modal" data-bs-target="#leo">เพิ่มไปตะกร้า</a>
+                    </div>
+                    <div class="col-3">
+                        <a href="#" class="btn cart3">ซื้อเลย</a>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-4">
+                        <i class="fa fa-heart" aria-hidden="true" style="color: #9A258F;"></i>
+                        <span class="hearts">&nbsp เพิ่มในรายการโปรด</span>
+                    </div>
+                    <div class="col-4">
+                        <i class="fas fa-random" aria-hidden="true" style="color: #9A258F;"></i>
+                        <span class="hearts">&nbsp เพิ่มไปเปรียบเทียบ</span>
+                    </div>
+                </div>
+                <br>
+                <hr style="width: 550px; color: #696969;">
+                <br>
+                <b><span>Share this product :</span></b>
+                <br>
+                <div class="col-10">
+                    <a class="btn btn-light  rounded-circle a" style="border: 2px solid whitesmoke; padding: 10px;"
+                        href="https://www.facebook.com/sharer.php?s=100&p[url]=https%3A%2F%2Fwww.logaworld.com%2Floga-ravana-2-4ghz-wireless-mechanical-keyboard.html&p[images][0]=https%3A%2F%2Fwww.logaworld.com%2Fpub%2Fmedia%2Fcatalog%2Fproduct%2Fcache%2Ff2ca15fbffcb2f0e3b76657b525b85cd%2Fr%2Fa%2Fravana_marketing-02.jpg&p[title]=LOGA%20RAVANA%20%3A%202.4GHz%20wireless%20Mechanical%20keyboard&p[summary]=%20LOGA%20RavanaKeyboard%2096%20%25%20%E0%B9%84%E0%B8%A3%E0%B9%89%E0%B8%AA%E0%B8%B2%E0%B8%A2%E0%B9%81%E0%B8%9A%E0%B8%9A%202.4GHz%20%E0%B8%AA%E0%B8%B3%E0%B8%AB%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%AB%E0%B8%A5%E0%B8%B2%E0%B8%81%E0%B8%AB%E0%B8%A5%E0%B8%B2%E0%B8%A2%E0%B8%A3%E0%B8%B9%E0%B8%9B%E0%B9%81%E0%B8%9A%E0%B8%9A%20%E0%B8%97%E0%B8%B1%E0%B9%89%E0%B8%87%E0%B9%80%E0%B8%A5%E0%B9%88%E0%B8%99%E0%B9%80%E0%B8%81%E0%B8%A1%E0%B8%A3%E0%B8%B0%E0%B8%94%E0%B8%B1%E0%B8%9A%E0%B9%82%E0%B8%9B%E0%B8%A3%20%E0%B8%88%E0%B8%99%E0%B9%84%E0%B8%9B%E0%B8%96%E0%B8%B6%E0%B8%87%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%97%E0%B8%B3%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B8%A3%E0%B8%B0%E0%B8%94%E0%B8%B1%E0%B8%9A%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%AD%E0%B8%B2%E0%B8%8A%E0%B8%B5%E0%B8%9E%20%E0%B8%94%E0%B9%89%E0%B8%A7%E0%B8%A2%E0%B8%82%E0%B8%99%E0%B8%B2%E0%B8%94%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B9%80%E0%B8%A5%E0%B9%87%E0%B8%81%E0%B8%A5%E0%B8%87%E0%B9%81%E0%B8%95%E0%B9%88%E0%B8%A2%E0%B8%B1%E0%B8%87%E0%B8%84%E0%B8%87%E0%B9%83%E0%B8%99%E0%B8%AA%E0%B9%88%E0%B8%A7%E0%B8%99%20numpad%20%E0%B9%84%E0%B8%A7%E0%B9%89%20%E0%B8%97%E0%B8%B3%E0%B9%83%E0%B8%AB%E0%B9%89%E0%B8%9C%E0%B8%B9%E0%B9%89%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%95%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B8%95%E0%B8%A3%E0%B8%87%20numpad%20%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B9%84%E0%B8%94%E0%B9%89%E0%B8%AA%E0%B8%B0%E0%B8%94%E0%B8%A7%E0%B8%81%E0%B8%A2%E0%B8%B4%E0%B9%88%E0%B8%87%E0%B8%82%E0%B8%B6%E0%B9%89%E0%B8%99%E0%B9%82%E0%B8%94%E0%B8%A2%E0%B9%84%E0%B8%A1%E0%B9%88%E0%B9%80%E0%B8%AA%E0%B8%B5%E0%B8%A2%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%9A%E0%B8%99%E0%B9%82%E0%B8%95%E0%B9%8A%E0%B8%B0%E0%B9%82%E0%B8%94%E0%B8%A2%E0%B9%84%E0%B8%A1%E0%B9%88%E0%B8%88%E0%B8%B3%E0%B9%80%E0%B8%9B%E0%B9%87%E0%B8%99%E0%B8%94%E0%B8%B2%E0%B8%A7%E0%B8%99%E0%B9%8C%E0%B9%82%E0%B8%AB%E0%B8%A5%E0%B8%94%20LOGA%20RAVANA%20%E0%B8%8B%E0%B8%AD%E0%B8%9F%E0%B8%95%E0%B9%8C%E0%B9%81%E0%B8%A7%E0%B8%A3%E0%B9%8C%E0%B9%84%E0%B8%94%E0%B9%89%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%99%E0%B8%B5%E0%B9%88"
+                        role="button"><i class="fab fa-facebook"></i></a>
+                    <a class="btn btn-light  rounded-circle a" style="border: 2px solid whitesmoke; padding: 10px;"
+                        href="https://twitter.com/home?status=LOGA%20RAVANA%20:%202.4GHz%20wireless%20Mechanical%20keyboard+https://www.logaworld.com/loga-ravana-2-4ghz-wireless-mechanical-keyboard.html"
+                        role="button"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-light  rounded-circle a" style="border: 2px solid whitesmoke; padding: 10px;"
+                        href="https://social-plugins.line.me/lineit/share?url=https://www.logaworld.com/loga-ravana-2-4ghz-wireless-mechanical-keyboard.html"
+                        role="button"><i class="fab fa-line"></i></a>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="row" style="margin-top: 20px;">
+            <div class="col-md-6">
+                <div id="wrapper">
+                    <div id="carousel">
+                        <div id="content">
+                            <div>
+                                <img src="zol1.jpg" class="item" onclick="currentSlide(1)">
+                            </div>
+                            <div>
+                                <img src="zol2.jpg" class="item" onclick="currentSlide(2)">
+                            </div>
+                            <div>
+                                <img src="zol3.jpg" class="item" onclick="currentSlide(3)">
+                            </div>
+                            <div>
+                                <img src="zol4.jpg" class="item" onclick="currentSlide(4)">
+                            </div>
+                            <div>
+                                <img src="zol5.jpg" class="item" onclick="currentSlide(5)">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+
+        <div id="clicks">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <ul class="nav" id="myTab" role="tablist" style="border-bottom: 1px solid #ccc; width: 1700px;">
+                    <li class="nav-item nbar" role="presentation"> <a class="nav-link active" style="color: black;"
+                            id="home-tab" data-bs-toggle="tab" href="#home1" role="tab" aria-controls="home"
+                            aria-selected="true">Details</a> </li>
+                    <li class="nav-item nbar" role="presentation"> <a class="nav-link" style="color: black;"
+                            id="profile-tab" data-bs-toggle="tab" href="#profile1" role="tab" aria-controls="profile"
+                            aria-selected="false">More Information</a> </li>
+                    <li class="nav-item nbar" role="presentation"> <a class="nav-link" style="color: black;"
+                            id="contact-tab" data-bs-toggle="tab" href="#contact1" role="tab" aria-controls="contact"
+                            aria-selected="false">Reviews</a> </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="col-12">
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="home1" role="tabpanel" aria-labelledby="home-tab"><br>
+                    คีย์แคป โลกา ซี่รีย์ จักรราศี : สิงห์ (23 กรกฎา ถึง 23 สิงหา นับในแบบ สายนะ)<br><br>
+                    คีย์แคป space bar ขนาด 6.25 U<br>
+                    และ ปุ่มเล็กแถวบนสุด ขนาด 1 U R4<br><br>
+                    *คำเตือน คีย์บอร์ดบางรุ่น ที่ไม่ใช่ แถวล่างสุดแบบ standard ไม่สามารถใส่ได้
+                    กรุณาตรวจสอบก่อนซื้อสินค้า<br><br>
+                    สินค้าเสริมดวงและความสวยงามของคีย์บอร์ดคุณ
+                    เหมาะกับการเป็นสินค้าที่ซื้อมาใช้เองหรือเป็นของขวัญให้เพื่อนๆที่รักการใช้คีย์บอร์ด Mechanical
+                    มาพร้อมกัน 2 ปุ่ม เป็นลายราศีธนูบน<br>
+                    space bar และลายประจำราศีบนปุ่ม Esc<br>
+                    การดีไซน์คีย์แคปของโลการุ่นนี้อ้างอิงมาจากจักรราศีทั้ง 12 ซึ่งเราได้ทำการดีไซน์โดยมี concept
+                    ต่างกันไปตามแต่ละเดือน<br><br>
+                    -----------------------------<br><br>
+                    --Leo--<br><br>
+                    ส่วนประกอบของภาพจะมีการซ่อนความหมายต่างๆไวในลวดลายเช่น<br><br><br>
+                    แซลมอน (Salmon) อิงจาก totem แซลมอน ซึ่งเป็นสัตว์ประจำเดือนเกิดตามความเชื่อของ Native
+                    American<br><br>
+                    ไฟ ( Fire) เป็นธาตุประจำจักรราศีสิงห์<br><br>
+                    สีส้ม (orange )เป็นสีประจำจักราศี สิงห์<br><br>
+                    -----------------------------<br><br>
+                    specification<br><br>
+                    - PBT dye-sub<br>
+                    - space bar ขนาด 6.25 U<br>
+                    - คีแคป แถว ESC ขนาด 1 U (R4)<br>
+                    - กล่องสินค้าจั่วปังคงทนสามารถเก็บสะสมได้<br><br>
+
+                </div>
+
+                <div class="tab-pane fade" id="profile1" role="tabpanel" aria-labelledby="profile-tab"
+                    style="margin-top: 30px;">
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <td>สี</td>
+                                <td>White</td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+                <div class="tab-pane fade" id="contact1" role="tabpanel" aria-labelledby="contact-tab">
+                    <div class="col-12">
+                        <p style="border-bottom: 1px solid #ccc; display: block; width: 900px; margin-top: 30px;">
+                            เขียนรีวิวของคุณเอง
+                        </p>
+
+                        <div class="col-12">
+                            <div class="rc-anchor-normal-footer">
+                                <img src="google.jpg" style="width: 20%; height: auto;">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="col-12">
+                            <p style="display: block; width: 900px;">
+                                <b>คุณกำลังรีวิว: Zodiac Collection LEO Keycap</b>
+                            </p>
+                        </div>
+                        <div class="col-12">
+                            <div class="stars">
+                                <form action=""> <input class="star star-5" id="star-5" type="radio" name="star" />
+                                    <label class="star star-5" for="star-5"></label> <input class="star star-4"
+                                        id="star-4" type="radio" name="star" /> <label class="star star-4"
+                                        for="star-4"></label> <input class="star star-3" id="star-3" type="radio"
+                                        name="star" /> <label class="star star-3" for="star-3"></label> <input
+                                        class="star star-2" id="star-2" type="radio" name="star" /> <label
+                                        class="star star-2" for="star-2"></label> <input class="star star-1" id="star-1"
+                                        type="radio" name="star" /> <label class="star star-1" for="star-1">
+                                    </label>
+                                    <p class="more2" style="font-size:16px; cursor: pointer;">ราคา</p>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="stars">
+                                <form action=""> <input class="star star-5" id="star-50" type="radio" name="star" />
+                                    <label class="star star-5" for="star-50"></label> <input class="star star-4"
+                                        id="star-40" type="radio" name="star" /> <label class="star star-4"
+                                        for="star-40"></label> <input class="star star-3" id="star-30" type="radio"
+                                        name="star" /> <label class="star star-3" for="star-30"></label> <input
+                                        class="star star-2" id="star-20" type="radio" name="star" /> <label
+                                        class="star star-2" for="star-20"></label> <input class="star star-1"
+                                        id="star-10" type="radio" name="star" /> <label class="star star-1"
+                                        for="star-10">
+                                    </label>
+                                    <p class="more2" style="font-size:16px; cursor: pointer;">ความคุ้มค่า</p>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="stars">
+                                <form action=""> <input class="star star-5" id="star-500" type="radio" name="star" />
+                                    <label class="star star-5" for="star-500"></label> <input class="star star-4"
+                                        id="star-400" type="radio" name="star" /> <label class="star star-4"
+                                        for="star-400"></label> <input class="star star-3" id="star-300" type="radio"
+                                        name="star" /> <label class="star star-3" for="star-300"></label> <input
+                                        class="star star-2" id="star-200" type="radio" name="star" /> <label
+                                        class="star star-2" for="star-200"></label> <input class="star star-1"
+                                        id="star-100" type="radio" name="star" /> <label class="star star-1"
+                                        for="star-100">
+                                    </label>
+                                    <p class="more2" style="font-size:16px; cursor: pointer;">คุณภาพ</p>
+                                </form>
+                            </div>
+                        </div>
+                        <br>
+                        <form class="row needs-validation" novalidate>
+                            <div class="col-md-6">
+                                <label for="validationCustom01" class="form-label more3"><b>ชื่อเล่น</b></label>
+                                <input type="text" class="form-control" id="validationCustom01" value=""
+                                    placeholder="ชื่อเล่น" required>
+                                <div class="invalid-feedback">
+                                    ฟิลด์นี้จำเป็น
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="validationCustom02" class="form-label more3"><b>สรุป</b></label>
+                                <input type="text" class="form-control" id="validationCustom02" value=""
+                                    placeholder="สรุป" required>
+                                <div class="invalid-feedback">
+                                    ฟิลด์นี้จำเป็น
+                                </div>
+                            </div>
+                            <div class="col-12 " style="margin-top: 30px;">
+                                <label for="validationCustom02" class="form-label more3"><b>รีวิว</b></label>
+                                <input type="text" placeholder="รีวิว" style="height: 100px;" class="form-control"
+                                    id="validationCustom02" value="" required>
+                                <div class="invalid-feedback">
+                                    ฟิลด์นี้จำเป็น
+                                </div>
+                            </div>
+                            <div class="col-6" style="margin-top: 30px;">
+                                <button class="btn cart" type="submit">ยืนยันรีวิว</button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <br>
+    <div class="container-fluid pt-3" style="background-color: #1f1f1f;margin-top: 60px;">
+        <div class="row">
+            <div class="col-sm-3 mt-5" style="overflow: hidden;">
+                <img src="Logo_Loga_footer.png" style="width: 160px; margin-left: 2%;">
+            </div>
+            <div class="col-sm-2 mt-3 ">
+                <div class="row">
+                    <h5 class='fs-6 ' style="color: white; padding-left:9.5%;font-size: 18px;">
+                        Customer Services</h5>
+                </div>
+                <div class="row mt-1">
+                    <a href="solution.html" style="color: rgb(195, 195, 195);">
+                        <p id="footer-info" style="font-size: 14px;">วิธีการแก้ปัญหาเบื้องต้น</p>
+                    </a>
+                </div>
+                <div class="row">
+                    <a href="guarantee.html" style="color: rgb(195, 195, 195);">
+                        <p id="footer-info" style="font-size: 14px;">รับประกันสินค้า</p>
+                    </a>
+                </div>
+                <div class="row">
+                    <a href="condition.html" style="color: rgb(195, 195, 195);">
+                        <p id="footer-info" style="font-size: 14px;">ข้อตกลงและเงื่อนไข</p>
+                    </a>
+                </div>
+                <div class="row">
+                    <a href="product-software.html" style="color: rgb(195, 195, 195);">
+                        <p id="footer-info" style="font-size: 14px;">ซอฟท์แวร์</p>
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-2 mt-3 ">
+                <div class="row ">
+                    <h5 class='fs-6 ' style="color: white; padding-left:9.5%">Company Information
+                    </h5>
+                </div>
+                <div class="row mt-1">
+                    <a href="about.html" style="color: rgb(195, 195, 195);">
+                        <p id="footer-info" style="font-size: 14px;">เกี่ยวกับเรา</p>
+                    </a>
+                </div>
+                <div class="row">
+                    <a href="contact.html" style="color: rgb(195, 195, 195);">
+                        <p id="footer-info" style="font-size: 14px;">ติดต่อเรา</p>
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-2 mt-3 ">
+                <div class="row">
+                    <h5 class='fs-6' style="color: white; padding-left:25%">Payment & Shipping
+                    </h5>
+                </div>
+                <div class="row mt-1">
+                    <a href="cart.html" style="color: rgb(195, 195, 195);">
+                        <p id="footer-info2" style="font-size: 14px;">ตะกร้าของฉัน</p>
+                    </a>
+                </div>
+                <div class="row">
+                    <a href="login.html" style="color: rgb(195, 195, 195);">
+                        <p id="footer-info2" style="font-size: 14px;">ติดตามคำสั่งซื้อ</p>
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-3 mt-3" style="overflow: hidden;">
+                <div class="row">
+                    <h5 class='fs-6' style="color: white; padding-left:25%">Let’s Talk
+                    </h5>
+                </div>
+                <div class="row mt-0" style="flex-wrap:nowrap;flex-shrink: 1;">
+                    <img src="iconmonstr-line-1-32_1.png"
+                        style="width:50px;height: 22px;margin-left: 22%; display: inline-block;">
+                    <a href="" style="color: rgb(255, 255, 255);margin-left: -4%;">
+                        <p id="footer-info2" style="top: 0%;padding: 0%;margin-right: 0%;font-size: 14px;">
+                            @Logathailand
+                        </p>
+                    </a>
+                </div>
+                <div class="row mt-0" style="flex-wrap:nowrap;flex-shrink: 1;">
+                    <img src="iconmonstr-email-2-32.png"
+                        style="width:50px;min-width:20px;height: 22px;margin-left: 22%;margin-top: 2.5px;">
+                    <a href="" style="color: rgb(255, 255, 255);margin-left: -4%;">
+                        <p id="footer-info2"
+                            style="position: relative;top: 0%;padding:0%;margin-right: 0%;font-size: 14px;">
+                            support@logaworld.com</p>
+                    </a>
+                </div>
+                <div class="row d-flex" style="margin-top: 15px;">
+                    <img id="social" src="iconmonstr-facebook-1-32.png"
+                        style="margin-left: 25%;width: 30px;height: 30px;">
+                    <img id="social" src="iconmonstr-youtube-6-32.png" style="width: 30px;height: 30px;">
+                    <img id="social" src="iconmonstr-instagram-11-32.png" style="width: 30px;height: 30px;">
+                    <img id="social" src="iconmonstr-line-1-32.png" style="width: 30px;height: 30px;">
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="container-fluid">
+                    <hr class='m-1' style="color: white;height:1.5px;">
+                    <p class='text-center m-1' style="color: white;font-size: 12px;">© 2021
+                        Logathailand.
+                        All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button onclick="topFunction()" id="myBtn"><i class="fas fa-angle-up"></i></button>
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("pic");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            slides[slideIndex - 1].style.display = "block";
+        }
+
+        function mouseOver1() {
+            document.getElementById("but").style.opacity = "1";
+        }
+
+        function mouseOut1() {
+            document.getElementById("but").style.opacity = "0";
+        }
+
+        function mouseOver2() {
+            document.getElementById("pre").style.backgroundColor = "#FFFFFF4D";
+            document.getElementById("pre").style.color = "#333333";
+            document.getElementById("but").style.opacity = "1";
+        }
+
+        function mouseOut2() {
+            document.getElementById("pre").style.backgroundColor = "transparent";
+            document.getElementById("but").style.opacity = "0";
+        }
+
+        function mouseOver3() {
+            document.getElementById("nex").style.backgroundColor = "#FFFFFF4D";
+            document.getElementById("nex").style.color = "#333333";
+            document.getElementById("but").style.opacity = "1";
+        }
+
+        function mouseOut3() {
+            document.getElementById("nex").style.backgroundColor = "transparent";
+            document.getElementById("but").style.opacity = "0";
+        }
+
+
+        var header = document.getElementById("clicks");
+        var btns = header.getElementsByClassName("nava");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function () {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+
+
+        (() => {
+            'use strict';
+
+            const forms = document.querySelectorAll('.needs-validation');
+
+            Array.prototype.slice.call(forms).forEach((form) => {
+                form.addEventListener('submit', (event) => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        })();
+
+        (function () {
+
+            window.inputNumber = function (el) {
+
+                var min = el.attr('min') || false;
+                var max = el.attr('max') || false;
+
+                var els = {};
+
+                els.dec = el.prev();
+                els.inc = el.next();
+
+                el.each(function () {
+                    init($(this));
+                });
+
+                function init(el) {
+
+                    els.dec.on('click', decrement);
+                    els.inc.on('click', increment);
+
+                    function decrement() {
+                        var value = el[0].value;
+                        value--;
+                        if (!min || value >= min) {
+                            el[0].value = value;
+                        }
+                    }
+
+                    function increment() {
+                        var value = el[0].value;
+                        value++;
+                        if (!max || value <= max) {
+                            el[0].value = value++;
+                        }
+                    }
+                }
+            }
+        })();
+
+        inputNumber($('.input-number'));
+
+        var mybutton = document.getElementById("myBtn");
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+                mybutton.style.visibility = "visible";
+                mybutton.style.animation = "slidein 300ms";
+            }
+            else {
+                mybutton.style.visibility = "hidden";
+                mybutton.style.animation = "slideout 300ms";
+            }
+        }
+
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+        function sticky() {
+            document.getElementsByClassName("main_page");
+            var navbar = document.getElementById("header");
+            if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
+                navbar.classList.add("header-active-sticky");
+                navbar.classList.remove("header");
+            }
+            else {
+                navbar.classList.remove("header-active-sticky");
+                navbar.classList.add("header");
+            }
+            console.log(document.getElementById("header").scrollTop);
+        }
+        window.addEventListener("scroll", sticky);
+
+        document.getElementById("nav-mobile").onclick = function () { shownavmobile() };
+        function shownavmobile() {
+            var nav = document.getElementById("navformobile");
+            if (nav.style.left == "-400px") {
+                nav.style.display = "block";
+                nav.style.animation = "MobileLeft 300ms";
+                nav.style.left = "0";
+            }
+
+            else if (nav.style.display == "block") {
+                nav.style.animation = "MobileRight 300ms";
+                nav.style.left = "-400px";
+            }
+
+            else {
+                nav.style.display = "block";
+                nav.style.left = "0";
+                nav.style.animation = "MobileLeft 300ms";
+            }
+        }
+
+        var select1 = document.getElementById("mobilenav-firstmb");
+        var select2 = document.getElementById("mobilenav-sec");
+        var select3 = document.getElementById("mobilenav-thd");
+        var mobilemenu = document.getElementById("mobile-nav-main");
+        var mobilemenu2 = document.getElementById("mobile-nav-account");
+        var mobilemenu3 = document.getElementById("mobile-nav-translate");
+        document.getElementById("mobilenav-firstmb").onclick = function () { selectnav1() };
+        function selectnav1() {
+            mobilemenu.classList.add("show");
+            mobilemenu.style.display = "block";
+            mobilemenu.style.height = "100%";
+            mobilemenu2.classList.remove("show");
+            mobilemenu2.style.height = "0";
+            mobilemenu2.style.display = "none";
+            mobilemenu3.classList.remove("show");
+            mobilemenu3.style.height = "0";
+            mobilemenu3.style.display = "none";
+            select1.style.color = "#222";
+            select1.style.backgroundColor = "#fff";
+            select1.style.borderBottom = "1px solid #ddd";
+            select2.style.color = "#fff";
+            select2.style.backgroundColor = "#222";
+            select2.style.borderBottom = "1px solid #222";
+            select3.style.color = "#fff";
+            select3.style.backgroundColor = "#222";
+            select3.style.borderBottom = "1px solid #222";
+            var dropdownflag = document.getElementById("dropdownflage-eng");
+            dropdownflag.style.display = "none";
+        }
+
+        document.getElementById("mobilenav-sec").onclick = function () { selectnav2() };
+        function selectnav2() {
+            mobilemenu2.classList.add("show");
+            mobilemenu2.style.display = "block";
+            mobilemenu2.style.height = "100%";
+            mobilemenu.classList.add("fade");
+            mobilemenu.classList.remove("show");
+            mobilemenu.style.display = "none";
+            mobilemenu.style.height = "0";
+            mobilemenu3.classList.remove("show");
+            mobilemenu3.style.display = "none";
+            mobilemenu3.style.height = "0";
+            select2.style.color = "#222";
+            select2.style.backgroundColor = "#fff";
+            select2.style.borderBottom = "1px solid #ddd";
+            select1.style.color = "#fff";
+            select1.style.backgroundColor = "#222";
+            select1.style.borderBottom = "1px solid #222";
+            select3.style.color = "#fff";
+            select3.style.backgroundColor = "#222";
+            select3.style.borderBottom = "1px solid #222";
+            var dropdownflag = document.getElementById("dropdownflage-eng");
+            dropdownflag.style.display = "none";
+        }
+
+        document.getElementById("mobilenav-thd").onclick = function () { selectnav3() };
+        function selectnav3() {
+            mobilemenu3.classList.add("show");
+            mobilemenu3.style.display = "block";
+            mobilemenu3.style.height = "100%";
+            mobilemenu.classList.add("fade");
+            mobilemenu.classList.remove("show");
+            mobilemenu.style.display = "none";
+            mobilemenu.style.height = "0";
+            mobilemenu2.classList.remove("show");
+            mobilemenu2.style.height = "0";
+            mobilemenu2.style.display = "none";
+            select3.style.color = "#222";
+            select3.style.backgroundColor = "#fff";
+            select3.style.borderBottom = "1px solid #ddd";
+            select2.style.color = "#fff";
+            select2.style.backgroundColor = "#222";
+            select2.style.borderBottom = "1px solid #222";
+            select1.style.color = "#fff";
+            select1.style.backgroundColor = "#222";
+            select1.style.borderBottom = "1px solid #222";
+        }
+
+        document.getElementById("dropdownflag").onclick = function () { dropdownclick() };
+        function dropdownclick() {
+            var dropdownflag = document.getElementById("dropdownflage-eng");
+            if (dropdownflag.style.display == "block") {
+                dropdownflag.style.display = "none";
+            }
+            else {
+                dropdownflag.style.display = "block";
+            }
+        }
+
+        document.getElementById("innavmobile-2").onmouseover = function () { navmobilehover() };
+        document.getElementById("innavmobile-2").onmouseout = function () { navmobilenothover() };
+        var navmobile = document.getElementById("innavmobile-2");
+        function navmobilehover() {
+            navmobile.style.color = "#9A258F";
+        }
+
+        function navmobilenothover() {
+            navmobile.style.color = "#333333";
+        }
+
+        document.getElementById("firstpagemb").onmouseover = function () { linembhover1() };
+        document.getElementById("firstpagemb").onmouseout = function () { linembnothover1() };
+        var line1mb = document.getElementById("line1mb");
+        function linembhover1() {
+            line1mb.style.display = "block";
+        }
+
+        function linembnothover1() {
+            line1mb.style.display = "none";
+        }
+
+        document.getElementById("productmb").onmouseover = function () { linembhover2() };
+        document.getElementById("productmb").onmouseout = function () { linembnothover2() };
+        var line2mb = document.getElementById("line2mb");
+        function linembhover2() {
+            line2mb.style.display = "block";
+        }
+
+        function linembnothover2() {
+            line2mb.style.display = "none";
+        }
+
+        document.getElementById("showmobile").onclick = function () { arrowshowmobile() };
+        var showmobile = document.getElementById("menuproductmb");
+        var arrowdown = document.getElementById("showmobile");
+        function arrowshowmobile() {
+            if (showmobile.style.display == "none") {
+                showmobile.style.display = "block";
+                arrowdown.style.transform = "rotate(0deg)";
+            }
+            else {
+                showmobile.style.display = "none";
+                arrowdown.style.transform = "rotate(-90deg)";
+            }
+        }
+
+        document.getElementById("blogmb").onmouseover = function () { linembhover3() };
+        document.getElementById("blogmb").onmouseout = function () { linembnothover3() };
+        var line3mb = document.getElementById("line3mb");
+        function linembhover3() {
+            line3mb.style.display = "block";
+        }
+
+        function linembnothover3() {
+            line3mb.style.display = "none";
+        }
+
+        document.getElementById("aboutlogamb").onmouseover = function () { linembhover4() };
+        document.getElementById("aboutlogamb").onmouseout = function () { linembnothover4() };
+        var line4mb = document.getElementById("line4mb");
+        function linembhover4() {
+            line4mb.style.display = "block";
+        }
+
+        function linembnothover4() {
+            line4mb.style.display = "none";
+        }
+
+        document.getElementById("contactmb").onmouseover = function () { linembhover5() };
+        document.getElementById("contactmb").onmouseout = function () { linembnothover5() };
+        var line5mb = document.getElementById("line5mb");
+        function linembhover5() {
+            line5mb.style.display = "block";
+        }
+
+        function linembnothover5() {
+            line5mb.style.display = "none";
+        }
+
+        document.getElementById("firstpage").onmouseover = function () { linehover1() };
+        document.getElementById("firstpage").onmouseout = function () { linenothover1() };
+        function linehover1() {
+            var line1 = document.getElementById("line1");
+            line1.style.display = "block";
+        }
+
+        function linenothover1() {
+            var line1 = document.getElementById("line1");
+            line1.style.display = "none";
+        }
+
+        document.getElementById("product").onmouseover = function () { linehover2() };
+        document.getElementById("product").onmouseout = function () { linenothover2() };
+        function linehover2() {
+            var line2 = document.getElementById("line2");
+            var menu = document.getElementById("menuhover");
+            line2.style.display = "block";
+            menu.style.display = "flex";
+            menu.style.visibility = "visible";
+            menu.style.opacity = "1";
+            menu.style.animation = "UpMenu 300ms";
+        }
+
+        function linenothover2() {
+            var line2 = document.getElementById("line2");
+            var menu = document.getElementById("menuhover");
+            line2.style.display = "none";
+            menu.style.opacity = "0";
+            menu.style.animation = "DownMenu 300ms";
+        }
+
+        document.getElementById("menuhover").onmouseover = function () { menuhover() };
+        document.getElementById("menuhover").onmouseout = function () { menunothover() };
+
+        function menuhover() {
+            var menu = document.getElementById("menuhover");
+            var line2 = document.getElementById("line2");
+            line2.style.display = "block";
+            menu.style.display = "flex";
+            menu.style.visibility = "visibie";
+            menu.style.opacity = "1";
+            menu.style.animation = "none";
+        }
+
+        function menunothover() {
+            var menu = document.getElementById("menuhover");
+            var line2 = document.getElementById("line2");
+            line2.style.display = "none";
+            menu.style.display = "none";
+            menu.style.opacity = "0";
+            menu.style.animation = "DownMenu 300ms";
+        }
+
+        document.getElementById("blog").onmouseover = function () { linehover3() };
+        document.getElementById("blog").onmouseout = function () { linenothover3() };
+        function linehover3() {
+            var line3 = document.getElementById("line3");
+            line3.style.display = "block";
+        }
+
+        function linenothover3() {
+            var line3 = document.getElementById("line3");
+            line3.style.display = "none";
+        }
+
+        document.getElementById("aboutloga").onmouseover = function () { linehover4() };
+        document.getElementById("aboutloga").onmouseout = function () { linenothover4() };
+        function linehover4() {
+            var line4 = document.getElementById("line4");
+            line4.style.display = "block";
+        }
+
+        function linenothover4() {
+            var line4 = document.getElementById("line4");
+            line4.style.display = "none";
+        }
+
+        document.getElementById("contact").onmouseover = function () { linehover5() };
+        document.getElementById("contact").onmouseout = function () { linenothover5() };
+        function linehover5() {
+            var line5 = document.getElementById("line5");
+            line5.style.display = "block";
+        }
+
+        function linenothover5() {
+            var line5 = document.getElementById("line5");
+            line5.style.display = "none";
+        }
+
+        document.getElementById("searchmenu").onclick = function () { search() };
+        function search() {
+            var search = document.getElementById("search");
+            search.style.visibility = "visible";
+            search.style.opacity = "1";
+            document.querySelector(".cartmenu").style.visibility = "hidden";
+            document.querySelector(".translatemenu").style.visibility = "hidden";
+
+        }
+
+        document.getElementById("cross").onclick = function () { cross() };
+        function cross() {
+            document.getElementById("searchinput").value = "";
+            document.getElementById("search").style.visibility = "hidden";
+            document.querySelector('.cartmenu').style.visibility = "visible";
+            document.querySelector(".translatemenu").style.visibility = "visible";
+
+        }
+
+        document.getElementById("usermenu").onmouseover = function () { userhover() };
+        document.getElementById("usermenu").onmouseout = function () { usernothover() };
+        function userhover() {
+            var userhover = document.getElementById("userhover");
+            userhover.style.display = "block";
+            userhover.style.visibility = "visible";
+            userhover.style.opacity = "1";
+            userhover.style.animation = "UpUser 300ms";
+        }
+
+        function usernothover() {
+            var userhover = document.getElementById("userhover");
+            userhover.style.animation = "DownUser 300ms";
+            userhover.style.visibility = "hidden";
+            userhover.style.opacity = "0";
+        }
+
+        document.getElementById("userhover").onmouseover = function () { onuserhover() };
+        document.getElementById("userhover").onmouseout = function () { outuserhover() };
+        function onuserhover() {
+            var onuserhover = document.getElementById("userhover");
+            onuserhover.style.display = "block";
+            onuserhover.style.display = "visible";
+            onuserhover.style.opacity = "1";
+        }
+
+        function outuserhover() {
+            var onuserhover = document.getElementById("userhover");
+
+        }
+
+        document.getElementById("user").onclick = function () { userclick() };
+        function userclick() {
+            var user = document.getElementById("usermenu");
+            var show = document.getElementById("userhover-active");
+            var notshow = document.getElementById("userhover");
+            if (user.className == "usermenu") {
+                user.classList.add("usermenu-active");
+                user.classList.remove("usermenu");
+                show.style.display = "block";
+                show.style.visibility = "visible";
+                show.style.opacity = "1";
+                notshow.style.visibility = "hidden";
+                notshow.style.animation = "none";
+            }
+            else {
+                user.classList.add("usermenu");
+                user.classList.remove("usermenu-active");
+                show.style.opacity = "0";
+                notshow.style.animation = "none";
+            }
+        }
+
+        document.getElementById("cartmenu").onmouseover = function () { carthover() };
+        document.getElementById("cartmenu").onmouseout = function () { cartnothover() };
+        function carthover() {
+            var cart = document.getElementById("dropdown-cart");
+            cart.style.display = "block";
+            cart.style.visibility = "visible";
+            cart.style.opacity = "1";
+            cart.style.animation = "UpCart 300ms";
+        }
+
+        function cartnothover() {
+            var cart = document.getElementById("dropdown-cart");
+            cart.style.animation = "DownCart 300ms";
+            cart.style.visibility = "hidden";
+            cart.style.opacity = "0";
+        }
+
+        document.getElementById("dropdown-cart").onmouseover = function () { indropcart() };
+        document.getElementById("dropdown-cart").onmouseout = function () { outdropcart() };
+        function indropcart() {
+            var cart = document.getElementById("dropdown-cart");
+            cart.style.display = "block";
+            cart.style.visibility = "visible";
+            cart.style.opacity = "1";
+        }
+
+        function outdropcart() {
+            var cart = document.getElementById("dropdown-cart");
+        }
+
+        document.getElementById("translatemenu").onmouseover = function () { translatehover() };
+        document.getElementById("translatemenu").onmouseout = function () { translatenothover() };
+        function translatehover() {
+            var Trshover = document.getElementById("translatehover");
+            Trshover.style.display = "block";
+            Trshover.style.visibility = "visible";
+            Trshover.style.opacity = "1";
+            Trshover.style.animation = "UpTranslate 300ms";
+        }
+
+        function translatenothover() {
+            var Trshover = document.getElementById("translatehover");
+            Trshover.style.animation = "DownTranslate 300ms";
+            Trshover.style.visibility = "hidden";
+            Trshover.style.opacity = "0";
+        }
+
+        document.getElementById("translatehover").onmouseover = function () { flaghover() };
+        document.getElementById("translatehover").onmouseout = function () { flagnothover() };
+        function flaghover() {
+            var Trshover = document.getElementById("translatehover");
+            Trshover.style.display = "block";
+            Trshover.style.visibility = "visible";
+            Trshover.style.opacity = "1";
+        }
+
+        function flagnothover() {
+            var Trshover = document.getElementById("translatehover");
+
+        }
+
+        var mybutton = document.getElementById("myBtn");
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+                mybutton.style.visibility = "visible";
+                mybutton.style.animation = "slidein 300ms";
+            }
+            else {
+                mybutton.style.visibility = "hidden";
+                mybutton.style.animation = "slideout 300ms";
+            }
+        }
+
+    </script>
+
+    <div class="modal fade" id="leo" tabindex="-1" aria-labelledby="leo" aria-hidden="true"
+        style="border-radius: none;">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="modal-title" id="exampleModalLabel"><strong>เพิ่ม 1 รายการในรถเข็นคุณ</strong></span>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-sm-3" style="text-align: center;">
+                            <img src="zol1.jpg" width="100px">
+                        </div>
+                        <div class="col-sm-9">
+                            <div class="modal-header2"><strong>Zodiac Collection LEO Keycap</strong>
+                            </div>
+                            <span style="color: #969696;">จำนวน: </span>
+                            <span>1</span>
+                            <br>
+                            <span style="color: #969696;">ตะกร้ายอดรวม: </span>
+                            <span>-</span>
+
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn cart" data-bs-dismiss="modal"
+                        style="width: 150px; height: 40px;">เลือกซื้อสินค้าต่อ</button>
+                    <button type="button" class="btn btn cart-black"
+                        style="width: 150px; height: 40px;">ไปยังตะกร้าสินค้า</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
