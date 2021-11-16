@@ -16,17 +16,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-    <link href="home.css" rel="stylesheet">
-
     <!--Font-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E     <link rel=" preconnect"
+        href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E     <link rel=" preconnect"
+        href="https://fonts.gstatic.com/" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
 
 
     <style>
         body {
-            font-family: "Prompt", arial, tahoma;
+            font-family: 'Prompt', sans-serif;
 
         }
 
@@ -523,9 +524,16 @@
         #line1,
         #line2,
         #line3,
-        #line4,
         #line5 {
             display: none;
+            position: absolute;
+            bottom: 2%;
+            height: 2px;
+            background-color: #9A258F;
+        }
+
+        #line4 {
+            display: block;
             position: absolute;
             bottom: 2%;
             height: 2px;
@@ -998,6 +1006,72 @@
             background-size: cover;
             padding: 4% 0 4%;
         }
+
+        #social {
+            transition: 0.3s;
+            padding: 0%;
+            width: 5%;
+            height: 5%;
+            margin-left: 10px;
+        }
+
+        #social:hover {
+            cursor: pointer;
+            opacity: 0.7;
+        }
+
+        #fname {
+            width: 60%;
+            transform: translateY(2px);
+            height: 40px;
+            border: 1px solid #ccc;
+        }
+
+        #footer-info {
+            font-size: 70%;
+            margin: 0.5%;
+            padding-left: 7%;
+            transition: 0.5s;
+            font-family: "Prompt", arial, tahoma;
+        }
+
+        #footer-info:hover {
+            color: #AE0496;
+        }
+
+        #footer-info2 {
+            font-size: 70%;
+            margin-bottom: 0.5%;
+            padding-left: 23%;
+            transition: 0.5s;
+            font-family: "Prompt", arial, tahoma;
+
+        }
+
+        #footer-info2:hover {
+            color: #AE0496;
+        }
+
+        .link {
+            font-size: 12px;
+            color: #696969;
+            text-decoration: none;
+        }
+
+        .link:hover {
+            color: #9A258F;
+            text-decoration: none;
+        }
+
+        .more::before {
+            content: ">";
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        blockquote {
+            background-color: rgb(240, 240, 240);
+        }
     </style>
 </head>
 
@@ -1313,31 +1387,28 @@
                 </div>
             </div>
         </div>
+        <div class="centered mx-auto h5 text-center text-white ">About LOGA</div>
         <div class="container-fluid p-0">
             <!--nav add here-->
             <button onclick="topFunction()" id="myBtn"> <i class="fas fa-angle-up"></i></button>
-            <div class="row" style="height: 260px">
-                <img src="bg_catalog.png" style="height: 70%; width: 100%;">
-                <div class="centered mx-auto text-center" style="font-size: 25px;">About LOGA</div>
-            </div>
-            <div class="container " style="margin-top:-50px">
+            <div class="container col " style="margin-top: 20px;">
                 <p style="font-size:12px; display: inline;"><a href="index.html" style="text-decoration: none; "
-                        id="home">หน้าแรก</a></p>
+                        id="home" class="link">หน้าแรก</a></p>
                 <p class="more" style="font-size:12px; color: black; display: inline;">About LOGA</p>
             </div>
-            <div class="container">
+            <div class="container col ">
                 <br>
                 <p style="font-size:15px; color: black; display: inline;">
                     จากกลุ่มผู้ก่อตั้งที่ชื่นชอบการเล่นเกมมาเป็นเวลากว่า 30 ปี และมุ่งมั่นที่จะสนับสนุนวงการ E-sport
                     ทั้งในไทยและระดับโลก.</p><br><br>
-                <blockquote class="p-3 rounded">
+                <blockquote class="p-4 rounded">
                     <i class="fas fa-quote-left fa-2x  p-2  "
                         style="color: rgb(136, 136, 136);font-size: 90%;transform: translateY(-10px);"></i>
-                    <p style="font-size:12px; color: black; display: inline;">โลกามีแนวคิดที่จะสนับสนุนนักกีฬา E-sport
+                    <p style="font-size:14px; color: black; display: inline;">โลกามีแนวคิดที่จะสนับสนุนนักกีฬา E-sport
                         ในทุกระดับให้เติบโตไปด้วยกัน.ด้วยอุปกรณ์ที่ผลิตมาเพื่อการแข่งขันเกมโดยเฉพาะ</p>
                 </blockquote>
             </div>
-            <div class="container">
+            <div class="container col ">
                 <p style="font-size:15px; color: black; display: inline;">
                     เนื่องจากผู้ก่อตั้งนั้นเป็นผู้ที่เล่นเกมทำให้เข้าใจสิ่งที่ผู้เล่นเกมนั้นต้องการ
                     เราจึงสามารถผลิตสินค้าที่ตรงต่อความต้องการของตลาดไทยและตลาดโลกได้
@@ -1345,7 +1416,7 @@
                     ทำให้สินค้าของเรามีราคาอยู่ในระดับที่จับต้องได้
                 </p>
             </div>
-            <div class="container">
+            <div class="container col ">
                 <p style="font-size:15px; color: black; display: inline;">
                     <br>และที่สำคัญเอกลักษณ์ความเป็นไทยและเอเชียเป็นสิ่งสำคัญสำหรับเรา เราจึงได้ใส่ลวดลายที่เห็นเด่นชัด
                     ให้แบรนด์มีเอกลักษณ์อย่างชัดเจน และมีความสวยงามไม่แพ้แบรนด์ใดๆ
@@ -1747,18 +1818,6 @@
         function linenothover3() {
             var line3 = document.getElementById("line3");
             line3.style.display = "none";
-        }
-
-        document.getElementById("aboutloga").onmouseover = function () { linehover4() };
-        document.getElementById("aboutloga").onmouseout = function () { linenothover4() };
-        function linehover4() {
-            var line4 = document.getElementById("line4");
-            line4.style.display = "block";
-        }
-
-        function linenothover4() {
-            var line4 = document.getElementById("line4");
-            line4.style.display = "none";
         }
 
         document.getElementById("contact").onmouseover = function () { linehover5() };
