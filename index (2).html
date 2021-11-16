@@ -41,11 +41,6 @@
             width: 95px;
         }
 
-        .logo {
-            height: 100%;
-            width: 100%;
-        }
-
         .head-text {
             font-size: 12px;
         }
@@ -147,7 +142,7 @@
             font-size: 20px;
         }
 
-        .active:after {
+        .active1:after {
             content: "\002B";
         }
 
@@ -215,6 +210,7 @@
         }
 
         a {
+            color: #333333;
             text-decoration: none;
         }
 
@@ -392,10 +388,1225 @@
             background-size: cover;
             padding: 4% 0 4%;
         }
+
+        ul,
+        li {
+            list-style: none;
+        }
+
+        ol,
+        ul {
+            padding: 0;
+        }
+
+        a,
+        i,
+        button {
+            cursor: pointer;
+        }
+
+        .navformobile {
+            display: none;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: -400px;
+            z-index: 99;
+            width: 400px;
+            background-color: #fff;
+            max-height: 100vh;
+            overflow-y: auto;
+            box-shadow: 0 0 5px 0 rgb(255 255 255 / 75%);
+        }
+
+        @keyframes MobileLeft {
+            from {
+                position: fixed;
+                left: -400px;
+            }
+
+            to {
+                display: block;
+                position: fixed;
+                left: 0px;
+            }
+        }
+
+        @keyframes MobileRight {
+            from {
+                display: block;
+                position: fixed;
+                left: 0px;
+            }
+
+            to {
+                display: none;
+                position: fixed;
+                left: -400px;
+            }
+        }
+
+        .nav-content {
+            margin-bottom: 30px;
+            border: none;
+            background-color: #222;
+            display: flex;
+            flex-wrap: wrap;
+            padding-left: 0;
+        }
+
+        .innav {
+            flex: 1;
+            margin-bottom: -1px;
+        }
+
+        .mobilenav {
+            display: block;
+            text-align: center;
+            margin: 0;
+            border: none;
+            font-weight: 500;
+            color: #fff;
+            background-color: #222;
+            border-bottom: 1px solid #222;
+            padding: 20px 0;
+        }
+
+        .mobilenav:hover {
+            color: #fff;
+        }
+
+        .fade.show {
+            opacity: 1;
+        }
+
+        .firstmb {
+            color: #222;
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .firstmb:hover {
+            color: #222;
+        }
+
+        .contentmobile {
+            margin-top: 40px;
+        }
+
+        .mainmenumb {
+            display: block;
+            padding: 0;
+            height: 100%;
+        }
+
+        .header {
+            position: relative;
+            top: 0;
+            right: 0;
+            left: 0;
+            z-index: 20;
+        }
+
+        .header-active-sticky {
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            z-index: 20;
+            background-color: #fff;
+            box-shadow: 0 1px 1px #ececec;
+        }
+
+        .container-fluid {
+            width: 100%;
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .wrapper-head {
+            display: flex;
+        }
+
+        .nav-mobile {
+            display: none;
+            position: relative;
+            flex: 1;
+        }
+
+        .menumobile {
+            position: relative;
+        }
+
+        .menu_nav.nav-link.active.navmobile {
+            padding: 5px 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        #showmobile {
+            font-size: 13px;
+            margin-left: 2px;
+            margin-top: 5px;
+            position: relative;
+            left: 90%;
+            transform: rotate(-90deg);
+            cursor: default;
+            border-bottom: 1px solid #eee;
+        }
+
+        .menuproductmb {
+            padding: 10px 0 10px 20px;
+            display: none;
+        }
+
+        .inmenumobile {
+            width: 100%;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 2;
+        }
+
+        .inmenumobile:hover {
+            color: #9A258F;
+        }
+
+        .inmenumobile2 {
+            display: inline-block;
+            padding-bottom: 3px;
+            margin-bottom: 10px;
+            width: 100%;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 2;
+        }
+
+        .inmenumobile2:hover {
+            color: #9A258F;
+        }
+
+        .mobilemenu {
+            position: relative;
+            padding: 10px 18px 10px 0;
+            font-size: 20px;
+            top: 0%;
+            transform: translateY(25%);
+        }
+
+        .innavmobile-2 {
+            border-bottom: 1px solid #eee;
+            padding: 9px 40px 9px 15px;
+            display: block;
+        }
+
+        .innavmobile-2:hover {
+            color: #9A258F;
+        }
+
+        .secmenu {
+            display: none;
+            height: 100%;
+        }
+
+        .translate-mobile {
+            display: none;
+            height: 100%;
+        }
+
+        .dropdown-mb {
+            position: relative;
+        }
+
+        .dropdownflag {
+            display: flex;
+            width: 100%;
+            padding: 8px 15px 9px;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+
+        .flagindropdown {
+            background-image: url(flag_th.png);
+            display: inline-block;
+            width: 95%;
+            background-repeat: no-repeat;
+            background-size: auto 100%;
+            height: 20px;
+        }
+
+        .dropdownflag.eng a {
+            display: none;
+            background-image: url(flag_en.png);
+            height: 20px;
+            padding-left: 40px;
+            background-size: auto 100%;
+            background-repeat: no-repeat;
+        }
+
+        .dropdownflag.eng:hover {
+            box-shadow: 0 5px 8px 0 #aaa;
+        }
+
+        .dropdownflag.eng a:hover {
+            color: #9A258F;
+        }
+
+        .logo {
+            margin: 0;
+            padding: 15px 0 15px;
+            max-width: 100%;
+            display: block;
+        }
+
+        #loga_logo {
+            height: 45px;
+        }
+
+        .menu {
+            display: flex;
+            width: 100%;
+            padding: 0;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .mainmenu {
+            display: inline-block;
+            padding: 0;
+        }
+
+        #Menu {
+            margin-left: 10vw;
+            font-family: "Prompt";
+        }
+
+        .nav-menu {
+            justify-content: center;
+            flex: 3;
+        }
+
+        .nav-item1,
+        .nav-item2,
+        .nav-item3,
+        .nav-item4,
+        .nav-item5 {
+            position: static;
+            padding: 0 0px 25px;
+            margin-bottom: -25px;
+        }
+
+        .menuhover {
+            position: absolute;
+            margin: 0 auto;
+            right: 0;
+            left: 0;
+            top: 130%;
+            width: 85vw;
+            display: none;
+            opacity: 0;
+            visibility: hidden;
+            border-top: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+            padding: 30px 5%;
+            z-index: 10;
+            background-color: #fff;
+            transform: translateY(2px);
+        }
+
+        .productmenu {
+            width: 100%;
+            padding: 0;
+            float: left;
+            display: flex;
+        }
+
+        .col1 {
+            width: 16.6666666667%;
+            padding: 0 15px;
+            float: left;
+            display: flex;
+            border-right: 1px solid #dfdfdf;
+        }
+
+        .col2 {
+            width: 83.3333333333%;
+            padding: 0 15px;
+            float: left;
+            display: flex;
+        }
+
+        .inmenu {
+            font-size: 16px;
+            line-height: 2;
+        }
+
+        .inmenu:hover {
+            color: #9A258F;
+        }
+
+        .inproductmenu {
+            padding-bottom: 1px;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+        .menutitle {
+            width: 100%;
+            padding: 0 15px;
+            float: left;
+            display: flex;
+        }
+
+        .txtmenu::after {
+            content: "";
+            width: 45px;
+            height: 1.5px;
+            background-color: #9A258F;
+            display: block;
+        }
+
+        .txtmenu2::after {
+            content: "";
+            width: 45px;
+            height: 1.5px;
+            background-color: #9A258F;
+            display: block;
+        }
+
+        .menutitle2 {
+            width: 16.6666666667%;
+            padding: 0 15px;
+            float: left;
+            display: flex;
+        }
+
+        .menutitle3 {
+            width: 16.6666666667%;
+            padding: 0 15px;
+            float: left;
+            display: flex;
+        }
+
+        .menutitle4 {
+            width: 66.6666666667%;
+            padding: 0 15px;
+            float: left;
+            display: flex;
+            border-left: 1px solid #dfdfdf;
+            text-align: right;
+        }
+
+        #line-1::after {
+            content: "";
+            height: 2px;
+            width: 50px;
+            background-color: #9A258F;
+            display: block;
+        }
+
+        #line1,
+        #line2,
+        #line3,
+        #line4,
+        #line5 {
+            display: none;
+            position: absolute;
+            bottom: 2%;
+            height: 2px;
+            background-color: #9A258F;
+        }
+
+        #line1mb,
+        #line2mb,
+        #line3mb,
+        #line4mb,
+        #line5mb {
+            display: none;
+            position: absolute;
+            bottom: 2%;
+            height: 2px;
+            background-color: #9A258F;
+        }
+
+        .menu_nav.nav-link.active {
+            display: flex;
+            align-items: center;
+            position: relative;
+            color: #333333;
+            padding: 0 20px;
+            letter-spacing: 0.03em;
+            font-size: 16px;
+            font-weight: 500;
+            position: relative;
+        }
+
+        .iconmenu {
+            margin-top: 12px;
+            flex: 2;
+        }
+
+        .searchmenu {
+            padding: 10px 20px;
+            float: right;
+            font-size: 18px;
+        }
+
+        #search {
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background: #fff;
+            align-items: stretch;
+            transform-origin: top;
+            opacity: 0;
+            visibility: hidden;
+            display: flex;
+            height: 75px;
+        }
+
+        .searchclick {
+            width: 900px;
+            margin: 0 auto;
+            height: 100%;
+        }
+
+        .field-search {
+            position: relative;
+            height: 100%;
+        }
+
+        #cross {
+            position: absolute;
+            right: 10px;
+            top: 18%;
+            font-size: 30px;
+            margin: 0 0 9px;
+            display: inline-block;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        .searchtext {
+            border: none;
+            font-size: 20px;
+            background: none;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+            width: 100%;
+            padding: 0 10px;
+            margin: 0;
+            height: 40px;
+            box-shadow: none;
+            outline: none;
+        }
+
+        .usermenu {
+            padding: 12px 20px 13px;
+            cursor: pointer;
+            float: right;
+        }
+
+        .usermenu:hover,
+        .usermenu-active:hover {
+            color: #9A258F;
+        }
+
+        .usermenu-active {
+            padding: 12px 20px 13px;
+            float: right;
+        }
+
+        .userhover {
+            position: absolute;
+            right: 13.5vw;
+            border: 1px solid #eee;
+            display: block;
+            visibility: hidden;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 300ms;
+            background-color: #fff;
+        }
+
+        .userhover ul li {
+            padding: 8px 20px 9px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .inhover:hover {
+            color: #9A258F;
+        }
+
+        .userhover-active {
+            position: absolute;
+            right: 13.5vw;
+            border: 1px solid #eee;
+            display: none;
+            visibility: hidden;
+            opacity: 0;
+            transform: translateY(10px);
+            background-color: #fff;
+        }
+
+        .userhover-active ul li {
+            padding: 8px 20px 9px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .likemenu {
+            padding: 14px 10px 11px;
+            float: right;
+        }
+
+        .fas.fa-heart:hover {
+            color: #9A258F;
+        }
+
+        .cartmenu {
+            padding: 10px 0 10px 20px;
+            cursor: pointer;
+            float: right;
+        }
+
+        #cart:before {
+            content: url(icshoppingbasket24px1@2x.svg);
+            background-size: 16px auto;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 22px;
+            height: 26px;
+            position: relative;
+            top: 3px;
+        }
+
+        .dropdown-cart {
+            position: absolute;
+            top: 100%;
+            right: 100px;
+            display: none;
+            opacity: 0;
+            visibility: hidden;
+            background-color: #fff;
+            box-sizing: border-box;
+            box-shadow: 1px 2px 7px rgb(99 99 99 / 15%);
+            padding: 15px;
+            width: 350px;
+            transform: translateY(-5px);
+            transition: all 300ms;
+        }
+
+        .fas.fa-caret-up {
+            color: #eee;
+            font-size: 28px;
+            position: absolute;
+            z-index: 1;
+            left: auto;
+            top: -20px;
+            right: 20px;
+            height: 0;
+            width: 0;
+        }
+
+        .hovercart {
+            display: block;
+        }
+
+        .carttitle {
+            display: block;
+            font-weight: 600;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+            text-transform: uppercase;
+            color: #333333;
+        }
+
+        .cartempty {
+            background: #9A258F;
+            color: #fff;
+            border-radius: 30px;
+            line-height: 18px;
+            min-width: 18px;
+            display: inline-block;
+            text-align: center;
+            font-size: 10px;
+            font-weight: 700;
+            margin: -5px 0 0 -1px;
+            vertical-align: top;
+        }
+
+        .translatemenu {
+            float: right;
+            margin-top: 7px;
+            display: inline-flex;
+            align-items: center;
+            padding: 11px 11px 12px;
+            position: relative;
+            cursor: pointer;
+        }
+
+        #flag {
+            display: inline-flex;
+        }
+
+        #flagthai {
+            background-image: url(flag_th.png);
+            background-size: 32px auto;
+            width: 32px;
+            height: 20px;
+            background-repeat: no-repeat;
+            margin-right: 5px;
+        }
+
+        .translatehover {
+            display: block;
+            visibility: hidden;
+            opacity: 0;
+            position: absolute;
+            background-color: #fff;
+            top: 100%;
+            right: 0;
+            border: 1px solid #eee;
+            min-width: 100%;
+            box-shadow: 0 1px 1px #eee;
+            padding: 0;
+            margin: 0;
+            transition: all 300ms;
+        }
+
+        .eng {
+            min-width: 140px;
+            padding: 8px 20px 9px;
+            white-space: nowrap;
+        }
+
+        .eng a {
+            background-image: url(flag_en.png);
+            padding-left: 40px;
+            background-size: 32px auto;
+            width: 32px;
+            height: 20px;
+            background-repeat: no-repeat;
+            line-height: 21px;
+            display: inline-flex;
+        }
+
+        @keyframes UpMenu {
+            from {
+                transform: translateY(22px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(2px);
+                opacity: 1;
+            }
+        }
+
+        @keyframes DownMenu {
+            from {
+                transform: translateY(2px);
+                opacity: 1;
+            }
+
+            to {
+                transform: translateY(22px);
+                opacity: 0;
+            }
+        }
+
+        @keyframes UpUser {
+            from {
+                position: absolute;
+                transform: translateY(30px);
+                opacity: 0;
+            }
+
+            to {
+                position: absolute;
+                transform: translateY(10px);
+                opacity: 1;
+            }
+        }
+
+        @keyframes DownUser {
+            from {
+                position: absolute;
+                transform: translateY(10px);
+                opacity: 1;
+            }
+
+            to {
+                position: absolute;
+                transform: translateY(30px);
+                opacity: 0;
+            }
+        }
+
+        @keyframes UpCart {
+            from {
+                transform: translateY(10px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(-5px);
+                opacity: 1;
+            }
+        }
+
+        @keyframes DownCart {
+            from {
+                transform: translateY(-5px);
+                opacity: 1;
+            }
+
+            to {
+                transform: translateY(10px);
+                opacity: 0;
+            }
+        }
+
+        @keyframes UpTranslate {
+            from {
+                position: absolute;
+                transform: translateY(20px);
+                opacity: 0;
+            }
+
+            to {
+                position: absolute;
+                transform: translateY(0px);
+                opacity: 1;
+            }
+        }
+
+        @keyframes DownTranslate {
+            from {
+                position: absolute;
+                transform: translateY(0px);
+                opacity: 1;
+            }
+
+            to {
+                position: absolute;
+                transform: translateY(20px);
+                opacity: 0;
+            }
+        }
+
+        @media (max-width: 1199.98px) {
+
+            .wrapper-head {
+                padding: 0;
+            }
+
+            .nav-mobile {
+                display: block;
+            }
+
+            .logo {
+                justify-content: center;
+            }
+
+            .nav-menu {
+                display: none;
+            }
+
+            .iconmenu {
+                flex: 1;
+            }
+
+            .searchmenu {
+                padding: 0 5px;
+            }
+
+            .usermenu {
+                padding: 2px 5px 2px;
+            }
+
+            .likemenu {
+                padding: 5px 10px 5px;
+            }
+
+            .cartmenu {
+                padding: 0 0 20px;
+            }
+
+            .translatemenu {
+                padding: 7px 5px 0;
+                margin: 0;
+            }
+        }
+
+        @media (min-width: 1200px) and (max-width: 1365px) {
+            .wrapper-head {
+                padding: 0 35px;
+            }
+
+        }
+
+        @media (min-width: 1200px) and (max-width: 1399px) {
+            .searchmenu {
+                padding: 10px 15px;
+            }
+
+            .usermenu {
+                padding: 12px 15px 13px;
+            }
+
+            .likemenu {
+                padding: 14px 10px 11px;
+            }
+
+            .cartmenu {
+                padding: 10px 0 10px 15px;
+            }
+
+            .translatemenu {
+                padding: 11px 15px 12px;
+            }
+        }
+
+        #home {
+            color: #000;
+            transition: 0.5s;
+        }
+
+        #home:hover {
+            color: #AE0496;
+        }
+
+        .more::before {
+            content: ">";
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .subbutton {
+            padding: 5px 8px;
+            border-radius: 3px;
+            border: 1px solid #9a258f;
+            min-width: 178px;
+            background-color: #9a258f;
+            transition: all .15s;
+        }
+
+        .subbutton:hover {
+            background-color: #333;
+            border: 1px solid #000;
+        }
     </style>
 </head>
 
 <body>
+    <div class="header" id="header">
+        <div class="navformobile" id="navformobile">
+            <ul class="nav-content">
+                <li class="innav">
+                    <a class="mobilenav firstmb" id="mobilenav-firstmb">เมนู</a>
+                </li>
+                <li class="innav">
+                    <a class="mobilenav sec" id="mobilenav-sec">บัญชีผู้ใช้</a>
+                </li>
+                <li class="innav">
+                    <a class="mobilenav thd" id="mobilenav-thd">การตั้งค่า</a>
+                </li>
+            </ul>
+            <div class="contentmobile">
+                <div class="mainmenumb fade show" id="mobile-nav-main">
+                    <ul style="height: 100%;align-items: stretch;">
+                        <li class="menumobile">
+                            <a href="" class="menu_nav nav-link active navmobile" id="firstpagemb">
+                                <span>หน้าแรก</span>
+                                <div id="line1mb" style="width: 56px;"></div>
+                            </a>
+                        </li>
+                        <li class="menumobile">
+                            <a href="" class="menu_nav nav-link active navmobile" id="productmb">
+                                <span>สินค้า</span>
+                                <div id="line2mb" style="width: 40px;"></div>
+                            </a>
+                            <div style="position: relative;bottom: 30px;height: 0px;border: none;"> <i
+                                    class="fas fa-chevron-down" id="showmobile"></i></div>
+                        </li>
+                        <div class="menuproductmb" id="menuproductmb">
+                            <div class="container">
+                                <div class="col1mb">
+                                    <a class="inmenumobile" href="#">คอลเลคชั่นใหม่</a><br>
+                                    <a class="inmenumobile" href="#">สินค้าขายดี</a><br>
+                                    <a class="inmenumobile" href="#">สินค้าโปรโมชั่น</a><br>
+                                </div>
+                                <div class="col2mb">
+                                    <a class="inmenumobile2" href="#">คีย์บอร์ด</a><br>
+                                    <a class="inmenumobile2" href="#">เมาส์</a><br>
+                                    <a class="inmenumobile2" href="#">ลิมิเต็ด</a><br>
+                                    <a class="inmenumobile2" href="#">แผ่นรองเมาส์</a><br>
+                                    <a class="inmenumobile2" href="#">อื่นๆ</a><br>
+                                    <a class="inmenumobile2" href="#">ไลฟ์สไตล์</a><br>
+                                </div>
+                                <div class="colmb3">
+                                    <img src="107828527_1200055027012769_4672740939162871675_o.jpg">
+                                </div>
+                            </div>
+                        </div>
+                        <li class="menumobile">
+                            <a href="" class="menu_nav nav-link active navmobile" id="blogmb">
+                                <span>บทความ</span>
+                                <div id="line3mb" style="width: 60px;"></div>
+                            </a>
+                        </li>
+                        <li class="menumobile">
+                            <a href="" class="menu_nav nav-link active navmobile" id="aboutlogamb">
+                                <span>เกี่ยวกับ loga</span>
+                                <div id="line4mb" style="width: 100px;"></div>
+                            </a>
+                        </li>
+                        <li class="menumobile">
+                            <a href="" class="menu_nav nav-link active navmobile" id="contactmb">
+                                <span>ติดต่อเรา</span>
+                                <div id="line5mb" style="width: 65px;"></div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="secmenu fade" id="mobile-nav-account">
+                    <ul>
+                        <li>
+                            <a class="innavmobile-2" id="innavmobile-2">บัญชีของฉัน</a>
+                        </li>
+                        <li>
+                            <a class="innavmobile-2">รายการสินค้าที่ต้องการ</a>
+                        </li>
+                        <li>
+                            <a class="innavmobile-2">สร้างบัญชี</a>
+                        </li>
+                        <li>
+                            <a class="innavmobile-2">เข้าสู่ระบบ</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="translate-mobile fade" id="mobile-nav-translate">
+                    <div class="dropdown-mb">
+                        <div class="dropdownflag" id="dropdownflag" style="border-bottom: 1px solid #eee;">
+                            <div class="flagindropdown"></div>
+                            <i class="fas fa-chevron-down" style="font-size: 9px;margin-left: 2px;margin-top: 5px;"></i>
+                        </div>
+                        <ul>
+                            <li class="dropdownflag eng" style="transition: all 300ms;cursor: default;">
+                                <a id="dropdownflage-eng">English</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="wrapper-head">
+                <div class="nav-mobile" id="nav-mobile">
+                    <div class="mobilemenu">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </div>
+                <div class="logo">
+                    <img id="loga_logo" src="loga_logo.svg">
+                </div>
+                <div class="nav-menu">
+                    <nav class="navbar navbar-expand-xl navbar-light mt-3">
+                        <div class="menu">
+                            <div class="mainmenu">
+                                <ul id="Menu" class="navbar-nav">
+                                    <li class="nav-item1">
+                                        <a class="menu_nav nav-link active" href="#" id="firstpage">
+                                            <span>หน้าแรก</span>
+                                            <div id="line1" style="width: 56px;"></div>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item2">
+                                        <a class="menu_nav nav-link active" href="#" id="product">
+                                            <span>สินค้า</span>
+                                            <div id="line2" style="width: 40px;"></div>
+                                        </a>
+                                        <div class="menuhover" id="menuhover">
+                                            <div class="productmenu">
+                                                <div class="col1">
+                                                    <div style="width: 100%;">
+                                                        <div class="menutitle">
+                                                            <a href="#" class="inmenu">คอลเลคชั่นใหม่</a>
+                                                        </div>
+                                                        <div class="menutitle">
+                                                            <a href="#" class="inmenu">สินค้าขายดี</a>
+                                                        </div>
+                                                        <div class="menutitle">
+                                                            <a href="#" class="inmenu">สินค้าโปรโมชั่น</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col2">
+                                                    <div class="menutitle2">
+                                                        <div style="width:100%;">
+                                                            <div style="width:100%;padding:0 15px;">
+                                                                <a href="#" class="inmenu inproductmenu">
+                                                                    <span class="txtmenu">คีย์บอร์ด</span></a>
+                                                            </div>
+                                                            <div style="width:100%;padding:0 15px;margin-top: 15px;">
+                                                                <a href="#" class="inmenu inproductmenu">
+                                                                    <span class="txtmenu">เมาส์</span></a>
+                                                            </div>
+                                                            <div style="width:100%;padding:0 15px;margin-top: 15px;">
+                                                                <a href="#" class="inmenu inproductmenu">
+                                                                    <span class="txtmenu">ลิมิเต็ด</span></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="menutitle3">
+                                                        <div style="width: 100%;">
+                                                            <div style="width:100%;padding:0 15px;">
+                                                                <a href="#" class="inmenu inproductmenu">
+                                                                    <span class="txtmenu2">แผ่นรองเมาส์</span></a>
+                                                            </div>
+                                                            <div style="width:100%;padding:0 15px;margin-top: 15px;">
+                                                                <a href="#" class="inmenu inproductmenu">
+                                                                    <span class="txtmenu2">อื่นๆ</span></a>
+                                                            </div>
+                                                            <div style="width:100%;padding:0 15px;margin-top: 15px;">
+                                                                <a href="#" class="inmenu inproductmenu">
+                                                                    <span class="txtmenu2">ไลฟ์สไตล์</span></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="menutitle4">
+                                                        <div
+                                                            style="width: 100%;padding: 0 15px;float: left;display: flex;">
+                                                            <img
+                                                                src="107828527_1200055027012769_4672740939162871675_o.jpg">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item3">
+                                        <a class="menu_nav nav-link active" href="#" id="blog">
+                                            <span>บทความ</span>
+                                            <div id="line3" style="width: 60px;"></div>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item4">
+                                        <a class="menu_nav nav-link active" href="#" id="aboutloga">
+                                            <span>เกี่ยวกับ loga</span>
+                                            <div id="line4" style="width: 100px;"></div>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item5">
+                                        <a class="menu_nav nav-link active" href="#" id="contact">
+                                            <span>ติดต่อเรา</span>
+                                            <div id="line5" style="width: 65px;"></div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <div class="iconmenu">
+                    <div class="translatemenu" id="translatemenu">
+                        <div id="flag">
+                            <div id="flagthai"></div>
+                            <i class="fas fa-chevron-down" style="font-size: 9px;margin-left: 2px;margin-top: 5px;"></i>
+                        </div>
+                        <div class="translatehover" id="translatehover">
+                            <div class="eng">
+                                <a id="flageng" class="inhover">ENGLISH</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cartmenu" id="cartmenu">
+                        <a id="cart">
+                            <span class="cartempty">0</span>
+                        </a>
+                        <div class="dropdown-cart" id="dropdown-cart">
+                            <i class="fas fa-caret-up"></i>
+                            <div class="hovercart">
+                                <div class="carttitle">
+                                    <strong>
+                                        <span style="font-size: 15px;
+                                        font-weight: 600;">ตะกร้าของฉัน</span>
+                                    </strong>
+                                </div>
+                                <div class="cartcontent">
+                                    <strong
+                                        style="display: block;font-size:14px;padding:20px 0 5px;font-weight:500;color:#7d7d7d;">คุณไม่มีรายการสินค้าในตะกร้าของคุณ.</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="likemenu">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="usermenu" id="usermenu">
+                        <div id="user" style="cursor: pointer;">
+                            <i class="fas fa-user"></i>
+                            <i class="fas fa-chevron-down" style="font-size: 9px;"></i>
+                        </div>
+                        <div class="userhover" id="userhover">
+                            <ul style="list-style-type:none;padding: 0;margin: 0;">
+                                <li>
+                                    <a href="#" class="inhover">บัญชีของฉัน</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="inhover">รายการสินค้าที่ต้องการ</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="inhover">สร้างบัญชี</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="inhover">เข้าสู่ระบบ</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="userhover-active" id="userhover-active">
+                            <ul style="list-style-type:none;padding: 0;margin: 0;">
+                                <li>
+                                    <a href="#" class="inhover">บัญชีของฉัน</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="inhover">รายการสินค้าที่ต้องการ</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="inhover">สร้างบัญชี</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="inhover">เข้าสู่ระบบ</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="searchmenu">
+                        <i class="fas fa-search" id="searchmenu"></i>
+                        <div id="search">
+                            <div class="searchclick">
+                                <div class="field-search">
+                                    <div id="cross">
+                                        <i class="fas fa-times"></i>
+                                    </div>
+                                    <div style="height:100%;border-bottom:2px solid #333;">
+                                        <input id="searchinput" placeholder="ค้นหา..." class="searchtext"
+                                            maxlength="128" autocomplete="off" value="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="centered mx-auto h5 text-center text-white ">สินค้า</div>
     <!-- main--->
     <div class="container">
@@ -1559,9 +2770,450 @@
 
     for (i = 0; i < coll.length; i++) {
         coll[i].addEventListener("click", function () {
-            this.classList.toggle("active");
+            this.classList.toggle("active1");
         });
     }
 
+    function sticky() {
+            document.getElementsByClassName("main_page");
+            var navbar = document.getElementById("header");
+            if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
+                navbar.classList.add("header-active-sticky");
+                navbar.classList.remove("header");
+            }
+            else {
+                navbar.classList.remove("header-active-sticky");
+                navbar.classList.add("header");
+            }
+            console.log(document.getElementById("header").scrollTop);
+        }
+        window.addEventListener("scroll", sticky);
 
+        document.getElementById("nav-mobile").onclick = function () { shownavmobile() };
+        function shownavmobile() {
+            var nav = document.getElementById("navformobile");
+            if (nav.style.left == "-400px") {
+                nav.style.display = "block";
+                nav.style.animation = "MobileLeft 300ms";
+                nav.style.left = "0";
+            }
+
+            else if (nav.style.display == "block") {
+                nav.style.animation = "MobileRight 300ms";
+                nav.style.left = "-400px";
+            }
+
+            else {
+                nav.style.display = "block";
+                nav.style.left = "0";
+                nav.style.animation = "MobileLeft 300ms";
+            }
+        }
+
+        var select1 = document.getElementById("mobilenav-firstmb");
+        var select2 = document.getElementById("mobilenav-sec");
+        var select3 = document.getElementById("mobilenav-thd");
+        var mobilemenu = document.getElementById("mobile-nav-main");
+        var mobilemenu2 = document.getElementById("mobile-nav-account");
+        var mobilemenu3 = document.getElementById("mobile-nav-translate");
+        document.getElementById("mobilenav-firstmb").onclick = function () { selectnav1() };
+        function selectnav1() {
+            mobilemenu.classList.add("show");
+            mobilemenu.style.display = "block";
+            mobilemenu.style.height = "100%";
+            mobilemenu2.classList.remove("show");
+            mobilemenu2.style.height = "0";
+            mobilemenu2.style.display = "none";
+            mobilemenu3.classList.remove("show");
+            mobilemenu3.style.height = "0";
+            mobilemenu3.style.display = "none";
+            select1.style.color = "#222";
+            select1.style.backgroundColor = "#fff";
+            select1.style.borderBottom = "1px solid #ddd";
+            select2.style.color = "#fff";
+            select2.style.backgroundColor = "#222";
+            select2.style.borderBottom = "1px solid #222";
+            select3.style.color = "#fff";
+            select3.style.backgroundColor = "#222";
+            select3.style.borderBottom = "1px solid #222";
+            var dropdownflag = document.getElementById("dropdownflage-eng");
+            dropdownflag.style.display = "none";
+        }
+
+        document.getElementById("mobilenav-sec").onclick = function () { selectnav2() };
+        function selectnav2() {
+            mobilemenu2.classList.add("show");
+            mobilemenu2.style.display = "block";
+            mobilemenu2.style.height = "100%";
+            mobilemenu.classList.add("fade");
+            mobilemenu.classList.remove("show");
+            mobilemenu.style.display = "none";
+            mobilemenu.style.height = "0";
+            mobilemenu3.classList.remove("show");
+            mobilemenu3.style.display = "none";
+            mobilemenu3.style.height = "0";
+            select2.style.color = "#222";
+            select2.style.backgroundColor = "#fff";
+            select2.style.borderBottom = "1px solid #ddd";
+            select1.style.color = "#fff";
+            select1.style.backgroundColor = "#222";
+            select1.style.borderBottom = "1px solid #222";
+            select3.style.color = "#fff";
+            select3.style.backgroundColor = "#222";
+            select3.style.borderBottom = "1px solid #222";
+            var dropdownflag = document.getElementById("dropdownflage-eng");
+            dropdownflag.style.display = "none";
+        }
+
+        document.getElementById("mobilenav-thd").onclick = function () { selectnav3() };
+        function selectnav3() {
+            mobilemenu3.classList.add("show");
+            mobilemenu3.style.display = "block";
+            mobilemenu3.style.height = "100%";
+            mobilemenu.classList.add("fade");
+            mobilemenu.classList.remove("show");
+            mobilemenu.style.display = "none";
+            mobilemenu.style.height = "0";
+            mobilemenu2.classList.remove("show");
+            mobilemenu2.style.height = "0";
+            mobilemenu2.style.display = "none";
+            select3.style.color = "#222";
+            select3.style.backgroundColor = "#fff";
+            select3.style.borderBottom = "1px solid #ddd";
+            select2.style.color = "#fff";
+            select2.style.backgroundColor = "#222";
+            select2.style.borderBottom = "1px solid #222";
+            select1.style.color = "#fff";
+            select1.style.backgroundColor = "#222";
+            select1.style.borderBottom = "1px solid #222";
+        }
+
+        document.getElementById("dropdownflag").onclick = function () { dropdownclick() };
+        function dropdownclick() {
+            var dropdownflag = document.getElementById("dropdownflage-eng");
+            if (dropdownflag.style.display == "block") {
+                dropdownflag.style.display = "none";
+            }
+            else {
+                dropdownflag.style.display = "block";
+            }
+        }
+
+        document.getElementById("innavmobile-2").onmouseover = function () { navmobilehover() };
+        document.getElementById("innavmobile-2").onmouseout = function () { navmobilenothover() };
+        var navmobile = document.getElementById("innavmobile-2");
+        function navmobilehover() {
+            navmobile.style.color = "#9A258F";
+        }
+
+        function navmobilenothover() {
+            navmobile.style.color = "#333333";
+        }
+
+        document.getElementById("firstpagemb").onmouseover = function () { linembhover1() };
+        document.getElementById("firstpagemb").onmouseout = function () { linembnothover1() };
+        var line1mb = document.getElementById("line1mb");
+        function linembhover1() {
+            line1mb.style.display = "block";
+        }
+
+        function linembnothover1() {
+            line1mb.style.display = "none";
+        }
+
+        document.getElementById("productmb").onmouseover = function () { linembhover2() };
+        document.getElementById("productmb").onmouseout = function () { linembnothover2() };
+        var line2mb = document.getElementById("line2mb");
+        function linembhover2() {
+            line2mb.style.display = "block";
+        }
+
+        function linembnothover2() {
+            line2mb.style.display = "none";
+        }
+
+        document.getElementById("showmobile").onclick = function () { arrowshowmobile() };
+        var showmobile = document.getElementById("menuproductmb");
+        var arrowdown = document.getElementById("showmobile");
+        function arrowshowmobile() {
+            if (showmobile.style.display == "none") {
+                showmobile.style.display = "block";
+                arrowdown.style.transform = "rotate(0deg)";
+            }
+            else {
+                showmobile.style.display = "none";
+                arrowdown.style.transform = "rotate(-90deg)";
+            }
+        }
+
+        document.getElementById("blogmb").onmouseover = function () { linembhover3() };
+        document.getElementById("blogmb").onmouseout = function () { linembnothover3() };
+        var line3mb = document.getElementById("line3mb");
+        function linembhover3() {
+            line3mb.style.display = "block";
+        }
+
+        function linembnothover3() {
+            line3mb.style.display = "none";
+        }
+
+        document.getElementById("aboutlogamb").onmouseover = function () { linembhover4() };
+        document.getElementById("aboutlogamb").onmouseout = function () { linembnothover4() };
+        var line4mb = document.getElementById("line4mb");
+        function linembhover4() {
+            line4mb.style.display = "block";
+        }
+
+        function linembnothover4() {
+            line4mb.style.display = "none";
+        }
+
+        document.getElementById("contactmb").onmouseover = function () { linembhover5() };
+        document.getElementById("contactmb").onmouseout = function () { linembnothover5() };
+        var line5mb = document.getElementById("line5mb");
+        function linembhover5() {
+            line5mb.style.display = "block";
+        }
+
+        function linembnothover5() {
+            line5mb.style.display = "none";
+        }
+
+        document.getElementById("firstpage").onmouseover = function () { linehover1() };
+        document.getElementById("firstpage").onmouseout = function () { linenothover1() };
+        function linehover1() {
+            var line1 = document.getElementById("line1");
+            line1.style.display = "block";
+        }
+
+        function linenothover1() {
+            var line1 = document.getElementById("line1");
+            line1.style.display = "none";
+        }
+
+        document.getElementById("product").onmouseover = function () { linehover2() };
+        document.getElementById("product").onmouseout = function () { linenothover2() };
+        function linehover2() {
+            var line2 = document.getElementById("line2");
+            var menu = document.getElementById("menuhover");
+            line2.style.display = "block";
+            menu.style.display = "flex";
+            menu.style.visibility = "visible";
+            menu.style.opacity = "1";
+            menu.style.animation = "UpMenu 300ms";
+        }
+
+        function linenothover2() {
+            var line2 = document.getElementById("line2");
+            var menu = document.getElementById("menuhover");
+            line2.style.display = "none";
+            menu.style.opacity = "0";
+            menu.style.animation = "DownMenu 300ms";
+        }
+
+        document.getElementById("menuhover").onmouseover = function () { menuhover() };
+        document.getElementById("menuhover").onmouseout = function () { menunothover() };
+
+        function menuhover() {
+            var menu = document.getElementById("menuhover");
+            var line2 = document.getElementById("line2");
+            line2.style.display = "block";
+            menu.style.display = "flex";
+            menu.style.visibility = "visibie";
+            menu.style.opacity = "1";
+            menu.style.animation = "none";
+        }
+
+        function menunothover() {
+            var menu = document.getElementById("menuhover");
+            var line2 = document.getElementById("line2");
+            line2.style.display = "none";
+            menu.style.display = "none";
+            menu.style.opacity = "0";
+            menu.style.animation = "DownMenu 300ms";
+        }
+
+        document.getElementById("blog").onmouseover = function () { linehover3() };
+        document.getElementById("blog").onmouseout = function () { linenothover3() };
+        function linehover3() {
+            var line3 = document.getElementById("line3");
+            line3.style.display = "block";
+        }
+
+        function linenothover3() {
+            var line3 = document.getElementById("line3");
+            line3.style.display = "none";
+        }
+
+        document.getElementById("aboutloga").onmouseover = function () { linehover4() };
+        document.getElementById("aboutloga").onmouseout = function () { linenothover4() };
+        function linehover4() {
+            var line4 = document.getElementById("line4");
+            line4.style.display = "block";
+        }
+
+        function linenothover4() {
+            var line4 = document.getElementById("line4");
+            line4.style.display = "none";
+        }
+
+        document.getElementById("contact").onmouseover = function () { linehover5() };
+        document.getElementById("contact").onmouseout = function () { linenothover5() };
+        function linehover5() {
+            var line5 = document.getElementById("line5");
+            line5.style.display = "block";
+        }
+
+        function linenothover5() {
+            var line5 = document.getElementById("line5");
+            line5.style.display = "none";
+        }
+
+        document.getElementById("searchmenu").onclick = function () { search() };
+        function search() {
+            var search = document.getElementById("search");
+            search.style.visibility = "visible";
+            search.style.opacity = "1";
+            document.querySelector(".cartmenu").style.visibility = "hidden";
+            document.querySelector(".translatemenu").style.visibility = "hidden";
+
+        }
+
+        document.getElementById("cross").onclick = function () { cross() };
+        function cross() {
+            document.getElementById("searchinput").value = "";
+            document.getElementById("search").style.visibility = "hidden";
+            document.querySelector('.cartmenu').style.visibility = "visible";
+            document.querySelector(".translatemenu").style.visibility = "visible";
+
+        }
+
+        document.getElementById("usermenu").onmouseover = function () { userhover() };
+        document.getElementById("usermenu").onmouseout = function () { usernothover() };
+        function userhover() {
+            var userhover = document.getElementById("userhover");
+            userhover.style.display = "block";
+            userhover.style.visibility = "visible";
+            userhover.style.opacity = "1";
+            userhover.style.animation = "UpUser 300ms";
+        }
+
+        function usernothover() {
+            var userhover = document.getElementById("userhover");
+            userhover.style.animation = "DownUser 300ms";
+            userhover.style.visibility = "hidden";
+            userhover.style.opacity = "0";
+        }
+
+        document.getElementById("userhover").onmouseover = function () { onuserhover() };
+        document.getElementById("userhover").onmouseout = function () { outuserhover() };
+        function onuserhover() {
+            var onuserhover = document.getElementById("userhover");
+            onuserhover.style.display = "block";
+            onuserhover.style.display = "visible";
+            onuserhover.style.opacity = "1";
+        }
+
+        function outuserhover() {
+            var onuserhover = document.getElementById("userhover");
+
+        }
+
+        document.getElementById("user").onclick = function () { userclick() };
+        function userclick() {
+            var user = document.getElementById("usermenu");
+            var show = document.getElementById("userhover-active");
+            var notshow = document.getElementById("userhover");
+            if (user.className == "usermenu") {
+                user.classList.add("usermenu-active");
+                user.classList.remove("usermenu");
+                show.style.display = "block";
+                show.style.visibility = "visible";
+                show.style.opacity = "1";
+                notshow.style.visibility = "hidden";
+                notshow.style.animation = "none";
+            }
+            else {
+                user.classList.add("usermenu");
+                user.classList.remove("usermenu-active");
+                show.style.opacity = "0";
+                notshow.style.animation = "none";
+            }
+        }
+
+        document.getElementById("cartmenu").onmouseover = function () { carthover() };
+        document.getElementById("cartmenu").onmouseout = function () { cartnothover() };
+        function carthover() {
+            var cart = document.getElementById("dropdown-cart");
+            cart.style.display = "block";
+            cart.style.visibility = "visible";
+            cart.style.opacity = "1";
+            cart.style.animation = "UpCart 300ms";
+        }
+
+        function cartnothover() {
+            var cart = document.getElementById("dropdown-cart");
+            cart.style.animation = "DownCart 300ms";
+            cart.style.visibility = "hidden";
+            cart.style.opacity = "0";
+        }
+
+        document.getElementById("dropdown-cart").onmouseover = function () { indropcart() };
+        document.getElementById("dropdown-cart").onmouseout = function () { outdropcart() };
+        function indropcart() {
+            var cart = document.getElementById("dropdown-cart");
+            cart.style.display = "block";
+            cart.style.visibility = "visible";
+            cart.style.opacity = "1";
+        }
+
+        function outdropcart() {
+            var cart = document.getElementById("dropdown-cart");
+        }
+
+        document.getElementById("translatemenu").onmouseover = function () { translatehover() };
+        document.getElementById("translatemenu").onmouseout = function () { translatenothover() };
+        function translatehover() {
+            var Trshover = document.getElementById("translatehover");
+            Trshover.style.display = "block";
+            Trshover.style.visibility = "visible";
+            Trshover.style.opacity = "1";
+            Trshover.style.animation = "UpTranslate 300ms";
+        }
+
+        function translatenothover() {
+            var Trshover = document.getElementById("translatehover");
+            Trshover.style.animation = "DownTranslate 300ms";
+            Trshover.style.visibility = "hidden";
+            Trshover.style.opacity = "0";
+        }
+
+        document.getElementById("translatehover").onmouseover = function () { flaghover() };
+        document.getElementById("translatehover").onmouseout = function () { flagnothover() };
+        function flaghover() {
+            var Trshover = document.getElementById("translatehover");
+            Trshover.style.display = "block";
+            Trshover.style.visibility = "visible";
+            Trshover.style.opacity = "1";
+        }
+
+        function flagnothover() {
+            var Trshover = document.getElementById("translatehover");
+
+        }
+
+        var mybutton = document.getElementById("myBtn");
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+                mybutton.style.visibility = "visible";
+                mybutton.style.animation = "slidein 300ms";
+            }
+            else {
+                mybutton.style.visibility = "hidden";
+                mybutton.style.animation = "slideout 300ms";
+            }
+        }
 </script>
