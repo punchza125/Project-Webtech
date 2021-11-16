@@ -16,8 +16,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-    <link href="home.css" rel="stylesheet">
-
     <!--Font-->
     <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E     <link rel=" preconnect"
         href="https://fonts.gstatic.com/" crossorigin>
@@ -991,6 +989,82 @@
                 padding: 11px 15px 12px;
             }
         }
+
+        .centered.mx-auto.h5.text-center {
+            font-size: 24px;
+            background-image: url(bg_catalog.png);
+            background-color: transparent;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            padding: 4% 0 4%;
+        }
+
+        #social {
+            transition: 0.3s;
+            padding: 0%;
+            width: 5%;
+            height: 5%;
+            margin-left: 10px;
+        }
+
+        #social:hover {
+            cursor: pointer;
+            opacity: 0.7;
+        }
+
+        #fname {
+            width: 60%;
+            transform: translateY(2px);
+            height: 40px;
+            border: 1px solid #ccc;
+        }
+
+        #footer-info {
+            font-size: 70%;
+            margin: 0.5%;
+            padding-left: 7%;
+            transition: 0.5s;
+            font-family: "Prompt", arial, tahoma;
+        }
+
+        #footer-info:hover {
+            color: #AE0496;
+        }
+
+        #footer-info2 {
+            font-size: 70%;
+            margin-bottom: 0.5%;
+            padding-left: 23%;
+            transition: 0.5s;
+            font-family: "Prompt", arial, tahoma;
+
+        }
+
+        #footer-info2:hover {
+            color: #AE0496;
+        }
+
+        .link {
+            font-size: 12px;
+            color: #696969;
+            text-decoration: none;
+        }
+
+        .link:hover {
+            color: #9A258F;
+            text-decoration: none;
+        }
+
+        .more::before {
+            content: ">";
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        blockquote {
+            background-color: rgb(240, 240, 240);
+        }
     </style>
 </head>
 
@@ -1306,16 +1380,13 @@
                 </div>
             </div>
         </div>
+        <div class="centered mx-auto h5 text-center text-white ">About LOGA</div>
         <div class="container-fluid p-0">
             <!--nav add here-->
             <button onclick="topFunction()" id="myBtn"> <i class="fas fa-angle-up"></i></button>
-            <div class="row" style="height: 260px">
-                <img src="bg_catalog.png" style="height: 70%; width: 100%;">
-                <div class="centered mx-auto  text-center" style="font-size: 25px;">About LOGA</div>
-            </div>
-            <div class="container col " style="margin-top:-50px">
+            <div class="container col " style="margin-top: 20px;">
                 <p style="font-size:12px; display: inline;"><a href="index.html" style="text-decoration: none; "
-                        id="home">หน้าแรก</a></p>
+                        id="home" class="link">หน้าแรก</a></p>
                 <p class="more" style="font-size:12px; color: black; display: inline;">About LOGA</p>
             </div>
             <div class="container col ">
@@ -1323,10 +1394,10 @@
                 <p style="font-size:15px; color: black; display: inline;">
                     จากกลุ่มผู้ก่อตั้งที่ชื่นชอบการเล่นเกมมาเป็นเวลากว่า 30 ปี และมุ่งมั่นที่จะสนับสนุนวงการ E-sport
                     ทั้งในไทยและระดับโลก.</p><br><br>
-                <blockquote class="p-3 rounded">
+                <blockquote class="p-4 rounded">
                     <i class="fas fa-quote-left fa-2x  p-2  "
                         style="color: rgb(136, 136, 136);font-size: 90%;transform: translateY(-10px);"></i>
-                    <p style="font-size:12px; color: black; display: inline;">โลกามีแนวคิดที่จะสนับสนุนนักกีฬา E-sport
+                    <p style="font-size:14px; color: black; display: inline;">โลกามีแนวคิดที่จะสนับสนุนนักกีฬา E-sport
                         ในทุกระดับให้เติบโตไปด้วยกัน.ด้วยอุปกรณ์ที่ผลิตมาเพื่อการแข่งขันเกมโดยเฉพาะ</p>
                 </blockquote>
             </div>
