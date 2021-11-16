@@ -539,10 +539,17 @@
 
         #line1,
         #line2,
-        #line3,
         #line4,
         #line5 {
             display: none;
+            position: absolute;
+            bottom: 2%;
+            height: 2px;
+            background-color: #9A258F;
+        }
+
+        #line3 {
+            display: block;
             position: absolute;
             bottom: 2%;
             height: 2px;
@@ -1826,18 +1833,6 @@
             menu.style.display = "none";
             menu.style.opacity = "0";
             menu.style.animation = "DownMenu 300ms";
-        }
-
-        document.getElementById("blog").onmouseover = function () { linehover3() };
-        document.getElementById("blog").onmouseout = function () { linenothover3() };
-        function linehover3() {
-            var line3 = document.getElementById("line3");
-            line3.style.display = "block";
-        }
-
-        function linenothover3() {
-            var line3 = document.getElementById("line3");
-            line3.style.display = "none";
         }
 
         document.getElementById("aboutloga").onmouseover = function () { linehover4() };
